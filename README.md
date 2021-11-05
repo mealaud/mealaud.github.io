@@ -18,7 +18,7 @@ Sadly (though it worked fine for my most of my college career so far haha), I do
 
 **Fall 2021** <br/><br/>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Math 245A - Graduate Real Analysis: [PDF]() [LaTeX]() <br/><br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Math 246B - Graduate Complex Analysis: [PDF]() [LaTeX]() <br/><br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Math 246B - Graduate Complex Analysis: [PDF](https://github.com/melsmathblog/class-notes/blob/master/math-246a/main.pdf) [LaTeX](https://github.com/melsmathblog/class-notes/tree/master/math-246a/chapters) <br/><br/>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Physics 221A - Graduate Quantum Mechanics: [PDF]() [LaTeX]() <br/><br/>
 
 # Blog post
