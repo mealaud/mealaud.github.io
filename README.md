@@ -16,5 +16,10 @@ Sadly (though it worked fine for my most of my college career so far haha), I do
 **Spring 2021** <br/><br/>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Math 199 - Applied math research: <br/><br/>
 
+**Fall 2021** <br/><br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Math 245A - Graduate Real Analysis: [PDF]() [LaTeX]() <br/><br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Math 246B - Graduate Complex Analysis: [PDF]() [LaTeX]() <br/><br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Physics 221A - Graduate Quantum Mechanics: [PDF]() [LaTeX]() <br/><br/>
+
 # Blog post
 Test
