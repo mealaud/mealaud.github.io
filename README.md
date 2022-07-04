@@ -1,5 +1,5 @@
 # Hello!
-Hello! My name is Mealaud "Mel" Mokhtarzad and I'm a pure math major at UCLA (class of '23). On this blog I aim to showcase math stuff that I find cool along with the notes I write for my classes (which I use Atom and Inkscape for). I have taken inspiration from [Gilles Castel](https://castel.dev/) in regards to notetaking (using Inkscape, for example), but I may do a post about how exactly I take notes eventually.
+Hello! My name is Mealaud "mel guy" Mokhtarzad and I'm a pure math major at UCLA (class of '24). On this blog I aim to showcase math stuff that I find cool along with the notes I write for my classes (which I use Atom and Inkscape for). Obligatory link to [Gilles Castel](https://castel.dev/).
 
 # Class notes
 I don't know what I'm doing with this site. I'll post notes and homework solutions for now for things I'm studying/self-studying.
