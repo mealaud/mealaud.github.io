@@ -1,0 +1,68 @@
+h1 {
+  counter-reset: math-count;
+}
+
+.math-bold-left-wall-env {
+  background-color: gray;
+  border-left: 5px solid black;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 2px;
+  margin-bottom: 3px;
+  color: black;
+}
+
+.math-bold-left-wall-env:before {
+    counter-increment: math-count;
+    color: black;
+    font-weight:bold;
+}
+
+
+/* Colors */
+:root {
+    /* Definition colors */
+    --definition-background: #2f2e2d;
+    --definition-border: #ebdbb2;
+    /* Result colors */
+    --result-background: #2b333c;
+    --result-border: #9abfd8;
+}
+
+/* Environments */
+/* Inherit from one abstracted math environment */
+.math-definition {
+  background-color: var(--definition-background);
+  border-left-color: var(--definition-border);
+  color: inherit;
+}
+
+.math-definition:before {
+  color: var(--definition-border);
+  content: "Definition " counter(math-count) ". "; 
+}
+
+.math-result {
+  background-color: var(--result-background);
+  border-left-color: var(--result-border);
+  color: inherit;
+}
+
+.math-result:before {
+  color: var(--result-border);
+}
+
+.math-prop {}
+.math-prop:before {
+  content: "Proposition " counter(math-count) ". ";
+}
+/* .math-definition:before { */
+/*     counter-increment: math-count; */
+/*     color: var(--definition-text-color); */
+/*     font-weight:bold; */
+/*     content: "Definition " counter(math-count) ". "; */
+/* } */
+
+/* Results Environments */
+
+

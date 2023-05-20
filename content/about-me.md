@@ -7,7 +7,7 @@ type: "page"
 
 {{% Headshot %}}
 
-Hello! My name is Mealaud Mokhtarzad but I usually go by Mel. I’m a pure math major at UCLA (class of ’24). My interests include and are usually limited to: math, rock skipping, and clouds. If you need to contact me, [m.mokhtarzad@ucla.edu]() is usually a good way to reach me---I check it daily.
+Hello! My name is Mealaud Mokhtarzad but I usually go by Mel. I’m a pure math major at UCLA (class of ’24). My interests include and are usually limited to: math, rock skipping, and clouds. If you need to contact me, [m.mokhtarzad at ucla dot edu]() is usually a good way to reach me---I check it daily.
 
 ## Cool People
 

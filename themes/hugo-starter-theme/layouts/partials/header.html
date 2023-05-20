@@ -7,7 +7,15 @@
 
 	<title>{{ if not .IsHome }}{{ .Title }} | {{ end }}{{ .Site.Title }}</title>
 
+  <!-- css stylesheets -->
 	<link rel="stylesheet" href="/css/style.css" type="text/css" media="all" />
+	<link rel="stylesheet" href="/css/theme.css" type="text/css" media="all" />
+	<link rel="stylesheet" href="/css/fonts.css" type="text/css" media="all" />
+	<link rel="stylesheet" href="/css/math.css" type="text/css" media="all" />
+	<link rel="stylesheet" href="/css/images.css" type="text/css" media="all" />
+
+  <!-- Icon for Website -->
+  <link rel="icon" href="https://drive.google.com/uc?id=1NL_j9dLAUfsFRWZJXWkw1yu3gxud2sb_"/>
 
 	{{ with .OutputFormats.Get "rss" -}}
 		{{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}

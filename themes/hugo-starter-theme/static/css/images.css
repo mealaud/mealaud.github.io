@@ -1,0 +1,22 @@
+/* https://drive.google.com/uc?id=[unique ID]*/
+
+.text-width {
+  width: 100%;
+}
+
+.imgHeadshot {
+  content:url("https://drive.google.com/uc?id=1xBLWLnK_XIfBXOpgH5Qi1DTaKswmIHLq");
+}
+
+.imgLogo {
+  content:url("https://drive.google.com/uc?id=1TRmsJkOgxMFg8rE9vac62KcvDI6y06Ch");
+}
+
+.logo-size {
+  width: 10%;
+}
+
+.imgTabLogo {
+  content:url("https://drive.google.com/uc?id=1NL_j9dLAUfsFRWZJXWkw1yu3gxud2sb_")
+}
+
