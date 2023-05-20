@@ -2,19 +2,16 @@ h1 {
   counter-reset: math-count;
 }
 
-.math-bold-left-wall-env {
-  background-color: gray;
+.math-env {
   border-left: 5px solid black;
   padding-left: 10px;
   padding-right: 10px;
-  padding-bottom: 2px;
-  margin-bottom: 3px;
-  color: black;
-}
-
-.math-bold-left-wall-env:before {
+  padding-bottom: 0px;
+  color: inherit;
+  margin-bottom: 10px;
+} .math-env:before {
     counter-increment: math-count;
-    color: black;
+    color: inherit;
     font-weight:bold;
 }
 
@@ -27,42 +24,88 @@ h1 {
     /* Result colors */
     --result-background: #2b333c;
     --result-border: #9abfd8;
+    /* Example Colors */
+    --example-background: #3c3836;
+    --example-border: #a89984;
+    /* Upshot colors */
+    --upshot-background: #fe801930; /* last two digits are alpha/transparency values */
+    --upshot-border: #fe8019;
 }
 
 /* Environments */
 /* Inherit from one abstracted math environment */
-.math-definition {
+/* remark */
+.math-rem {} .math-rem:before {
+  counter-increment: math-count;
+  font-weight:bold;
+  content: "Remark " counter(math-count) ". ";
+}
+
+/* definition */
+.math-defn {
   background-color: var(--definition-background);
   border-left-color: var(--definition-border);
   color: inherit;
-}
-
-.math-definition:before {
+} .math-defn:before {
   color: var(--definition-border);
   content: "Definition " counter(math-count) ". "; 
 }
 
+/* results */
 .math-result {
   background-color: var(--result-background);
   border-left-color: var(--result-border);
   color: inherit;
-}
-
-.math-result:before {
+} .math-result:before {
   color: var(--result-border);
 }
 
-.math-prop {}
-.math-prop:before {
+.math-prop {} .math-prop:before {
   content: "Proposition " counter(math-count) ". ";
 }
-/* .math-definition:before { */
-/*     counter-increment: math-count; */
-/*     color: var(--definition-text-color); */
-/*     font-weight:bold; */
-/*     content: "Definition " counter(math-count) ". "; */
-/* } */
 
-/* Results Environments */
+.math-thm {} .math-thm:before {
+  content: "Theorem " counter(math-count) ". ";
+}
 
+.math-lem {} .math-lem:before {
+  content: "Lemma " counter(math-count) ". ";
+}
 
+/* example */
+.math-ex {
+  background-color: var(--example-background);
+  border: 4px dashed var(--example-border);
+} .math-ex:before {
+  counter-increment: math-count;
+  color: var(--example-border);
+  font-weight: bold;
+  content: "Example " counter(math-count) ". ";
+}
+
+/* upshot */
+.math-up {
+  background-color: var(--upshot-background);
+  border: 4px solid var(--upshot-border);
+} .math-up:before {
+  counter-increment: math-count;
+  color: var(--upshot-border);
+  font-weight:bold;
+  content: "Upshot " counter(math-count) ". ";
+}
+
+/* proof */
+.math-pf {
+  margin-top: 10px;
+  margin-bottom: 10px;
+} .math-pf:before {
+  font-weight: bold;
+  content: "Proof. "
+} .math-pf:after {
+  content: "▮"
+}
+
+/* makes things go on teh same line as the bolded word. pretty :) */
+p {
+  display: inline;
+}

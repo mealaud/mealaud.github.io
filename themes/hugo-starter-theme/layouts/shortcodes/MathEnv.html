@@ -1,0 +1,30 @@
+{{ if eq ( .Get 0 ) "defn" }}
+  <div class="math-env math-defn">
+    {{ .Inner }}
+  </div>
+{{ else if eq ( .Get 0 ) "thm" }}
+  <div class="math-env math-result math-thm">
+    {{ .Inner }}
+  </div>
+{{ else if eq ( .Get 0 ) "prop" }}
+  <div class="math-env math-result math-prop">
+    {{ .Inner }}
+  </div>
+{{ else if eq ( .Get 0 ) "lem" }}
+  <div class="math-env math-result math-lem">
+    {{ .Inner }}
+  </div>
+{{ else if eq ( .Get 0 ) "rem" }}
+  <div class="math-rem">
+    {{ .Inner }}
+  </div>
+{{ else if eq ( .Get 0 ) "ex" }}
+  <div class="math-env math-ex">
+    {{ .Inner }}
+  </div>
+{{ else if eq ( .Get 0 ) "up" }}
+  <div class="math-env math-up">
+    {{ .Inner }}
+  </div>
+{{ else }}
+{{ end }}

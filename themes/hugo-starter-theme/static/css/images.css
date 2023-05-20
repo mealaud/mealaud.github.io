@@ -3,20 +3,23 @@
 .text-width {
   width: 100%;
 }
-
 .imgHeadshot {
-  content:url("https://drive.google.com/uc?id=1xBLWLnK_XIfBXOpgH5Qi1DTaKswmIHLq");
+  content:url("https://drive.google.com/uc?id=1EvB7LNiRIXxrA6nSvk4dSiPpGvGMAuBQ");
 }
 
 .imgLogo {
-  content:url("https://drive.google.com/uc?id=1TRmsJkOgxMFg8rE9vac62KcvDI6y06Ch");
+  content:url("https://drive.google.com/uc?id=1Q-oue8ZFSwLSmdUZ8TZxOUyXQVMzM7mx");
+  filter: brightness(0) saturate(100%) invert(96%) sepia(2%) saturate(4162%) hue-rotate(353deg) brightness(101%) contrast(97%);
 }
 
 .logo-size {
   width: 10%;
 }
 
-.imgTabLogo {
-  content:url("https://drive.google.com/uc?id=1NL_j9dLAUfsFRWZJXWkw1yu3gxud2sb_")
+.imgGruvTabLogo {
+  content:"https://drive.google.com/uc?id=1iY7dweJbxRAfOagKffo2U78Q3lhqfsxU";
 }
 
+.imgGruvFilter {
+  filter: brightness(0) saturate(100%) invert(96%) sepia(2%) saturate(4162%) hue-rotate(353deg) brightness(101%) contrast(97%);
+}
