@@ -1,0 +1,36 @@
+baseURL = 'http://mealaud.com/'
+languageCode = 'en-us'
+title = 'mealaud.com'
+theme = 'hugo-starter-theme'
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[menu]
+    [[menu.main]]
+        identifier = "about-me"
+        name = "about me"
+        url = "/about-me/"
+        weight = 0
+    [[menu.main]]
+        identifier = "math"
+        name = "math"
+        url = "/math/"
+        weight = 1
+    [[menu.main]]
+        identifier = "rock-skipping"
+        name = "rock skipping"
+        url = "/rock-skipping/"
+        weight = 2
+    [[menu.main]]
+        identifier = "clouds"
+        name = "clouds"
+        url = "/clouds/"
+        weight = 3
+    [[menu.main]]
+        identifier = "gort"
+        name = "gort"
+        url = "/gort/"
+        weight = 4
