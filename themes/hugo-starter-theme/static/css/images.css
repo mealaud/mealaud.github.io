@@ -1,8 +1,8 @@
 /* https://drive.google.com/uc?id=[unique ID]*/
 
-.text-width {
-  width: 100%;
-}
+/* .text-width { */
+/*   width: 100%; */
+/* } */
 .imgHeadshot {
   content:url("https://drive.google.com/uc?id=1EvB7LNiRIXxrA6nSvk4dSiPpGvGMAuBQ");
 }
@@ -22,4 +22,8 @@
 
 .imgGruvFilter {
   filter: brightness(0) saturate(100%) invert(96%) sepia(2%) saturate(4162%) hue-rotate(353deg) brightness(101%) contrast(97%);
+}
+
+.imgGort {
+  content:url("https://drive.google.com/uc?id=1SPcSobmOPplmqv1ReIfAf-ASJYj8VZ4c");
 }

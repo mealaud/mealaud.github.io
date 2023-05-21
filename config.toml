@@ -20,17 +20,12 @@ theme = 'hugo-starter-theme'
         url = "/math/"
         weight = 1
     [[menu.main]]
-        identifier = "rock-skipping"
-        name = "rock skipping"
-        url = "/rock-skipping/"
+        identifier = "hobbies"
+        name = "hobbies"
+        url = "/hobbies/"
         weight = 2
     [[menu.main]]
-        identifier = "clouds"
-        name = "clouds"
-        url = "/clouds/"
-        weight = 3
-    [[menu.main]]
-        identifier = "gort"
-        name = "gort"
-        url = "/gort/"
-        weight = 4
+        identifier = "misc"
+        name = "misc"
+        url = "/misc/"
+        weight = 2

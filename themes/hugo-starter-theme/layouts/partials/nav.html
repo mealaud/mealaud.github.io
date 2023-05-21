@@ -5,7 +5,7 @@
 }
 
 .subtitlefont {
-  font-size: 20.5px;
+  font-size: 18.9px;
   opacity: 0.5;
 }
 
@@ -25,34 +25,53 @@
   overflow: hidden; /* if you don't want #second to wrap below #first */
 }
 
+ul#menu li {
+  display:inline;
+}
+.coolpeople {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+}
 </style>
 
 <header class="site-header">
-  <div id="wrapper" style="margin-left: 40px;">
-    <div id="fleft">
-      <a class="logo" href="{{ .Site.BaseURL }}">
-        {{ partial "image-input" (dict "image" "imgLogo" "size" "logo-size") }}
-      </a>
-    </div>
-    <div id="fright" style="position: relative; top: 4px">
-      <div class="titlefont" >
-        <a href="{{ .Site.BaseURL }}" style="text-decoration: none">MEALAUD.COM</a>
+  <ul id="menu" class="coolpeople">
+    <li class="coolpeople">
+      <div id="wrapper" style="margin-left: 40px;">
+        <div id="fleft">
+          <a class="logo" href="{{ .Site.BaseURL }}">
+            {{ partial "image-input" (dict "image" "imgLogo" "size" "logo-size") }}
+          </a>
+        </div>
+        <div id="fright" style="position: relative; top: 4px">
+          <div class="titlefont" >
+            <a href="{{ .Site.BaseURL }}" style="text-decoration: none">MEALAUD.COM</a>
+          </div>
+          <div class="subtitlefont" style="line-height: 90%; position: relative; top:-15px ;">
+            where the mel guy reigns supreme
+          </div>
+        </div>
       </div>
-      <div class="subtitlefont" style="line-height: 90%; position: relative; top:-15px ;">
-        where the mel guy reigns supreme
-      </div>
-    </div>
-  </div>
-  <nav class="site-nav">
-    <!-- <a class="logo" href="{{ .Site.BaseURL }}"> -->
-    <!--   {{ .Site.Title }} -->
-    <!-- </a> -->
-    <ul class="main-menu">
+    </li>
+  </ul>
+<!-- list-style-type: none; display: inline-flex; justify-content: space-around; align-items: center; -->
+  <div class="nav">
+    <ul id="menu" class="coolpeople">
       {{ range.Site.Menus.main }}
-      <li>
-        <a href="{{ .URL }}">{{ .Name }}</a>
+      <li class="coolpeople">
+        <a href="{{ .URL }}" style="text-decoration: none; font-weight: bold">{{ .Name }}</a>
       </li>
       {{ end }}
     </ul>
-  </nav>
+  </div>
+  <!-- <nav class="site-nav"> -->
+  <!--   <ul class="main-menu"> -->
+  <!--     {{ range.Site.Menus.main }} -->
+  <!--     <li> -->
+  <!--       <a href="{{ .URL }}">{{ .Name }}</a> -->
+  <!--     </li> -->
+  <!--     {{ end }} -->
+  <!--   </ul> -->
+  <!-- </nav> -->
 </header>

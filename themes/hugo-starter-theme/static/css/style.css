@@ -48,6 +48,15 @@ body {
   }
 }
 
+
+.nav {
+  overflow: auto;
+  /* display: flex; */
+  /* display: inline-block; */
+  /* justify-content: space-between; */
+  /* align-items: center; */
+}
+
 /* LISTS */
 
 .post-snippet {
