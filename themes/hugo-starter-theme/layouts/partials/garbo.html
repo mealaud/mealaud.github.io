@@ -1,0 +1,77 @@
+<style>
+#content-tile {
+  width: 33%;
+  float: left;
+  border: 1px solid white; 
+  overflow: hidden;
+  float: left;
+} #tile-header {
+  height: 175px;
+  overflow: hidden;
+  border: 1px solid red;
+  text-align: center;
+} #tile-desc {
+  height: 550px;
+  overflow: hidden;
+  border: 1px solid blue;
+}
+
+#date-line {
+  font-size: 60%;
+  font-weight: lighter;
+} #desc {
+  font-size: 70%;
+  font-weight: normal;
+  line-height: 130%;
+}
+</style>
+
+{{ range ( .context.Paginate ( first 3 .context.Pages.ByPublishDate.Reverse )).context.Pages }}
+<div id="content-tile">
+  <div id="tile-header">
+    <a href="{{ .Permalink }}" style="text-decoration: none">{{ .Title }}</a><br>
+    <div id="date-line">{{ .Date.Format "January 2, 2006" }}</div>
+  </div>  
+  <div id="tile-desc">
+    <div id="desc">{{ .Description }}</div>
+  </div>
+</div>  
+{{ end }}
+<!-- <style> -->
+<!-- .content-tile { -->
+<!--   width: 33%; -->
+<!--   float: left; -->
+<!-- }  -->
+<!-- .post-title { -->
+<!--   font-weight: bold; -->
+<!--   padding-left: 10px; -->
+<!-- } -->
+<!---->
+<!-- .date-line { -->
+<!--   font-size: 60%; -->
+<!--   font-weight: lighter; -->
+<!--   padding-left: 10px; -->
+<!-- } -->
+<!---->
+<!-- .desc { -->
+<!--   font-size: 70%; -->
+<!--   font-weight: normal; -->
+<!--   padding left: 10px; -->
+<!-- } -->
+<!---->
+<!-- <div> -->
+<!--   <div style="text-align: center;"> -->
+<!--     <h3>Recent posts</h3> -->
+<!--   </div> -->
+<!--   <div> -->
+<!--     {{ range (.Paginate ( first 3 .Pages.ByPublishDate.Reverse )).Pages }} -->
+<!--       <div class="content-tile" style="border: 1px solid white;"> -->
+<!--         <div style="border: 1px solid red; text-align: center; background-color: #fbf1c720;"> -->
+<!--           <div class="post-title"><a href="{{ .Permalink }}" style="text-decoration: none">{{ .Title }}</a></div> -->
+<!--           <div class="date-line">{{ .Date.Format "January 2, 2006" }}</div> -->
+<!--         </div> -->
+<!--         <div class="desc" style="background-color: #fbf1c705">{{ .Description }}</div> -->
+<!--       </div> -->
+<!--     {{ end }} -->
+<!--   </div> -->
+<!-- </div> -->

@@ -29,3 +29,7 @@ theme = 'hugo-starter-theme'
         name = "misc"
         url = "/misc/"
         weight = 2
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"

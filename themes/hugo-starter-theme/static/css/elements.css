@@ -1,0 +1,14 @@
+#content-tile {
+  width: 32%;
+  float: left;
+  box-sizing: border-box;
+  border: 1px solid;
+  overflow: hidden;
+  float: left;
+  margin-bottom: 2%;
+} #tile-group {
+  box-sizing: border-box;
+  min-height: 10%;
+  height: auto;
+  overflow: auto;
+}

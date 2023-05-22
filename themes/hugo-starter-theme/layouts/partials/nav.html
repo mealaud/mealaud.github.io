@@ -13,6 +13,8 @@
   display: flex;
   width: 500px;
   overflow: hidden; /* will contain if #first is longer than #second */
+  transform: scale(1.6) translateX(250px);
+  margin-bottom: 5%;
 }
 #fleft {
   width: 90px;
@@ -26,7 +28,7 @@
 }
 
 ul#menu li {
-  display:inline;
+  display: inline;
 }
 .coolpeople {
   list-style-type: none;
@@ -38,7 +40,8 @@ ul#menu li {
 <header class="site-header">
   <ul id="menu" class="coolpeople">
     <li class="coolpeople">
-      <div id="wrapper" style="margin-left: 40px;">
+      <!-- <div id="wrapper" style="margin-left: 40px;"> -->
+      <div id="wrapper">
         <div id="fleft">
           <a class="logo" href="{{ .Site.BaseURL }}">
             {{ partial "image-input" (dict "image" "imgLogo" "size" "logo-size") }}
@@ -55,23 +58,11 @@ ul#menu li {
       </div>
     </li>
   </ul>
-<!-- list-style-type: none; display: inline-flex; justify-content: space-around; align-items: center; -->
-  <div class="nav">
-    <ul id="menu" class="coolpeople">
-      {{ range.Site.Menus.main }}
-      <li class="coolpeople">
-        <a href="{{ .URL }}" style="text-decoration: none; font-weight: bold">{{ .Name }}</a>
-      </li>
-      {{ end }}
-    </ul>
-  </div>
-  <!-- <nav class="site-nav"> -->
-  <!--   <ul class="main-menu"> -->
-  <!--     {{ range.Site.Menus.main }} -->
-  <!--     <li> -->
-  <!--       <a href="{{ .URL }}">{{ .Name }}</a> -->
-  <!--     </li> -->
-  <!--     {{ end }} -->
-  <!--   </ul> -->
-  <!-- </nav> -->
+  <ul id="menu" class="coolpeople">
+    {{ range.Site.Menus.main }}
+    <li class="coolpeople">
+      <a href="{{ .URL }}" style="text-decoration: none; font-weight: bold">{{ .Name }}</a>
+    </li>
+    {{ end }}
+  </ul>
 </header>

@@ -1,0 +1,14 @@
+---
+title: "Misc"
+date: 2023-05-21T21:46:25-07:00
+draft: false
+math: false
+tags: 
+categories: 
+---
+
+Thing will be here eventually! For now you may look at gort. :) {{%lb%}}
+
+{{% ImgSrcInput "gort.png" "100%" %}}
+
+I freaking love gort.

@@ -1,21 +1,3 @@
-<style>
-  .dateline {
-    font-weight: lighter;
-    font-style: italic;
-    font-size: 90%;
-  }
-
-  .desc {
-    font-weight: bold;
-  }
-
-  tr, th {
-    text-align: left;
-    vertical-align: text-top;
-
-  }
-</style>
-
 {{ partial "header.html" . }}
 
 <article>
@@ -24,22 +6,11 @@
   </header>
   {{ .Content }}
 </article>
-<table>
-  <colgroup>
-    <col style="width: 32%">
-    <col style="width: 65%">
-  </colgroup>
-  {{ range .Pages.ByPublishDate.Reverse }}
-    <tr>
-      <th style="padding-top: 14px; padding-bottom: 14px; padding-right: 14px">
-        <a href="{{ .Permalink }}" style="text-decoration: none">{{ .Title }}</a><br>
-        <div class="dateline">{{ .Date.Format "January 2, 2006" }}</div>
-      </th>    
-      <th style="font-weight: normal;">
-        {{ .Description }}
-      </th>
-    </tr>
-  {{ end }}
-</table>
+
+{{ partial "landinglists.html" . }}
+
+{{ partial "recentposts.html" . }}
+
+{{ partial "postsbycategories.html" . }}
 
 {{ partial "footer.html" . }}
