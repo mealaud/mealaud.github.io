@@ -27,10 +27,15 @@
 
 <body>
 
-{{ partial "nav.html" . }}
-
 {{ if or .Params.math .Site.Params.math }}
   {{ partial "math.html" . }}
 {{ end }}
 
+
+<div id="nav-bar">
+{{ partial "menu.html" . }}
+</div>
+
+<div id="contents">
 <main class="content">
+</div>

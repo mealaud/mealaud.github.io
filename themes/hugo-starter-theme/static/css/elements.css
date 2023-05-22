@@ -12,3 +12,26 @@
   height: auto;
   overflow: auto;
 }
+
+#nav-bar {}
+#contents {}
+
+#guide {
+  width: 18%;
+  float: left;
+  margin-right: 5%;
+  min-height: 100vh;
+} #site-logo {
+  box-sizing: border-box;
+} #title-font {
+  box-sizing: border-box;
+  font-size: 150%;
+  font-weight: bold;
+} #subtitle-font {
+  box-sizing: border-box;
+  line-height: 100%;
+  font-size: 100%;
+  opacity: 65%;
+} #nav-menu {
+  box-sizing: border-box;
+}
