@@ -1,7 +1,14 @@
-{{ partial "header.html" . }}
-
-<h1>{{ .Title }}</h1>
-
-{{ .Content }}
-
-{{ partial "footer.html" . }}
+<div class="grid-container">
+  <div id="nav-grid">
+    {{ partial "header.html" . }}
+  </div>    
+  <div id="content-grid">
+    <article>
+      <header>
+        <h1>{{ .Title }}</h1>
+      </header>
+      {{ .Content }}
+    </article>
+    {{ partial "footer.html" . }}
+  </div>    
+</div>

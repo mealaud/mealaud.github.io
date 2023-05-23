@@ -1,16 +1,21 @@
-{{ partial "header.html" . }}
+<div class="grid-container">
+  <div id="nav-grid">
+    {{ partial "header.html" . }}
+  </div>    
+  <div id="content-grid">
+    <article>
+      <header>
+        <h1>{{ .Title }}</h1>
+      </header>
+      {{ .Content }}
+    </article>
 
-<article>
-  <header>
-    <h1>{{ .Title }}</h1>
-  </header>
-  {{ .Content }}
-</article>
+    {{ partial "landinglists.html" . }}
 
-{{ partial "landinglists.html" . }}
+    {{ partial "recentposts.html" . }}
 
-{{ partial "recentposts.html" . }}
+    {{ partial "postsbycategories.html" . }}
 
-{{ partial "postsbycategories.html" . }}
-
-{{ partial "footer.html" . }}
+    {{ partial "footer.html" . }}
+  </div>    
+</div>

@@ -13,14 +13,13 @@
   overflow: auto;
 }
 
-#nav-bar {}
-#contents {}
-
+#content-position {
+  position: relative;
+} #nav-bar {} 
 #guide {
-  width: 18%;
+  margin-left: 2%;
+  width: 100%;
   float: left;
-  margin-right: 5%;
-  min-height: 100vh;
 } #site-logo {
   box-sizing: border-box;
 } #title-font {
@@ -32,8 +31,16 @@
   line-height: 100%;
   font-size: 100%;
   opacity: 65%;
-} #nav-bar {
-  box-sizing: border-box;
-  position: sticky;
-  top: 0;
+} 
+
+
+.grid-container {
+  display: grid;
+  /* grid-template-columns: auto 1fr; */
+  grid-template-columns: 20% 2fr;
+  gap: 0%;
+} #nav-grid {
+  grid-coloumn: 1;
+} #content-grid {
+  grid-column: 2;
 }
