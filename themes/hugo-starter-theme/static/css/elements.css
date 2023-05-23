@@ -32,6 +32,8 @@
   line-height: 100%;
   font-size: 100%;
   opacity: 65%;
-} #nav-menu {
+} #nav-bar {
   box-sizing: border-box;
+  position: sticky;
+  top: 0;
 }
