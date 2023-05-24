@@ -1,5 +1,12 @@
-{{ partial "header.html" . }}
+{{ define "header" }}
+  {{ partial "header.html" . }}
+{{ end }}
 
-{{ .Content }}
+{{ define "main" }}
+  {{ partial "home.html" . }}
+{{ end }}
 
-{{ partial "footer.html" . }}
+{{ define "footer" }}
+  {{ partial "footer.html" . }}
+{{ end }}
+
