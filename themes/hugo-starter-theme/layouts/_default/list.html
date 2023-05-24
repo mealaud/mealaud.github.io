@@ -1,21 +1,20 @@
-<div class="grid-container">
-  <div id="nav-grid">
-    {{ partial "header.html" . }}
-  </div>    
-  <div id="content-grid">
-    <article>
-      <header>
-        <h1>{{ .Title }}</h1>
-      </header>
-      {{ .Content }}
-    </article>
+{{ define "header" }}
+  {{ partial "header.html" . }}
+{{ end }}
 
-    {{ partial "landinglists.html" . }}
+{{ define "main" }}
+  <header>
+    <h1>{{ .Title }}</h1>
+  </header>
+  {{ .Content }}
 
-    {{ partial "recentposts.html" . }}
+  {{ partial "landinglists.html" . }}
+  
+  {{ partial "recentposts.html" . }}
 
-    {{ partial "postsbycategories.html" . }}
+  {{ partial "postsbycategories.html" . }}
+{{ end }}
 
-    {{ partial "footer.html" . }}
-  </div>    
-</div>
+{{ define "footer" }}
+  {{ partial "footer.html" . }}
+{{ end }}
