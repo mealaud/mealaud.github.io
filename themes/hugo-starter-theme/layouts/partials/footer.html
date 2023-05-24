@@ -1,8 +1,14 @@
 </main>
+
+{{ if .Params.katex }}
+  {{ partial "katex.html" . }}
+{{ end }}
 	
 <footer>
 	<div style="text-align: center;"><p>&copy;{{ dateFormat "2006" now }} {{ .Site.Title }}</p></div>
 </footer>
 
 </body>
+
+
 </html>
