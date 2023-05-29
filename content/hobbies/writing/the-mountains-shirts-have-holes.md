@@ -1,7 +1,7 @@
 ---
 title: "The Mountains' Shirts Have Holes"
 date: 2023-05-28T23:50:26-07:00
-draft: true
+draft: false
 math: false
 tags: ["mountains", "shirts", "holes"]
 categories: ["writing", "poems"]
