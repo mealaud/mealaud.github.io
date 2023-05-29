@@ -17,3 +17,5 @@ Hello! My name is Mealaud Mokhtarzad but I usually go by Mel. I’m a pure math 
 * [Kyle Chud](https://github.com/kylechui) – I met the back of Kyle’s head during the summer going into my high school senior year when we took multivariable together at a local community college. We ended up taking another course together the coming fall where I meant the front of his head and found out he was a cool guy. He’s still really cool. He’s also rich and famous, so that’s a plus. Check out his Neovim plugin!
 
 * [Logang Bigslap](https://loganhyslop.github.io/) - Logan is mega cool and mega cracked. We met his freshman year (my sorta junior year). He actually does math (good stuff at that). B)
+
+* [Andrea Borkhermerfererger](https://www.math.lsu.edu/~abour99/) - Andrea is a big ol' math nerd and are very cool, but never talk to them after they've had mac'n'cheese. _shudders_
