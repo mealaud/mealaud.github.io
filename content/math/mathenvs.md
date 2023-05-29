@@ -7,6 +7,40 @@ tags:
 categories: 
 ---
 
-{{% MathEnv "defn" %}}
-hi
+{{% MathEnv "thm"%}}
+dasdsa
 {{% /MathEnv %}}
+
+{{% MathEnv "lem"%}}
+daskdjalkdsj
+{{% /MathEnv %}}
+
+{{% MathEnv "coro"%}}
+dasd
+{{% /MathEnv %}}
+
+{{% MathEnv "prop"%}}
+djaskdljakdsljj
+{{% /MathEnv %}}
+
+{{% MathEnv "defn"%}}
+dasdsa
+{{% /MathEnv %}}
+
+{{% MathEnv "rem"%}}
+daksdjlkdjs
+{{% /MathEnv %}}
+
+{{% Proof %}}
+daskjdlakjsd
+{{% /Proof %}}
+
+{{% MathEnv "up"%}}
+dlaksjdlakjsdj
+{{% /MathEnv %}}
+
+{{% MathEnv "ex"%}}
+sdaklsjdlks
+{{% /MathEnv %}}
+
+

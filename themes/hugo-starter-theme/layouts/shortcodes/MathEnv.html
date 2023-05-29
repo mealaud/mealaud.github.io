@@ -14,6 +14,10 @@
   <div class="math-env math-result math-lem">
     {{ .Inner }}
   </div>
+{{ else if eq ( .Get 0 ) "coro" }}
+  <div class="math-env math-result math-coro">
+    {{ .Inner }}
+  </div>
 {{ else if eq ( .Get 0 ) "rem" }}
   <div class="math-rem">
     {{ .Inner }}
