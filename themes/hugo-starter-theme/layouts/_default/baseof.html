@@ -9,9 +9,10 @@
     <link rel="stylesheet" href="/css/theme.css" type="text/css" media="all" />
     <link rel="stylesheet" href="/css/fonts.css" type="text/css" media="all" />
     <link rel="stylesheet" href="/css/elements.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/css/math.css" type="text/css" media="all" />
 
     <!-- katex -->
-    {{ if .Params.katex }}
+    {{ if .Params.math }}
       {{ partial "math.html" . }}
     {{ end }}
 

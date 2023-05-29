@@ -1,8 +1,8 @@
 ---
 title: "Mathtest"
 date: 2023-05-20T13:40:35-07:00
-draft: true
-math: true
+draft: false
+katex: true
 ---
 
 lfkdjsaflksadjflkj
