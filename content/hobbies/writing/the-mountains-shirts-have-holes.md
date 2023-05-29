@@ -1,0 +1,23 @@
+---
+title: "The Mountains' Shirts Have Holes"
+date: 2023-05-28T23:50:26-07:00
+draft: true
+math: false
+tags: ["mountains", "shirts", "holes"]
+categories: ["writing", "poems"]
+---
+
+The mountains rest.{{%nl%}}
+They sleep peacefully, happily, unstirringly night and day.{{%nl%}}
+They rest as the window blows and bellows across.{{%nl%}}{{%nl%}}
+
+The trees leave them be. {{%nl%}}
+They dig their roots into their skin,{{%nl%}}
+into their flesh,{{%nl%}}
+but they don't mind.{{%nl%}}{{%nl%}}
+
+The trees,{{%nl%}}
+in becoming part of them,{{%nl%}}
+turn into their clothes.{{%nl%}}
+The imperfect canopy reveals their rocky skin.{{%nl%}}
+Their shirts have holes.{{%nl%}}{{%nl%}}
