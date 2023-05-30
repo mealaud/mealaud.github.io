@@ -57,8 +57,8 @@ Here are some examples.
 2. $ \mathrm{char}(\mathbb{R}) = 0$;
 3. $ \mathrm{char}(\mathbb{C}) = 0$; and
 4. $ \mathrm{char}(\mathbb{Z}/p\mathbb{Z}) = p$ for prime $ p$.
-5. $ \mathrm{char}(\mathbb{F}_p[x]) = p$ for $ \mathbb{F}_p \coloneqq \mathbb{Z}/p\mathbb{Z}$.
-    - Notice that $ \mathbb{F}_p[x]$ has finite characteristic despite being an infinite field! 
+5. $ \mathrm{char}(\mathbb{F}_p[t]) = p$ for $ \mathbb{F}_p \coloneqq \mathbb{Z}/p\mathbb{Z}$.
+    - Notice that $ \mathbb{F}_p[t]$ has finite characteristic despite being an infinite field! 
 {{% /MathEnv %}}
 
 Had I given you more examples of fields, you might have realized that the characteristic of a field is always either $ 0$ or prime. Indeed, we can make this a proposition!
@@ -91,10 +91,46 @@ $$
 
 ## Field extensions and their degrees
 
-Note that there are _subfields_ of fields! For example, $ \mathbb{Q}$ is a subfield of $ \mathbb{R}$. In some sense... **DRUMROLL PLEASE**... $ \mathbb{R}$ extends $ \mathbb{Q}$! This turns out to be a general phenomenon and field theory and is actually a very important idea that we study. Here is a precise definition.
+Note that there are _subfields_ of fields! For example, $ \mathbb{Q}$ is a subfield of $ \mathbb{R}$. In some sense... **DRUMROLL PLEASE**... $ \mathbb{R}$ extends $ \mathbb{Q}$! This turns out to be a general phenomenon of field theory and is actually a very important idea. 
 
 {{% MathEnv "defn"%}}
-If $ K$ is a field containing the subfield $ F$, then $ K$ is said to be an {{% tdf "extension" %}} of $ F$, denoted $ K/F$ or by the diagram 
+If $ K$ is a field containing the subfield $ F$, then $ K$ is said to be an {{% tdf "extension" %}} of $ F$, denoted $ K/F$ (read: "$ K$ over $ F$") or by the diagram 
+$$
+    bruh put the figure :skull: incscape moment
+$$
+{{% /MathEnv %}}
+{{% MathEnv "rem"%}}
+$ F$ is sometimes called the {{% tdf "base field" %}}.
 {{% /MathEnv %}}
 
 
+But how can we quantify how much our extension "extends" our base field? It turns out, as one might expect, that an extension corresponds to a vector space (over the base field)! Indeed, if $ K / F$, $ K$ forms an $ F$-vector-space. This gives us a nifty way to define how "extend-y" an extension is.
+
+{{% MathEnv "defn"%}}
+The {{% tdf "degree" %}} or {{% tdf "index" %}} of a field extension $ K /F$, denoted $ [K:F]$, is the dimension of $ K$ as a vector space over $ F$. (i.e., $ [K:F] = \mathrm{dim}_F(K)$). If $ [K:F]$ is finite, we say the extension is {{% tdf "finite" %}}  and the extension is {{% tdf "infinite" %}} otherwise.
+{{% /MathEnv %}}
+
+#### Aside: Why is the definition of degree any good?
+
+When I first approached these ideas I wasn't really sure I was understanding why the definition of the degree of an extension was good. More precisely, it was not obvious to me that any two isomorphic fields would have the same degree over isomorphic base fields. That's why I go through all of this rigmarole.
+
+{{% MathEnv "prop"%}}
+If $ K_1, K_2$ both extend a base field $ F$ and are isomorphic, then $ [K_1 : F] = [K_2 : F]$. 
+{{% /MathEnv %}}
+
+{{% Proof %}}
+It suffices to show that $ K_1$ and $ K_2$ are isomorphic as $ F$-vector spaces. Let $ \alpha, \beta$ be bases of $ K_1$ and $ K_2$ as $ F$-vector spaces. Moreover, let $ \phi \colon K_1 \to K_2$ be a field isomorphism. Then define $ T \colon \alpha \to \beta$ with $ T(a) \coloneqq \phi(\alpha)$. We may then extend $ T$ to $ \widetilde{T} \colon K_1 \to K_2$. 
+
+We now show injectivity. If $ K_1 \ni v = c_1 a_1 +\cdots + c_n a_n$ (for $ \left \\{ a_1,\ldots,a_n \right \\} \subseteq \alpha$),  
+$$\begin{align*}
+    v \in \mathrm{ker}(\widetilde{T}) &\iff \widetilde{T}(v) = 0 \\\\
+    &\iff c_1 \widetilde{T}(a_1) + \cdots + c_n \widetilde{T}(a_n) = 0 \\\\
+    &\implies c_i = 0 \text{ for all } i \text{ by linear independence of } \beta \\\\
+    &\implies v=0
+\end{align*}$$
+Thus $ \widetilde{T}$ is injective. 
+
+What remains to be shown is surjectivity. Suppose $ u \in K_2$. Then $ \phi^{-1} \in K_1$ and hence $ \widetilde{T}(\phi^{-1}(u)) = u$. Thus $ \widetilde{T}$ is surjective and is hence a bijective linear map--an isomorphism. Therefore $ K_1 \cong K_2$ as $ F$-vector spaces and $ [K_1:F]= \mathrm{dim}_F(K_1) = \mathrm{dim}_F(K_2)=[K_2:F]$ as desired.
+{{% /Proof %}}
+
+### Back to field extensions and degrees
