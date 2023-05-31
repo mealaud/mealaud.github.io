@@ -8,8 +8,10 @@ body {
   color: #333;
   line-height: 1.5;
   max-width: 95vw;
-  /* margin: 0 auto; */
-  /* height: 100vh; */
+}
+
+p {
+  text-indent: 2em;
 }
 
 .content {

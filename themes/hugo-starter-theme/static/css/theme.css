@@ -33,7 +33,7 @@
 }
 
 body {
- word-wrap:break-word;
+ /* word-wrap:break-word; */
  background:var(--bg);
  color:var(--fg);
  /* line-height:1.675 */
