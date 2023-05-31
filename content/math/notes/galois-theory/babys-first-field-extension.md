@@ -1,7 +1,7 @@
 ---
 title: "Baby's First Field Extension"
 date: 2023-05-29T13:42:29-07:00
-draft: false
+draft: true
 math: true
 tags: 
 categories: 
@@ -57,8 +57,8 @@ Here are some examples.
 2. $ \operatorname{char}(\mathbb{R}) = 0$;
 3. $ \operatorname{char}(\mathbb{C}) = 0$; and
 4. $ \operatorname{char}(\mathbb{Z}/p\mathbb{Z}) = p$ for prime $ p$.
-5. $ \operatorname{char}(\mathbb{F}_p[t]) = p$ for $ \mathbb{F}_p \coloneqq \mathbb{Z}/p\mathbb{Z}$.
-    - Notice that $ \mathbb{F}_p[t]$ has finite characteristic despite being an infinite field! 
+<!-- 5. $ \operatorname{char}(\mathbb{F}_p[t]) = p$ for $ \mathbb{F}_p \coloneqq \mathbb{Z}/p\mathbb{Z}$. -->
+<!--     - Notice that $ \mathbb{F}_p[t]$ has finite characteristic despite being an infinite field!  -->
 {{% /MathEnv %}}
 
 Had I given you more examples of fields, you might have realized that the characteristic of a field is always either $ 0$ or prime. Indeed, we can make this a proposition!
@@ -70,9 +70,9 @@ The characteristic of a field $ F$ is either $ 0$ or a prime $ p$.
 {{% Proof %}}
 Without loss of generality, suppose that $ \operatorname{char}(F) \neq 0$. Further suppose then that $ \operatorname{char}(F) = mn$ for some positive integers $ m,n$. Then 
 $$
-    (m \cdot 1) (n\cdot 1) = mn \cdot 1 = 0
+    (m \cdot 1_F) (n\cdot 1_F) = mn \cdot 1_F = 0
 $$ 
-by definition. However, because fields are integral domains, either $ m \cdot 1 = 0$ or $ n \cdot 1 = 0$. Without loss of generality, suppose that $ m \cdot 1 = 0$ Then $ \operatorname{char}(F) \mid m$ so $ m = k \operatorname{char}(F)$. Hence: 
+by definition. However, because fields are integral domains, either $ m \cdot 1_F = 0$ or $ n \cdot 1_F = 0$. Without loss of generality, suppose that $ m \cdot 1_F = 0$ Then $ \operatorname{char}(F) \mid m$ so $ m = k \operatorname{char}(F)$ for some positive integer $ k$. Hence: 
 $$
     \operatorname{char}(F) = mn = k \operatorname{char}(F) \cdot n
 $$
