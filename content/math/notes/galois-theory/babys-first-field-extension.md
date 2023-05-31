@@ -133,4 +133,12 @@ Thus $ \widetilde{T}$ is injective.
 What remains to be shown is surjectivity. Suppose $ u \in K_2$. Then $ \phi^{-1} \in K_1$ and hence $ \widetilde{T}(\phi^{-1}(u)) = u$. Thus $ \widetilde{T}$ is surjective and is hence a bijective linear map--an isomorphism. Therefore $ K_1 \cong K_2$ as $ F$-vector spaces and $ [K_1:F]= \mathrm{dim}_F(K_1) = \mathrm{dim}_F(K_2)=[K_2:F]$ as desired.
 {{% /Proof %}}
 
-### Back to field extensions and degrees
+### Adjoining roots by quotienting by polynomials
+
+One thing I remember being mentioned in one of my (5?) complex analysis classes during my undergrad career was that 
+$$
+    \mathbb{C} \cong \frac{ \mathbb{R}[t] }{(t^2+1)}.
+$$
+I honestly had no idea what my professor was trying to say besides them mumbling (read: saying quite clearly) that we are _adjoining_ the root of $ t^2+1$, i.e. $ \sqrt{-1}$, to $ \mathbb{R}$. What did this mean? 
+
+Having now taken ring theory and now being vaguely familiar with field theory I see that he meant literally what he said (as math professors often do...), we are giving the otherwise _irreducible_ polynomial $ t^2+1$ a root "in" a field extending $ \mathbb{R}$. We call this idea (we being me) _quotienting fields by polynomials_ (the name of this section!)
