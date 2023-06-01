@@ -20,38 +20,38 @@ p {
 
 /* NAVIGATION */
 
-.site-nav {
-  display: flex;
-}
+/* .site-nav { */
+/*   display: flex; */
+/* } */
+/**/
+/* .site-nav a { */
+/*   display: block; */
+/*   padding: 1rem; */
+/* } */
+/**/
+/* .site-nav .logo { */
+/*   font-weight: bold; */
+/*   padding-left: 0; */
+/* } */
+/**/
+/* .main-menu { */
+/*   display: flex; */
+/*   list-style: none; */
+/*   margin: 0; */
+/*   padding: 0; */
+/* } */
 
-.site-nav a {
-  display: block;
-  padding: 1rem;
-}
-
-.site-nav .logo {
-  font-weight: bold;
-  padding-left: 0;
-}
-
-.main-menu {
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-@media screen and (max-width: 48rem) {
-  .site-nav,
-  .main-menu {
-    flex-direction: column;
-  }
-
-  .site-nav a {
-    padding: 0.5rem;
-    padding-left: 0;
-  }
-}
+/* @media screen and (max-width: 48rem) { */
+/*   .site-nav, */
+/*   .main-menu { */
+/*     flex-direction: column; */
+/*   } */
+/**/
+/*   .site-nav a { */
+/*     padding: 0.5rem; */
+/*     padding-left: 0; */
+/*   } */
+/* } */
 
 /* LISTS */
 

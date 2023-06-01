@@ -8,10 +8,11 @@ categories:
 type: "math/notes/topic"
 ---
 
-I am currently (Spring 2023) taking Galois Theory at my university. I kind of suck very hard at this but I'm slowly getting the hang of it. (I hope this helps me get a bit more of a grip.) For this reason it will be written assuming no field theory (obviously, I guess) and will be explaining most everything that I am even slightly confused by. To not interrupt the material as much, I will put these somewhat confused explanations into a labelled "Aside" subsection. Just a heads up. {{%nl%}}
+<!-- Maybe make these galois notes eventually follow some historical overview of his life rather than these disjointed joke titles. I think that'd be very cool -->
+I am currently (Spring 2023) taking Galois Theory at my university. I kind of suck very hard at this but I'm slowly getting the hang of it. (I hope this helps me get a bit more of a grip.) For this reason these notes will be written assuming no field theory (obviously, I guess) and will be explaining most everything that I am even slightly confused by. To not interrupt the material as much, I will put these somewhat confused explanations into a labelled "Aside" section at the bottom of each post. (These "Asides" are just for the very confused, so if the questions I pose confuses you it might be worth reading. Otherwise, feel free to skip past them.) {{%nl%}}
 
 ## Pre-requisites
-I'd recommend knowing/reviewing group theory, some ring theory, and linear algebra for this series of notes. In particular, we will need some properties of rings and polynomial rings throughout, the definition of dimension, span, linear maps, etc. for the first bit, and then group theory for the actual Galois Theory stuff.
+I'd recommend knowing/reviewing group theory, some ring theory, and linear algebra for this series of notes. In particular, we will need some properties of rings and polynomial rings throughout, the definition of dimension, span, linear maps, etc. for the first bit, and then group theory for the actual Galois Theory stuff (I think).
 
 ## References
 I am using Dummit & Foote's _Abstract Algebra_ (3rd edition) as my main/only reference. I really enjoy how they discuss the material and the examples, so I am taking the structure of the subject/material from them. I do this also because I don't know enough myself to write a coherent narrative of what happens and why in field theory... yet.

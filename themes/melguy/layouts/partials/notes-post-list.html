@@ -1,0 +1,5 @@
+<ol>
+{{ range .RegularPagesRecursive.ByPublishDate }}
+  <li><h4><a href="{{ .Permalink }}" style="text-decoration: none">{{ .Title }}</a></h4>
+{{ end }}
+</ol>

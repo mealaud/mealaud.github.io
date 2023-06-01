@@ -8,7 +8,8 @@
   </header>
   {{ .Content }}
 
-  {{ partial "recentposts.html" . }}
+  <h3 style="text-align: center">Posts</h3>
+  {{ partial "notes-post-list.html" . }}
 {{ end }}
 
 {{ define "footer" }}

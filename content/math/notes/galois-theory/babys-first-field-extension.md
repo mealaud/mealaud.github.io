@@ -7,6 +7,8 @@ tags:
 categories: 
 ---
 
+## Preliminaries
+
 We start by defining what a field is.{{%nl%}}
 
 {{% MathEnv "defn" %}}
@@ -104,7 +106,7 @@ $ F$ is sometimes called the {{% tdf "base field" %}}.
 {{% /MathEnv %}}
 
 
-But how can we quantify how much our extension "extends" our base field? It turns out, as one might expect, that an extension corresponds to a vector space (over the base field)! Indeed, if $ K / F$, $ K$ forms an $ F$-vector-space. This gives us a nifty way to define how "extend-y" an extension is.
+But how can we quantify how much our extension "extends" our base field? It turns out, as one might expect, that an extension can be viewed as a vector space (over the base field)! Indeed, if $ K / F$, $ K$ forms an $ F$-vector-space. This gives us a nifty way to define how "extend-y" an extension is.
 
 {{% MathEnv "defn" %}}
 The {{% tdf "degree" %}} or {{% tdf "index" %}} of a field extension $ K /F$, denoted $ [K:F]$, is the dimension of $ K$ as a vector space over $ F$. (i.e., $ [K:F] = \operatorname{dim}_F(K)$). If $ [K:F]$ is finite, we say the extension is {{% tdf "finite" %}}  and the extension is {{% tdf "infinite" %}} otherwise.
@@ -132,7 +134,7 @@ Let $F$ be a field and $ p(t) \in F[t]$ an irreducible polynomal of degree $ n$.
 {{% Proof %}}
 First since $ F[t]$ is a Euclidean Domain, it is a PID, so prime ideals are maximal, so quotients by prime ideals are fields. Thus since $ F[t]$ is a Unique Factorization Domain (UFD), $ (p(t))$ is a prime ideal (and hence maximal) so that $ K = F[t]/(p(t))$ is indeed a field. {{%nl%}}{{%nl%}}
 
-What remains to be shown is that $ [K:F] = n$. Since $ \left \\{ 1,t,\ldots \right \\} $ is an $ F$-basis of $ F[x]$ , 
+What remains to be shown is that $ [K:F] = n$. Since $ \left \\{ 1,t,\ldots \right \\} $ is an $ F$-basis of $ F[t]$, 
 $$
     \left \\{ 1+(p(t)), t+(p(t)),\ldots \right \\} = \left \\{ 1+(p(t)), t+(p(t)),\ldots, t^{n-1}+(p(t)) \right \\} \eqqcolon \beta
 $$
