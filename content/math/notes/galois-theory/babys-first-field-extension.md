@@ -1,7 +1,7 @@
 ---
 title: "Baby's First Field Extension"
 date: 2023-05-29T13:42:29-07:00
-draft: true
+draft: false
 math: true
 tags: 
 categories: 
@@ -96,7 +96,7 @@ Note that there are _subfields_ of fields! For example, $ \mathbb{Q}$ is a subfi
 {{% MathEnv "defn" %}}
 If $ K$ is a field containing the subfield $ F$, then $ K$ is said to be an {{% tdf "extension" %}} of $ F$, denoted $ K/F$ (read: "$ K$ over $ F$") or by the diagram 
 $$
-    bruh put the figure :skull: incscape moment
+    \mathbf{MAKE-TOWER-DIAGRAM}
 $$
 {{% /MathEnv %}}
 {{% MathEnv "rem" %}}
@@ -110,28 +110,6 @@ But how can we quantify how much our extension "extends" our base field? It turn
 The {{% tdf "degree" %}} or {{% tdf "index" %}} of a field extension $ K /F$, denoted $ [K:F]$, is the dimension of $ K$ as a vector space over $ F$. (i.e., $ [K:F] = \operatorname{dim}_F(K)$). If $ [K:F]$ is finite, we say the extension is {{% tdf "finite" %}}  and the extension is {{% tdf "infinite" %}} otherwise.
 {{% /MathEnv %}}
 
-#### Aside: Why is the definition of degree any good?
-
-When I first approached these ideas I wasn't really sure I was understanding why the definition of the degree of an extension was good. More precisely, it was not obvious to me that any two isomorphic fields would have the same degree over isomorphic base fields. That's why I go through all of this rigmarole.
-
-{{% MathEnv "prop" %}}
-If $ K_1, K_2$ both extend a base field $ F$ and are isomorphic, then $ [K_1 : F] = [K_2 : F]$. 
-{{% /MathEnv %}}
-
-{{% Proof %}}
-It suffices to show that $ K_1$ and $ K_2$ are isomorphic as $ F$-vector spaces. Let $ \alpha, \beta$ be bases of $ K_1$ and $ K_2$ as $ F$-vector spaces. Moreover, let $ \phi \colon K_1 \to K_2$ be a field isomorphism. Then define $ T \colon \alpha \to \beta$ with $ T(a) \coloneqq \phi(\alpha)$. We may then extend $ T$ to $ \widetilde{T} \colon K_1 \to K_2$. 
-
-We now show injectivity. If $ K_1 \ni v = c_1 a_1 +\cdots + c_n a_n$ (for $ \left \\{ a_1,\ldots,a_n \right \\} \subseteq \alpha$),  
-$$\begin{align*}
-    v \in \operatorname{ker}(\widetilde{T}) &\iff \widetilde{T}(v) = 0 \\\\
-    &\iff c_1 \widetilde{T}(a_1) + \cdots + c_n \widetilde{T}(a_n) = 0 \\\\
-    &\implies c_i = 0 \text{ for all } i \text{ by linear independence of } \beta \\\\
-    &\implies v=0
-\end{align*}$$
-Thus $ \widetilde{T}$ is injective. 
-
-What remains to be shown is surjectivity. Suppose $ u \in K_2$. Then $ \phi^{-1} \in K_1$ and hence $ \widetilde{T}(\phi^{-1}(u)) = u$. Thus $ \widetilde{T}$ is surjective and is hence a bijective linear map--an isomorphism. Therefore $ K_1 \cong K_2$ as $ F$-vector spaces and $ [K_1:F]= \operatorname{dim}_F(K_1) = \operatorname{dim}_F(K_2)=[K_2:F]$ as desired.
-{{% /Proof %}}
 
 ### Quotienting by Polynomials
 
@@ -178,3 +156,30 @@ forms a basis of $ K$ as an $ F$-vector space.
 {{% /MathEnv %}}
 
 This fact that we now have a field extension of degree $ n$ means that we can have finite fields that aren't just prime-ordered: we can have powers of primes! We'll talk more about this in a later installment on splitting fields.
+
+---
+
+### Asides
+
+#### Why is the definition of degree any good?
+
+When I first approached these ideas I wasn't really sure I was understanding why the definition of the degree of an extension was good. More precisely, it was not obvious to me that any two isomorphic fields would have the same degree over isomorphic base fields. That's why I go through all of this rigmarole.
+
+{{% MathEnv "prop" %}}
+If $ K_1, K_2$ both extend a base field $ F$ and are isomorphic, then $ [K_1 : F] = [K_2 : F]$. 
+{{% /MathEnv %}}
+
+{{% Proof %}}
+It suffices to show that $ K_1$ and $ K_2$ are isomorphic as $ F$-vector spaces. Let $ \alpha, \beta$ be bases of $ K_1$ and $ K_2$ as $ F$-vector spaces. Moreover, let $ \phi \colon K_1 \to K_2$ be a field isomorphism. Then define $ T \colon \alpha \to \beta$ with $ T(a) \coloneqq \phi(\alpha)$. We may then extend $ T$ to $ \widetilde{T} \colon K_1 \to K_2$. 
+
+We now show injectivity. If $ K_1 \ni v = c_1 a_1 +\cdots + c_n a_n$ (for $ \left \\{ a_1,\ldots,a_n \right \\} \subseteq \alpha$),  
+$$\begin{align*}
+    v \in \operatorname{ker}(\widetilde{T}) &\iff \widetilde{T}(v) = 0 \\\\
+    &\iff c_1 \widetilde{T}(a_1) + \cdots + c_n \widetilde{T}(a_n) = 0 \\\\
+    &\implies c_i = 0 \text{ for all } i \text{ by linear independence of } \beta \\\\
+    &\implies v=0
+\end{align*}$$
+Thus $ \widetilde{T}$ is injective. 
+
+What remains to be shown is surjectivity. Suppose $ u \in K_2$. Then $ \phi^{-1} \in K_1$ and hence $ \widetilde{T}(\phi^{-1}(u)) = u$. Thus $ \widetilde{T}$ is surjective and is hence a bijective linear map--an isomorphism. Therefore $ K_1 \cong K_2$ as $ F$-vector spaces and $ [K_1:F]= \operatorname{dim}_F(K_1) = \operatorname{dim}_F(K_2)=[K_2:F]$ as desired.
+{{% /Proof %}}
