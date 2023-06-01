@@ -1,0 +1,25 @@
+{{ $numpages := .RegularPagesRecursive | len }}
+{{ if (ne $numpages 0) }}
+<h2 style="text-align: center;">Recent Posts</h2>
+<div id="tile-group">
+{{ $counter := 0 }}
+{{ range (.Paginate ( first 3 .RegularPagesRecursive.ByPublishDate.Reverse )).Pages }}
+  {{ $tileCounter := mod $counter 3}}
+  {{ if ( eq $tileCounter 0 ) }}
+  <div id="content-tile" style="margin-right: 1%;">
+    {{ partial "content-of-tile.html" . }}
+  </div>    
+  {{ else if ( eq $tileCounter 1 ) }}
+  <div id="content-tile" style="margin-right: 1%; margin-left: 1%;">
+    {{ partial "content-of-tile.html" . }}
+  </div>    
+  {{ else if ( eq $tileCounter 2 ) }}
+  <div id="content-tile" style="margin-left: 1%;">
+    {{ partial "content-of-tile.html" . }}
+  </div>    
+  {{ else }} {{ end }}
+  {{ $counter = add $counter 1}}
+{{ end }}
+</div>
+{{ end }}
+

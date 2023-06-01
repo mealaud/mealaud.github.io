@@ -177,4 +177,4 @@ $$
 forms a basis of $ K$ as an $ F$-vector space.
 {{% /MathEnv %}}
 
-This fact that we now have a field extension of degree $ n$ means that we can have finite fields that aren't just prime-ordered: we can have powers of primes! We'll talk more about this in the next installment, **Splitting Fields**!
+This fact that we now have a field extension of degree $ n$ means that we can have finite fields that aren't just prime-ordered: we can have powers of primes! We'll talk more about this in a later installment on splitting fields.

@@ -1,9 +1,13 @@
 baseURL = 'http://mealaud.com/'
 languageCode = 'en-us'
 title = 'mealaud.com'
-theme = 'hugo-starter-theme'
+theme = 'melguy'
 
 [markup]
+  [markup.tableOfContents]
+    ordered = true
+    startlevel = 1
+    endlevel = 3
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true

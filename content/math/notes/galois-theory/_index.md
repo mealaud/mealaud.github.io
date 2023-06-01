@@ -5,6 +5,7 @@ draft: false
 math: false
 tags: ["notes", "galois theory", "field theory", "abstract algebra"]
 categories: 
+type: "math/notes/topic"
 ---
 
 I am currently (Spring 2023) taking Galois Theory at my university. I kind of suck very hard at this but I'm slowly getting the hang of it. (I hope this helps me get a bit more of a grip.) For this reason it will be written assuming no field theory (obviously, I guess) and will be explaining most everything that I am even slightly confused by. To not interrupt the material as much, I will put these somewhat confused explanations into a labelled "Aside" subsection. Just a heads up. {{%nl%}}

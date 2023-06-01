@@ -5,6 +5,7 @@ draft: false
 math: false
 tags: 
 categories: 
+type: "math/notes"
 ---
 
 This is where my notes go. 
