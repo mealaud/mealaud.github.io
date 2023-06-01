@@ -40,15 +40,7 @@ Now to blow your (read: my) mind a lot more, notice that $ \mathbb{R}(i) \cong \
 $$
    \mathbb{R}(-i) \cong \frac{ \mathbb{R}[t] }{ (t^2+1) } \cong \mathbb{R}(i).
 $$      
-This helps illustrate that when we quotient by a (irreducible) polynomial, we are actually just adjoining a root to our field! Indeed, we can make this observation rigorous. :) First however, we state and prove a helpful little lemma.
-
-{{% MathEnv "lem" %}}
-Let $ \phi \colon F \to F'$ by a homomorphism of fields. Then $ \operatorname{ker}(\phi)$ is either injective or identically $ 0$.
-{{% /MathEnv %}}
-{{% Proof %}}
-Recall that $ \operatorname{ker}(\phi)$ is an ideal of $ F$. Then since the only ideals of a field are $ \left \\{ 0 \right \\} $ and itself, the kernel is either $ \left \\{ 0 \right \\} $ or all of $ F$. Thus we are done.
-{{% /Proof %}}
-
+This helps illustrate that when we quotient by a (irreducible) polynomial, we are actually just adjoining a root (in fact, any root of our irreducible) to our field! Indeed, we can make this observation rigorous. :)
 
 {{% MathEnv "thm" %}}
 Let $ F$ be a field and let $ p(t) \in F[t]$ be an irreducible polynomial. Suppose $ K$ is an extension of $ F$ containing a root $ \alpha$ of $ p(t)$: $ p(\alpha)=0$. Then: 
@@ -58,5 +50,64 @@ $$
 {{% /MathEnv %}}
 
 {{% Proof %}}
-We prove this statement using the First Isomorphism Theorem. Let $ \phi \colon F[t] \to F(\alpha)$ defined by $ F[t] \ni f(t) \mapsto f(\alpha) \in F(\alpha)$. (Essentially we consider an evaluation map.) By hypothesis $ p(\alpha) = 0$, so $ p(t) \in \operatorname{ker}(\phi)$ so by our above lemma, $ \operatorname{ker}(\phi) = F[t]$
+We prove this statement using the First Isomorphism Theorem. Let $ \phi \colon F[t] \to F(\alpha)$ defined by $ F[t] \ni f(t) \mapsto f(\alpha) \in F(\alpha)$. (Essentially we consider an evaluation map.) By hypothesis $ p(\alpha) = 0$, so $ p(t) \in \operatorname{ker}(\phi)$ so $ (p(t)) \subseteq \operatorname{ker}(\phi)$ and since $ p(t)$ is irreducible and $ F[t]$ is a PID, $ (p(t))$ is maximal, so $ \operatorname{ker}(\phi) = (p(t))$. Then by the First Isomorphism Theorem, there is a map $ \psi \colon F[t]/((p(t)) \to \operatorname{im}(\psi) $ that witnesses this isomorphism. Now, since $ \operatorname{im}(\psi)$ is an ideal of $ F(\alpha)$, $ F(\alpha)$ has no nontrivial ideals (as it is a field), and $ 1 \in \operatorname{im}(\psi)$, it necessarily follows that $ \operatorname{im}(\psi) = F(\alpha)$. Thus 
+$$
+   \frac{ F[t] }{ (p(t)) } \cong F(\alpha)
+$$
+as desired.
 {{% /Proof %}}
+{{% MathEnv "rem" %}}
+Notice that we didn't specify which root of $ p(t)$ was being adjoined. Thus we have shown that quotienting by an irreducible polynomial is the same as adjoining all of its roots. This will be of great importance soon enough.
+{{% /MathEnv %}}
+
+## Algebraic extensions
+
+Before hearing about algebraic numbers, you likely heard of "transcendental numbers" like $ \pi$ and $ e$. You might have also heard that these numbers are "not being the root of any polynomial over $ \mathbb{Q}$". Indeed, not only does this generalize to any field, but we are often more interested in its dual: an algebraic number/element. As you would expect, an algebraic number _is_ the root of a polynomial.
+
+{{% MathEnv "defn" %}}
+If $ K/F$, $ \alpha \in K$ is said to be {{% tdf "algebraic over $ F$" %}} if $ \alpha$ is a root of some nonzero polynomial $ f(t) \in F[t]$. If $ \alpha$ is not algebraic (i.e., not the root of any nonzero polynomial with coefficients in $ F$) then $ \alpha$ is a said to be {{% tdf "transcendental over $ F$" %}}.
+{{% /MathEnv %}}
+
+In light of this definition of algebraic elements, we now define an _algebraic extension_. 
+
+{{% MathEnv "defn" %}}
+An extension $ K/F$ is said to be {{% tdf "algebraic" %}} if every element of $ K$ is algebraic over $ F$.            
+{{% /MathEnv %}}
+
+{{% MathEnv "rem" %}}
+Notice that if you are algebraic over the base field, you are algebraic over any extension. (This is because you are the root of a polynomial with coefficients in $ F$ and extensions of $ F$ necessarily contain $ F$.)
+{{% /MathEnv %}}
+
+## Minimal polynomials
+
+Recall from Theorem 4 earlier in this post that if $ F$ is a field, $ p(t) \in F[t]$ is irreducible, and if $ K$ is an extension of $ F$ containing a root $ \alpha$ of $ p(t)$, then $ F[t]/(p(t)) \cong F(\alpha)$. In particular, if we translate this theorem in our newly learned language of algebraicity we get that: adjoining an algebraic element to a field is isomorphic to quotienting by a polynomial that witnesses its algebraicity. Let's study this "witness polynomial" for a bit. 
+
+This $ p(t)$ is said to be irreducible with $ \alpha$ as a root. What can we say about such an object? 
+- Since its irreducible over $ F[t]$, we can assume that $ p(t)$ is monic (i.e., its leading coefficient is $ 1$) as otherwise we could multiply it by a constant without changing the roots (hence reducing the polynomial).  
+- If we consider our map (to which we applied the First Isomorphism Theorem in the proof of Theorem 4) $ \phi \colon F[t] \to F(\alpha)$, if $ f(t) \in F[t]$ has $ \alpha$ as a root, then $ f(t) \in \operatorname{ker}(\phi) = (p(t))$. Hence $ p(t) \mid f(t)$. 
+
+We call such a $ p(t)$ a _minimal polynomial_ as we can't factor it anymore and any other polynomial that has $ \alpha$ as a root is divisible by $ p(t)$. We state this result now (though we have only sketched the proof and will not give it in full detail):
+
+{{% MathEnv "prop" %}}
+Let $ \alpha$ be algebraic over a field $ F$. Then there is a unique monic irreducible polynomial $ m_F(\alpha)(t) \in F[t]$ which has $ \alpha$ as a root. Moreover, a polynomial $ f(t) \in F[t]$ has $ \alpha$ as a root if and only if $ m_F(\alpha) \mid f$ in $ F[t]$.
+{{% /MathEnv %}}
+
+We also get the following corollary.
+
+{{% MathEnv "coro" %}}
+If $ L/F$ is an extension of fields and $ \alpha$ is algebraic over both $ F$ and $ L$, then $ m_L(\alpha) \mid m_F(\alpha)$.
+{{% /MathEnv %}}
+{{% Proof %}}
+Noticing that $ F \subseteq L$, it becomes clear that $ m_F(\alpha) \in L[t]$ and hence, by definition of the minimal polynomial, $ m_L(\alpha) \mid m_F(\alpha)$ as desired.
+{{% /Proof %}}
+
+Just for completeness we state the definition of the minimal polynomial.
+{{% MathEnv "defn" %}}
+The polynomial $ m_F(\alpha)$ in Proposition 9 is called he {{% tdf "minimal polynomial for $ \alpha$ over $ F$" %}} . The degree of $ m_F(\alpha)$ is called the {{% tdf "degree of $ \alpha$" %}}.
+{{% /MathEnv %}}
+
+
+
+
+
+## Algebraic extensions continued

@@ -11,11 +11,12 @@ p {
   border-left: 5px solid #282828;
   padding-left: 10px;
   padding-right: 10px;
-  padding-bottom: 0px;
-  /* padding-top: 2em; */
-  /* margin-top: 10em; */
+  padding-bottom: 10px;
+  padding-top: 10px;
   color: inherit;
   margin-bottom: 10px;
+  margin-top: 10px;
+  
 } .math-env:before {
     counter-increment: math-count;
     color: inherit;
@@ -87,6 +88,12 @@ p {
 .math-ex {
   background-color: var(--example-background);
   border: 4px dashed var(--example-border);
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  margin-bottom: 10px;
+  margin-top: 10px;
 } .math-ex:before {
   /* counter-increment: math-count; */
   color: var(--example-border);
@@ -107,10 +114,10 @@ p {
 
 /* proof */
 .math-pf {
-  display: inline;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  /* margin-left: 2em; */
+  padding-left: 5%;
+  padding-right: 5%;
+  /* margin-top: 10px; */
+  margin-bottom: 1em;
 } .math-pf:before {
   font-weight: bold;
   content: "Proof. "
