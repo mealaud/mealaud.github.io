@@ -1,6 +1,6 @@
 baseURL = 'http://mealaud.com/'
 languageCode = 'en-us'
-title = 'mealaud.com'
+title = 'mel-land'
 theme = 'melguy'
 
 [markup]
@@ -32,4 +32,9 @@ theme = 'melguy'
         identifier = "misc"
         name = "misc"
         url = "/misc/"
-        weight = 2
+        weight = 3
+    [[menu.main]]
+        identifier = "journal"
+        name = "journal"
+        url= "/journal/"
+        weight = 4

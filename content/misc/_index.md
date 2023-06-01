@@ -7,7 +7,7 @@ tags:
 categories: 
 ---
 
-Thing will be here eventually! For now you may look at gort. :) {{%lb%}}
+Things will be here eventually! For now you may look at gort. :)
 
 {{% ImgSrcInput "gort.png" "100%" %}}
 

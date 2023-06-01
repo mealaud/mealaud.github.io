@@ -8,6 +8,13 @@ body {
   color: #333;
   line-height: 1.5;
   max-width: 95vw;
+  /* min-height: 100vh; */
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  margin-top: auto;
 }
 
 p {
