@@ -23,8 +23,8 @@ categories:
 [ ] <Jun. 4> Resubmit Differential Forms homework 3 {{%nl%}}
 [ ] <Jun. 7> Complex Analysis homework due {{%nl%}}
 
-## Thoughts
-- Replace
-
-## Things to think about
-- Replace
+<!-- ## Thoughts -->
+<!-- - Replace -->
+<!---->
+<!-- ## Things to think about -->
+<!-- - Replace -->
