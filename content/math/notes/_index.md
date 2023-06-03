@@ -8,5 +8,5 @@ categories:
 type: "math/notes"
 ---
 
-This is where my notes go. 
+I will lead those more confused than I to where I am: a place slightly less confused than the place before I wrote these notes.
 

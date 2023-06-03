@@ -9,6 +9,6 @@ categories:
 
 Things will be here eventually! For now you may look at gort. :){{%nl%}}{{%nl%}}
 
-{{% ImgSrcInput "gort.png" "100%" %}}
-
+{{% figure "gort.png" "100%" %}}
 I freaking love gort.
+{{% /figure %}}

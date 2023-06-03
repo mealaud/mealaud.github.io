@@ -4,9 +4,11 @@ date: 2023-05-18T10:39:06-07:00
 draft: false
 ---
 
-{{% Headshot %}}
+{{% figure "headshot.jpg" "70%" %}}
+me!
+{{% /figure %}}
 
-Hello! My name is Mealaud Mokhtarzad but I usually go by Mel. I’m a pure math major at UCLA (class of ’24). My interests include and are usually limited to: math, rock skipping, and clouds. If you need to contact me, [m.mokhtarzad at ucla dot edu]() is usually a good way to reach me---I check it daily.
+Hello! My name is Mealaud Mokhtarzad but I usually go by Mel. I’m a pure math major at UCLA (class of ’24). My interests include and are usually limited to: math, rock skipping, clouds, and writing. If you need to contact me, [m.mokhtarzad at ucla dot edu]() is usually a good way to reach me.
 
 ## Cool People
 
@@ -18,4 +20,4 @@ Hello! My name is Mealaud Mokhtarzad but I usually go by Mel. I’m a pure math 
 
 * [Logang Bigslap](https://loganhyslop.github.io/) - Logan is mega cool and mega cracked. We met his freshman year (my sorta junior year). He actually does math (good stuff at that). B)
 
-* [Andrea Borkhermerfererger](https://www.math.lsu.edu/~abour99/) - Andrea is a big ol' math nerd and are very cool, but never talk to them after they've had mac'n'cheese. _shudders_
+* [Andrea Borkhermerfererger](https://www.math.lsu.edu/~abour99/) - Andrea is a big ol' math nerd and is very cool, but never talk to them after they've had mac'n'cheese. _shudders_
