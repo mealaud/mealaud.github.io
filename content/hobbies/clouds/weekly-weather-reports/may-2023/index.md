@@ -8,7 +8,7 @@ categories:
 ---
 
 {{% figure "IMG_1594.png" "100%" %}}
-Westwood Boulevard might have blocked some of the sky but what remained was pretty dark nice. :)
+Westwood Boulevard might have blocked some of the sky but what remained was pretty darn nice. :)
 {{% /figure %}}
 
 {{% figure "IMG_1597.png" "100%" %}}

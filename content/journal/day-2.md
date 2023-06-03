@@ -17,9 +17,10 @@ categories:
 ### Future (by date)
 {{% /center-text %}}
 [ ] <Jun. 3> Prep for Complex Analyis midterm on Monday!{{%nl%}}
-[ ] <Jun. 7> Look at Complex Analysis homework {{%nl%}}
-[ ] <Jun. 8> Resubmit Differential Forms homework 2 {{%nl%}}
-[ ] <Jun. 8> Resubmit Differential Forms homework 3 {{%nl%}}
+[ ] <Jun. 4> Do Complex Analysis homework {{%nl%}}
+[ ] <Jun. 4> Resubmit Differential Forms homework 2 {{%nl%}}
+[ ] <Jun. 4> Resubmit Differential Forms homework 3 {{%nl%}}
+[ ] <Jun. 7> Complex Analysis homework due {{%nl%}}
 
 ## Thoughts
 - Today was also very overwhelming. I don't know if I can do it, but I know I have to at least try, so I'm going to keep trying. 

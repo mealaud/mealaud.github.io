@@ -12,8 +12,9 @@ categories:
 ### Today
 {{% /center-text %}}
 [ ] Replace
+
 {{% center-text %}}
-### Future (by date)
+### Future & Deadlines
 {{% /center-text %}}
 [ ] <Date> Replace
 
