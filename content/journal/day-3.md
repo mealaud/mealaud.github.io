@@ -11,9 +11,9 @@ categories:
 {{% center-text %}}
 ### Today
 {{% /center-text %}}
-[ ] Study for Galois Theory {{%nl%}}
+[X] Study for Galois Theory {{%nl%}}
 [ ] Prep for Complex Analyis midterm on Monday!{{%nl%}}
-[ ] Go to friend's play (Great week to be a Jacob fan!)
+[X] Go to friend's play (Great week to be a Jacob fan!)
 
 {{% center-text %}}
 ### Future & Deadlines

@@ -8,5 +8,5 @@ categories:
 type: "math/notes"
 ---
 
-I will lead those more confused than I to where I am: a place slightly less confused than the place before I wrote these notes.
+If you've come here you're either blind or curious (or both). Both are welcome. :3c
 
