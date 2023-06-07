@@ -5,6 +5,8 @@ draft: false
 math: true
 tags: 
 categories: 
+type: "math/notes/topic"
+partOfText: ["Field Theory"]
 ---
 
 ## Generating extensions using elements

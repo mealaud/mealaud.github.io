@@ -8,11 +8,12 @@
   </header>
   {{ .Content }}
 
-  <h3 style="text-align: center">Posts</h3>
-  {{ partial "notes-post-list.html" . }}
+  <h2>Table of Contents</h2>
+  {{ partial "toc.html" . }}
 {{ end }}
 
 {{ define "footer" }}
   {{ partial "footer.html" . }}
 {{ end }}
+
 

@@ -6,8 +6,8 @@ theme = 'melguy'
 [markup]
   [markup.tableOfContents]
     ordered = true
-    startlevel = 1
-    endlevel = 3
+    startlevel = 2
+    endlevel = 2
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true

@@ -5,6 +5,7 @@ draft: false
 math: true
 tags: 
 categories: 
+partOfText: ["Field Theory"]
 ---
 
 ## Preliminaries
@@ -113,7 +114,7 @@ The {{% tdf "degree" %}} or {{% tdf "index" %}} of a field extension $ K /F$, de
 {{% /MathEnv %}}
 
 
-### Quotienting by Polynomials
+## Quotienting by Polynomials
 
 One thing I remember being mentioned in one of my (5?) complex analysis classes during my undergrad career was that 
 $$
@@ -161,7 +162,7 @@ This fact that we now have a field extension of degree $ n$ means that we can ha
 
 ---
 
-### Asides
+## Asides
 
 #### Why is the definition of degree any good?
 
