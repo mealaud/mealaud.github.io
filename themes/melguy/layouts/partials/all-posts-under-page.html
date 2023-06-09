@@ -1,0 +1,7 @@
+<ul>
+{{ range .RegularPagesRecursive.ByPublishDate.Reverse }}
+<li>
+  <a href="{{ .Permalink }}" style="text-decoration: none">{{ .Title }}</a>
+</li>
+{{ end }}
+</ul>

@@ -4,9 +4,12 @@
 
 {{ define "main" }}
   <header>
-    <h1>{{ .Title }}<span style="opacity: 0.5; font-size: 0.5em">    {{ .PublishDate.Format "Monday, January 2, 2006" }}</span></h1>
+    <h1>{{ .Title }}</h1>
   </header>
   {{ .Content }}
+
+  <!-- {{ partial "calendar.html" . }} -->
+  {{ partial "all-posts-under-page.html" . }}
 {{ end }}
 
 {{ define "footer" }}

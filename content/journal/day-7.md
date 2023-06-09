@@ -12,7 +12,7 @@ categories:
 ### Today
 {{% /center-text %}}
 [X] Study for Galois Theory {{%nl%}}
-[ ] Work on Complex Analysis Homework {{%nl%}}
+[X] Work on Complex Analysis Homework {{%nl%}}
 [ ] Work on Differential Forms Homework 4 {{%nl%}}
 [ ] Practice Persian poem and grammar/vocab
 
