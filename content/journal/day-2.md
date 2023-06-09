@@ -8,14 +8,10 @@ categories:
 ---
 
 ## To-do
-{{% center-text %}}
 ### Today
-{{% /center-text %}}
 [ ] Study for Galois Theory {{%nl%}}
 [X] Get swiffer, brita, kettle, etc. for apartment
-{{% center-text %}}
 ### Future (by date)
-{{% /center-text %}}
 [ ] <Jun. 3> Prep for Complex Analyis midterm on Monday!{{%nl%}}
 [ ] <Jun. 4> Do Complex Analysis homework {{%nl%}}
 [ ] <Jun. 4> Resubmit Differential Forms homework 2 {{%nl%}}

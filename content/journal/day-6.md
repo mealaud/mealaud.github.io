@@ -8,17 +8,13 @@ categories:
 ---
 
 ## To-do
-{{% center-text %}}
 ### Today
-{{% /center-text %}}
 [ ] Study for Galois Theory - Work on notes/doing problems {{%nl%}}
 [X] Work on Complex Analysis Homework {{%nl%}}
 [ ] Work on Differential Forms Homework 4 {{%nl%}}
 [ ] Practice Persian poem and grammar/vocab
 
-{{% center-text %}}
 ### Future & Deadlines
-{{% /center-text %}}
 [ ] <ASAP> Resubmit Differential Forms Homework 2 {{%nl%}}
 [ ] <ASAP> Resubmit Differential Forms Homework 3 {{%nl%}}
 [ ] <Wed., Jun. 7> Complex Analysis Homework due {{%nl%}}

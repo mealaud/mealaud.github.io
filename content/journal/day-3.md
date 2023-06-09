@@ -8,16 +8,12 @@ categories:
 ---
 
 ## To-do
-{{% center-text %}}
 ### Today
-{{% /center-text %}}
 [X] Study for Galois Theory {{%nl%}}
 [ ] Prep for Complex Analyis midterm on Monday!{{%nl%}}
 [X] Go to friend's play (Great week to be a Jacob fan!)
 
-{{% center-text %}}
 ### Future & Deadlines
-{{% /center-text %}}
 [ ] <Jun. 4> Do Complex Analysis homework {{%nl%}}
 [ ] <Jun. 4> Resubmit Differential Forms homework 2 {{%nl%}}
 [ ] <Jun. 4> Resubmit Differential Forms homework 3 {{%nl%}}
