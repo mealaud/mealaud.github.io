@@ -18,7 +18,7 @@ I forget what I enjoyed and what I despised. I forget what I loved and what I fe
 
 How can I be burdened if there is nothing I hold dear, if there is no responsibility, if there is no passion?{{%nl%}}{{%nl%}}
 
-Before I realize that I am in this enchanting fog, my world rolls off my shoulders—I have shrugged without knowing—and into the cold dark of the cosmos. There is nothing quite so painful as realizing you have not done all that you could.{{%nl%}}{{%nl%}}
+Before I realize that I am in this enchanting fog, my world rolls off my shoulders and into the cold dark of the cosmos — I have shrugged without knowing. There is nothing quite so painful as realizing you have not done all that you could.{{%nl%}}{{%nl%}}
 
 It falls further.{{%nl%}}{{%nl%}}
 
