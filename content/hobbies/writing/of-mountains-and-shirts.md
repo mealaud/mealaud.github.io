@@ -1,0 +1,15 @@
+---
+title: "Of Mountains and Shirts"
+date: 2023-06-09T11:43:00-07:00
+draft: false
+math: false
+tags: 
+categories: 
+---
+
+The mountain is immovable.{{%nl%}}
+It stands strongly despite all it endures.{{%nl%}}
+Its clothes may be ragged but it continues to do what it must.{{%nl%}}{{%nl%}}
+
+May I be a mountain.{{%nl%}}
+May my shirt have holes.
