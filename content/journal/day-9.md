@@ -10,15 +10,15 @@ categories:
 ## To-do
 ### Today
 [ ] Study for Galois Theory {{%nl%}}
-[ ] Work on Complex Analysis Homework {{%nl%}}
+[X] Work on Complex Analysis Homework {{%nl%}}
 [ ] Finish Differential Forms Homework 4 {{%nl%}}
-[ ] Study for Persian final! {{%nl%}}
+[X] Study for Persian final! {{%nl%}}
 
 ### Future & Deadlines
 [ ] {ASAP} Resubmit Differential Forms Homework 2 {{%nl%}}
 [ ] {ASAP} Resubmit Differential Forms Homework 3 {{%nl%}}
-[ ] {TODAY} Persian final {{%nl%}}
-[ ] {TONIGHT} Complex Analysis Homework due {{%nl%}}
+[X] {TODAY} Persian final {{%nl%}}
+[X] {TONIGHT} Complex Analysis Homework due {{%nl%}}
 [ ] {TONIGHT} Differential Forms Homework due {{%nl%}}
 [ ] {Sun., Jun. 11} Galois Theory 21-30 resubmission deadline {{%nl%}}
 [ ] {Mon., Jun. 12} Differential Forms final {{%nl%}}

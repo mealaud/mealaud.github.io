@@ -6,6 +6,7 @@ math: false
 tags: 
 categories: 
 ---
+*Originally written: May 24, 2023*{{%nl%}}{{%nl%}}
 
 The mountain is immovable.{{%nl%}}
 It stands strongly despite all it endures.{{%nl%}}

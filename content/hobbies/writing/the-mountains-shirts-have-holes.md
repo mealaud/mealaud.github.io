@@ -6,6 +6,7 @@ math: false
 tags: ["mountains", "shirts", "holes"]
 categories: ["writing", "poems"]
 ---
+*Originally written: circa Apr. 13, 2019*   {{%nl%}}{{%nl%}}
 
 The mountains rest.{{%nl%}}
 They sleep peacefully, happily, unstirringly night and day.{{%nl%}}

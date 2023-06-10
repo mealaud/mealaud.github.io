@@ -6,6 +6,7 @@ math: false
 tags: 
 categories: 
 ---
+*Originally written: Sep. 21, 2018*{{%nl%}}{{%nl%}}
 
 I feel the damp, soft grass push lightly against my back as I watch the puffy clouds transform above. I stare and I see a beautiful, fluffy, poorly drawn rabbit. He doesn’t seem to move much. {{%nl%}}{{%nl%}}
 
