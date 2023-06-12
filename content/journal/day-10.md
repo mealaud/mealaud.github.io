@@ -9,8 +9,8 @@ categories:
 
 ## To-do
 ### Today
-[ ] Study for Galois Theory {{%nl%}}
-[ ] Finish Differential Forms Homework 4 {{%nl%}}
+[X] Study for Galois Theory {{%nl%}}
+[X] Work on Differential Forms {{%nl%}}
 
 ### Future & Deadlines
 [ ] {ASAP} Resubmit Differential Forms Homework 2 {{%nl%}}
@@ -22,5 +22,5 @@ categories:
 [ ] {Thu., Jun. 15} Complex Analysis final {{%nl%}}
 
 ## Thoughts
-- Yesterday was really nice. :) I like their presence. :>
+- Yesterday was really nice. :> 
 
