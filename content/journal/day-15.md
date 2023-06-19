@@ -9,9 +9,9 @@ categories:
 
 ## To-do
 ### Today
-[ ] Work on Galois Theory {{%nl%}}
-[ ] {@ 11:30AM} Complex Analysis final {{%nl%}}
-[ ] Move stuff out of old apartment
+[X] Work on Galois Theory {{%nl%}}
+[X] {@ 11:30AM} Complex Analysis final {{%nl%}}
+[X] Move stuff out of old apartment
 
 ### Future & Deadlines
 [ ] {Fri., Jun. 16 @ 11:59PM} Galois Theory #31-40 {{%nl%}}
