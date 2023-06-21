@@ -8,15 +8,14 @@ categories:
 ---
 
 ## To-do
-{{% center-text %}}
 ### Today
-{{% /center-text %}}
 [ ] Replace
 
-{{% center-text %}}
+### Tomorrow
+[ ] Replace
+
 ### Future & Deadlines
-{{% /center-text %}}
-[ ] <Date> Replace
+[ ] {Date} Replace
 
 ## Thoughts
 - Replace

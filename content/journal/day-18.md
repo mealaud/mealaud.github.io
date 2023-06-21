@@ -9,8 +9,8 @@ categories:
 
 ## To-do
 ### Today
-[ ] Drive home! {{%nl%}} 
-[ ] Just enjoy your day back home. :) {{%nl%}}
+[X] Drive home! {{%nl%}} 
+[X] Just enjoy your day back home. :) {{%nl%}}
 
 ### Future & Deadlines
 [ ] Send honors counseling a message about the incomplete {{%nl%}}
