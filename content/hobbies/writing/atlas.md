@@ -1,13 +1,13 @@
 ---
 title: "Atlas"
-date: 2023-06-10T00:18:45-07:00
+date: 2022-09-08T00:18:45-07:00
 draft: false
 math: false
 tags: 
 categories: 
 ---
 
-*Originally written: Sep. 8, 2022*{{%nl%}}{{%nl%}}
+<!-- *Originally written: Sep. 8, 2022*{{%nl%}}{{%nl%}} -->
 
 I crumple.{{%nl%}}{{%nl%}}
 

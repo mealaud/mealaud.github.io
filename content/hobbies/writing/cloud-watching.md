@@ -1,12 +1,12 @@
 ---
 title: "Cloud Watching"
-date: 2023-06-08T23:32:21-07:00
+date: 2018-09-21T23:32:21-07:00
 draft: false
 math: false
 tags: 
 categories: 
 ---
-*Originally written: Sep. 21, 2018*{{%nl%}}{{%nl%}}
+<!-- *Originally written: Sep. 21, 2018*{{%nl%}}{{%nl%}} -->
 
 I feel the damp, soft grass push lightly against my back as I watch the puffy clouds transform above. I stare and I see a beautiful, fluffy, poorly drawn rabbit. He doesn’t seem to move much. {{%nl%}}{{%nl%}}
 

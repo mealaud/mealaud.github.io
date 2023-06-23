@@ -1,12 +1,12 @@
 ---
 title: "Dawn to Noon"
-date: 2023-06-10T00:17:32-07:00
+date: 2018-10-03T00:17:32-07:00
 draft: false
 math: false
 tags: 
 categories: 
 ---
-*Originally written: Oct. 3, 2018*{{%nl%}}{{%nl%}}
+<!-- *Originally written: Oct. 3, 2018*{{%nl%}}{{%nl%}} -->
 
 He rises. {{%nl%}}{{%nl%}}
 

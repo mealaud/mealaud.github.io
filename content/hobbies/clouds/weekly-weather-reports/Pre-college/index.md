@@ -1,6 +1,6 @@
 ---
 title: "Pre-College"
-date: 2023-06-03T00:22:47-07:00
+date: 2023-06-03T00:22:07-07:00
 draft: false
 math: false
 tags: 

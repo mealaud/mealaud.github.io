@@ -7,6 +7,8 @@ tags:
 categories: 
 ---
 
+<!-- *Originally written: Jun. 9, 2023*{{%nl%}}{{%nl%}} -->
+
 I close my eyes often. {{%nl%}}
 Beyond blinking I choose to close them to imagine what has been, is, and can be.{{%nl%}}{{%nl%}}
 

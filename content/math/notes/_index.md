@@ -1,5 +1,5 @@
 ---
-title: "The One-eyed Man Leads the Blind"
+title: "The one-eyed man leads the blind"
 date: 2023-05-29T12:17:28-07:00
 draft: false
 math: false

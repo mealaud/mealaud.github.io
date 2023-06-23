@@ -5,6 +5,7 @@ draft: false
 math: false
 tags: 
 categories: 
+type: "hobbies/writing"
 ---
 
 I really like writing (particularly, prose and poetry). Here's a collection of what I've written that I both like and feel comfortable sharing. :)

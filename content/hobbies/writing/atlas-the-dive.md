@@ -1,12 +1,12 @@
 ---
 title: "Atlas: The Dive"
-date: 2023-06-10T00:18:58-07:00
+date: 2023-01-02T00:18:58-07:00
 draft: false
 math: false
 tags: 
 categories: 
 ---
-*Originally written: Jan. 2, 2023*{{%nl%}}{{%nl%}}
+<!-- *Originally written: Jan. 2, 2023*{{%nl%}}{{%nl%}} -->
 
 I am unburdened.{{%nl%}}{{%nl%}}
 

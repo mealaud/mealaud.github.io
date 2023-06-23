@@ -1,13 +1,13 @@
 ---
 title: "The Tempest"
-date: 2023-06-10T00:13:30-07:00
+date: 2018-10-06T00:13:30-07:00
 draft: false
 math: false
 tags: 
 categories: 
 ---
 
-*Originally written: Oct. 6, 2018*{{%nl%}}{{%nl%}}
+<!-- *Originally written: Oct. 6, 2018*{{%nl%}}{{%nl%}} -->
 
 The tempest erupts once again and everything is re-enlivened. {{%nl%}}{{%nl%}}
 

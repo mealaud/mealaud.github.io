@@ -16,7 +16,7 @@ Hello! My name is Mealaud Mokhtarzad but I usually go by Mel. I’m a pure math 
 
 * Kelanu Ranganap – Kelanu is so cool! We met at our physics lab internship during the summer of 2021 and we’ve been great friends since then. I love this guy a lot. 
 
-* [Kyle Chud](https://github.com/kylechui) – I met the back of Kyle’s head during the summer going into my high school senior year when we took multivariable together at a local community college. We ended up taking another course together the coming fall where I meant the front of his head and found out he was a cool guy. He’s still really cool. He’s also rich and famous, so that’s a plus. Check out his Neovim plugin!
+* [King Chud](https://github.com/kylechui) – I met the back of Kyle’s head during the summer going into my high school senior year when we took multivariable together at a local community college. We ended up taking another course together the coming fall where I meant the front of his head and found out he was a cool guy. He’s still really cool. He’s also rich and famous, so that’s a plus. Check out his Neovim plugin!
 
 * [Logang Bigslap](https://loganhyslop.github.io/) - Logan is mega cool and mega cracked. We met his freshman year (my sorta junior year). He actually does math (good stuff at that). B)
 

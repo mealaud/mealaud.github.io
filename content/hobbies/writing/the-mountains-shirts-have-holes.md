@@ -1,12 +1,12 @@
 ---
 title: "The Mountains' Shirts Have Holes"
-date: 2023-05-28T23:50:26-07:00
+date: 2019-04-13T23:50:26-07:00
 draft: false
 math: false
 tags: ["mountains", "shirts", "holes"]
 categories: ["writing", "poems"]
 ---
-*Originally written: circa Apr. 13, 2019*   {{%nl%}}{{%nl%}}
+<!-- *Originally written: circa Apr. 13, 2019*   {{%nl%}}{{%nl%}} -->
 
 The mountains rest.{{%nl%}}
 They sleep peacefully, happily, unstirringly night and day.{{%nl%}}
