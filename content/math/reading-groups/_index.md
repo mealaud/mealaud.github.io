@@ -7,4 +7,4 @@ tags:
 categories: 
 ---
 
-
+This is where my reading groups go! I like doing reading groups because math is more fun with friends. :D The reading groups are below!

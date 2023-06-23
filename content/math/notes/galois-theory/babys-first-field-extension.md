@@ -3,8 +3,6 @@ title: "Baby's First Field Extension"
 date: 2023-05-29T13:42:29-07:00
 draft: false
 math: true
-tags: 
-categories: 
 partOfText: ["Field Theory"]
 ---
 
