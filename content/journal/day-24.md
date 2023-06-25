@@ -1,6 +1,6 @@
 ---
-title: "{{ replace .Name "-" " " | title }}"
-date: {{ .Date }}
+title: "Day 24"
+date: 2023-06-24T22:52:38-07:00
 draft: false
 math: false
 tags: 
@@ -15,17 +15,9 @@ categories:
 [ ] Read Grimmett for 5 minutes  {{%nl%}}
 [ ] Look at graduate school stuff for 5 minutes {{%nl%}}
 
-### Today
-[ ] Replace
-
 ### Tomorrow
-[ ] Replace
+[ ] Hang out with Gaurav and Charles! :) {{%nl%}}
+[ ] Write up current Folland solutions (#1, 6, 7) {{%nl%}}
 
 ### Future & Deadlines
-[ ] {Date} Replace
-
-## Thoughts
-- Replace
-
-## Things to think about
-- Replace
+[ ] {Sep. 2023} Apply for Masters Programs
