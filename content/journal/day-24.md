@@ -13,6 +13,7 @@ categories:
 [ ] Read *Make it Stick* for 5 minutes {{%nl%}}
 [ ] Read *Category Theory* for 5 minutes {{%nl%}}
 [ ] Read Grimmett for 5 minutes  {{%nl%}}
+[ ] Read Tao Complex for 5 minutes {{%nl%}}
 [ ] Look at graduate school stuff for 5 minutes {{%nl%}}
 
 ### Tomorrow
