@@ -1,6 +1,6 @@
 ---
-title: "Day 24"
-date: 2023-06-24T22:52:38-07:00
+title: "Day 26"
+date: 2023-06-26T20:59:38-07:00
 draft: false
 math: false
 tags: 
@@ -16,8 +16,10 @@ categories:
 [ ] Read Tao Complex for 5 minutes {{%nl%}}
 [ ] Look at graduate school stuff for 5 minutes {{%nl%}}
 
+### Today
+[X] Hang out with Dilara :)
+
 ### Tomorrow
-[X] Hang out with Gaurav and Charles! :) {{%nl%}}
 [ ] Write up current Folland solutions (#1, 6, 7) {{%nl%}}
 
 ### Future & Deadlines
