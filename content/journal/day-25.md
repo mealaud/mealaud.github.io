@@ -1,6 +1,6 @@
 ---
 title: "Day 25"
-date: 2023-06-26T20:59:34-07:00
+date: 2023-06-25T20:59:34-07:00
 draft: false
 math: false
 tags: 

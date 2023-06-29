@@ -11,10 +11,9 @@ categories:
 ### Dailies
 [ ] Read Folland for 5 minutes & try problems for 5 minutes {{%nl%}}
 [ ] Read *Make it Stick* for 5 minutes {{%nl%}}
-[ ] Read *Category Theory* for 5 minutes {{%nl%}}
-[ ] Read Grimmett for 5 minutes  {{%nl%}}
 [ ] Read Tao Complex for 5 minutes {{%nl%}}
-[ ] Look at graduate school stuff for 5 minutes {{%nl%}}
+[ ] Read *Twenty Thousand Leagues Under the Sea* for 5 minutes {{%nl%}}
+[ ] Look at graduate school stuff for 30 minutes
 
 ### Today
 [ ] Replace
