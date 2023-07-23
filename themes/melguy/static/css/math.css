@@ -127,4 +127,13 @@ p {
   float: right;
 }
 
+/* exercise */
+.math-x {
+  border: 4px dotted var(--example-border);
+} .math-x:before {
+  /* counter-increment: math-count; */
+  color: var(--example-border);
+  font-weight: bold;
+  content: "Exercise " counter(math-count) ". ";
+}
 

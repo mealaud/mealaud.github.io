@@ -32,7 +32,7 @@ daksdjlkdjs
 {{% /MathEnv %}}
 
 {{% Proof %}}
-daskjdlakjsd
+daskjdlakjsddsad
 {{% /Proof %}}
 
 {{% MathEnv "up"%}}
@@ -43,4 +43,7 @@ dlaksjdlakjsdj
 sdaklsjdlks
 {{% /MathEnv %}}
 
+{{% MathEnv "x" %}}
+dsadsdsaasdfsda
+{{% /MathEnv %}}
 

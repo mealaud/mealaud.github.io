@@ -30,5 +30,9 @@
   <div class="math-env math-up">
     {{ .Inner }}
   </div>
+{{ else if eq ( .Get 0 ) "x" }}
+  <div class="math-env math-x">
+    {{ .Inner }}
+  </div>
 {{ else }}
 {{ end }}
