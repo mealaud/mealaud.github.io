@@ -38,3 +38,8 @@ theme = 'melguy'
         name = "journal"
         url= "/journal/"
         weight = 4
+    [[menu.main]]
+        identifier = "axioms"
+        name = "axioms"
+        url= "/axioms/"
+        weight = 5
