@@ -42,15 +42,27 @@ We suppose without loss of generality that my word _does not_ have worth. (As if
 In some sense, it is irrelevant whether your word means anything as you must act like it does to give it the hoped for worth. Roughly speaking, this is "fake it till you make it".
 {{% /MathEnv %}}
 
-{{% MathEnv "coro" %}}
-What is life but a promise to oneself to live? I must be a man of my word. I must keep my promises. I must live.
-{{% /MathEnv %}}
-
 {{% MathEnv "prop" %}}
 One must never resign.
 {{% /MathEnv %}}
 {{% Proof %}}
 If one resigns to their situation (i.e., gives up and no longer puts in effort into their life), Proposition \#1 tells us that their life can no longer neither markedly improve and stay improved. Therefore we are violating Axiom \#4 and thus one cannot resign.
 {{% /Proof %}}
+
+{{% MathEnv "rem" %}}
+Notice that there is a hidden "for all" quantifier in the above proposition (i.e., "For all instances in time, one must not resign, or, in other words, "There does not exist a time where one resigns"). This leads us to the following very important corollary (and its corresponding definition).
+{{% /MathEnv %}}
+{{% MathEnv "defn" %}}
+We define {{% tdf "idling" %}} as acting without purpose.
+{{% /MathEnv %}}
+
+{{% MathEnv "coro" %}}
+One must _never_ idle (i.e., everything must be done with a purpose). 
+{{% /MathEnv %}}
+{{% MathEnv "rem" %}}
+It's okay (and beneficial) to take breaks and to recuperate and to enjoy oneself outside of work. It's fine to turn one's brain off! But it has to be done with reason! You must perform one of these inactions with purpose to relax, for example. Don't turn your brain off and do nothing (or even something) if you have no purpose behind it. 
+{{% /MathEnv %}}
+
+
 
 

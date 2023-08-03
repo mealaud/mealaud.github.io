@@ -67,6 +67,29 @@ $$
 $$
 as $ z \to z_0 $, where $ o(|z-z_0|) $ denotes quantity of the form $ |z-z_0| c(z) $, where $ c(z) $ goes to zero as $ z $ goes to $ z_0 $. Conversely, show that this property determines the numbers $ \frac{\partial f}{\partial z}(z_0) $ and $ \frac{\partial f}{\partial \overline{z}}(z_0) $ uniquely (and thus can be used as an alternate definition of the Wirtinger derivatives).
 {{% /MathEnv %}}
+{{% Proof %}}
+1. ($\Rightarrow$) Suppose $ f $ is holomorphic on $ U $. Then, if $ f = u + iv $, $ u_x - v_y = 0 $ and $ u_y + v_x = 0 $ (by the Cauchy-Riemann Equations). Now let us compute $ \frac{\partial f}{\partial \overline{z}} $. 
+$$
+    \frac{\partial f}{\partial \overline{z}} = \frac{ 1 }{ 2 } \left ( [u_x+iv_x] - \frac{ 1 }{ i } [u_y+iv_y]\right ) = \frac{ 1 }{ 2 } \left ( u_x + iv_x - \frac{ u_y }{ i } - v_y \right ) = \frac{ 1 }{ 2 } \left ( [u_x-v_y] - \frac{ 1 }{ i }[u_y+v_x]\right ) = 0
+$$
+as desired. Now, ($\Leftarrow$) Suppose $ \frac{\partial f}{\partial \overline{z}} = 0 $. Comparing real and imaginary parts, we get to the Cauchy-Riemann equations which shows that $ f $ is holomorphic. 
+2. We begin with a lemma.
+{{% MathEnv "lem" %}}
+Suppose $ f ,g $ are complex-valued Frechet differentiable functions on $ U $. Then, 
+$$\begin{align*}
+    \frac{\partial }{\partial z} (fg) &= g \frac{\partial f}{\partial z} + f \frac{\partial g}{\partial z} \\\\
+    \frac{\partial }{\partial \overline{z}}(fg)&=  g \frac{\partial f}{\partial \overline{z}} + f \frac{\partial g}{\partial \overline{z}}.
+\end{align*}$$
+{{% Proof %}}
+This is clear by rote computation.
+{{% /Proof %}}
+{{% /MathEnv %}}
+Now, it is clear that, once again by rote computation, that $ \frac{\partial }{\partial z}z = \frac{\partial }{\partial \overline{z}} \overline{z} = 1 $ and $ \frac{\partial }{\partial z} \overline{z} = \frac{\partial }{\partial \overline{z}}z = 0 $, we get tha the desired polynomial rule falls out immediately.{{%nl%}}{{%nl%}}
+
+For the second claim, if $ f $ does contain a term that involves $ \overline{z} $, then does not have vanishing $ \overline{z} $ derivative and hence cannot be holomorphic by part (1). 
+
+3. ? I don't understand this one. Asking for help now!
+{{% /Proof %}}
 
 {{% MathEnv "x" %}}
 [Tao 1.27] Recall the Wirtinger derivatives defined in the previous exercise. 
