@@ -9,6 +9,6 @@ categories:
 
 Things will be here eventually! For now you may look at gort. :){{%nl%}}{{%nl%}}
 
-{{% figure "gort.png" "100%" %}}
+{{% figure "gort.png" "25%" %}}
 I freaking love gort.
 {{% /figure %}}

@@ -26,23 +26,17 @@
   </head>
 
   <body>
-    <div class="grid-container">
-      <div id="nav-grid">
-        {{ block "header" . }}
+    {{ block "header" . }}
 
-        {{ end }}
-      </div>    
-      <div id="content-grid">
-        <article style="min-height: 95vh">
-          {{ block "main" . }}
+    {{ end }}
+    <article style="padding-left: 0.5em;">
+      {{ block "main" . }}
 
-          {{ end }}
-        </article>
-        {{ block "footer" . }}
+      {{ end }}
+    </article>
+    {{ block "footer" . }}
 
-        {{ end }}
-      </div>    
-    </div>
+    {{ end }}
   </body>
 </html>
 
