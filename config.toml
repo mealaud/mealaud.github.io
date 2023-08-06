@@ -19,9 +19,9 @@ theme = 'melguy'
         url = "/about-me/"
         weight = 0
     [[menu.main]]
-        identifier = "math"
-        name = "math"
-        url = "/math/"
+        identifier = "notes"
+        name = "notes"
+        url = "/notes/"
         weight = 1
     [[menu.main]]
         identifier = "hobbies"
