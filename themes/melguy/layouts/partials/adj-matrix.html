@@ -1,0 +1,55 @@
+{{ $adjMatrix := after 1 (slice "") }}
+<!-- {{ $relevantPages := .RegularPagesRecursive.ByPublishDate}} -->
+{{ $relevantPages := where .Site.RegularPages.ByPublishDate "Params.notes" "eq" "yes"}}
+<!-- Getting a list of all the relevant pages (this is so we can easily make the adjacency matrix later) -->
+{{ $allRelPages := after 1 (slice "") }}
+{{ range $pg, $relevantPages }}
+    {{ $allRelPages = $allRelPages | append (first 1 (last 2 (split $pg.Permalink "/")))}}
+{{ end }}
+<!-- Do for every page -->
+{{ range  $pg, $relevantPages }}
+  {{ $pg.Title }}
+<!-- Gets list of referenced pages on current page! -->
+ {{ $splitAtRefs := split $pg.RawContent "{{<ref" }}
+ {{ $splitAtRefs = after 1 $splitAtRefs }}
+ {{ $splitAtQuotes := slice "" }}
+ {{ range $s, $splitAtRefs }}
+    {{ $splitAtQuotes = $splitAtQuotes | append ( split $s "\"") }}   
+ {{ end }}
+ {{ $onlyRefs := slice "" }}
+ {{ $counter := 0}}
+ {{ range $s, $splitAtQuotes}}
+    {{ $counter = mod (add $counter 1) 3 }}
+    {{ if ( eq $counter 0 ) }}
+        {{ $onlyRefs = $onlyRefs | append $s }}
+    {{ end }}
+ {{ end }}
+ {{ $onlyRefs = after 1 $onlyRefs}}
+ {{ $refTitles := slice "" }}
+ {{ range $s, $onlyRefs }}
+    {{ $refTitles = $refTitles | append (substr $s 7) }}
+ {{ end }}
+ {{ $finalList := (after 1 $refTitles) | uniq }}
+ <!-- {{ $finalList }} &&  -->
+
+<!-- Making the adjacency matrix one row at a time -->
+  {{ $row := slice "" }}
+  {{ range $p, $allRelPages }}
+      {{ if (in $finalList $p) }}
+        {{ $row = $row | append 1 }}
+      {{ else }}
+        {{ $row = $row | append 0 }}
+      {{ end }}
+  {{ end }}
+  {{ $row = after 1 $row }}
+  <!-- &{{ $row }}& <br> -->
+  <!-- {{ $row }} <br> -->
+  <!-- Putting the adjacency matrix together! -->
+  {{ $adjMatrix = $adjMatrix | append (slice $row) }}
+{{ end }}
+<!-- Printing adjacency matrix for testing -->
+<br>
+{{ range $s, $adjMatrix }}
+{{ $s }} <br>
+{{ end }}
+

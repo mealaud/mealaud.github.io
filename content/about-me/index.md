@@ -1,5 +1,5 @@
 ---
-title: "About Me"
+title: "about me"
 date: 2023-05-18T10:39:06-07:00
 draft: false
 ---
@@ -9,6 +9,8 @@ me!
 {{% /figure %}}
 
 Hello! My name is Mealaud Mokhtarzad but I usually go by Mel. I’m a pure math major at UCLA (class of ’24). My interests include and are usually limited to: math, rock skipping, clouds, and writing. If you need to contact me, [m.mokhtarzad at ucla dot edu]() is usually a good way to reach me.
+
+<!-- Test: [a recent writing piece!]({{<ref "hobbies/writing/closing-my-eyes/">}}) -->
 
 ## Cool People
 

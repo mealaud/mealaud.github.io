@@ -1,5 +1,5 @@
 ---
-title: "Axioms"
+title: "axioms"
 date: 2023-07-24T13:05:00-07:00
 draft: false
 math: true

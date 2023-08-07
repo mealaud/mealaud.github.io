@@ -8,9 +8,11 @@
   </header>
   {{ .Content }}
 
-  {{ partial "all-posts-under-page.html" . }}
+  {{ partial "adj-matrix.html" . }}
+  {{ partial "link-graph.html" . }}
 {{ end }}
 
 {{ define "footer" }}
   {{ partial "footer.html" . }}
 {{ end }}
+
