@@ -13,7 +13,6 @@ var canvas = d3.select("#network"),
   height = canvas.attr("height"),
   ctx = canvas.node().getContext("2d"),
   r = 7,
-  color = d3.scaleOrdinal(d3.schemeCategory20),
   simulation = d3.forceSimulation()
     .force("x", d3.forceX(width/2))
     .force("y", d3.forceY(height/2))
