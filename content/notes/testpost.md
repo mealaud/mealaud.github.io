@@ -5,6 +5,7 @@ draft: true
 math: false
 tags: 
 categories: 
+notes: "yes"
 ---
 
 dlkasjdlksajdlkajsd [cool idea 1]({{<ref "/notes/cool-idea2">}}) aksdjlkd {{%nl%}}

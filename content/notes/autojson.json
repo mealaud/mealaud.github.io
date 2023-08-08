@@ -1,0 +1,1 @@
+{"nodes":[{"name":"Cool Idea1"},{"name":"Cool Idea2"}],"links":[{"source":"Cool Idea1","target":"Cool Idea2"},{"source":"Cool Idea2","target":"Cool Idea1"}]}
