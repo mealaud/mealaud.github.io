@@ -10,7 +10,8 @@
 
 var linkOpacity = 0.5;
 var nodeRadius = 8;
-var repelStrength = 3
+var repelStrength = 3;
+var clickCutoffTime = 75;
 
 var start, end;
   
@@ -84,7 +85,7 @@ function dragended() {
   d3.event.subject.fy = null;
   end = +new Date();
   // console.log(end - start)
-  if (end-start < 95) { // hacky solution by just measuring if "mouse is held down very briefly" and treating a shortenough press as a click!
+  if (end-start < clickCutoffTime) { // hacky solution by just measuring if "mouse is held down very briefly" and treating a shortenough press as a click!
     // Relative link!
     var slash = "/notes/";
     var pageRelLink = slash.concat((d3.event.subject.name).toLowerCase().replaceAll(" ", "-")); 

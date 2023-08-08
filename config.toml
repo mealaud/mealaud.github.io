@@ -12,6 +12,18 @@ theme = 'melguy'
     [markup.goldmark.renderer]
       unsafe = true
 
+[mediaTypes]
+    [mediaTypes."application/json"]
+        suffixes = ["json"]
+
+[outputFormats]
+    [outputFormats.a]
+        mediaType = "application/json"
+        isPlainText = true
+
+[outputs]
+    page = ["html","a"]
+
 [menu]
     [[menu.main]]
         identifier = "about-me"

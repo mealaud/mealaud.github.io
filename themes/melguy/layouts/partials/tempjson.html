@@ -1,3 +1,4 @@
+got here!
 {{ $nodeSlice := slice "{\"nodes\":[" }}
 {{ $linkSlice := slice "],\"links\":["}}
 
@@ -5,9 +6,9 @@
 <!-- Getting a list of all the relevant pages  -->
 {{ $allRelPages := after 1 (slice "") }}
 {{ range $pg, $relevantPages }}
+    {{ $pg.Title }} <br>
     {{ $allRelPages = $allRelPages | append (slice $pg.Permalink ) }}
 {{ end }}
-
 <!-- Do for every page -->
 {{ range  $pg, $relevantPages }}
 <!-- Gets list of referenced pages on current page! -->
@@ -34,6 +35,9 @@
  {{ $finalList := $refTitles | uniq }}
 
 
+
+
+
   {{ range $p, $relevantPages }}
   <!-- Get current page's linktitle thing -->
       {{ $tmpLink := split $p.Permalink "/"}}
@@ -57,5 +61,8 @@
 {{ $linkStr = substr $linkStr 0 -1 }}
 {{ $linkStr = print $linkStr "]}" }}
 {{ $jsonStr := print $nodeStr $linkStr }}
-{{ $jsonStr = substr $jsonStr 1 -1 }}
-{{ return $jsonStr }}
+{{ $jsonStr = substr (substr $jsonStr -1) 1}}
+flkjasdklajsdlk
+<!-- {{ return $jsonStr }} -->
+
+
