@@ -10,7 +10,7 @@
 
 var linkOpacity = 0.5;
 var nodeRadius = 5;
-var repelStrength = 1;
+var repelStrength = 2;
 var clickCutoffTime = 100;
 
 var start, end;
@@ -102,7 +102,7 @@ function drawNode(d) {
   ctx.moveTo(d.x, d.y);
   ctx.arc(d.x, d.y, r, 0, Math.PI*2);
   ctx.fill();
-  ctx.font = "0.7em JetBrains Mono";
+  ctx.font = "0.9em JetBrains Mono";
   ctx.fillText(d.name, d.x-2*r, d.y-2*r);
 }
 
