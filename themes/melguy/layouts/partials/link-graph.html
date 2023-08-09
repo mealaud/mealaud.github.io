@@ -9,9 +9,9 @@
 
 
 var linkOpacity = 0.5;
-var nodeRadius = 8;
+var nodeRadius = 5;
 var repelStrength = 0.3;
-var clickCutoffTime = 75;
+var clickCutoffTime = 100;
 
 var start, end;
   
@@ -86,11 +86,9 @@ function dragended() {
   end = +new Date();
   // console.log(end - start)
   if (end-start < clickCutoffTime) { // hacky solution by just measuring if "mouse is held down very briefly" and treating a shortenough press as a click!
-    // Relative link!
-    // var slash = "/notes/";
-    // var pageRelLink = slash.concat((d3.event.subject.name).toLowerCase().replaceAll(" ", "-")); 
-    // window.open(pageRelLink, "_blank");
-    console.log(d3.event.subject.name)
+
+    window.open(d3.event.subject.lnk, "_blank");
+    // console.log(d3.event.subject.name)
   }
 }
 
@@ -101,7 +99,7 @@ function drawNode(d) {
   ctx.moveTo(d.x, d.y);
   ctx.arc(d.x, d.y, r, 0, Math.PI*2);
   ctx.fill();
-  ctx.font = "1em JetBrains Mono";
+  ctx.font = "0.7em JetBrains Mono";
   ctx.fillText(d.name, d.x, d.y-2*r);
 }
 

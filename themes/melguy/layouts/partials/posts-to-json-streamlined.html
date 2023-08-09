@@ -23,7 +23,7 @@
 
 {{ $nodeStr := "\"nodes\":[" }}
 {{ range $i, $allPages }}
-    {{ $nodeStr = print $nodeStr "{\"name\":\"" $i.Title "\"},"}}
+    {{ $nodeStr = print $nodeStr "{\"name\":\"" $i.Title "\",\"lnk\":\"" $i.RelPermalink "\"},"}}
 {{ end }}
 {{ $nodeStr = substr $nodeStr 0 -1 }}
 {{ $nodeStr = print $nodeStr "],"}}

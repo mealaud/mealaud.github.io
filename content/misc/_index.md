@@ -1,5 +1,5 @@
 ---
-title: "misc"
+title: "Misc"
 date: 2023-05-21T21:46:25-07:00
 draft: false
 math: false
