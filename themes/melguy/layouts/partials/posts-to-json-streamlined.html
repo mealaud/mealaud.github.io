@@ -23,10 +23,16 @@
 {{ $linkStr = substr $linkStr 0 -1 }} <!-- 5 because its removing the last comma AND the linebreak -->
 {{ $linkStr = print $linkStr "]"}}
 
+{{ $disallowedPageTypes := slice "home" }}
 {{ $nodeStr := "\"nodes\":[" }}
 {{ range $i, $allPages }}
-  {{if not (or (strings.Contains $i.RelPermalink "tag") (strings.Contains $i.RelPermalink "categories"))}}
-    {{ $nodeStr = print $nodeStr "{\"name\":\"" $i.Title "\",\"lnk\":\"" $i.RelPermalink "\"},"}}
+  {{if not (or (strings.Contains $i.RelPermalink "tag") (strings.Contains $i.RelPermalink "categories") (in $disallowedPageTypes $i.Kind))}}
+  <!-- putting in name  -->
+  {{ $nodeStr = print $nodeStr "{\"name\":\"" $i.Title "\"," }}
+  <!-- putting in link address -->
+  {{ $nodeStr = print $nodeStr "\"lnk\":\"" $i.RelPermalink "\"," }}
+  <!-- putting in Kind hugo info (like if its section or page) -->
+  {{ $nodeStr = print $nodeStr "\"kind\":\"" $i.Kind "\"}," }}
   {{ end }}
 {{ end }}
 {{ $nodeStr = substr $nodeStr 0 -1 }}

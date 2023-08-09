@@ -70,7 +70,7 @@ function dragstarted() {
   if (!d3.event.active) simulation.alphaTarget(0.3).restart();
   d3.event.subject.fx = d3.event.subject.x;
   d3.event.subject.fy = d3.event.subject.y;
-  console.log(d3.event.subject.name);
+  // console.log(d3.event.subject.name);
   start = +new Date();
 }
 
@@ -86,7 +86,6 @@ function dragended() {
   end = +new Date();
   // console.log(end - start)
   if (end-start < clickCutoffTime) { // hacky solution by just measuring if "mouse is held down very briefly" and treating a shortenough press as a click!
-
     window.open(d3.event.subject.lnk, "_blank");
     // console.log(d3.event.subject.name)
   }
@@ -95,12 +94,16 @@ function dragended() {
 
 function drawNode(d) {
   ctx.beginPath();
-  ctx.fillStyle = "#ebdbb2"
+  if (d.kind === "section") {
+    ctx.fillStyle = "#d79921"
+  } else {
+    ctx.fillStyle = "#ebdbb2"
+  }
   ctx.moveTo(d.x, d.y);
   ctx.arc(d.x, d.y, r, 0, Math.PI*2);
   ctx.fill();
   ctx.font = "0.7em JetBrains Mono";
-  ctx.fillText(d.name, d.x, d.y-2*r);
+  ctx.fillText(d.name, d.x-2*r, d.y-2*r);
 }
 
 function drawLink(l) {
