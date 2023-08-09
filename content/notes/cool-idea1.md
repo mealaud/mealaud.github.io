@@ -12,3 +12,8 @@ aksjdhkjsadhkjashdkjashdkjashddlkajsk ldja
 asdlkasjdlkasjdlksdj {{%nl%}}
 dlkasjdlksajdlkajsd [cool idea 2]({{<ref "/notes/cool-idea2">}}) aksdjlkd {{%nl%}}
 asdkljaskdljaskdj {{%nl%}}
+dlkasjdlksajdlkajsd [cool idea 2]({{<ref "/notes/cool-idea2">}}) aksdjlkd {{%nl%}}
+dlkasjdlksajdlkajsd [cool idea 2]({{<ref "/notes/cool-idea2">}}) aksdjlkd {{%nl%}}
+dlkasjdlksajdlkajsd [cool idea 2]({{<ref "/notes/cool-idea2">}}) aksdjlkd {{%nl%}}
+dlkasjdlksajdlkajsd [cool idea 2]({{<ref "/notes/cool-idea2">}}) aksdjlkd {{%nl%}}
+dlkasjdlksajdlkajsd [cool idea 2]({{<ref "/notes/cool-idea2">}}) aksdjlkd {{%nl%}}

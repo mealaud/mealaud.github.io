@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>notes on mel-land</title>
+    <link>http://mealaud.com/notes/</link>
+    <description>Recent content in notes on mel-land</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 20 May 2023 18:09:12 -0700</lastBuildDate><atom:link href="http://mealaud.com/notes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cool Idea2</title>
+      <link>http://mealaud.com/notes/cool-idea2/</link>
+      <pubDate>Sun, 06 Aug 2023 17:05:45 -0700</pubDate>
+      
+      <guid>http://mealaud.com/notes/cool-idea2/</guid>
+      <description>daskdjaskdj
+thing</description>
+    </item>
+    
+    <item>
+      <title>Cool Idea1</title>
+      <link>http://mealaud.com/notes/cool-idea1/</link>
+      <pubDate>Sun, 06 Aug 2023 17:05:40 -0700</pubDate>
+      
+      <guid>http://mealaud.com/notes/cool-idea1/</guid>
+      <description>aksjdhkjsadhkjashdkjashdkjashddlkajsk ldja asdlkasjdlkasjdlksdj dlkasjdlksajdlkajsd cool idea 2 aksdjlkd asdkljaskdljaskdj dlkasjdlksajdlkajsd cool idea 2 aksdjlkd dlkasjdlksajdlkajsd cool idea 2 aksdjlkd dlkasjdlksajdlkajsd cool idea 2 aksdjlkd dlkasjdlksajdlkajsd cool idea 2 aksdjlkd dlkasjdlksajdlkajsd cool idea 2 aksdjlkd </description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,38 @@
+{
+  "nodes":[
+    {"name": "Cool Idea1"},
+    {"name": "Cool Idea2"},
+    {"name": "Cool Subidea1 2"},
+    {"name": "Testpost"}
+  ],
+  "links":[
+    {
+      "source": "Cool Idea1",
+      "target": "Cool Idea2"
+    },
+    {
+      "source": "Cool Idea1",
+      "target": "Cool Subidea1 2"
+    },
+    {
+      "source": "Cool Idea1",
+      "target": "Testpost"
+    },
+    {
+      "source": "Cool Idea2",
+      "target": "Cool Idea1"
+    },
+    {
+      "source": "Cool Idea2",
+      "target": "Cool Subidea1 2"
+    },
+    {
+      "source": "Testpost",
+      "target": "Cool Idea2"
+    },
+    {
+      "source": "Testpost",
+      "target": "Cool Subidea1 2"
+    }
+  ]
+}

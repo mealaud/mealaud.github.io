@@ -1,0 +1,31 @@
+{{ $linkStr := "\"links\":["}}
+
+{{ $allPages := .Site.AllPages}}
+{{ range $i, $allPages }}
+<!-- Processing raw content to get all references to other posts -->
+{{ $unprocessedRefs := findRESubmatch `\{\{\<ref.*"(.*?)"\>\}\}` $i.RawContent }} <!-- Unprocessed refs! (look like \{\{<ref "...."\}\}) -->
+  {{ $refs := slice }} <!-- instantiate processed references variable -->
+  {{ range $u, $unprocessedRefs }} <!-- Iterate through unprocessed ref's to extra their respective RelPermalink's -->
+    {{ $refs = $refs | append (slice (index $u 1))}}
+  {{ end }}
+  <!-- {{ $refs }}<br><br><br> -->
+  
+  {{ range $j, $allPages }}
+    {{ if (in $refs (substr $j.RelPermalink 0 -1)) }}
+      {{ $linkStr = print $linkStr "{\"source\":\"" $i.Title "\","}}
+      {{ $linkStr = print $linkStr "\"target\":\"" $j.Title "\"},"}}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ $linkStr = substr $linkStr 0 -1 }} <!-- 5 because its removing the last comma AND the linebreak -->
+{{ $linkStr = print $linkStr "]"}}
+
+{{ $nodeStr := "\"nodes\":[" }}
+{{ range $i, $allPages }}
+    {{ $nodeStr = print $nodeStr "{\"name\":\"" $i.Title "\"},"}}
+{{ end }}
+{{ $nodeStr = substr $nodeStr 0 -1 }}
+{{ $nodeStr = print $nodeStr "],"}}
+
+{{ print "{" $nodeStr $linkStr "}"}}

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on mel-land</title>
+    <link>http://mealaud.com/tags/</link>
+    <description>Recent content in Tags on mel-land</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 13 Apr 2019 23:50:26 -0700</lastBuildDate><atom:link href="http://mealaud.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>holes</title>
+      <link>http://mealaud.com/tags/holes/</link>
+      <pubDate>Sat, 13 Apr 2019 23:50:26 -0700</pubDate>
+      
+      <guid>http://mealaud.com/tags/holes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mountains</title>
+      <link>http://mealaud.com/tags/mountains/</link>
+      <pubDate>Sat, 13 Apr 2019 23:50:26 -0700</pubDate>
+      
+      <guid>http://mealaud.com/tags/mountains/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>shirts</title>
+      <link>http://mealaud.com/tags/shirts/</link>
+      <pubDate>Sat, 13 Apr 2019 23:50:26 -0700</pubDate>
+      
+      <guid>http://mealaud.com/tags/shirts/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

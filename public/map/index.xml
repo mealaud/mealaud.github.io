@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>map on mel-land</title>
+    <link>http://mealaud.com/map/</link>
+    <description>Recent content in map on mel-land</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 08 Aug 2023 13:46:18 -0700</lastBuildDate><atom:link href="http://mealaud.com/map/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Graphdata</title>
+      <link>http://mealaud.com/map/graphdata/</link>
+      <pubDate>Tue, 08 Aug 2023 16:25:23 -0700</pubDate>
+      
+      <guid>http://mealaud.com/map/graphdata/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

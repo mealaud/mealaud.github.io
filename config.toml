@@ -12,18 +12,6 @@ theme = 'melguy'
     [markup.goldmark.renderer]
       unsafe = true
 
-[mediaTypes]
-    [mediaTypes."application/json"]
-        suffixes = ["json"]
-
-[outputFormats]
-    [outputFormats.a]
-        mediaType = "application/json"
-        isPlainText = true
-
-[outputs]
-    page = ["html","a"]
-
 [menu]
     [[menu.main]]
         identifier = "about-me"
@@ -31,20 +19,25 @@ theme = 'melguy'
         url = "/about-me/"
         weight = 0
     [[menu.main]]
+        identifier = "map"
+        name = "map"
+        url = "/map/"
+        weight = 1
+    [[menu.main]]
         identifier = "notes"
         name = "notes"
         url = "/notes/"
-        weight = 1
+        weight = 5
     [[menu.main]]
         identifier = "hobbies"
         name = "hobbies"
         url = "/hobbies/"
-        weight = 2
+        weight = 10 
     [[menu.main]]
         identifier = "misc"
         name = "misc"
         url = "/misc/"
-        weight = 3
+        weight = 15
     # [[menu.main]]
     #     identifier = "journal"
     #     name = "journal"
@@ -54,4 +47,4 @@ theme = 'melguy'
         identifier = "axioms"
         name = "axioms"
         url= "/axioms/"
-        weight = 5
+        weight = 20
