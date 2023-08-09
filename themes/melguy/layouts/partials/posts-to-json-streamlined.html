@@ -1,6 +1,6 @@
 {{ $linkStr := "\"links\":["}}
 
-{{ $allPages := .Site.AllPages}}
+{{ $allPages := .Site.AllPages.ByPublishDate }}
 {{ range $i, $allPages }}
 <!-- Processing raw content to get all references to other posts -->
 {{ $unprocessedRefs := findRESubmatch `\{\{\<ref.*"(.*?)"\>\}\}` $i.RawContent }} <!-- Unprocessed refs! (look like \{\{<ref "...."\}\}) -->
@@ -12,8 +12,10 @@
   
   {{ range $j, $allPages }}
     {{ if (in $refs (substr $j.RelPermalink 0 -1)) }}
-      {{ $linkStr = print $linkStr "{\"source\":\"" $i.Title "\","}}
-      {{ $linkStr = print $linkStr "\"target\":\"" $j.Title "\"},"}}
+      {{if not (or (strings.Contains $j.RelPermalink "tag") (strings.Contains $j.RelPermalink "categories"))}}
+        {{ $linkStr = print $linkStr "{\"source\":\"" $i.Title "\","}}
+        {{ $linkStr = print $linkStr "\"target\":\"" $j.Title "\"},"}}
+      {{ end }}
     {{ end }}
   {{ end }}
 {{ end }}
@@ -23,7 +25,9 @@
 
 {{ $nodeStr := "\"nodes\":[" }}
 {{ range $i, $allPages }}
+  {{if not (or (strings.Contains $i.RelPermalink "tag") (strings.Contains $i.RelPermalink "categories"))}}
     {{ $nodeStr = print $nodeStr "{\"name\":\"" $i.Title "\",\"lnk\":\"" $i.RelPermalink "\"},"}}
+  {{ end }}
 {{ end }}
 {{ $nodeStr = substr $nodeStr 0 -1 }}
 {{ $nodeStr = print $nodeStr "],"}}

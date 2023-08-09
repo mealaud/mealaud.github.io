@@ -3,8 +3,8 @@ title: "The Mountains' Shirts Have Holes"
 date: 2019-04-13T23:50:26-07:00
 draft: false
 math: false
-tags: ["mountains", "shirts", "holes"]
-categories: ["writing", "poems"]
+tags: 
+categories: 
 ---
 <!-- *Originally written: circa Apr. 13, 2019*   {{%nl%}}{{%nl%}} -->
 
