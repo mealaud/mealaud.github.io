@@ -6,12 +6,12 @@
   <header>
     <h1>{{ .Title }}</h1>
   </header>
-  {{ partial "link-graph.html" . }}
 
   {{ .Content }}
+  {{ partial "link-graph.html" . }}
+  <!-- {{ partial "svg-link-graph.html" . }} -->
 {{ end }}
 
 {{ define "footer" }}
   {{ partial "footer.html" . }}
 {{ end }}
-

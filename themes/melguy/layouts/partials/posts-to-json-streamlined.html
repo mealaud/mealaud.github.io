@@ -28,9 +28,14 @@
     {{ $refs := slice }} <!-- instantiate processed references variable -->
     {{ range $j, $allPages }}
       {{ if (strings.Contains $j.RelPermalink $i.RelPermalink)}}       
-      {{if not (or (strings.Contains $j.RelPermalink "tag") (strings.Contains $j.RelPermalink "categories") (strings.Contains $j.RelPermalink "map"))}}
-          {{ $linkStr = print $linkStr "{\"source\":\"" $i.Title "\","}}
-          {{ $linkStr = print $linkStr "\"target\":\"" $j.Title "\"},"}}
+        {{if not (or (strings.Contains $j.RelPermalink "tag") (strings.Contains $j.RelPermalink "categories") (strings.Contains $j.RelPermalink "map"))}}
+          {{ $iLinkDepth := (split $i.RelPermalink "/") | len }}
+          {{ $jLinkDepth := (split $j.RelPermalink "/") | len }}
+          {{ $signedDepthDiff := sub $iLinkDepth $jLinkDepth }}
+          {{ if (or (eq $signedDepthDiff 1) (eq $signedDepthDiff -1))}}
+            {{ $linkStr = print $linkStr "{\"source\":\"" $i.Title "\","}}
+            {{ $linkStr = print $linkStr "\"target\":\"" $j.Title "\"},"}}
+          {{ end }}
         {{ end }}
       {{ end }}
     {{ end }}

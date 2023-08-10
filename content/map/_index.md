@@ -7,5 +7,5 @@ tags:
 categories: 
 type: "map"
 ---
+yo
 
-Map page! This will look super cool :)
