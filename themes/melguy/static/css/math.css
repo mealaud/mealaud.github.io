@@ -46,7 +46,7 @@ p {
 .math-rem {} .math-rem:before {
   /* counter-increment: math-count; */
   font-weight: bold;
-  content: "Remark " counter(math-count) ". ";
+  content: "Remark";
 }
 
 /* definition */
@@ -56,32 +56,32 @@ p {
   color: inherit;
 } .math-defn:before {
   color: var(--definition-border);
-  content: "Definition " counter(math-count) ". "; 
+  content: "Definition";
 }
 
 /* results */
 .math-result {
   background-color: var(--result-background);
   border-left-color: var(--result-border);
-  color: inherit;
-} .math-result:before {
+  /* color: inherit; */
+  font-weight: bold;
   color: var(--result-border);
-}
+} .math-result:before {}
 
 .math-coro {} .math-coro:before {
-  content: "Corollary " counter(math-count) ". ";
+  content: "Corollary";
 }
 
 .math-prop {} .math-prop:before {
-  content: "Proposition " counter(math-count) ". ";
+  content: "Proposition";
 }
 
 .math-thm {} .math-thm:before {
-  content: "Theorem " counter(math-count) ". ";
+  content: "Theorem";
 }
 
 .math-lem {} .math-lem:before {
-  content: "Lemma " counter(math-count) ". ";
+  content: "Lemma";
 }
 
 /* example */
@@ -98,7 +98,7 @@ p {
   /* counter-increment: math-count; */
   color: var(--example-border);
   font-weight: bold;
-  content: "Example " counter(math-count) ". ";
+  content: "Example";
 }
 
 /* upshot */
@@ -109,7 +109,7 @@ p {
   /* counter-increment: math-count; */
   color: var(--upshot-border);
   font-weight:bold;
-  content: "Upshot " counter(math-count) ". ";
+  content: "Upshot";
 }
 
 /* proof */
@@ -134,6 +134,16 @@ p {
   /* counter-increment: math-count; */
   color: var(--example-border);
   font-weight: bold;
-  content: "Exercise " counter(math-count) ". ";
+  content: "Exercise";
 }
 
+/* math numbering (or lack thereof)! */
+.math-num {}
+.math-num:before {
+  font-weight: bold;
+  content: " " counter(math-count)  ". ";
+} .math-no-num {}
+.math-no-num:before {
+  font-weight: bold;
+  content: ". ";
+}

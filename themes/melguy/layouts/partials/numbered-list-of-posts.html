@@ -1,0 +1,11 @@
+<ol>
+{{ range .RegularPagesRecursive.ByPublishDate }}
+<li>
+  <a href="{{ .Permalink }}" style="text-decoration: none">{{ .Params.slogan }}</a> <span style="opacity: 0.5; font-size: 0.7em">    {{ .PublishDate.Format "Monday, January 2, 2006" }}</span>
+  {{ if ne .Lastmod .PublishDate }}
+    <span style="opacity: 0.5; font-size: 0.7em"> | Last modified: {{ .Lastmod.Format "2006-01-02"}}</span>
+  {{ end }}
+</li>
+{{ end }}
+</ol>
+ <!-- | Last modified: {{ .Lastmod.Format "2006-01-02"}}</span> -->
