@@ -9,3 +9,4 @@ categories:
 
 I was first introduced to this method of thinking by Professor Rowan Killip. I had him for a course briefly and this was the one of the coolest things I've learned!
 
+[test]({{<ref "/notes/math/math-ca/tao-notes/notes-0/definition-of-the-complex-numbers">}})

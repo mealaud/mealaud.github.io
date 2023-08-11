@@ -18,3 +18,4 @@ If one resigns to their situation (i.e., gives up and no longer puts in effort i
 {{% MathEnv "rem" %}}
 Notice that there is a hidden "for all" quantifier in the above proposition (i.e., "For all instances in time, one must not resign, or, in other words, "There does not exist a time where one resigns"). This leads us to the following very important corollary (and its corresponding definition).
 {{% /MathEnv %}}
+

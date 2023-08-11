@@ -33,11 +33,11 @@ theme = 'melguy'
         name = "Hobbies"
         url = "/hobbies/"
         weight = 10 
-    [[menu.main]]
-        identifier = "misc"
-        name = "Misc"
-        url = "/misc/"
-        weight = 15
+    # [[menu.main]]
+    #     identifier = "misc"
+    #     name = "Misc"
+    #     url = "/misc/"
+    #     weight = 15
     # [[menu.main]]
     #     identifier = "journal"
     #     name = "journal"
