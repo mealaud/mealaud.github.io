@@ -6,6 +6,7 @@ math: false
 tags: 
 categories: 
 ---
+[]({{<ref "/hobbies/writing/atlas">}})
 <!-- *Originally written: Jan. 2, 2023*{{%nl%}}{{%nl%}} -->
 
 I am unburdened.{{%nl%}}{{%nl%}}

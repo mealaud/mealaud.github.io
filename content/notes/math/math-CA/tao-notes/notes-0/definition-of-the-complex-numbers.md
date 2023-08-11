@@ -5,26 +5,30 @@ draft: false
 math: true
 tags: 
 categories: 
+rootPage: true
 ---
 
 There are many ways to define them! :D I'll generally use the following definition:
 
 {{% MathEnv "defn" %}}
-A {{% tdf "field of complex numbers" %}} is a field $ \mathbb{C} $ containing the real numbers $ \mathbb{R} $ as a subfield, as well as a root $ i $ of the equation $ i^2+1=0 $. For those familiar with field theory, 
+A complex number is of the following form: 
 $$
-    \mathbb{C} \coloneqq \frac{ \mathbb{R}[t] }{ (t^2+1) }.
+   z=x+iy \qquad \text{where} \qquad x,y \in \mathbb{R} \text{ and } i^2 = -1. 
 $$
+$ \mathbb{C} $ is the collection of all such values. Furthermore, we call $ x $ the {{% tdf "real part of $ z $" %}} and denote it by $ \operatorname{Re} z $. Similarly, $ y $ is the {{% tdf "imaginary part of $ z $" %}} and is denoted by $ \operatorname{Im} z $. {{%nl%}}{{%nl%}}
+
+$ \mathbb{C} $'s arithmetical operations are defined as: 
+$$
+    (x+iy) + (u+iv) = (x+u) + i(y+v) \qquad \text{and} \qquad (x+iy)\cdot (u+iv) = (xu - yv) + i(xv+ yu)
+$$
+and has the following properties:
+- addition and multiplication are commutative;
+- addition and multiplication are associative; and 
+- multiplication is distributive
 {{% /MathEnv %}}
 
 {{% MathEnv "rem" %}}
-This is somewhat too complicated for our (read: my) purposes, so we just need to know that $ \mathbb{C} $ is 
-$$
-    \left \{ (a,b) : a,b \in \mathbb{R} \right \} 
-$$
-with addition defined pointwise and multiplication defined as: 
-$$
-    (a,b) \cdot (c,d) = (ac-bd,ad+bc).
-$$
+$ i $ is often called the {{% tdf "imaginary unit" %}}.
 {{% /MathEnv %}}
 
 Let's keep movin'!

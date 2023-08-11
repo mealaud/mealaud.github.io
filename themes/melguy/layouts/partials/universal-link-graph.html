@@ -12,20 +12,35 @@
 
 {{ $ALLREFS := dict }}  <!-- instantiating thing that will contain ALL cross references and ALL posts listings on a section on the website -->
 {{ range $i, $ALLPAGES }}
-
+  {{ $refs := slice }}
+  {{ $currPageFileStr := print $i }}
 <!-- make sure its not about me i hate that page in my data!!!! -->
   {{ if ne $i.RelPermalink "/about-me/" }}
     <!-- currnet idea is to collect all the sublanding pages for a given section page, then finding all cross references between them and any other page, treating them as any other page (i.e., reading raw content and not doing much else) -->
     {{ if eq $i.Kind "section" }}
-      {{ $refs := slice }}
       {{ range $j, $ALLPAGES }} <!-- find the immediate subsections -->
-        {{ if and (in $j.RelPermalink $i.RelPermalink) (in $j.RelPermalink $rootLink) }}
-          {{ if not (or (in $j.RelPermalink "tag") (in $j.RelPermalink "categories"))}}
-            {{ $iLinkDepth := (split $i.RelPermalink "/") | len }}
-            {{ $jLinkDepth := (split $j.RelPermalink "/") | len }}
-            {{ $signedDepthDiff := sub $iLinkDepth $jLinkDepth }}
-            {{ if eq $signedDepthDiff -1 }}
-              {{ $refs = $refs | append (index $PAGESBYLINKS (substr $j.RelPermalink 0 -1)) }} <!-- append the page that was linked to if it is an immediate subsection) -->
+        {{ if eq $j.Kind "page" }}
+          {{ if $j.Params.rootPage }}
+            {{ if and (in $j.RelPermalink $i.RelPermalink) (in $j.RelPermalink $rootLink) }}
+              {{ if not (or (in $j.RelPermalink "tag") (in $j.RelPermalink "categories"))}}
+                {{ $iLinkDepth := (split $i.RelPermalink "/") | len }}
+                {{ $jLinkDepth := (split $j.RelPermalink "/") | len }}
+                {{ $signedDepthDiff := sub $iLinkDepth $jLinkDepth }}
+                {{ if eq $signedDepthDiff -1 }}
+                  {{ $refs = $refs | append (index $PAGESBYLINKS (substr $j.RelPermalink 0 -1)) }} <!-- append the page that was linked to if it is an immediate subsection) -->
+                {{ end }}
+              {{ end }}
+            {{ end }}
+          {{ end }}
+        {{ else }}
+          {{ if and (in $j.RelPermalink $i.RelPermalink) (in $j.RelPermalink $rootLink) }}
+            {{ if not (or (in $j.RelPermalink "tag") (in $j.RelPermalink "categories"))}}
+              {{ $iLinkDepth := (split $i.RelPermalink "/") | len }}
+              {{ $jLinkDepth := (split $j.RelPermalink "/") | len }}
+              {{ $signedDepthDiff := sub $iLinkDepth $jLinkDepth }}
+              {{ if eq $signedDepthDiff -1 }}
+                {{ $refs = $refs | append (index $PAGESBYLINKS (substr $j.RelPermalink 0 -1)) }} <!-- append the page that was linked to if it is an immediate subsection) -->
+              {{ end }}
             {{ end }}
           {{ end }}
         {{ end }}

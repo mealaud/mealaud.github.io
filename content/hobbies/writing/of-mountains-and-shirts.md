@@ -6,6 +6,7 @@ math: false
 tags: 
 categories: 
 ---
+[]({{<ref "/hobbies/writing/the-mountains-shirts-have-holes">}})
 <!-- *Originally written: May 24, 2023*{{%nl%}}{{%nl%}} -->
 
 The mountain is immovable.{{%nl%}}

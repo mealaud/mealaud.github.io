@@ -5,6 +5,7 @@ draft: false
 math: false
 tags: 
 categories: 
+rootPage: true
 ---
 
 <!-- *Originally written: Sep. 8, 2022*{{%nl%}}{{%nl%}} -->
