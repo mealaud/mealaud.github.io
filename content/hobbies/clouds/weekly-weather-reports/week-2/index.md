@@ -6,6 +6,7 @@ math: false
 tags: 
 categories: 
 ---
+[]({{<ref "/hobbies/clouds/weekly-weather-reports/week-1">}})
 
 {{% figure "IMG_1756.JPG" "100%" %}}
 I liked the tree and stuff.

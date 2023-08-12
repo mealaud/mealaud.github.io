@@ -6,6 +6,7 @@ math: false
 tags: 
 categories: 
 ---
+[]({{<ref "/hobbies/clouds/weekly-weather-reports/may-2023">}})
 
 {{% figure "img1.jpg" "100%" %}}
 I took this photo when walking with home with my good friend Matt. :) I think that was the last time I will see him at UCLA as he's going to Caltech now for his teaching/post-doc job.
