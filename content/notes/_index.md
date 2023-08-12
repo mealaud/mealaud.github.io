@@ -1,7 +1,12 @@
 ---
 title: "Notes"
-date: 2023-05-20T18:09:12-07:00
+date: 2023-08-11T18:23:36-07:00
 draft: false
-type: "notes/"
+math: true
+tags: 
+categories: 
+rootPage: false
 ---
-hello
+
+Notes.
+

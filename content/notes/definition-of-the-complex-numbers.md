@@ -1,6 +1,6 @@
 ---
 title: "Definition of the Complex Numbers"
-date: 2023-08-09T21:26:22-07:00
+date: 2023-08-11T18:22:05-07:00
 draft: false
 math: true
 tags: 
