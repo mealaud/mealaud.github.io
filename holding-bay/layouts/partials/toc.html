@@ -1,0 +1,55 @@
+{{ $partsOfText := slice }} 
+{{ range .Pages.ByPublishDate }}
+  {{ range .Params.partOfText }}
+    {{ $partsOfText = $partsOfText | append . }}
+  {{ end }}
+{{ end }}
+<!-- Get rid of duplicate parts in array -->
+{{ $partsOfText = $partsOfText | uniq }}
+
+{{ $pagesByDate := .Pages.ByPublishDate }}
+
+
+{{ $ct := 0 }}
+{{ $prevPart := ( index $partsOfText $ct ) }}
+<ol style="list-style-type:upper-roman;">
+{{ range $pt, $partsOfText }}
+<li>
+  {{ $pt }}
+  <ol>
+    {{ range $pg, $pagesByDate }}
+      {{ if ( in $pg.Params.partOfText $prevPart ) }}
+      <li>
+        <a href="{{ .Permalink }}" style="text-decoration: none">{{ .Title }}</a>
+        {{ $mods := print "\"" .Permalink "#\" style=\"text-decoration: none\"" }}
+        <!-- Finds all relative links to headings -->
+        {{ $matches := findRE `href=(".*?")` $pg.TableOfContents }}
+        {{ $matched := findRE `href=(".*?")` $pg.TableOfContents }}
+        <!-- Modify all of the links to the proper absolute paths and link decoration status -->
+        {{ $newMatches := slice }} <!-- Get list of proper absolute paths and whatever since for some reason the terms of $matches are only changed within the scope of the loop??? -->
+        {{ range $mt, $matches }}
+          {{ $tmp := findRE `#.*` $mt }} 
+          {{ $t := index $tmp 0 }}
+          {{ $t = replace $t "\"" "" }}
+          {{ $tmp2 := replaceRE `#` $t $mods }}
+          {{ $mt = replaceRE `#.*` $tmp2 $mt }}
+          {{ $mt = replace $mt "\"\"" "\""}}
+          {{ $newMatches = $newMatches | append $mt }}
+        {{ end }}
+        {{ $toc := $pg.TableOfContents }} <!-- So we can do a bunch of changes over several steps -->
+        {{ $i := 0 }}
+        {{ range $md, $matched }}
+          {{ $toc = replace $toc $md (index $newMatches $i)}}
+          {{ $i = add $i 1 }}
+        {{ end }}
+        {{ $toc = replace $toc "<ol>" "<ol style=\"list-style-type: lower-greek\">"}}
+        {{ .RenderString $toc }}
+      </li>
+      {{ end }}
+    {{ end }}
+    {{ $ct = add $ct 1 }}
+    {{ $prevPart = (index $partsOfText $ct )}}
+  </ol>
+</li>
+{{ end }}
+</ol>

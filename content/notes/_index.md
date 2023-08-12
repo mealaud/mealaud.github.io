@@ -9,9 +9,3 @@ rootPage: false
 ---
 
 Notes.  
-{{%nl%}}
-
-{{% tabs "/notes/complex-numbers-as-vectors/" %}} 
-{{%nl%}} {{%nl%}}
-
-{{% tabs "/notes/definition-of-the-complex-numbers/" %}} 

@@ -1,0 +1,249 @@
+{{ $ALLPAGES := .Site.AllPages }}
+{{ $ROOTLINK := .RelPermalink }}
+{{ $rootLink := substr $ROOTLINK 0 -1 }}
+{{ $rootTitle := .Title }}
+
+<!-- gameplan: get all information at once (maybe put this in the header eventually? so we compute once and not on every page?) and then simplify down when printing the string? -->
+
+{{ $PAGESBYLINKS := dict }} <!-- collect all pages in a dictionary with key being their relative link! useful later for getting a references list which is just a slice of literal pages -->
+{{ range $i, $ALLPAGES }}
+  {{ $PAGESBYLINKS = merge $PAGESBYLINKS (dict (substr $i.RelPermalink 0 -1) $i)}} <!-- Just adding pages with link keys -->
+{{ end }}
+
+{{ $ALLREFS := dict }}  <!-- instantiating thing that will contain ALL cross references and ALL posts listings on a section on the website -->
+{{ range $i, $ALLPAGES }}
+  {{ $refs := slice }}
+  {{ $currPageFileStr := print $i }}
+<!-- make sure its not about me i hate that page in my data!!!! -->
+  {{ if ne $i.RelPermalink "/about-me/" }}
+    <!-- currnet idea is to collect all the sublanding pages for a given section page, then finding all cross references between them and any other page, treating them as any other page (i.e., reading raw content and not doing much else) -->
+    {{ if eq $i.Kind "section" }}
+      {{ range $j, $ALLPAGES }} <!-- find the immediate subsections -->
+        {{ if eq $j.Kind "page" }}
+          {{ if $j.Params.rootPage }}
+            {{ if and (in $j.RelPermalink $i.RelPermalink) (in $j.RelPermalink $rootLink) }}
+              {{ if not (or (in $j.RelPermalink "tag") (in $j.RelPermalink "categories"))}}
+                {{ $iLinkDepth := (split $i.RelPermalink "/") | len }}
+                {{ $jLinkDepth := (split $j.RelPermalink "/") | len }}
+                {{ $signedDepthDiff := sub $iLinkDepth $jLinkDepth }}
+                {{ if eq $signedDepthDiff -1 }}
+                  {{ $refs = $refs | append (index $PAGESBYLINKS (substr $j.RelPermalink 0 -1)) }} <!-- append the page that was linked to if it is an immediate subsection) -->
+                {{ end }}
+              {{ end }}
+            {{ end }}
+          {{ end }}
+        {{ else }}
+          {{ if and (in $j.RelPermalink $i.RelPermalink) (in $j.RelPermalink $rootLink) }}
+            {{ if not (or (in $j.RelPermalink "tag") (in $j.RelPermalink "categories"))}}
+              {{ $iLinkDepth := (split $i.RelPermalink "/") | len }}
+              {{ $jLinkDepth := (split $j.RelPermalink "/") | len }}
+              {{ $signedDepthDiff := sub $iLinkDepth $jLinkDepth }}
+              {{ if eq $signedDepthDiff -1 }}
+                {{ $refs = $refs | append (index $PAGESBYLINKS (substr $j.RelPermalink 0 -1)) }} <!-- append the page that was linked to if it is an immediate subsection) -->
+              {{ end }}
+            {{ end }}
+          {{ end }}
+        {{ end }}
+      {{ end }}
+      {{ if ne ($refs | len) 0 }} <!-- only add if there are references -->
+        {{ $ALLREFS = merge $ALLREFS (dict $i.RelPermalink (slice $i $refs)) }}
+      {{ end }}
+    {{ end }}
+
+
+    <!-- do for non home pages (i.e., pretty much every page, INCLUDING sections!) -->
+    {{ if ne $i.Kind "home" }}
+    <!-- scan text to find  all references -->
+      {{ $splitText := after 1 (split $i.RawContent "{{<re") }} <!-- split to get multiple references per line  -->
+      {{ $refs := slice }} <!-- instantiate processed references variable -->
+      {{ range $s, $splitText }} <!-- get all the references in the references variable! -->
+        {{ $sLink := index (index (findRESubmatch `"(.*?)">}}\)` $s) 0) 1 }}
+        {{ $refs = $refs | append (index $PAGESBYLINKS $sLink) }}
+      {{ end }}
+      {{ if ne ($refs | len) 0 }} <!-- only add if there are references -->
+        {{ $ALLREFS = merge $ALLREFS (dict $i.RelPermalink (slice $i $refs)) }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ range $i, $ALLPAGES }}
+  {{ if and (not (index $ALLREFS $i.RelPermalink)) (ne $i.Kind "home") (ne $i.RelPermalink "/about-me/") }}
+    {{ if not (or (in $i.RelPermalink "tag") (in $i.RelPermalink "categories"))}}
+      {{ $ALLREFS = merge $ALLREFS (dict $i.RelPermalink (slice $i (slice )))}}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+<!-- now to refine the $ALLREFS dictionary into that of ones only corresponding to the current page! -->
+{{ $ROOTREFS := dict }}
+{{ range $r, $ALLREFS }} <!-- go through all refs to refine the list! -->
+  {{ $pageLink := (index $r 0).RelPermalink }}
+  {{ $refsForPage := print }}
+  {{ $refs := index $r 1 }}
+  {{ range $s, $refs }}
+    {{ $refsForPage = print $refsForPage " " $s.RelPermalink}}
+  {{ end }}
+  {{ if or (in $pageLink $rootLink) (in $refsForPage $rootLink) }}
+    {{ $ROOTREFS = merge $ROOTREFS (dict $pageLink (slice (index $r 0) (index $r 1)))}}
+  {{ end }}
+{{ end }}
+
+
+<!-- now to take our refined list and convert it into a JSON string and go BEAST MODE -->
+{{ $nodeStr := "\"nodes\":[" }}
+{{ $linkStr := "\"links\":["}}
+{{ range $r, $ROOTREFS }}
+<!-- add in nodes! only need to do it for the actual "source" page as we will add the other one later! (im pretty sure. we'll test this soon) -->
+  {{ $nodeStr = print $nodeStr "{\"name\":\"" (index $r 0).Title "\"," }}
+  <!-- putting in link address -->
+  {{ $nodeStr = print $nodeStr "\"lnk\":\"" (index $r 0).RelPermalink "\"," }}
+  <!-- putting in Kind hugo info (like if its section or page) -->
+  {{ $nodeStr = print $nodeStr "\"kind\":\"" (index $r 0).Kind "\"}," }}
+
+  <!-- time ot add in the links! We will run through the references and add one at a time -->
+  {{ $source := index $r 0 }}
+  {{ $targets := index $r 1 }}
+  {{ range $target, $targets }}
+    
+    {{ $linkStr = print $linkStr "{\"source\":\"" $source.Title "\","}}
+    {{ $linkStr = print $linkStr "\"target\":\"" $target.Title "\"},"}}
+    {{ if not (index $ROOTREFS $target.RelPermalink) }}
+      {{ $nodeStr = print $nodeStr "{\"name\":\"" $target.Title "\"," }}
+      <!-- putting in link address -->
+      {{ $nodeStr = print $nodeStr "\"lnk\":\"" $target.RelPermalink "\"," }}
+      <!-- putting in Kind hugo info (like if its section or page) -->
+      {{ $nodeStr = print $nodeStr "\"kind\":\"" $target.Kind "\"}," }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ $nodeStr = substr $nodeStr 0 -1 }}
+{{ $nodeStr = print $nodeStr "],"}}
+{{ $linkStr = substr $linkStr 0 -1 }} 
+{{ $linkStr = print $linkStr "]"}}
+{{ $jsonString := print "{" $nodeStr $linkStr "}"}}
+
+<br><br>
+
+
+<div id="data-jsonstring" data-jsonstring="{{ $jsonString }}"></div>
+
+<!-- All credit to https://github.com/john-guerra/d3V4ForceTutorial for giving the implementation guide :)  -->
+<canvas id="network" width="1500" height="1500"></canvas>
+
+<link rel="stylesheet" href="/css/theme.css" type="text/css" media="all" />
+<script src="https://d3js.org/d3.v4.min.js"></script>
+
+
+
+
+<script>
+/* global d3 */
+
+var dataString = document.getElementById("data-jsonstring").getAttribute("data-jsonstring");  
+// console.log(dataString);
+var graph = JSON.parse(dataString);
+
+var linkOpacity = 0.5;
+var nodeRadius = 5;
+var repelStrength = 1.8;
+var clickCutoffTime = 100;
+
+var start, end;
+  
+var canvas = d3.select("#network"),
+  width = canvas.attr("width"),
+  height = canvas.attr("height"),
+  ctx = canvas.node().getContext("2d"),
+  r = nodeRadius,
+  simulation = d3.forceSimulation()
+    .force("x", d3.forceX(width/2))
+    .force("y", d3.forceY(height/2))
+    .force("collide", d3.forceCollide(r+1))
+    .force("charge", d3.forceManyBody()
+      .strength(repelStrength*-1000))
+    .force("link", d3.forceLink()
+      .id(function (d) { return d.name; }));
+
+
+simulation.nodes(graph.nodes);
+simulation.force("link")
+  .links(graph.links);
+simulation.on("tick", update);
+
+canvas
+    .call(d3.drag()
+        .container(canvas.node())
+        .subject(dragsubject)
+        .on("start", dragstarted)
+        .on("drag", dragged)
+        .on("end", dragended)
+        );
+
+function update() {
+  ctx.clearRect(0, 0, width, height);
+
+  ctx.beginPath();
+  ctx.globalAlpha = linkOpacity;
+  ctx.strokeStyle = "#fbf1c7";
+  graph.links.forEach(drawLink);
+  ctx.stroke();
+
+  ctx.globalAlpha = 1.0;
+  graph.nodes.forEach(drawNode);
+}
+
+function dragsubject() {
+  return simulation.find(d3.event.x, d3.event.y);
+}
+
+function dragstarted() {
+  if (!d3.event.active) simulation.alphaTarget(0.3).restart();
+  d3.event.subject.fx = d3.event.subject.x;
+  d3.event.subject.fy = d3.event.subject.y;
+  // console.log(d3.event.subject.name);
+  start = +new Date();
+}
+
+function dragged() {
+  d3.event.subject.fx = d3.event.x;
+  d3.event.subject.fy = d3.event.y;
+}
+
+function dragended() {
+  if (!d3.event.active) simulation.alphaTarget(0);
+  d3.event.subject.fx = null;
+  d3.event.subject.fy = null;
+  end = +new Date();
+  // console.log(end - start)
+  if (end-start < clickCutoffTime) { // hacky solution by just measuring if "mouse is held down very briefly" and treating a shortenough press as a click!
+    window.open(d3.event.subject.lnk, "_blank");
+    // console.log(d3.event.subject.name)
+  }
+}
+
+
+function drawNode(d) {
+  ctx.beginPath();
+  if (d.kind === "section") {
+    ctx.fillStyle = "#d79921"
+  } else {
+    ctx.fillStyle = "#ebdbb2"
+  }
+  ctx.moveTo(d.x, d.y);
+  ctx.arc(d.x, d.y, r, 0, Math.PI*2);
+  ctx.fill();
+  ctx.font = "0.9em JetBrains Mono";
+  ctx.fillText(d.name, d.x-2*r, d.y-2*r);
+}
+
+function drawLink(l) {
+  ctx.moveTo(l.source.x, l.source.y);
+  ctx.lineTo(l.target.x, l.target.y);
+}
+
+
+
+
+</script>

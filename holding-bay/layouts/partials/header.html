@@ -1,0 +1,26 @@
+<div style="display: flex;">
+  <div style="width: 6.4em;">
+    <a class="logo" href="{{ .Site.BaseURL }}">
+      <img src="/gortoutline.png" style="filter: brightness(0) saturate(100%) invert(96%) sepia(2%) saturate(4162%) hue-rotate(353deg) brightness(101%) contrast(97%);" width=100%>
+    </a>
+  </div>
+  <div>&nbsp;</div>
+  <div>
+    <div id="title-font">
+      <a href="{{ .Site.BaseURL }}" style="text-decoration: none">mel-land</a>
+    </div>
+    <div id="subtitle-font">
+      where the mel guy<br>
+      reigns supreme
+    </div>
+    <div id="nav-menu">
+      <ul style="list-style-type: none; margin: 0; padding: 0; display: flex; font-size: 125%">
+        {{ range .Site.Menus.main }}
+          <li>
+            <a href="{{ .URL }}" style="text-decoration: none; font-weight: bold;">{{ .Name }}</a>&nbsp;&nbsp;
+          </li>
+        {{ end }}
+      </ul>
+    </div>
+  </div>
+</div>
