@@ -1,9 +1,0 @@
-{{ $ALLPAGES := .Site.AllRegularPages }}
-{{ $PAGESBYLINKS := dict }} <!-- collect all pages in a dictionary with key being their relative link! useful later for getting a references list which is just a slice of literal pages -->
-{{ range $i, $ALLPAGES }}
-  {{ $PAGESBYLINKS = merge $PAGESBYLINKS (dict $i.RelPermalink $i)}} <!-- Just adding pages with link keys -->
-{{ end }}
-
-{{ $currPage := index $PAGESBYLINKS (.Get 0) }}
-
-{{ partial "tabs.html" $currPage }}

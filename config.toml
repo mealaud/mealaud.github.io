@@ -1,7 +1,6 @@
 baseURL = 'http://mealaud.com/'
 languageCode = 'en-us'
 title = 'mel-land'
-theme = 'melguy'
 
 [markup]
   [markup.tableOfContents]
