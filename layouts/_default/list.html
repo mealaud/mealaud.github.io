@@ -6,11 +6,11 @@
   <header>
     <h1>{{ .Title }}</h1>
   </header>
-  <!-- <div id="content" style="display: flex; width: 100%;"> -->
-  <!--   <div style="min-width: 25%">{{ .Content }}</div> -->
-  <!-- </div> -->
+  <div id="content" style="display: flex; width: 100%;">
+    <div style="min-width: 33vw">{{ .Content }}</div>
+  </div>
   <!-- {{ partial "landinglists.html" . }} -->
-  {{ .Content }}
+  <!-- {{ .Content }} -->
   {{ partial "universal-link-graph.html" . }}
 {{ end }}
 

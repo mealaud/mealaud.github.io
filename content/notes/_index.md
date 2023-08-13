@@ -9,3 +9,20 @@ rootPage: false
 ---
 
 Notes.  
+{{%nl%}} {{%nl%}} {{%nl%}}
+{{% tabs "/notes/complex-numbers-as-vectors/" %}}
+{{%nl%}}
+{{%nl%}}
+{{%nl%}}
+{{%nl%}}
+{{% tabs "/notes/definition-of-the-complex-numbers/" %}}
+{{%nl%}}
+{{%nl%}}
+{{%nl%}}
+{{%nl%}}
+{{% tabs "/notes/topology-of-the-complex-numbers-and-euclidean-space/" %}}
+{{%nl%}}
+{{%nl%}}
+{{%nl%}}
+{{%nl%}}
+{{% tabs "/notes/magnitude-of-a-complex-number/" %}}
