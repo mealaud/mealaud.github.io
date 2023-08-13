@@ -3,15 +3,13 @@
 {{ end }}
 
 {{ define "main" }}
-  <header>
-    <h1>{{ .Title }}</h1>
-  </header>
-  <div id="content" style="display: flex; width: 100%;">
-    <div style="min-width: 33vw">{{ .Content }}</div>
+  <div id="content" style="display: flex; width: 100%; margin-top: 1em">
+    <div style="width: 30vw; min-width: 25vw; height: 80vh">
+      <h1>{{ .Title }}</h1>
+      {{ .Content }}
+      <!-- {{ partial "universal-link-graph.html" . }} -->
+    </div>
   </div>
-  <!-- {{ partial "landinglists.html" . }} -->
-  <!-- {{ .Content }} -->
-  {{ partial "universal-link-graph.html" . }}
 {{ end }}
 
 {{ define "footer" }}

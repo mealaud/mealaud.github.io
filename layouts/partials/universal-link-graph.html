@@ -130,7 +130,7 @@
 <div id="data-jsonstring" data-jsonstring="{{ $jsonString }}"></div>
 
 <!-- All credit to https://github.com/john-guerra/d3V4ForceTutorial for giving the implementation guide :)  -->
-<canvas id="network" width="1500" height="1500"></canvas>
+<canvas id="network" width="375" height="600"></canvas>
 
 <link rel="stylesheet" href="/css/theme.css" type="text/css" media="all" />
 <script src="https://d3js.org/d3.v4.min.js"></script>
@@ -147,7 +147,7 @@ var graph = JSON.parse(dataString);
 
 var linkOpacity = 0.5;
 var nodeRadius = 5;
-var repelStrength = 1.8;
+var repelStrength = 0.5;
 var clickCutoffTime = 100;
 
 var start, end;

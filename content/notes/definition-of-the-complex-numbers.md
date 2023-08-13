@@ -32,5 +32,3 @@ $ i $ is often called the {{% tdf "imaginary unit" %}}.
 {{% /MathEnv %}}
 
 Let's keep movin'!
-
-
