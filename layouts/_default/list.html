@@ -3,12 +3,23 @@
 {{ end }}
 
 {{ define "main" }}
+  <script>
+    function clearTabs() {
+      document.getElementById("tabs").remove();
+      var tabs = document.createElement("div");
+      tabs.id = "tabs";
+      tabs.style.display = "flex";
+      document.getElementById("content").append(tabs);
+    }
+  </script>
   <div id="content" style="display: flex; width: 100%; margin-top: 1em">
     <div style="width: 30vw; min-width: 25vw; height: 80vh">
-      <h1>{{ .Title }}</h1>
+      <h1>{{ .Title }} </h1>
+      <div class="exit-button" onclick="clearTabs();return false;">Clear</div>
       {{ .Content }}
       <!-- {{ partial "universal-link-graph.html" . }} -->
     </div>
+    <div id="tabs" style="display: flex"></div>
   </div>
 {{ end }}
 
