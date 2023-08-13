@@ -30,15 +30,6 @@ function genTab(args) {
   exitButton.addEventListener("click", function() {tab.remove();});
   exitButton.style.width = "1em";
   exitButton.style.height = "1em";
-  // exitButton.style.position = "absolute";
-  // exitButton.style.top = "1.5em";
-  // exitButton.style.right = "0em";
-  // exitButton.style.padding = "0.2em";
-  // exitButton.style.marginRight = "1em";
-  // exitButton.style.backgroundColor = "none";
-  // exitButton.style.border = "2px solid #fbf1c7";
-  // exitButton.style.color = "#fbf1c7";
-  // exitButton.style.fontSize = "1em";
 
   // Drawing the tab
   if (!document.getElementById(tabId)) {
