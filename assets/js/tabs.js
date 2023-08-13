@@ -12,21 +12,33 @@ function genTab(args) {
   var tab = document.createElement("div");
   tab.setAttribute("class", tabClass);
   tab.id = link;
+  tab.style.position = "relative";
 
   // title
-  var tabTitle = document.createElement("div");
-  tabTitle.id = tabId.concat("-", "Title");
+  var tabHeader = document.createElement("div");
+  tabHeader.id = tabId.concat("-", "Title");
 
   // content
   var tabContent = document.createElement("div");
   tabContent.id = tabId.concat("-", "Content");
 
   // exit button
-  var exitButton = document.createElement("button");
+  var exitButton = document.createElement("div");
   exitButton.id = tabId.concat("-", "Exit");
-  exitButton.setAttribute("class","exit-button");
   exitButton.innerText = "X";
+  exitButton.setAttribute("class", "exit-button")
   exitButton.addEventListener("click", function() {tab.remove();});
+  exitButton.style.width = "1em";
+  exitButton.style.height = "1em";
+  // exitButton.style.position = "absolute";
+  // exitButton.style.top = "1.5em";
+  // exitButton.style.right = "0em";
+  // exitButton.style.padding = "0.2em";
+  // exitButton.style.marginRight = "1em";
+  // exitButton.style.backgroundColor = "none";
+  // exitButton.style.border = "2px solid #fbf1c7";
+  // exitButton.style.color = "#fbf1c7";
+  // exitButton.style.fontSize = "1em";
 
   // Drawing the tab
   if (!document.getElementById(tabId)) {
@@ -34,8 +46,11 @@ function genTab(args) {
     document.getElementById(parentEltId).append(tab);
 
     // making title
-    tabTitle.innerHTML = `<h1>${title.substring(1,title.length)}</h1>`;
-    tab.appendChild(tabTitle);
+    tabHeader.innerHTML = `<h1>${title.substring(1,title.length)}</h1>`;
+    tab.appendChild(tabHeader);
+
+    // // making button
+    tab.appendChild(exitButton);
 
     // making content 
     tabContent.innerHTML = `${content.substring(0,content.length-2)}`;
@@ -48,8 +63,5 @@ function genTab(args) {
                 {left: "\\(", right: "\\)", display: false},
             ]
         });
-
-    // // making button
-    tab.appendChild(exitButton);
   }
 }

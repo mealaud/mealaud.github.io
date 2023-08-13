@@ -3,6 +3,27 @@
 {{ end }}
 
 {{ define "main" }}
+  <style>
+    .tab {
+      min-width: 35vw;
+      width: 35vw;
+      border-right: 3px solid var(--fg0);
+      padding-left: 3px;
+    } .exit-button {
+      position: absolute;
+      top: 1.5em;
+      right: 0em;
+      padding: 0.5em;
+      margin-right: 1em;
+      background-color: none;
+      border: 2px solid var(--fg0); /* ?>???? not updating */
+      color: var(--fg0);
+      font-size: 1em;
+      text-decoration: none;
+    } .exit-button:hover {
+      cursor: pointer;
+    }
+  </style>
   <script>
     function clearTabs() {
       document.getElementById("tabs").remove();
@@ -13,9 +34,12 @@
     }
   </script>
   <div id="content" style="display: flex; width: 100%; margin-top: 1em">
-    <div style="width: 30vw; min-width: 25vw; height: 80vh">
-      <h1>{{ .Title }} </h1>
-      <div class="exit-button" onclick="clearTabs();return false;">Clear</div>
+    <div id="base" style="position: relative; width: 30vw; min-width: 25vw; height: 80vh; border-right: 3px solid var(--fg0);">
+      <div id="baseTitle">
+        <div style="display: flex;"><h1>{{ .Title }} </h1></div>
+        <div class="exit-button" onclick="clearTabs();return false;">clear</div>
+      </div>
+      
       {{ .Content }}
       <!-- {{ partial "universal-link-graph.html" . }} -->
     </div>
