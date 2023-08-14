@@ -24,9 +24,22 @@
     {{ if ne $i.RelPermalink "/about-me/" }}
       <!-- currnet idea is to collect all the sublanding pages for a given section page, then finding all cross references between them and any other page, treating them as any other page (i.e., reading raw content and not doing much else) -->
       {{ if eq $i.Kind "section" }}
-        {{ range $j, $ALLPAGES }} <!-- find the immediate subsections -->
-          {{ if eq $j.Kind "page" }}
-            {{ if $j.Params.rootPage }}
+        {{ if ne $i.RelPermalink $ROOTLINK }}
+          {{ range $j, $ALLPAGES }} <!-- find the immediate subsections -->
+            {{ if eq $j.Kind "page" }}
+              {{ if $j.Params.rootPage }}
+                {{ if and (in $j.RelPermalink $i.RelPermalink) (in $j.RelPermalink $rootLink) }}
+                  {{ if not (or (in $j.RelPermalink "tag") (in $j.RelPermalink "categories"))}}
+                    {{ $iLinkDepth := (split $i.RelPermalink "/") | len }}
+                    {{ $jLinkDepth := (split $j.RelPermalink "/") | len }}
+                    {{ $signedDepthDiff := sub $iLinkDepth $jLinkDepth }}
+                    {{ if eq $signedDepthDiff -1 }}
+                      {{ $refs = $refs | append (index $PAGESBYLINKS (substr $j.RelPermalink 0 -1)) }} <!-- append the page that was linked to if it is an immediate subsection) -->
+                    {{ end }}
+                  {{ end }}
+                {{ end }}
+              {{ end }}
+            {{ else }}
               {{ if and (in $j.RelPermalink $i.RelPermalink) (in $j.RelPermalink $rootLink) }}
                 {{ if not (or (in $j.RelPermalink "tag") (in $j.RelPermalink "categories"))}}
                   {{ $iLinkDepth := (split $i.RelPermalink "/") | len }}
@@ -35,17 +48,6 @@
                   {{ if eq $signedDepthDiff -1 }}
                     {{ $refs = $refs | append (index $PAGESBYLINKS (substr $j.RelPermalink 0 -1)) }} <!-- append the page that was linked to if it is an immediate subsection) -->
                   {{ end }}
-                {{ end }}
-              {{ end }}
-            {{ end }}
-          {{ else }}
-            {{ if and (in $j.RelPermalink $i.RelPermalink) (in $j.RelPermalink $rootLink) }}
-              {{ if not (or (in $j.RelPermalink "tag") (in $j.RelPermalink "categories"))}}
-                {{ $iLinkDepth := (split $i.RelPermalink "/") | len }}
-                {{ $jLinkDepth := (split $j.RelPermalink "/") | len }}
-                {{ $signedDepthDiff := sub $iLinkDepth $jLinkDepth }}
-                {{ if eq $signedDepthDiff -1 }}
-                  {{ $refs = $refs | append (index $PAGESBYLINKS (substr $j.RelPermalink 0 -1)) }} <!-- append the page that was linked to if it is an immediate subsection) -->
                 {{ end }}
               {{ end }}
             {{ end }}
@@ -101,28 +103,29 @@
   {{ $linkStr := "\"links\":["}}
   {{ $nodesOnly := slice }}
   {{ range $r, $ROOTREFS }}
-    {{ $nodesOnly = $nodesOnly | append (index $r 0) }}
-  <!-- add in nodes! only need to do it for the actual "source" page as we will add the other one later! (im pretty sure. we'll test this soon) -->
-    {{ $nodeStr = print $nodeStr "{\"id\":\"" (index $r 0).Title "\"," }}
-    <!-- putting in link address -->
-    {{ $nodeStr = print $nodeStr "\"link\":\"" (index $r 0).RelPermalink "\"," }}
-    <!-- putting in Kind hugo info (like if its section or page) -->
-    {{ $nodeStr = print $nodeStr "\"kind\":\"" (index $r 0).Kind "\"}," }}
+    {{ if ne (index $r 0).RelPermalink $ROOTLINK }}
+      {{ $nodesOnly = $nodesOnly | append (index $r 0) }}
+    <!-- add in nodes! only need to do it for the actual "source" page as we will add the other one later! (im pretty sure. we'll test this soon) -->
+      {{ $nodeStr = print $nodeStr "{\"id\":\"" (index $r 0).Title "\"," }}
+      <!-- putting in link address -->
+      {{ $nodeStr = print $nodeStr "\"link\":\"" (index $r 0).RelPermalink "\"," }}
+      <!-- putting in Kind hugo info (like if its section or page) -->
+      {{ $nodeStr = print $nodeStr "\"kind\":\"" (index $r 0).Kind "\"}," }}
 
-    <!-- time ot add in the links! We will run through the references and add one at a time -->
-    {{ $source := index $r 0 }}
-    {{ $targets := index $r 1 }}
-    {{ range $target, $targets }}
-      
-      {{ $linkStr = print $linkStr "{\"source\":\"" $source.Title "\","}}
-      {{ $linkStr = print $linkStr "\"target\":\"" $target.Title "\"},"}}
-      {{ if not (index $ROOTREFS $target.RelPermalink) }}
-        {{ $nodesOnly = $nodesOnly | append $target }}
-        {{ $nodeStr = print $nodeStr "{\"id\":\"" $target.Title "\"," }}
-        <!-- putting in link address -->
-        {{ $nodeStr = print $nodeStr "\"link\":\"" $target.RelPermalink "\"," }}
-        <!-- putting in Kind hugo info (like if its section or page) -->
-        {{ $nodeStr = print $nodeStr "\"kind\":\"" $target.Kind "\"}," }}
+      <!-- time ot add in the links! We will run through the references and add one at a time -->
+      {{ $source := index $r 0 }}
+      {{ $targets := index $r 1 }}
+      {{ range $target, $targets }}
+        {{ $linkStr = print $linkStr "{\"source\":\"" $source.Title "\","}}
+        {{ $linkStr = print $linkStr "\"target\":\"" $target.Title "\"},"}}
+        {{ if not (index $ROOTREFS $target.RelPermalink) }}
+          {{ $nodesOnly = $nodesOnly | append $target }}
+          {{ $nodeStr = print $nodeStr "{\"id\":\"" $target.Title "\"," }}
+          <!-- putting in link address -->
+          {{ $nodeStr = print $nodeStr "\"link\":\"" $target.RelPermalink "\"," }}
+          <!-- putting in Kind hugo info (like if its section or page) -->
+          {{ $nodeStr = print $nodeStr "\"kind\":\"" $target.Kind "\"}," }}
+        {{ end }}
       {{ end }}
     {{ end }}
   {{ end }}
