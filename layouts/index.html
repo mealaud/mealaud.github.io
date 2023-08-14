@@ -3,17 +3,16 @@
 {{ end }}
 
 {{ define "main" }}
-  {{ .Content }}
-  <div>
-    {{ $path := "/js/link-graph.js" }}
-    {{ $js := resources.Get $path | resources.ExecuteAsTemplate $path . }}
-    <!-- {{ $js.Permalink }} -->
-    {{ $script := print $js.Permalink "?2" }}
-    <script src="{{ $script }}"></script> 
-  </div>
+  <h1>Hello! o/</h1>
+  Welcome to mel-land! As you would expect, this is the place where the mel guy indeed reigns supreme. B) <br><br>
+
+  Check my about me page to learn more about me, and check my other pages to learn more about stuff important to me! <br><br>
+
+  Enjoy your visit.
+
+  <h2>OTL</h2>
 {{ end }}
 
 {{ define "footer" }}
   {{ partial "footer.html" . }}
 {{ end }}
-
