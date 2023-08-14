@@ -1,4 +1,5 @@
 function genTab(args) {
+  console.log("got here!");
   // page variables
   const splitArgs = args.split("&&&12391&&&");
   const title = splitArgs[0];

@@ -9,7 +9,6 @@ var linkOpacity = 1;
 var nodeRadius = 8;
 var repelStrength = 0.5;
 var clickCutoffTime = 100;
-var linkWidth = 3;
 
 var start, end;
 // Specify the dimensions of the chart.
@@ -48,7 +47,7 @@ const link = svg.append("g")
   .selectAll("line")
   .data(links)
   .join("line")
-    .attr("stroke-width", linkWidth);
+    .attr("stroke-width", d => Math.sqrt(d.value));
 
 const node = svg.append("g")
   .selectAll("circle")
@@ -85,6 +84,7 @@ function dragstarted(event) {
   if (!event.active) simulation.alphaTarget(0.3).restart();
   event.subject.fx = event.subject.x;
   event.subject.fy = event.subject.y;
+  start = +new Date();
 }
 
 // Update the subject (dragged node) position during drag.
@@ -99,4 +99,12 @@ function dragended(event) {
   if (!event.active) simulation.alphaTarget(0);
   event.subject.fx = null;
   event.subject.fy = null;
+  end = +new Date();
+  // console.log(end - start)
+  if (end-start < clickCutoffTime) { // hacky solution by just measuring if "mouse is held down very briefly" and treating a shortenough press as a click!
+    var str = "button";
+    if ( event.subject.link.split("/").length > 3 ) {
+      document.getElementById(str.concat(event.subject.link)).click();
+    }
+  }
 }

@@ -1,0 +1,9 @@
+{{ $args := delimit (slice .Title .RelPermalink .Content) "&&&12391&&&" }} <!-- garbage delimiter as i will hopefully never type that :skull: -->
+<a href="" onclick="genTab(`{{ $args }}`);return false;">{{ .Title }}</a>
+
+{{ $path := "/js/tabs.js" }}
+{{ $js := resources.Get $path | resources.ExecuteAsTemplate $path . }}
+<!-- {{ $js.Permalink }} -->
+{{ $script := print $js.Permalink "?2" }}
+<script src="{{ $script }}"></script> 
+
