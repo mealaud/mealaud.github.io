@@ -55,7 +55,6 @@ const node = svg.append("g")
   .join("circle")
     .attr("r", nodeRadius)
     .attr("fill", d => ((d.kind === "section") ? "#d79921" : "#ebdbb2"));
-    // .on("click", d => genTab(d.id, d.link));
 
 node.append("text")
     .text(d => d.id);
@@ -102,9 +101,9 @@ function dragended(event) {
   end = +new Date();
   // console.log(end - start)
   if (end-start < clickCutoffTime) { // hacky solution by just measuring if "mouse is held down very briefly" and treating a shortenough press as a click!
-    var str = "button";
-    if ( event.subject.link.split("/").length > 3 ) {
-      document.getElementById(str.concat(event.subject.link)).click();
+    if (event.subject.link.split("/").length > 3) {
+      document.getElementById(event.subject.link.concat("/button")).click();
     }
   }
 }
+

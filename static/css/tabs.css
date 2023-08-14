@@ -1,0 +1,24 @@
+.tab {
+  min-width: 35vw;
+  width: 35vw;
+  border-right: 3px solid var(--fg0);
+  padding-left: 3px;
+} .exit-button {
+  position: absolute;
+  top: 1.5em;
+  right: 0em;
+  padding: 0.5em;
+  margin-right: 1em;
+  background-color: none;
+  border: 2px solid var(--fg0); /* ?>???? not updating */
+  color: var(--fg0);
+  font-size: 1em;
+  text-decoration: none;
+} .exit-button:hover {
+  cursor: pointer;
+}
+.invisible {
+position: absolute;
+left: -9999px;
+}
+

@@ -1,10 +1,4 @@
-function genTab(args) {
-  console.log("got here!");
-  // page variables
-  const splitArgs = args.split("&&&12391&&&");
-  const title = splitArgs[0];
-  const link = splitArgs[1];
-  const content = splitArgs[2];
+function genTab(title, link, content) {
   const parentEltId = "tabs";
   var tabId = link;
   const tabClass = "tab";
@@ -36,16 +30,17 @@ function genTab(args) {
   if (!document.getElementById(tabId)) {
     // making tab
     document.getElementById(parentEltId).append(tab);
+    // console.log("hi");
 
     // making title
-    tabHeader.innerHTML = `<h1>${title.substring(1,title.length)}</h1>`;
+    tabHeader.innerHTML = `<h1>${title.substring(1,title.length-1)}</h1>`;
     tab.appendChild(tabHeader);
 
     // // making button
     tab.appendChild(exitButton);
 
     // making content 
-    tabContent.innerHTML = `${content.substring(0,content.length-2)}`;
+    tabContent.innerHTML = `${content.substring(1,content.length-2)}`;
     tab.appendChild(tabContent);
     renderMathInElement(tab, {
             delimiters: [
@@ -57,3 +52,12 @@ function genTab(args) {
         });
   }
 }
+
+function clearTabs() {
+  document.getElementById("tabs").remove();
+  var tabs = document.createElement("div");
+  tabs.id = "tabs";
+  tabs.style.display = "flex";
+  document.getElementById("content").append(tabs);
+}
+

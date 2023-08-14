@@ -1,0 +1,19 @@
+{{ define "header" }}
+  {{ partial "header.html" . }}
+{{ end }}
+
+{{ define "main" }}
+  {{ .Content }}
+  <div>
+    {{ $path := "/js/link-graph.js" }}
+    {{ $js := resources.Get $path | resources.ExecuteAsTemplate $path . }}
+    <!-- {{ $js.Permalink }} -->
+    {{ $script := print $js.Permalink "?2" }}
+    <script src="{{ $script }}"></script> 
+  </div>
+{{ end }}
+
+{{ define "footer" }}
+  {{ partial "footer.html" . }}
+{{ end }}
+

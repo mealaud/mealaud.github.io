@@ -3,46 +3,173 @@
 {{ end }}
 
 {{ define "main" }}
+   <!-- compute the all pages stuff! -->
+  {{ $ALLPAGES := .Site.AllPages }}
+  {{ $ROOTLINK := .RelPermalink }}
+  {{ $rootLink := substr $ROOTLINK 0 -1 }}
+  {{ $rootTitle := .Title }}
 
-  <style>
-    .tab {
-      min-width: 35vw;
-      width: 35vw;
-      border-right: 3px solid var(--fg0);
-      padding-left: 3px;
-    } .exit-button {
-      position: absolute;
-      top: 1.5em;
-      right: 0em;
-      padding: 0.5em;
-      margin-right: 1em;
-      background-color: none;
-      border: 2px solid var(--fg0); /* ?>???? not updating */
-      color: var(--fg0);
-      font-size: 1em;
-      text-decoration: none;
-    } .exit-button:hover {
-      cursor: pointer;
-    }
-  </style>
+  <!-- gameplan: get all information at once (maybe put this in the header eventually? so we compute once and not on every page?) and then simplify down when printing the string? -->
 
-  <script src="https://d3js.org/d3.v7.min.js"></script>
-  <script>
-    function clearTabs() {
-      document.getElementById("tabs").remove();
-      var tabs = document.createElement("div");
-      tabs.id = "tabs";
-      tabs.style.display = "flex";
-      document.getElementById("content").append(tabs);
-    }
-  </script>
+  {{ $PAGESBYLINKS := dict }} <!-- collect all pages in a dictionary with key being their relative link! useful later for getting a references list which is just a slice of literal pages -->
+  {{ range $i, $ALLPAGES }}
+    {{ $PAGESBYLINKS = merge $PAGESBYLINKS (dict (substr $i.RelPermalink 0 -1) $i)}} <!-- Just adding pages with link keys -->
+  {{ end }}
+
+  {{ $ALLREFS := dict }}  <!-- instantiating thing that will contain ALL cross references and ALL posts listings on a section on the website -->
+  {{ range $i, $ALLPAGES }}
+    {{ $refs := slice }}
+    {{ $currPageFileStr := print $i }}
+  <!-- make sure its not about me i hate that page in my data!!!! -->
+    {{ if ne $i.RelPermalink "/about-me/" }}
+      <!-- currnet idea is to collect all the sublanding pages for a given section page, then finding all cross references between them and any other page, treating them as any other page (i.e., reading raw content and not doing much else) -->
+      {{ if eq $i.Kind "section" }}
+        {{ range $j, $ALLPAGES }} <!-- find the immediate subsections -->
+          {{ if eq $j.Kind "page" }}
+            {{ if $j.Params.rootPage }}
+              {{ if and (in $j.RelPermalink $i.RelPermalink) (in $j.RelPermalink $rootLink) }}
+                {{ if not (or (in $j.RelPermalink "tag") (in $j.RelPermalink "categories"))}}
+                  {{ $iLinkDepth := (split $i.RelPermalink "/") | len }}
+                  {{ $jLinkDepth := (split $j.RelPermalink "/") | len }}
+                  {{ $signedDepthDiff := sub $iLinkDepth $jLinkDepth }}
+                  {{ if eq $signedDepthDiff -1 }}
+                    {{ $refs = $refs | append (index $PAGESBYLINKS (substr $j.RelPermalink 0 -1)) }} <!-- append the page that was linked to if it is an immediate subsection) -->
+                  {{ end }}
+                {{ end }}
+              {{ end }}
+            {{ end }}
+          {{ else }}
+            {{ if and (in $j.RelPermalink $i.RelPermalink) (in $j.RelPermalink $rootLink) }}
+              {{ if not (or (in $j.RelPermalink "tag") (in $j.RelPermalink "categories"))}}
+                {{ $iLinkDepth := (split $i.RelPermalink "/") | len }}
+                {{ $jLinkDepth := (split $j.RelPermalink "/") | len }}
+                {{ $signedDepthDiff := sub $iLinkDepth $jLinkDepth }}
+                {{ if eq $signedDepthDiff -1 }}
+                  {{ $refs = $refs | append (index $PAGESBYLINKS (substr $j.RelPermalink 0 -1)) }} <!-- append the page that was linked to if it is an immediate subsection) -->
+                {{ end }}
+              {{ end }}
+            {{ end }}
+          {{ end }}
+        {{ end }}
+        {{ if ne ($refs | len) 0 }} <!-- only add if there are references -->
+          {{ $ALLREFS = merge $ALLREFS (dict $i.RelPermalink (slice $i $refs)) }}
+        {{ end }}
+      {{ end }}
+
+
+      <!-- do for non home pages (i.e., pretty much every page, INCLUDING sections!) -->
+      {{ if ne $i.Kind "home" }}
+      <!-- scan text to find  all references -->
+        {{ $splitText := after 1 (split $i.RawContent "{{<re") }} <!-- split to get multiple references per line  -->
+        {{ $refs := slice }} <!-- instantiate processed references variable -->
+        {{ range $s, $splitText }} <!-- get all the references in the references variable! -->
+          {{ $sLink := index (index (findRESubmatch `"(.*?)">}}\)` $s) 0) 1 }}
+          {{ $refs = $refs | append (index $PAGESBYLINKS $sLink) }}
+        {{ end }}
+        {{ if ne ($refs | len) 0 }} <!-- only add if there are references -->
+          {{ $ALLREFS = merge $ALLREFS (dict $i.RelPermalink (slice $i $refs)) }}
+        {{ end }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+
+  {{ range $i, $ALLPAGES }}
+    {{ if and (not (index $ALLREFS $i.RelPermalink)) (ne $i.Kind "home") (ne $i.RelPermalink "/about-me/") }}
+      {{ if not (or (in $i.RelPermalink "tag") (in $i.RelPermalink "categories"))}}
+        {{ $ALLREFS = merge $ALLREFS (dict $i.RelPermalink (slice $i (slice )))}}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+
+  <!-- now to refine the $ALLREFS dictionary into that of ones only corresponding to the current page! -->
+  {{ $ROOTREFS := dict }}
+  {{ range $r, $ALLREFS }} <!-- go through all refs to refine the list! -->
+    {{ $pageLink := (index $r 0).RelPermalink }}
+    {{ $refsForPage := print }}
+    {{ $refs := index $r 1 }}
+    {{ range $s, $refs }}
+      {{ $refsForPage = print $refsForPage " " $s.RelPermalink}}
+    {{ end }}
+    {{ if or (in $pageLink $rootLink) (in $refsForPage $rootLink) }}
+      {{ $ROOTREFS = merge $ROOTREFS (dict $pageLink (slice (index $r 0) (index $r 1)))}}
+    {{ end }}
+  {{ end }}
+
+
+  <!-- now to take our refined list and convert it into a JSON string and go BEAST MODE -->
+  {{ $nodeStr := "\"nodes\":[" }}
+  {{ $linkStr := "\"links\":["}}
+  {{ $nodesOnly := slice }}
+  {{ range $r, $ROOTREFS }}
+    {{ $nodesOnly = $nodesOnly | append (index $r 0) }}
+  <!-- add in nodes! only need to do it for the actual "source" page as we will add the other one later! (im pretty sure. we'll test this soon) -->
+    {{ $nodeStr = print $nodeStr "{\"id\":\"" (index $r 0).Title "\"," }}
+    <!-- putting in link address -->
+    {{ $nodeStr = print $nodeStr "\"link\":\"" (index $r 0).RelPermalink "\"," }}
+    <!-- putting in Kind hugo info (like if its section or page) -->
+    {{ $nodeStr = print $nodeStr "\"kind\":\"" (index $r 0).Kind "\"}," }}
+
+    <!-- time ot add in the links! We will run through the references and add one at a time -->
+    {{ $source := index $r 0 }}
+    {{ $targets := index $r 1 }}
+    {{ range $target, $targets }}
+      
+      {{ $linkStr = print $linkStr "{\"source\":\"" $source.Title "\","}}
+      {{ $linkStr = print $linkStr "\"target\":\"" $target.Title "\"},"}}
+      {{ if not (index $ROOTREFS $target.RelPermalink) }}
+        {{ $nodesOnly = $nodesOnly | append $target }}
+        {{ $nodeStr = print $nodeStr "{\"id\":\"" $target.Title "\"," }}
+        <!-- putting in link address -->
+        {{ $nodeStr = print $nodeStr "\"link\":\"" $target.RelPermalink "\"," }}
+        <!-- putting in Kind hugo info (like if its section or page) -->
+        {{ $nodeStr = print $nodeStr "\"kind\":\"" $target.Kind "\"}," }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+
+  {{ $nodeStr = substr $nodeStr 0 -1 }}
+  {{ $nodeStr = print $nodeStr "],"}}
+  {{ $linkStr = substr $linkStr 0 -1 }} 
+  {{ $linkStr = print $linkStr "]"}}
+  {{ $jsonString := print "{" $nodeStr $linkStr "}"}}
+  <div id="data-jsonstring" data-jsonstring="{{ $jsonString }}"></div>
+
+  <script src="/js/d3.v7.min.js"></script>
+
+  {{ $path := "/js/tabs.js" }}
+  {{ $js := resources.Get $path | resources.ExecuteAsTemplate $path . }}
+  <!-- {{ $js.Permalink }} -->
+  {{ $script := print $js.Permalink "?2" }}
+  <script src="{{ $script }}"></script> 
+
+
+
   <div id="content" style="display: flex; width: 100%; margin-top: 1em">
     <div id="base" style="position: relative; width: 30vw; min-width: 25vw; height: 80vh; border-right: 3px solid var(--fg0);">
       <div id="baseTitle">
         <div style="display: flex;"><h1>{{ .Title }} </h1></div>
         <div class="exit-button" onclick="clearTabs();return false;">clear</div>
       </div>
-      {{ .Content }}
+      <div>{{ .Content }}</div>
+
+      {{ $rootPage := . }}
+      {{ range $i, $nodesOnly }}
+        {{ if ne $rootPage.RelPermalink $i.RelPermalink }}
+          {{ $id := print $i.RelPermalink "/button"  }}
+          <div id="{{ $id }}" class="invisible" onclick="genTab(`{{$i.Title}}`, `{{$i.RelPermalink}}`, `{{ $i.Content }}`)">{{$i.Title}}
+          </div>
+        {{ end }}
+      {{ end }}
+
+      <!-- link graph -->
+      <div>
+        {{ $path := "/js/link-graph.js" }}
+        {{ $js := resources.Get $path | resources.ExecuteAsTemplate $path . }}
+        <!-- {{ $js.Permalink }} -->
+        {{ $script := print $js.Permalink "?2" }}
+        <script src="{{ $script }}"></script> 
+      </div>
+
     </div>
     <div id="tabs" style="display: flex"></div>
   </div>
