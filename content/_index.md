@@ -8,5 +8,3 @@ categories:
 rootPage: false
 ---
 
-{{% home %}}
-

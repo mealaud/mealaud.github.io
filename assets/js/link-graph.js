@@ -5,15 +5,27 @@ var data = JSON.parse(document.getElementById("data-jsonstring").getAttribute("d
 // console.log(data);
 
 // variables for how stuff looks
+var numNodes = Object.keys(data.nodes).length;
 var linkOpacity = 1;
-var nodeRadius = 8;
-var repelStrength = 0.5;
+var linkWidth = 3;
+var pageNodeRadius = 6;
+var sectionNodeRadius = 1.5*pageNodeRadius;
+var repelStrength = 1/numNodes;
 var clickCutoffTime = 100;
+var pageNodeColor = "#ebdbb2";
+var sectionNodeColor = "#87ceeb";
 
 var start, end;
 // Specify the dimensions of the chart.
-const width = 300;
-const height = 300;
+const width = document.documentElement.clientWidth * 0.3;
+const height = document.documentElement.clientWidth * 0.5;
+// const bound = 0.1;
+// const widthLeftBound = width * inf;
+// const widthRightBound = height * sup;
+// const heightTopBound = height * inf;
+// const heightBottomBound = height * sup;
+const centerX = width/2;
+const centerY = height/2;
 
 // Specify the color scale.
 // const color = d3.scaleOrdinal(d3.schemeCategory10);
@@ -29,16 +41,13 @@ const simulation = d3.forceSimulation(nodes)
     .force("link", d3.forceLink(links).id(d => d.id))
     .force("charge", d3.forceManyBody()
       .strength(repelStrength*-1000))
-    .force("x", d3.forceX())
-    .force("y", d3.forceY());
+    .force('center', d3.forceCenter(centerX, centerY));
 
 // Create the SVG container.
 
 const svg = d3.select("#base").append("svg")
     .attr("width", width)
-    .attr("height", height)
-    .attr("viewBox", [-width / 2, -height / 2, width, height])
-    .attr("style", "max-width: 100%; height: auto;");
+    .attr("height", height);
 
 // Add a line for each link, and a circle for each node.
 const link = svg.append("g")
@@ -47,14 +56,16 @@ const link = svg.append("g")
   .selectAll("line")
   .data(links)
   .join("line")
-    .attr("stroke-width", d => Math.sqrt(d.value));
+    .attr("stroke-width", linkWidth);
 
 const node = svg.append("g")
   .selectAll("circle")
   .data(nodes)
   .join("circle")
-    .attr("r", nodeRadius)
-    .attr("fill", d => ((d.kind === "section") ? "#d79921" : "#ebdbb2"));
+    .attr("r", d => d.kind === "section" ? sectionNodeRadius : pageNodeRadius)
+    .attr("cx", centerX)
+    .attr("cy", centerY)
+    .attr("fill", d => d.kind === "section" ? sectionNodeColor : pageNodeColor);
 
 node.append("text")
     .text(d => d.id);
@@ -74,8 +85,8 @@ simulation.on("tick", () => {
       .attr("y2", d => d.target.y);
 
   node
-      .attr("cx", d => d.x)
-      .attr("cy", d => d.y);
+      .attr("cx", d => d.x > width ? width : d.x < 0 ? 0 : d.x)
+      .attr("cy", d => d.y > height ? height : d.y < 0 ? 0 : d.y);
 });
 
 // Reheat the simulation when drag starts, and fix the subject position.
@@ -88,8 +99,8 @@ function dragstarted(event) {
 
 // Update the subject (dragged node) position during drag.
 function dragged(event) {
-  event.subject.fx = event.x;
-  event.subject.fy = event.y;
+  event.subject.fx = event.x > width ? width : event.x < 0 ? 0 : event.x;
+  event.subject.fy = event.y > height ? height : event.y < 0 ? 0 : event.y;
 }
 
 // Restore the target alpha so the simulation cools after dragging ends.
