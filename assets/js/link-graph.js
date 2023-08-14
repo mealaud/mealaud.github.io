@@ -2,7 +2,7 @@
 
 // data for connections
 var data = JSON.parse(document.getElementById("data-jsonstring").getAttribute("data-jsonstring"));
-console.log(data);
+// console.log(data);
 
 // variables for how stuff looks
 var numNodes = Object.keys(data.nodes).length;
@@ -17,10 +17,12 @@ var sectionNodeColor = "#87ceeb";
 
 var start, end;
 // Specify the dimensions of the chart.
-var width = document.documentElement.clientWidth * 0.3;
-var height = document.documentElement.clientWidth * 0.5;
-var centerX = width/2;
-var centerY = height/2;
+var initWidth = document.documentElement.clientWidth * 0.3;
+var initHeight = document.documentElement.clientWidth * 0.5;
+var width = 0;
+var height = 0;
+var centerX = initWidth/2;
+var centerY = initHeight/2;
 var textHover = -1.5;
 var nodeTextSize = "0.7em";
 
@@ -46,7 +48,7 @@ var simulation = d3.forceSimulation(nodes)
 // Create the SVG container.
 
 var svg = d3.select("#base").append("svg")
-    .attr("width", width)
+    .attr("width", initWidth)
     .attr("height", height);
 
 // Add a line for each link, and a circle for each node.
@@ -91,6 +93,7 @@ node.call(d3.drag()
 
 // Set the position attributes of links and nodes each time the simulation ticks.
 simulation.on("tick", () => {
+  // if (width )
   width = document.documentElement.clientWidth * 0.3;
   height = document.documentElement.clientWidth * 0.5;
   centerX = width/2;
