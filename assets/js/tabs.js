@@ -21,7 +21,7 @@ function genTab(title, link, content) {
   var exitButton = document.createElement("div");
   exitButton.id = tabId.concat("-", "Exit");
   exitButton.innerText = "X";
-  exitButton.setAttribute("class", "exit-button")
+  exitButton.setAttribute("class", "button")
   exitButton.addEventListener("click", function() {tab.remove();});
   exitButton.style.width = "1em";
   exitButton.style.height = "1em";

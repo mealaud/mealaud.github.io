@@ -2,7 +2,7 @@
 
 // data for connections
 var data = JSON.parse(document.getElementById("data-jsonstring").getAttribute("data-jsonstring"));
-// console.log(data);
+console.log(data);
 
 // variables for how stuff looks
 var numNodes = Object.keys(data.nodes).length;
@@ -10,22 +10,19 @@ var linkOpacity = 1;
 var linkWidth = 3;
 var pageNodeRadius = 6;
 var sectionNodeRadius = 1.5*pageNodeRadius;
-var repelStrength = 1/numNodes;
+var repelStrength = 4/numNodes;
 var clickCutoffTime = 100;
 var pageNodeColor = "#ebdbb2";
 var sectionNodeColor = "#87ceeb";
 
 var start, end;
 // Specify the dimensions of the chart.
-const width = document.documentElement.clientWidth * 0.3;
-const height = document.documentElement.clientWidth * 0.5;
-// const bound = 0.1;
-// const widthLeftBound = width * inf;
-// const widthRightBound = height * sup;
-// const heightTopBound = height * inf;
-// const heightBottomBound = height * sup;
-const centerX = width/2;
-const centerY = height/2;
+var width = document.documentElement.clientWidth * 0.3;
+var height = document.documentElement.clientWidth * 0.5;
+var centerX = width/2;
+var centerY = height/2;
+var textHover = -1.5;
+var nodeTextSize = "0.7em";
 
 // Specify the color scale.
 // const color = d3.scaleOrdinal(d3.schemeCategory10);
@@ -37,15 +34,18 @@ const links = data.links.map(d => ({...d}));
 const nodes = data.nodes.map(d => ({...d}));
 
 // Create a simulation with several forces.
-const simulation = d3.forceSimulation(nodes)
+var simulation = d3.forceSimulation(nodes)
     .force("link", d3.forceLink(links).id(d => d.id))
     .force("charge", d3.forceManyBody()
       .strength(repelStrength*-1000))
+    .force("collide", d3.forceCollide().radius(sectionNodeRadius+1))
+    .force("x", d3.forceX(width/2))
+    .force("y", d3.forceY(height/2))
     .force('center', d3.forceCenter(centerX, centerY));
 
 // Create the SVG container.
 
-const svg = d3.select("#base").append("svg")
+var svg = d3.select("#base").append("svg")
     .attr("width", width)
     .attr("height", height);
 
@@ -65,10 +65,23 @@ const node = svg.append("g")
     .attr("r", d => d.kind === "section" ? sectionNodeRadius : pageNodeRadius)
     .attr("cx", centerX)
     .attr("cy", centerY)
-    .attr("fill", d => d.kind === "section" ? sectionNodeColor : pageNodeColor);
+    .attr("fill", d => d.kind === "section" ? sectionNodeColor : pageNodeColor)
+    // .on("mouseover", d => document.getElementById("link-graph-current-node").innerHTML = d.Title);
+    .on("mouseover", function(event, d) {
+       document.getElementById("link-graph-current-node").innerHTML = d.id;
+    });
 
-node.append("text")
-    .text(d => d.id);
+const text = svg.append("g")
+  .selectAll("text")
+  .data(nodes)
+  .join("text")
+    .attr("x", centerX)
+    .attr("y", centerY)
+    .attr("dy", d => d.kind === "section" ? textHover*sectionNodeRadius : textHover*pageNodeRadius)
+    .style("fill", "white")
+    .style("text-anchor", "middle")
+    .style("font-size", nodeTextSize)
+    .text(d => d.kind === "section" || d.rootpage === "true" ? d.id : null);
 
 // Add a drag behavior.
 node.call(d3.drag()
@@ -78,6 +91,18 @@ node.call(d3.drag()
 
 // Set the position attributes of links and nodes each time the simulation ticks.
 simulation.on("tick", () => {
+  width = document.documentElement.clientWidth * 0.3;
+  height = document.documentElement.clientWidth * 0.5;
+  centerX = width/2;
+  centerY = height/2;
+
+  simulation
+      .force("x", d3.forceX(width/2))
+      .force("y", d3.forceY(height/2))
+      .force('center', d3.forceCenter(centerX, centerY));
+  svg
+      .attr("width", width)
+      .attr("height", height);
   link
       .attr("x1", d => d.source.x)
       .attr("y1", d => d.source.y)
@@ -87,6 +112,10 @@ simulation.on("tick", () => {
   node
       .attr("cx", d => d.x > width ? width : d.x < 0 ? 0 : d.x)
       .attr("cy", d => d.y > height ? height : d.y < 0 ? 0 : d.y);
+
+  text
+      .attr("x", d => d.x > width ? width : d.x < 0 ? 0 : d.x)
+      .attr("y", d => d.y > height ? height : d.y < 0 ? 0 : d.y);
 });
 
 // Reheat the simulation when drag starts, and fix the subject position.
