@@ -12,9 +12,9 @@ var pageNodeRadius = 6;
 var sectionNodeRadius = 1.5*pageNodeRadius;
 var repelStrength = 4/numNodes;
 var clickCutoffTime = 100;
-var pageNodeColor = "#ebdbb2";
-var sectionNodeColor = "#87ceeb";
-var highlightColor = "orange";
+var pageNodeColor = "var(--fg1)";
+var sectionNodeColor = "var(--skyblue)";
+var highlightColor = "var(--orange2)";
 var highlightWidth = 10;
 var unhighlightedOpacity = 0;
 
@@ -94,6 +94,7 @@ const text = svg.append("g")
     .style("fill", "white")
     .style("text-anchor", "middle")
     .style("font-size", nodeTextSize)
+    .style("user-select", "none")
     .text(d => d.kind === "section" || d.rootpage === "true" ? d.id : null);
 
 // Add a drag behavior.
