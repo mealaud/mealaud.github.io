@@ -17,12 +17,10 @@ var sectionNodeColor = "#87ceeb";
 
 var start, end;
 // Specify the dimensions of the chart.
-var initWidth = document.documentElement.clientWidth * 0.3;
-var initHeight = document.documentElement.clientWidth * 0.5;
-var width = 0;
-var height = 0;
-var centerX = initWidth/2;
-var centerY = initHeight/2;
+var width = document.documentElement.clientWidth * 0.25;
+var height = document.documentElement.clientHeight * 0.45;
+var centerX = width/2;
+var centerY = height/2;
 var textHover = -1.5;
 var nodeTextSize = "0.7em";
 
@@ -48,7 +46,7 @@ var simulation = d3.forceSimulation(nodes)
 // Create the SVG container.
 
 var svg = d3.select("#base").append("svg")
-    .attr("width", initWidth)
+    .attr("width", width)
     .attr("height", height);
 
 // Add a line for each link, and a circle for each node.
@@ -94,10 +92,10 @@ node.call(d3.drag()
 // Set the position attributes of links and nodes each time the simulation ticks.
 simulation.on("tick", () => {
   // if (width )
-  width = document.documentElement.clientWidth * 0.3;
-  height = document.documentElement.clientWidth * 0.5;
+  width = document.documentElement.clientWidth * 0.25;
+  // height = document.documentElement.clientWidth * 0.5;
   centerX = width/2;
-  centerY = height/2;
+  // centerY = height/2;
 
   simulation
       .force("x", d3.forceX(width/2))

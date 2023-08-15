@@ -1,8 +1,12 @@
 .tab {
-  min-width: 35vw;
-  width: 35vw;
-  border-right: 3px solid var(--fg0);
-  padding-left: 3px;
+  min-width: 95%;
+  width: 95%;
+  height: 100%;
+  padding-left: 1em;
+  /* margin-left: 0.5em; */
+  position: relative;
+  /* overflow-x: hidden; */
+  overflow-y: auto;
 } .button {
   margin-right: 1em;
   background-color: none;

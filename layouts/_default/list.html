@@ -151,8 +151,8 @@
 
 
 
-  <div id="content" style="display: flex; width: 100%; margin-top: 1em">
-    <div id="base" style="position: relative; width: 30vw; min-width: 25vw; height: 80vh; border-right: 3px solid var(--fg0);">
+  <div id="content" style="display: flex; width: 100%; margin-top: 1em; height: 70vh">
+    <div id="base" class="tab" style="width: 25vw; min-width: 25vw; border-right: 0.3em solid var(--fg0)">
       <div id="baseTitle">
         <div style="display: flex;"><h1>{{ .Title }}</h1></div>
         <div class="button top-right" onclick="clearTabs()">clear</div>
@@ -169,10 +169,10 @@
       {{ end }}
 
       <!-- link graph -->
-      <div id="link-graph-stuff">
+      <div id="link-graph-stuff" style="height: auto; width: 100%">
         <br>
         <div id="link-graph-current-node" class="button" style="padding: 0.3em">Selected Page</div>
-        <div id="link-graph">
+        <div id="link-graph" style="height: auto; width:100%">
           {{ $path := "/js/link-graph.js" }}
           {{ $js := resources.Get $path | resources.ExecuteAsTemplate $path . }}
           <!-- {{ $js.Permalink }} -->

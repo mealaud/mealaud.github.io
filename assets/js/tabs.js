@@ -3,11 +3,18 @@ function genTab(title, link, content) {
   var tabId = link;
   const tabClass = "tab";
 
+  // tab wrapper
+  var wrapper = document.createElement("div");
+  wrapper.id = tabId.concat("-", "wrapper")
+  wrapper.style.width = "35vw";
+  wrapper.style.minWidth = "35vw";
+  wrapper.style.borderRight = "0.3em solid var(--fg0)"
+
   // Tab data
   var tab = document.createElement("div");
   tab.setAttribute("class", tabClass);
   tab.id = link;
-  tab.style.position = "relative";
+  // tab.style.position = "relative";
 
   // title
   var tabHeader = document.createElement("div");
@@ -21,7 +28,7 @@ function genTab(title, link, content) {
   var exitButton = document.createElement("div");
   exitButton.id = tabId.concat("-", "Exit");
   exitButton.innerText = "X";
-  exitButton.setAttribute("class", "button")
+  exitButton.setAttribute("class", "button top-right")
   exitButton.addEventListener("click", function() {tab.remove();});
   exitButton.style.width = "1em";
   exitButton.style.height = "1em";
@@ -29,7 +36,8 @@ function genTab(title, link, content) {
   // Drawing the tab
   if (!document.getElementById(tabId)) {
     // making tab
-    document.getElementById(parentEltId).append(tab);
+    document.getElementById(parentEltId).append(wrapper);
+    document.getElementById(wrapper.id).append(tab);
     // console.log("hi");
 
     // making title

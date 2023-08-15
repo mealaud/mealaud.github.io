@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html style="height: 100%">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{{ if not .IsHome }}{{ .Title }} | {{ end }}{{ .Site.Title }}</title>
     <!-- css stylesheets -->
-    <link rel="stylesheet" href="/css/style.css" type="text/css" media="all" />
-    <link rel="stylesheet" href="/css/theme.css" type="text/css" media="all" />
-    <link rel="stylesheet" href="/css/fonts.css" type="text/css" media="all" />
-    <link rel="stylesheet" href="/css/elements.css" type="text/css" media="all" />
-    <link rel="stylesheet" href="/css/math.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/css/style.css?2" type="text/css" media="all" />
+    <link rel="stylesheet" href="/css/theme.css?2" type="text/css" media="all" />
+    <link rel="stylesheet" href="/css/fonts.css?2" type="text/css" media="all" />
+    <link rel="stylesheet" href="/css/elements.css?2" type="text/css" media="all" />
+    <link rel="stylesheet" href="/css/math.css?2" type="text/css" media="all" />
     <link rel="stylesheet" href="/css/tabs.css?2" type="text/css" media="all" />
 
     <!-- katex -->
@@ -23,7 +23,7 @@
     {{ end -}}
   </head>
 
-  <body>
+  <body style="height: 100%">
     {{ block "header" . }}
 
     {{ end }}
