@@ -154,8 +154,8 @@
       <div id="base" class="tab" style="width: 93%; min-width: 95%; height: 100%; padding-left: 0.5em; padding-right: 0.5em; position: relative">
         <div id="baseTitle">
           <div style="display: flex;"><h1>{{ .Title }}</h1></div>
-          <div id="clearButton" class="button top-right" onclick="clearTabs()" onmouseover="highlightButton(this)" onmouseout="unHighlightButton(this)">clear</div>
         </div>
+        <div id="clearButton" class="button top-right" style="top: 1em;" onclick="clearTabs()" onmouseover="highlightButton(this)" onmouseout="unHighlightButton(this)">clear</div>
         <div class="tab-content">{{ .Content }}</div>
 
         {{ $rootPage := . }}
