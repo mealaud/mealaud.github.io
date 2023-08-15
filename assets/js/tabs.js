@@ -1,13 +1,8 @@
-/* global d3 */
-
 function genTab(title, link, content) {
   const parentEltId = "tabs";
   var tabId = link.substring(1,link.length-1);
-  var nodeId = "#";
-  nodeId = tabId.concat("-", "node");
-  console.log(nodeId);
-  // document.getElementById(nodeId).style.strokeOpacity = 0.5;
-  // console.log(d3.select("link-graph-stuff").node());
+  var nodeId = tabId.concat("-", "node");
+  // console.log(nodeId);
 
 
   // tab wrapper

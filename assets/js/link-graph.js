@@ -18,7 +18,6 @@ var highlightColor = "var(--orange2)";
 var highlightWidth = 10;
 var unhighlightedOpacity = 0;
 
-var start, end;
 // Specify the dimensions of the chart.
 var width = document.documentElement.clientWidth * 0.25;
 var height = document.documentElement.clientHeight * 0.45;
@@ -75,6 +74,9 @@ const node = svg.append("g")
     .attr("fill", d => d.kind === "section" ? sectionNodeColor : pageNodeColor)
     .attr("id", d => (d.link).concat("-", "node"))
     // .on("mouseover", d => document.getElementById("link-graph-current-node").innerHTML = d.Title);
+    .on("click", function(event, d) {
+      document.getElementById((d.link).concat("/", "button")).click();
+    })
     .on("mouseover", function(event, d) {
       document.getElementById("link-graph-current-node").innerHTML = d.id;
       document.getElementById((d.link).concat("-", "node")).style.strokeOpacity = 0.5;
@@ -138,7 +140,6 @@ function dragstarted(event) {
   if (!event.active) simulation.alphaTarget(0.3).restart();
   event.subject.fx = event.subject.x;
   event.subject.fy = event.subject.y;
-  start = +new Date();
 }
 
 // Update the subject (dragged node) position during drag.
@@ -153,12 +154,5 @@ function dragended(event) {
   if (!event.active) simulation.alphaTarget(0);
   event.subject.fx = null;
   event.subject.fy = null;
-  end = +new Date();
-  // console.log(end - start)
-  if (end-start < clickCutoffTime) { // hacky solution by just measuring if "mouse is held down very briefly" and treating a shortenough press as a click!
-    if (event.subject.link.split("/").length > 3) {
-      document.getElementById(event.subject.link.concat("/button")).click();
-    }
-  }
 }
 
