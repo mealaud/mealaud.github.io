@@ -3,24 +3,26 @@
   width: 95%;
   height: 100%;
   padding-left: 1em;
-  /* margin-left: 0.5em; */
   position: relative;
-  /* overflow-x: hidden; */
-  overflow-y: auto;
+  /* overflow-y: auto; */
 } .button {
-  margin-right: 1em;
+  /* margin-right: 1em; */
   background-color: none;
   border: 2px solid var(--fg0); /* ?>???? not updating */
   color: var(--fg0);
   font-size: 1em;
+  padding: 0.5em;
   text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
 } .button:hover {
   cursor: pointer;
 } .top-right {
   position: absolute;
-  top: 1.5em;
+  top: 0em;
   right: 0em;
-  padding: 0.5em;
 }
 .invisible {
 position: absolute;

@@ -149,37 +149,37 @@
   {{ $script := print $js.Permalink "?2" }}
   <script src="{{ $script }}"></script> 
 
-
-
   <div id="content" style="display: flex; width: 100%; margin-top: 1em; height: 70vh">
-    <div id="base" class="tab" style="width: 25vw; min-width: 25vw; border-right: 0.3em solid var(--fg0)">
-      <div id="baseTitle">
-        <div style="display: flex;"><h1>{{ .Title }}</h1></div>
-        <div class="button top-right" onclick="clearTabs()">clear</div>
-      </div>
-      <div>{{ .Content }}</div>
-
-      {{ $rootPage := . }}
-      {{ range $i, $nodesOnly }}
-        {{ if ne $rootPage.RelPermalink $i.RelPermalink }}
-          {{ $id := print $i.RelPermalink "/button"  }}
-          <div id="{{ $id }}" class="invisible" onclick="genTab(`{{ $i.Title }}`, `{{ $i.RelPermalink }}`, `{{ $i.Content }}`)">{{$i.Title}}
-          </div>
-        {{ end }}
-      {{ end }}
-
-      <!-- link graph -->
-      <div id="link-graph-stuff" style="height: auto; width: 100%">
-        <br>
-        <div id="link-graph-current-node" class="button" style="padding: 0.3em">Selected Page</div>
-        <div id="link-graph" style="height: auto; width:100%">
-          {{ $path := "/js/link-graph.js" }}
-          {{ $js := resources.Get $path | resources.ExecuteAsTemplate $path . }}
-          <!-- {{ $js.Permalink }} -->
-          {{ $script := print $js.Permalink "?2" }}
-          <script src="{{ $script }}"></script> 
+    <div id="baseWrapper" style="width: 25vw; min-width: 25vw; border-right: 0.3em solid var(--fg0)">
+      <div id="base" class="tab" style="width: 93%; min-width: 95%; height: 100%; padding-left: 0.5em; padding-right: 0.5em; position: relative">
+        <div id="baseTitle">
+          <div style="display: flex;"><h1>{{ .Title }}</h1></div>
+          <div id="clearButton" class="button top-right" onclick="clearTabs()" onmouseover="highlightButton(this)" onmouseout="unHighlightButton(this)">clear</div>
         </div>
-      </div>
+        <div class="tab-content">{{ .Content }}</div>
+
+        {{ $rootPage := . }}
+        {{ range $i, $nodesOnly }}
+          {{ if ne $rootPage.RelPermalink $i.RelPermalink }}
+            {{ $id := print $i.RelPermalink "/button"  }}
+            <div id="{{ $id }}" class="invisible" onclick="genTab(`{{ $i.Title }}`, `{{ $i.RelPermalink }}`, `{{ $i.Content }}`)">{{$i.Title}}
+            </div>
+          {{ end }}
+        {{ end }}
+
+        <!-- link graph -->
+        <div id="link-graph-stuff" style="height: auto; width: 100%">
+          <br>
+          <div id="link-graph-current-node" class="button" style="padding: 0.3em">Selected Page</div>
+          <div id="link-graph" style="height: auto; width:100%">
+            {{ $path := "/js/link-graph.js" }}
+            {{ $js := resources.Get $path | resources.ExecuteAsTemplate $path . }}
+            <!-- {{ $js.Permalink }} -->
+            {{ $script := print $js.Permalink "?2" }}
+            <script src="{{ $script }}"></script> 
+          </div>
+        </div>
+    </div>
 
     </div>
     <div id="tabs" style="display: flex"></div>

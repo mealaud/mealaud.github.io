@@ -1,7 +1,6 @@
 function genTab(title, link, content) {
   const parentEltId = "tabs";
-  var tabId = link;
-  const tabClass = "tab";
+  var tabId = link.substring(1,link.length-1);
 
   // tab wrapper
   var wrapper = document.createElement("div");
@@ -12,44 +11,55 @@ function genTab(title, link, content) {
 
   // Tab data
   var tab = document.createElement("div");
-  tab.setAttribute("class", tabClass);
-  tab.id = link;
-  // tab.style.position = "relative";
+  tab.setAttribute("class", "tab");
+  tab.id = tabId;
 
-  // title
-  var tabHeader = document.createElement("div");
-  tabHeader.id = tabId.concat("-", "Title");
+  var tabTitle = document.createElement("div");
+  tabTitle.id = tabId.concat("-", "Title");
+  tabTitle.innerHTML = `<h1>${title.substring(1,title.length-1)}</h1>`;
 
   // content
   var tabContent = document.createElement("div");
   tabContent.id = tabId.concat("-", "Content");
+  tabContent.style.height = "60vh";
+  tabContent.style.overflowY = "auto";
 
   // exit button
   var exitButton = document.createElement("div");
   exitButton.id = tabId.concat("-", "Exit");
   exitButton.innerText = "X";
-  exitButton.setAttribute("class", "button top-right")
-  exitButton.addEventListener("click", function() {tab.remove();});
+  exitButton.setAttribute("class", "button top-right");
+  exitButton.addEventListener("click", function() {wrapper.remove();});
+  exitButton.addEventListener("mouseover", function() {
+    exitButton.style.backgroundColor = "var(--fg0)";
+    exitButton.style.color = "var(--bg)";
+  });
+  exitButton.addEventListener("mouseout", function() {
+    exitButton.style.backgroundColor = "var(--bg)";
+    exitButton.style.color = "var(--fg0)";
+  });
   exitButton.style.width = "1em";
   exitButton.style.height = "1em";
+
+  // // making the header
+  // tabHeader.append(tabTitle);
+  // tabHeader.append(exitButton);
 
   // Drawing the tab
   if (!document.getElementById(tabId)) {
     // making tab
     document.getElementById(parentEltId).append(wrapper);
-    document.getElementById(wrapper.id).append(tab);
+    wrapper.append(tab);
     // console.log("hi");
 
     // making title
-    tabHeader.innerHTML = `<h1>${title.substring(1,title.length-1)}</h1>`;
-    tab.appendChild(tabHeader);
-
-    // // making button
-    tab.appendChild(exitButton);
+    // tabHeader.innerHTML = "hello";
+    tab.append(tabTitle);
+    tab.append(exitButton);
 
     // making content 
     tabContent.innerHTML = `${content.substring(1,content.length-2)}`;
-    tab.appendChild(tabContent);
+    tab.append(tabContent);
     renderMathInElement(tab, {
             delimiters: [
                 {left: "$$", right: "$$", display: true},
@@ -67,5 +77,13 @@ function clearTabs() {
   tabs.id = "tabs";
   tabs.style.display = "flex";
   document.getElementById("content").append(tabs);
+}
+
+function highlightButton(x) {
+  x.style.backgroundColor = "var(--fg0)";
+  x.style.color = "var(--bg)";
+} function unHighlightButton(x) {
+  x.style.backgroundColor = "var(--bg)";
+  x.style.color = "var(--fg0)";
 }
 
