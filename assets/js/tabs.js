@@ -1,13 +1,27 @@
+/* global d3 */
+
 function genTab(title, link, content) {
   const parentEltId = "tabs";
   var tabId = link.substring(1,link.length-1);
+  var nodeId = "#";
+  nodeId = tabId.concat("-", "node");
+  console.log(nodeId);
+  // document.getElementById(nodeId).style.strokeOpacity = 0.5;
+  // console.log(d3.select("link-graph-stuff").node());
+
 
   // tab wrapper
   var wrapper = document.createElement("div");
   wrapper.id = tabId.concat("-", "wrapper")
   wrapper.style.width = "35vw";
   wrapper.style.minWidth = "35vw";
-  wrapper.style.borderRight = "0.3em solid var(--fg0)"
+  wrapper.style.borderRight = "0.3em solid var(--fg0)";
+  wrapper.addEventListener("mouseover", function() {
+    document.getElementById(nodeId).style.strokeOpacity = 0.5;
+  });
+  wrapper.addEventListener("mouseout", function() {
+    document.getElementById(nodeId).style.strokeOpacity = 0;
+  });
 
   // Tab data
   var tab = document.createElement("div");
@@ -41,19 +55,13 @@ function genTab(title, link, content) {
   exitButton.style.width = "1em";
   exitButton.style.height = "1em";
 
-  // // making the header
-  // tabHeader.append(tabTitle);
-  // tabHeader.append(exitButton);
-
   // Drawing the tab
   if (!document.getElementById(tabId)) {
     // making tab
     document.getElementById(parentEltId).append(wrapper);
     wrapper.append(tab);
-    // console.log("hi");
 
     // making title
-    // tabHeader.innerHTML = "hello";
     tab.append(tabTitle);
     tab.append(exitButton);
 

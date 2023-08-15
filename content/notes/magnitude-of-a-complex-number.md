@@ -7,8 +7,6 @@ tags:
 categories: 
 rootPage: false
 ---
-[]({{<ref "/notes/complex-numbers-as-vectors">}})
-[]({{<ref "/notes/definition-of-the-complex-numbers">}})
 
 {{% MathEnv "defn" %}}
 We define the magnitude of a complex number $ z $ as 

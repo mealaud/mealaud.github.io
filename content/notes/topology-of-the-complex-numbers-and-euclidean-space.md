@@ -7,7 +7,6 @@ tags:
 categories: 
 rootPage: false
 ---
-[]({{<ref "/notes/magnitude-of-a-complex-number">}})
 
 
 

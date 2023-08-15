@@ -14,6 +14,9 @@ var repelStrength = 4/numNodes;
 var clickCutoffTime = 100;
 var pageNodeColor = "#ebdbb2";
 var sectionNodeColor = "#87ceeb";
+var highlightColor = "orange";
+var highlightWidth = 10;
+var unhighlightedOpacity = 0;
 
 var start, end;
 // Specify the dimensions of the chart.
@@ -46,6 +49,7 @@ var simulation = d3.forceSimulation(nodes)
 // Create the SVG container.
 
 var svg = d3.select("#base").append("svg")
+    .attr("id", "link-graph-svg")
     .attr("width", width)
     .attr("height", height);
 
@@ -59,6 +63,9 @@ const link = svg.append("g")
     .attr("stroke-width", linkWidth);
 
 const node = svg.append("g")
+      .attr("stroke", highlightColor)
+      .attr("stroke-width", highlightWidth)
+      .attr("stroke-opacity", unhighlightedOpacity)
   .selectAll("circle")
   .data(nodes)
   .join("circle")
@@ -66,9 +73,15 @@ const node = svg.append("g")
     .attr("cx", centerX)
     .attr("cy", centerY)
     .attr("fill", d => d.kind === "section" ? sectionNodeColor : pageNodeColor)
+    .attr("id", d => (d.link).concat("-", "node"))
     // .on("mouseover", d => document.getElementById("link-graph-current-node").innerHTML = d.Title);
     .on("mouseover", function(event, d) {
-       document.getElementById("link-graph-current-node").innerHTML = d.id;
+      document.getElementById("link-graph-current-node").innerHTML = d.id;
+      document.getElementById((d.link).concat("-", "node")).style.strokeOpacity = 0.5;
+    })
+    .on("mouseout", function(event, d) {
+      document.getElementById("link-graph-current-node").innerHTML = "Select Page";
+      document.getElementById((d.link).concat("-", "node")).style.strokeOpacity = 0;
     });
 
 const text = svg.append("g")

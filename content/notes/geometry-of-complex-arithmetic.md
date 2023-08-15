@@ -9,5 +9,4 @@ rootPage: false
 ---
 
 
-Recall the post [Complex Numbers as Vectors]({{<ref "/notes/complex-numbers-as-vectors">}}). This gave us our first taste of the geometry 
-
+{{<ref "/notes/complex-numbers-as-vectors">}}
