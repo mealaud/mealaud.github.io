@@ -12,7 +12,7 @@ slogan: "One must never resign."
 One must never resign.
 {{% /MathEnv %}}
 {{% Proof %}}
-If one resigns to their situation (i.e., gives up and no longer puts in effort into their life), [On Improving My Life]({{<ref "/axioms/on-improving-my-life">}}) tells us that their life can no longer neither markedly improve and stay improved. Therefore we are violating [Axiom \#4]() and thus one cannot resign.
+If one resigns to their situation (i.e., gives up and no longer puts in effort into their life), {{<ref "On Improving My Life" "/axioms/on-improving-my-life">}} tells us that their life can no longer neither markedly improve and stay improved. Therefore we are violating [Axiom \#4]() and thus one cannot resign.
 {{% /Proof %}}
 
 {{% MathEnv "rem" %}}

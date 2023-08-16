@@ -1,7 +1,8 @@
-function genTab(title, link, content) {
+function genTab(title, link, content, date) {
   const parentEltId = "tabs";
   var tabId = link.substring(1,link.length-1);
   var nodeId = tabId.concat("-", "node");
+  date = date.substring(1,date.length-1);
   // console.log(nodeId);
 
 
@@ -25,7 +26,7 @@ function genTab(title, link, content) {
 
   var tabTitle = document.createElement("div");
   tabTitle.id = tabId.concat("-", "Title");
-  tabTitle.innerHTML = `<h1>${title.substring(1,title.length-1)}</h1>`;
+  tabTitle.innerHTML = `<h1>${title.substring(1,title.length-1)}<br><span style="opacity: 0.5; font-size: 0.5em">Last modified: ${date}</span></h1>`;
 
   // content
   var tabContent = document.createElement("div");
@@ -39,6 +40,12 @@ function genTab(title, link, content) {
   exitButton.innerText = "X";
   exitButton.setAttribute("class", "button top-right");
   exitButton.addEventListener("click", function() {wrapper.remove();});
+  // exitButton.addEventListener("click", function() {
+  //   wrapper.classList.add("shrink");
+  //   // wrapper.style.whitespace = "nowrap";
+  //   // wrapper.remove();
+  // });
+  // exitButton.addEventListener("transitionend", function() {wrapper.remove();}, true);
   exitButton.addEventListener("mouseover", function() {
     exitButton.style.backgroundColor = "var(--fg0)";
     exitButton.style.color = "var(--bg)";
@@ -71,6 +78,12 @@ function genTab(title, link, content) {
                 {left: "\\(", right: "\\)", display: false},
             ]
         });
+  } else {
+    wrapper.style.backgroundColor = "var(--orange2)";
+    // wrapper.style.backgroundColor = rgba(254,128,25,0.5);
+    // setTimeout(function() {
+    //   wrapper.style.backgroundColor = initBackgroundColor;
+    // }, 2000);
   }
 }
 

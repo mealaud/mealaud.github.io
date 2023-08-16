@@ -6,7 +6,7 @@ math: false
 tags: 
 categories: 
 ---
-{{<ref "/hobbies/clouds/weekly-weather-reports/pre-college">}}
+{{<ref "" "/hobbies/clouds/weekly-weather-reports/pre-college">}}
 
 {{% figure "IMG_1594.png" "100%" %}}
 Westwood Boulevard might have blocked some of the sky but what remained was pretty darn nice. :)

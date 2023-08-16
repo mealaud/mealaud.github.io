@@ -6,7 +6,7 @@ math: false
 tags: 
 categories: 
 ---
-[]({{<ref "/hobbies/writing/cloud-watching">}})
+{{<ref "" "/hobbies/writing/cloud-watching">}}
 <!-- *Originally written: Oct. 3, 2018*{{%nl%}}{{%nl%}} -->
 
 He rises. {{%nl%}}{{%nl%}}

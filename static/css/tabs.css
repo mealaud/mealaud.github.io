@@ -29,3 +29,9 @@ position: absolute;
 left: -9999px;
 }
 
+/* animation thing for deleting tab */
+/* .shrink { */
+/*   height: 60vh; */
+/*   overflow: hidden; */
+/*   transition: width 2s; */
+/* } */

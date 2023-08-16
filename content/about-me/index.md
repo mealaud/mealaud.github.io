@@ -10,7 +10,6 @@ me!
 
 Hello! My name is Mealaud Mokhtarzad but I usually go by Mel. I’m a pure math major at UCLA (class of ’24). My interests include and are usually limited to: math, rock skipping, clouds, and writing. If you need to contact me, [m.mokhtarzad at ucla dot edu]() is usually a good way to reach me.
 
-<!-- Test: [a recent writing piece!]({{<ref "hobbies/writing/closing-my-eyes/">}}) -->
 
 ## Cool People
 

@@ -16,7 +16,7 @@ One must never idle (i.e., everything must be done with a purpose).
 {{% /MathEnv %}}
 
 {{% Proof %}}
-This is a corollary of [On Resignation]({{<ref "/axioms/on-resignation">}}).
+This is a corollary of {{<ref "On Resignation" "/axioms/on-resignation">}}.
 {{% /Proof %}}
 
 It's okay (and beneficial) to take breaks and to recuperate and to enjoy oneself outside of work. It's fine to turn one's brain off! But it has to be done with reason! You must perform one of these inactions with purpose to relax, for example. Don't turn your brain off and do nothing (or even something) if you have no purpose behind it. 

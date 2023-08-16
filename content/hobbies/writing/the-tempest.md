@@ -6,7 +6,7 @@ math: false
 tags: 
 categories: 
 ---
-[]({{<ref "/hobbies/writing/cloud-watching">}})
+{{<ref "" "/hobbies/writing/cloud-watching">}}
 <!-- *Originally written: Oct. 6, 2018*{{%nl%}}{{%nl%}} -->
 
 The tempest erupts once again and everything is re-enlivened. {{%nl%}}{{%nl%}}

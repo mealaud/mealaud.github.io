@@ -1,13 +1,4 @@
-{{ $ALLPAGES := .Site.AllPages }}
-{{ $PAGESBYLINKS := dict }} <!-- collect all pages in a dictionary with key being their relative link! useful later for getting a references list which is just a slice of literal pages -->
-{{ range $i, $ALLPAGES }}
-  {{ $PAGESBYLINKS = merge $PAGESBYLINKS (dict (substr $i.RelPermalink 0 -1) $i)}} <!-- Just adding pages with link keys -->
-{{ end }}
-{{ $id := print (.Get 0) "/" "/button" }}
-{{ with index $PAGESBYLINKS (.Get 0) }}
-<a href="hello" onclick="document.getElementById({{ $id }}).click(); return false;">
-  {{ if in $id "/notes/"}}
-    {{ .Title }}
-  {{ end }}
-</a>
+{{ $id := print (.Get 1) "/" "/button" }}
+{{ if in $id "/notes/"}}
+  <a href="hello" onclick="document.getElementById({{ $id }}).click(); return false;">{{ .Get 0 }}</a>
 {{ end }}

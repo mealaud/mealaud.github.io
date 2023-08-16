@@ -6,7 +6,7 @@ math: false
 tags: 
 categories: 
 ---
-[]({{<ref "/hobbies/writing/atlas">}})
+{{<ref "" "/hobbies/writing/atlas">}}
 
 <!-- *Originally written: Jun. 9, 2023*{{%nl%}}{{%nl%}} -->
 

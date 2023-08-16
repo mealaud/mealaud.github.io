@@ -62,10 +62,10 @@
       <!-- do for non home pages (i.e., pretty much every page, INCLUDING sections!) -->
       {{ if ne $i.Kind "home" }}
       <!-- scan text to find  all references -->
-        {{ $splitText := after 1 (split $i.RawContent "{{<re") }} <!-- split to get multiple references per line  -->
+        {{ $splitText := after 1 (split $i.RawContent "{{<ref ") }} <!-- split to get multiple references per line  -->
         {{ $refs := slice }} <!-- instantiate processed references variable -->
         {{ range $s, $splitText }} <!-- get all the references in the references variable! -->
-          {{ $sLink := index (index (findRESubmatch `"(.*?)">}}` $s) 0) 1 }}
+          {{ $sLink := index (index (findRESubmatch `".*" "(\/.*?)">}}` $s) 0) 1 }}          
           {{ $refs = $refs | append (index $PAGESBYLINKS $sLink) }}
         {{ end }}
         {{ if ne ($refs | len) 0 }} <!-- only add if there are references -->
@@ -162,7 +162,9 @@
         {{ range $i, $nodesOnly }}
           {{ if ne $rootPage.RelPermalink $i.RelPermalink }}
             {{ $id := print $i.RelPermalink "/button"  }}
-            <div id="{{ $id }}" class="invisible" onclick="genTab(`{{ $i.Title }}`, `{{ $i.RelPermalink }}`, `{{ $i.Content }}`)">{{$i.Title}}</div>
+            {{ $date := $i.Lastmod.Format "2006-01-02" }}
+            
+            <div id="{{ $id }}" class="invisible" onclick="genTab(`{{ $i.Title }}`, `{{ $i.RelPermalink }}`, `{{ $i.Content }}`, `{{ $date }}`)">{{$i.Title}}</div>
           {{ end }}
         {{ end }}
 

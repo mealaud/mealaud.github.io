@@ -6,7 +6,7 @@ math: false
 tags: 
 categories: 
 ---
-[]({{<ref "/hobbies/writing/the-mountains-shirts-have-holes">}})
+{{<ref "" "/hobbies/writing/the-mountains-shirts-have-holes">}}
 <!-- *Originally written: circa Apr. 13, 2019*   {{%nl%}}{{%nl%}} -->
 
 The wind whistles and howls,{{%nl%}}

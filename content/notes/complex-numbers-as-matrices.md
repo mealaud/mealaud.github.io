@@ -7,10 +7,10 @@ tags:
 categories: 
 rootPage: false
 ---
-I was first introduced to this method of thinking by Professor Rowan Killip. I had him for a course briefly and this was the one of the coolest things I've learned!
+I was first introduced to this method of thinking by Professor Rowan Killip. I had him for a course briefly and this was the one of the coolest things I've learned! 
 
 Recall the 
-[definition of $ \mathbb{C} $]({{<ref "/notes/definition-of-the-complex-numbers">}}). It turns out 
+{{<ref "dasdasd" "/notes/definition-of-the-complex-numbers">}}
 
 
 
