@@ -39,7 +39,11 @@ function genTab(title, link, content, date) {
   exitButton.id = tabId.concat("-", "Exit");
   exitButton.innerText = "X";
   exitButton.setAttribute("class", "button top-right");
-  exitButton.addEventListener("click", function() {wrapper.remove();});
+  exitButton.addEventListener("click", function() {
+    wrapper.remove();
+    document.getElementById(tabId.concat("-", "node")).style.strokeOpacity = 0;
+  });
+  // exitButton.addEventListener("click", function() {wrapper.remove();});
   // exitButton.addEventListener("click", function() {
   //   wrapper.classList.add("shrink");
   //   // wrapper.style.whitespace = "nowrap";
