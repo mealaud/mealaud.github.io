@@ -11,7 +11,7 @@ rootPage: true
 
 The mountains rest.{{%nl%}}
 They sleep peacefully, happily, unstirringly night and day.{{%nl%}}
-They rest as the window blows and bellows across.{{%nl%}}{{%nl%}}
+They rest as the wind blows and bellows across.{{%nl%}}{{%nl%}}
 
 The trees leave them be. {{%nl%}}
 They dig their roots into their skin,{{%nl%}}
