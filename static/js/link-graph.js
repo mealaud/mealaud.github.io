@@ -1,8 +1,10 @@
 /* global d3 */
 
 // data for connections
-var data = JSON.parse(document.getElementById("data-jsonstring").getAttribute("data-jsonstring"));
+var data = JSON.parse(document.getElementById("search-data-jsonstring").getAttribute("data-jsonstring"));
+
 // console.log(data);
+
 
 // variables for how stuff looks
 var numNodes = Object.keys(data.nodes).length;
@@ -17,6 +19,7 @@ var sectionNodeColor = "#87ceeb";
 var highlightColor = "var(--orange2)";
 var highlightWidth = 10;
 var unhighlightedOpacity = 0;
+var highlightedOpacity = 0.5;
 
 // Specify the dimensions of the chart.
 var width = document.documentElement.clientWidth * 0.25;
@@ -59,6 +62,8 @@ const link = svg.append("g")
   .selectAll("line")
   .data(links)
   .join("line")
+    .attr("id", d => (d.source.id).concat("-", d.target.id))
+    // .attr("id", d => (d.source).concat("-", d.target))
     .attr("stroke-width", linkWidth);
 
 const node = svg.append("g")
@@ -93,6 +98,7 @@ const text = svg.append("g")
     .attr("x", centerX)
     .attr("y", centerY)
     .attr("dy", d => d.kind === "section" ? textHover*sectionNodeRadius : textHover*pageNodeRadius)
+    .attr("id", d => (d.link).concat("-", "text"))
     .style("fill", "white")
     .style("text-anchor", "middle")
     .style("font-size", nodeTextSize)
@@ -156,3 +162,43 @@ function dragended(event) {
   event.subject.fy = null;
 }
 
+function searchResults() {
+  var query = document.getElementById("page-search-input").value;
+  var nodeData = nodes;
+  var linkData = links;
+  var source;
+  var target;
+  if (query != "") {
+    linkData = linkData.filter( function(entry) {
+      source = entry.source.id;
+      target = entry.target.id;
+      return (source.toLowerCase().replace(/\s+/g, "")).includes(query.toLowerCase().replace(/\s+/g, "")) || (target.toLowerCase().replace(/\s+/g, "")).includes(query.toLowerCase().replace(/\s+/g, ""));
+    });
+  }
+  var usedNodeIds = {};
+  for (let l of linkData) {
+    usedNodeIds[l.source.id] = true;
+    usedNodeIds[l.target.id] = true;
+  }
+  console.log(usedNodeIds);
+  return usedNodeIds;
+}
+
+function updateGraph() {
+  var usedNodeIds = searchResults();
+  for (var n of nodes) {
+    // console.log(document.getElementById((n.link).concat("-", "node")).r );
+    document.getElementById((n.link).concat("-", "node")).setAttribute("r", 0);
+    document.getElementById((n.link).concat("-", "text")).style.opacity = 0;
+    if (usedNodeIds[n.id]) {
+      document.getElementById((n.link).concat("-", "node")).setAttribute("r", n.kind === "section" ? sectionNodeRadius : pageNodeRadius);
+      document.getElementById((n.link).concat("-", "text")).style.opacity = 1;
+    } 
+  }
+  var source;
+  for (var l of links) {
+    source = l.source.id;
+    // console.log(source);
+    document.getElementById(source.concat("-", l.target.id)).style.strokeOpacity = usedNodeIds[l.source.id] && usedNodeIds[l.target.id] ? linkOpacity : 0;
+  }
+}

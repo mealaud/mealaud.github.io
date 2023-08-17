@@ -47,3 +47,6 @@ title = 'mel-land'
         name = "Axioms"
         url= "/axioms/"
         weight = 20
+
+[outputs]
+    home = ["HTML", "RSS", "JSON"]

@@ -140,14 +140,11 @@
   {{ $linkStr = print $linkStr "]"}}
   {{ $jsonString := print "{" $nodeStr $linkStr "}"}}
   <div id="data-jsonstring" data-jsonstring="{{ $jsonString }}"></div>
+  <div id="search-data-jsonstring" data-jsonstring="{{ $jsonString }}"></div>
 
   <script src="/js/d3.v7.min.js"></script>
-
-  {{ $path := "/js/tabs.js" }}
-  {{ $js := resources.Get $path | resources.ExecuteAsTemplate $path . }}
-  <!-- {{ $js.Permalink }} -->
-  {{ $script := print $js.Permalink "?2" }}
-  <script src="{{ $script }}"></script> 
+  <script src="/js/tabs.js?2"></script>
+  <script src="/js/search-bar.js?2" defer></script>
 
   <div id="content" style="display: flex; width: 100%; margin-top: 1em; height: 70vh">
     <div id="baseWrapper" style="width: 25vw; min-width: 25vw; border-right: 0.3em solid var(--fg0)">
@@ -171,19 +168,18 @@
         <!-- link graph -->
         <div id="link-graph-stuff" style="height: auto; width: 100%">
           <br>
+          <!-- <div id="search-stuff" style="display: flex;"> -->
+          <!--   <div id="search-button" class="button" onclick="updateGraph()" onmouseover="highlightButton(this)" onmouseout="unHighlightButton(this)" style="margin: 0em; padding: 0em;">Search</div> -->
+          <!--   <input type="text" id="page-search-input" placeholder="filter by"> -->
+          <!-- </div> -->
           <div id="link-graph-current-node-wrapper" style="height: 3em">
             <div id="link-graph-current-node" class="button" style="padding: 0.3em">Select Page</div>
           </div>
           <div id="link-graph" style="height: auto; width:100%">
-            {{ $path := "/js/link-graph.js" }}
-            {{ $js := resources.Get $path | resources.ExecuteAsTemplate $path . }}
-            <!-- {{ $js.Permalink }} -->
-            {{ $script := print $js.Permalink "?2" }}
-            <script src="{{ $script }}"></script> 
+            <script src="/js/link-graph.js" defer></script>
           </div>
         </div>
-    </div>
-
+      </div>
     </div>
     <div id="tabs" style="display: flex"></div>
   </div>

@@ -1,0 +1,13 @@
+input[type="text"] {
+  margin-left: 1em;
+  background-color: var(--bg);
+  border: 2px solid var(--fg0); /* ?>???? not updating */
+  color: var(--fg0);
+  font-size: 1em;
+  padding: 0.5em;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+}
