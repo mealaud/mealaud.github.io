@@ -36,14 +36,15 @@
 
     <div id="fastSearch">
       <div id="postResults">
-        <div id="search-input-wrapper" style="position: relative;">
+        <div id="search-input-wrapper" style="position: relative; flex: 0 1 auto;">
           <span class="search-header" style="left: 1em;">Search Query</span>
-          <input id="searchInput" class="searchInputStyle border">
+          <span id="search-icon">🔭</span>
+          <input id="searchInput" class="searchInputStyle border" style="border-radius: 0.3em;">
         </div>
         <div id="inputOutputDivider"></div>
-        <div id="search-results-wrapper" style="position: relative;">
+        <div id="search-results-wrapper" class="border" style="border-radius: 0.62em; position: relative; flex: 1 1 auto;">
           <span class="search-header" style="left: 1em;">Results</span>
-          <div id="searchResults" class="border"></div>
+          <div id="searchResults"></div>
         </div>
       </div>
       <div id="resultsContentDivider"></div>
