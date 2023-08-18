@@ -132,7 +132,7 @@ function executeSearch(term) {
   } else { // build our html 
     for (let item in results) { // only show first 5 results
       var id = (results[item].item.relpermalink).concat("-", "search-item");
-      searchitems = searchitems + '<li><div id="' + id + '" tabindex="0"><span class="title">' + results[item].item.title + '</span><br /></div></li>';
+      searchitems = searchitems + '<li><div id="' + id + '" tabindex="0"><span class="title">' + results[item].item.relpermalink + '</span><br /></div></li>';
     }
     resultsAvailable = true;
   }
