@@ -105,12 +105,14 @@ function loadSearch() {
       // location: 0,
       // distance: 100,
       ignoreLocation: true,
-      threshold: 0.2,
-      minMatchCharLength: 2,
+      threshold: 0.0,
+      includeMatches: true,
+      minMatchCharLength: 4,
+      findAllMatches: true,
       keys: [
-        'title',
-        'content',
-        'relpermalink'
+        'plain',
+        'title'
+        // 'relpermalink'
         // 'permalink',
         // 'summary'
         ]
@@ -145,17 +147,26 @@ function executeSearch(term) {
     first = list.firstChild.firstElementChild; // first result container — used for checking against keyboard up/down location
     last = list.lastChild.firstElementChild; // last result container — used for checking against keyboard up/down location
   }
-
+  // (results[item].matches[1]).indices
   if (results.length > 0) {
+    content = new Array(results.length);
     for (let item in results) {
-       // keyboard events!
+      if (results[item].matches[0].key === "plain") {
+        // console.log(results[item].matches[0].value);
+        // console.log(results[item].matches[0].indices);
+        content[item] = highlightText(results[item].item.content, results[item].matches[0].indices, results[item].item.plain);
+      }
+      else {
+        content[item] = results[item].item.content;
+      }
+      // keyboard events!
       var id = (results[item].item.relpermalink).concat("-", "search-item");
       document.getElementById(id).addEventListener("keydown", function(event) {
         if (event.keyCode === 13) {
           var t = `.${results[item].item.title}.`;
           var l = `.${results[item].item.relpermalink}.`;
           var d = `.${results[item].item.date}.`;
-          var c = `.${results[item].item.content}..`;
+          var c = `.${content[item]}..`;
           genTab(t, l, c, d);
         }
       });
@@ -186,8 +197,7 @@ function executeSearch(term) {
         var body = document.createElement("div");
         body.id = id.concat("-", "body");
         body.setAttribute("class", "body");
-        body.innerHTML = results[item].item.content;
-        // body.innerHTML = marked.parse(results[item].item.content);
+        body.innerHTML = content[item];
 
         if (document.getElementById(header.id)) {
           document.getElementById(header.id).remove();
@@ -211,4 +221,21 @@ function executeSearch(term) {
       });
     }
   }
+}
+
+function highlightText(initContent, matchIndices, initPlain) {
+  var highlightedWords = new Set();
+
+  for (let i = 0; i < matchIndices.length; i++) {
+    highlightedWords.add(initPlain.slice(matchIndices[i][0], matchIndices[i][1]+1));
+  }
+
+  var lspan = '<span class="highlighted">';
+  var rspan = '</span>';
+  for (const w of highlightedWords) {
+    initContent = initContent.replaceAll(w,lspan.concat(w).concat(rspan));
+  }
+
+  console.log(initContent);
+  return initContent;
 }
