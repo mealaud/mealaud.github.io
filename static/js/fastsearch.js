@@ -102,14 +102,17 @@ function loadSearch() {
 
     var options = { // fuse.js options; check fuse.js website for details
       shouldSort: true,
-      location: 0,
-      distance: 100,
+      // location: 0,
+      // distance: 100,
+      ignoreLocation: true,
       threshold: 0.4,
       minMatchCharLength: 2,
       keys: [
         'title',
-        'permalink',
-        'summary'
+        'content',
+        'relpermalink'
+        // 'permalink',
+        // 'summary'
         ]
     };
     fuse = new Fuse(data, options); // build the index from the json file
@@ -208,8 +211,4 @@ function executeSearch(term) {
       });
     }
   }
-}
-
-function switchContent() {
-
 }
