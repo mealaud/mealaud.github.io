@@ -47,7 +47,7 @@ document.addEventListener('keydown', function(event) {
   // DOWN (40) arrow
   if (event.keyCode == 40) {
     if (searchVisible && resultsAvailable) {
-      console.log("down");
+      // console.log("down");
       event.preventDefault(); // stop window from scrolling
       if ( document.activeElement == maininput) { first.focus(); } // if the currently focused element is the main input --> focus the first <li>
       else if ( document.activeElement == last ) { last.focus(); } // if we're at the bottom, stay there
@@ -105,7 +105,7 @@ function loadSearch() {
       // location: 0,
       // distance: 100,
       ignoreLocation: true,
-      threshold: 0.4,
+      threshold: 0.2,
       minMatchCharLength: 2,
       keys: [
         'title',

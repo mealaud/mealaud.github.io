@@ -118,3 +118,6 @@
   overflow-y: auto;
 }
 
+.highlighted {
+  background-color: rgba(254,128,25, 0.5) !important;
+}
