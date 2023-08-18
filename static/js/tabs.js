@@ -13,10 +13,14 @@ function genTab(title, link, content, date) {
   wrapper.style.minWidth = "35vw";
   wrapper.style.borderRight = "0.3em solid var(--fg0)";
   wrapper.addEventListener("mouseover", function() {
-    document.getElementById(nodeId).style.strokeOpacity = 0.5;
+    if (document.getElementById(nodeId)) {
+      document.getElementById(nodeId).style.strokeOpacity = 0.5;
+    }
   });
   wrapper.addEventListener("mouseout", function() {
-    document.getElementById(nodeId).style.strokeOpacity = 0;
+    if (document.getElementById(nodeId)) {
+      document.getElementById(nodeId).style.strokeOpacity = 0;
+    }
   });
 
   // Tab data

@@ -156,7 +156,7 @@
         <div class="tab-content">{{ .Content }}</div>
 
         {{ $rootPage := . }}
-        {{ range $i, $nodesOnly }}
+        {{ range $i, $ALLPAGES }}
           {{ if ne $rootPage.RelPermalink $i.RelPermalink }}
             {{ $id := print $i.RelPermalink "/button"  }}
             {{ $date := $i.Lastmod.Format "2006-01-02" }}

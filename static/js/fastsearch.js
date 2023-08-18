@@ -13,7 +13,6 @@ var resultsAvailable = false; // Did we get any search results?
 document.addEventListener('keydown', function(event) {
 
   // CMD-/ to show / hide Search
-  // switching to ctrl-/
   if (event.ctrlKey && event.which === 191) {
       // Load json search index if first time invoking search
       // Means we don't load json unless searches are going to happen; keep user payload small unless needed
@@ -36,10 +35,11 @@ document.addEventListener('keydown', function(event) {
   }
 
   // Allow ESC (27) to close search box
-  if (event.keyCode == 27) {
+  if (event.keyCode == 27 || event.keyCode == 13) {
     if (searchVisible) {
       document.getElementById("fastSearch").style.visibility = "hidden";
       document.activeElement.blur();
+      document.getElementById("contentResults").remove();
       searchVisible = false;
     }
   }
@@ -130,10 +130,9 @@ function executeSearch(term) {
     resultsAvailable = false;
     searchitems = '';
   } else { // build our html 
-    for (let item in results.slice(0,5)) { // only show first 5 results
-      searchitems = searchitems + '<li><a href="' + results[item].item.permalink + '" tabindex="0">' + '<span class="title">' + results[item].item.title + '</span><br />'+ results[item].item.content +'</a></li>';
-      // searchitems = searchitems + '<li><a href="' + results[item].item.permalink + '" tabindex="0">' + '<span class="title">' + results[item].item.title + '</span><br /> <span class="sc">'+ results[item].item.section +'</span> — ' + results[item].item.date + ' — <em>' + results[item].item.desc + '</em></a></li>';
-      // searchitems = searchitems + '<li><a href="' + results[item].item.permalink + '" tabindex="0">' + '<span class="title">' + results[item].item.title + '</span><br /><span style="font-size: 50%">' + results[item].item.content + '</span></a></li>';
+    for (let item in results) { // only show first 5 results
+      var id = (results[item].item.relpermalink).concat("-", "search-item");
+      searchitems = searchitems + '<li><div id="' + id + '" tabindex="0"><span class="title">' + results[item].item.title + '</span><br /></div></li>';
     }
     resultsAvailable = true;
   }
@@ -143,4 +142,74 @@ function executeSearch(term) {
     first = list.firstChild.firstElementChild; // first result container — used for checking against keyboard up/down location
     last = list.lastChild.firstElementChild; // last result container — used for checking against keyboard up/down location
   }
+
+  if (results.length > 0) {
+    for (let item in results) {
+       // keyboard events!
+      var id = (results[item].item.relpermalink).concat("-", "search-item");
+      document.getElementById(id).addEventListener("keydown", function(event) {
+        if (event.keyCode === 13) {
+          var t = `.${results[item].item.title}.`;
+          var l = `.${results[item].item.relpermalink}.`;
+          var d = `.${results[item].item.date}.`;
+          var c = `.${results[item].item.content}..`;
+          genTab(t, l, c, d);
+        }
+      });
+      document.getElementById(id).addEventListener("focus", function() {
+        if (document.getElementById("contentResults")) {
+          document.getElementById("contentResults").remove();
+        }
+        var contentResults = document.createElement("div");
+        contentResults.id = "contentResults";
+        contentResults.setAttribute("class", "border content-results");
+        // contentResults.style.display = "flex";
+        // contentResults.style.justifyContent = "center";
+        
+        var wrapper = document.createElement("div");
+        wrapper.id = id.concat("-", "wrapper");
+        wrapper.setAttribute("class", "content-wrapper");
+        var previewHeader = document.createElement("span");
+        previewHeader.setAttribute("class", "search-header");
+        previewHeader.style.left = "1em";
+        previewHeader.innerHTML = "Post Preview";
+
+        var header = document.createElement("div");
+        header.id = id.concat("-", "header");
+        header.style.left = "2em";
+        header.style.marginRight = "1em";
+        header.innerHTML = `<h1>${results[item].item.title}<br><span style="opacity: 0.5; font-size: 0.5em">Last modified: ${results[item].item.date}</span></h1>`
+
+        var body = document.createElement("div");
+        body.id = id.concat("-", "body");
+        body.setAttribute("class", "body");
+        body.innerHTML = results[item].item.content;
+        // body.innerHTML = marked.parse(results[item].item.content);
+
+        if (document.getElementById(header.id)) {
+          document.getElementById(header.id).remove();
+          document.getElementById(body.id).remove();
+        }
+        
+        document.getElementById("fastSearch").append(contentResults);
+        contentResults.append(wrapper);
+        wrapper.append(previewHeader);
+        wrapper.append(header);
+        wrapper.append(body);
+
+        renderMathInElement(contentResults, {
+                delimiters: [
+                    {left: "$$", right: "$$", display: true},
+                    {left: "$", right: "$", display: false},
+                    {left: "\\[ ", right: "\\]", display: true},
+                    {left: "\\(", right: "\\)", display: false},
+                ]
+            });
+      });
+    }
+  }
+}
+
+function switchContent() {
+
 }

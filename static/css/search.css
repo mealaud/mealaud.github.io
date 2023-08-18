@@ -1,35 +1,104 @@
 #fastSearch { 
   visibility: hidden;
   position: absolute;
-  right: 0px;
-  top: 0px;
+  top: 12.5vh;
+  bottom: 12.5vh;
+  left: 12.5vw;
+  right: 12.5vw;
   display: inline-block;
-  width: 300px;
+  width: 75vw;
+  height: 75vh;
+  display: flex;
+  background-color: var(--bg);
+  z-index: 100;
 }      
 
 #fastSearch input { 
-  padding: 4px 10px;
   width: 100%;
-  height: 31px;
-  font-size: 1.6em;
-  color: #aaa;
-  font-weight: bold;
-  background-color: #000;
-  border-radius: 3px 3px 0px 0px;
-  border: none;
+  height: 2.5em;
+  font-size: 1.7em;
+  color: var(--fg);
+  background-color: var(--bg);
   outline: none;
   text-align: left;
   display: inline-block;
+  flex: 0 1 auto;
 }
 
-#searchResults li { 
+#postResults {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+  /* border: 2px solid red; */
+}
+
+#searchResults { 
+  flex: 1 1 auto;
+  visibility: inherit; 
+  display: inline-block; 
+  width: 100%;
+  height: 60vh;
+  /* border: 2px solid var(--fg0); */
+} #searchResults li { 
   list-style: none; 
   margin-left: 0em;
-  background-color: #333; 
-  border-bottom: 1px dotted #000;
+  background-color: var(--bg); 
+} #searchResults li .title {
+  font-size: 1.1em; 
+  margin-bottom: 10px; 
+  display: inline-block;
+} #searchResults div { 
+  text-decoration: none !important; 
+  padding: 10px; 
+  display: inline-block; 
+} #searchResults div:focus { 
+  outline: 0; 
+  background-color: var(--bg);
+  color: var(--orange2); 
 }
-  #searchResults li .title { font-size: 1.1em; margin-bottom: 10px; display: inline-block;}
 
-#searchResults { visibility: inherit; display: inline-block; width: 320px; }
-#searchResults a { text-decoration: none !important; padding: 10px; display: inline-block; }
-  #searchResults a:hover, a:focus { outline: 0; background-color: #666; color: #fff; }
+.content-results {
+  width: 50%;
+  /* border: 2px solid var(--fg0); */
+  color: var(--fg0);
+  display: flex;
+  justify-content: center;
+}
+
+#resultsContentDivider {
+  width: 2em;
+}
+#inputOutputDivider {
+  height: 2em;
+}
+
+
+.border {
+  border: 2px solid var(--fg0);
+  border-radius: 0.3em;
+  border-sizing: border-box;
+}
+
+.content-wrapper {
+  width: 95%;
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+  /* padding-bottom: 1em; */
+  position: relative;
+} .search-header {
+  position: absolute;
+  z-index: 1000;
+  background-color: var(--bg);
+  top: -0.6em;
+  font-size: 1.25em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+
+.body {
+  flex: 1 1 auto;
+  overflow-y: auto;
+}
+
