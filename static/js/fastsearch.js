@@ -137,7 +137,18 @@ function executeSearch(term) {
   } else { // build our html 
     for (let item in results) { // only show first 5 results
       var id = (results[item].item.relpermalink).concat("-", "search-item");
-      searchitems = searchitems + '<li><div id="' + id + '" tabindex="0"><span class="title">' + results[item].item.relpermalink + '</span><br /></div></li>';
+      if (results[item].item.relpermalink.includes("notes")) {
+        searchitems = searchitems + '<li><div id="' + id + '" tabindex="0"><span class="title">🗒️&nbsp;' + results[item].item.relpermalink.slice(1,-1) + '</span><br /></div></li>';
+      }
+      else if (results[item].item.relpermalink.includes("hobbies")) {
+        searchitems = searchitems + '<li><div id="' + id + '" tabindex="0"><span class="title">🪨&nbsp;' + results[item].item.relpermalink.slice(1,-1) + '</span><br /></div></li>';
+      }
+      else if (results[item].item.relpermalink.includes("axioms")) {
+        searchitems = searchitems + '<li><div id="' + id + '" tabindex="0"><span class="title">📜&nbsp;' + results[item].item.relpermalink.slice(1,-1) + '</span><br /></div></li>';
+      }
+      else {
+        searchitems = searchitems + '<li><div id="' + id + '" tabindex="0"><span class="title">❔&nbsp;' + results[item].item.relpermalink.slice(1,-1) + '</span><br /></div></li>';
+      }
     }
     resultsAvailable = true;
   }
