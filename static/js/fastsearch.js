@@ -165,7 +165,8 @@ function executeSearch(term) {
       if (results[item].matches[0].key === "plain") {
         // console.log(results[item].matches[0].value);
         // console.log(results[item].matches[0].indices);
-        content[item] = highlightText(results[item].item.content, results[item].matches[0].indices, results[item].item.plain);
+        // content[item] = highlightText(results[item].item.content, results[item].matches[0].indices, results[item].item.plain);
+        content[item] = results[item].item.content;
       }
       else {
         content[item] = results[item].item.content;
