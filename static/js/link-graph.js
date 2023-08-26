@@ -27,7 +27,7 @@ var height = document.documentElement.clientHeight * 0.45;
 var centerX = width/2;
 var centerY = height/2;
 var textHover = -1.5;
-var nodeTextSize = "0.7em";
+var nodeTextSize = "1em";
 
 // Specify the color scale.
 // const color = d3.scaleOrdinal(d3.schemeCategory10);
@@ -73,10 +73,10 @@ const node = svg.append("g")
   .selectAll("circle")
   .data(nodes)
   .join("circle")
-    .attr("r", d => d.kind === "section" ? sectionNodeRadius : pageNodeRadius)
+    .attr("r", d => d.kind === "section" || d.rootpage === "true" ? sectionNodeRadius : pageNodeRadius)
     .attr("cx", centerX)
     .attr("cy", centerY)
-    .attr("fill", d => d.kind === "section" ? sectionNodeColor : pageNodeColor)
+    .attr("fill", d => d.kind === "section" || d.rootpage === "true" ? sectionNodeColor : pageNodeColor)
     .attr("id", d => (d.link).concat("-", "node"))
     // .on("mouseover", d => document.getElementById("link-graph-current-node").innerHTML = d.Title);
     .on("click", function(event, d) {
@@ -85,10 +85,12 @@ const node = svg.append("g")
     .on("mouseover", function(event, d) {
       document.getElementById("link-graph-current-node").innerHTML = d.id;
       document.getElementById((d.link).concat("-", "node")).style.strokeOpacity = 0.5;
+      document.getElementById((d.link).concat("-", "text")).style.fontSize = nodeTextSize;
     })
     .on("mouseout", function(event, d) {
       document.getElementById("link-graph-current-node").innerHTML = "Select Page";
       document.getElementById((d.link).concat("-", "node")).style.strokeOpacity = 0;
+      document.getElementById((d.link).concat("-", "text")).style.fontSize = 0;
     });
 
 const text = svg.append("g")
@@ -101,9 +103,9 @@ const text = svg.append("g")
     .attr("id", d => (d.link).concat("-", "text"))
     .style("fill", "white")
     .style("text-anchor", "middle")
-    .style("font-size", nodeTextSize)
+    .style("font-size", "0em")
     .style("user-select", "none")
-    .text(d => d.kind === "section" || d.rootpage === "true" ? d.id : null);
+    .text(d => d.id);
 
 // Add a drag behavior.
 node.call(d3.drag()
