@@ -8,7 +8,7 @@ categories:
 rootPage: false
 ---
 
-To answer my question from {{<ref "our post on state spaces" "/notes/state-spaces">}}, it seems you can indeed think of the state-space as a manifold, sort of! Indeed, we apparently can always realize the motion of the state variables as the boundary of an $ (n-1) $-dimensional manifold. {{%nl%}}{{%nl%}}
+To answer my question from {{<ref "our post on state spaces" "/notes/state-spaces">}}, it seems you can indeed think of the state-space as a {{<ref "manifold" "/notes/definition-of-a-topological-manifold">}}, sort of! Indeed, we apparently can always realize the motion of the state variables as the boundary of an $ (n-1) $-dimensional manifold. {{%nl%}}{{%nl%}}
 
 This boundary is also a subset of the boundary of the state space $ \mathcal{E} $. (I don't get this either!!!!!!!!! D:<)
 

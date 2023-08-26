@@ -73,10 +73,10 @@ const node = svg.append("g")
   .selectAll("circle")
   .data(nodes)
   .join("circle")
-    .attr("r", d => d.kind === "section" ? sectionNodeRadius : pageNodeRadius)
+    .attr("r", d => d.kind === "section" || d.rootpage === "true" ? sectionNodeRadius : pageNodeRadius)
     .attr("cx", centerX)
     .attr("cy", centerY)
-    .attr("fill", d => d.kind === "section" ? sectionNodeColor : pageNodeColor)
+    .attr("fill", d => d.kind === "section" || d.rootpage === "true" ? sectionNodeColor : pageNodeColor)
     .attr("id", d => (d.link).concat("-", "node"))
     // .on("mouseover", d => document.getElementById("link-graph-current-node").innerHTML = d.Title);
     .on("click", function(event, d) {
