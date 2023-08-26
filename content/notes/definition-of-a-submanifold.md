@@ -24,4 +24,4 @@ The natural number $ (n-m) $ is called the {{% tdf "codimension" %}} of $ M $ in
 ---
 ---
 ## References & Related Readings
-- 
+- [An Introduction to Riemannian Geometry](https://www.maths.lth.se/matematiklu/personal/sigma/Riemann.pdf) pg.11 by Sigmundur Gudmundsson.
