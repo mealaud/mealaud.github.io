@@ -17,6 +17,7 @@ $$
 with $ A \coloneqq x(U \cap \phi^{-1}(V)) $, is of class $ C^r $. The map $ \phi $ is said to be {{% tdf "differentiable" %}} if it is differentiable at every point $ p \in M $.
 {{% /MathEnv %}}
 
+See the discussion in {{<ref "Definition of an Atlas" "/notes/definition-of-an-atlas">}} for a more insightful (in my opinion!) explanation to this idea and definition.
 
 
 
