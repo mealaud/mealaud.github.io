@@ -21,3 +21,4 @@ A {{<ref "maximal atlas" "/notes/compatible-and-maximal-atlases">}} $ \widehat{A
 ---
 ## References & Related Readings
 - [An Introduction to Riemannian Geometry](https://www.maths.lth.se/matematiklu/personal/sigma/Riemann.pdf) pg.8 by Sigmundur Gudmundsson.
+- See {{<ref "The Moral of Differentiable Manifolds" "/notes/the-moral-of-differentiable-manifolds">}} for a more intuition-focused discussion.
