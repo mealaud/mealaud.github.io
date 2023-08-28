@@ -12,7 +12,8 @@ var linkOpacity = 1;
 var linkWidth = 3;
 var pageNodeRadius = 6;
 var sectionNodeRadius = 1.5*pageNodeRadius;
-var repelStrength = 4/numNodes;
+// var repelStrength = 4/numNodes;
+var repelStrength = 0.6;
 var clickCutoffTime = 100;
 var pageNodeColor = "var(--fg1)";
 var sectionNodeColor = "#87ceeb";
@@ -22,8 +23,8 @@ var unhighlightedOpacity = 0;
 var highlightedOpacity = 0.5;
 
 // Specify the dimensions of the chart.
-var width = document.documentElement.clientWidth * 0.25;
-var height = document.documentElement.clientHeight * 0.45;
+var width = document.documentElement.clientWidth * 0.7;
+var height = document.documentElement.clientHeight * 0.7;
 var centerX = width/2;
 var centerY = height/2;
 var textHover = -1.5;
@@ -50,7 +51,7 @@ var simulation = d3.forceSimulation(nodes)
 
 // Create the SVG container.
 
-var svg = d3.select("#base").append("svg")
+var svg = d3.select("#link-graph").append("svg")
     .attr("id", "link-graph-svg")
     .attr("width", width)
     .attr("height", height);
@@ -78,17 +79,15 @@ const node = svg.append("g")
     .attr("cy", centerY)
     .attr("fill", d => d.kind === "section" || d.rootpage === "true" ? sectionNodeColor : pageNodeColor)
     .attr("id", d => (d.link).concat("-", "node"))
-    // .on("mouseover", d => document.getElementById("link-graph-current-node").innerHTML = d.Title);
     .on("click", function(event, d) {
       document.getElementById((d.link).concat("/", "button")).click();
+      document.getElementById("link-graph").style.display = "none";
     })
     .on("mouseover", function(event, d) {
-      document.getElementById("link-graph-current-node").innerHTML = d.id;
       document.getElementById((d.link).concat("-", "node")).style.strokeOpacity = 0.5;
       document.getElementById((d.link).concat("-", "text")).style.fontSize = nodeTextSize;
     })
     .on("mouseout", function(event, d) {
-      document.getElementById("link-graph-current-node").innerHTML = "Select Page";
       document.getElementById((d.link).concat("-", "node")).style.strokeOpacity = 0;
       document.getElementById((d.link).concat("-", "text")).style.fontSize = 0;
     });
@@ -115,11 +114,11 @@ node.call(d3.drag()
 
 // Set the position attributes of links and nodes each time the simulation ticks.
 simulation.on("tick", () => {
-  // if (width )
-  width = document.documentElement.clientWidth * 0.25;
-  // height = document.documentElement.clientWidth * 0.5;
-  centerX = width/2;
-  // centerY = height/2;
+  // // if (width )
+  // width = document.documentElement.clientWidth * 0.25;
+  // // height = document.documentElement.clientWidth * 0.5;
+  // centerX = width/2;
+  // // centerY = height/2;
 
   simulation
       .force("x", d3.forceX(width/2))

@@ -101,6 +101,7 @@ function clearTabs() {
   tabs.id = "tabs";
   tabs.style.display = "flex";
   document.getElementById("content").append(tabs);
+  document.getElementById("link-graph").style.display = "inline";
 }
 
 function highlightButton(x) {
