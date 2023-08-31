@@ -22,13 +22,7 @@ From this definition, pay close attention to the definition of the so called _lo
 Topological manifolds are locally Euclidean. 
 {{% /MathEnv %}}
 
-But why is this important? Our above observation allows us to do some calculus on our space (since we know how to do calculus in Euclidean space). To this end, recall the {{<ref "the moral of differentiation" "/notes/the-moral-of-differentiation">}}:
-
-1. Differentiation is a local property.
-2. Differentiation isn't always possible.
-3. When differentiation is possible, it simplifies things.
-
-Combining these morals with our boxed observation, we get to the pleasant conclusion that 
+But why is this important? Our above observation allows us to do some calculus on our space (since we know how to do calculus in Euclidean space). To this end, recall from {{<ref "the moral of differentiation" "/notes/the-moral-of-differentiation">}} that differentiation is a local property: the only thing that matters to differentiation is a small neighborhood around your chosen point. Combining this with morals our boxed observation, we get to the pleasant conclusion that 
 
 {{% MathEnv "up" %}}
 
