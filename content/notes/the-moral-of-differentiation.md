@@ -58,4 +58,4 @@ We summarize with a pretty graphic:
 ---
 ---
 ## References & Related Readings
-- Highschool calculus.
+- Just trust me lol.

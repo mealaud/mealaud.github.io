@@ -5,7 +5,7 @@ draft: false
 math: false
 tags: 
 categories: 
-rootPage: true
+rootPage: false
 ---
 
 Here are my favorite clouds from my high school years.
