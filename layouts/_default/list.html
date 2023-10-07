@@ -150,7 +150,7 @@
     {{ if ne $rootPage.RelPermalink $i.RelPermalink }}
       {{ $id := print $i.RelPermalink "/button"  }}
       {{ $date := $i.Lastmod.Format "2006-01-02" }}
-      <div id="{{ $id }}" class="invisible" onclick="genTab(`{{ $i.Title }}`, `{{ $i.RelPermalink }}`, `{{ $i.Content }}`, `{{ $date }}`)">{{$i.Title}}</div>
+      <div id="{{ $id }}" class="invisible" onclick="genTab('{{ $i.Title }}', '{{ $i.RelPermalink }}', '{{ $i.Content }}', '{{ $date }}')">{{$i.Title}}</div>
     {{ end }}
   {{ end }}
 

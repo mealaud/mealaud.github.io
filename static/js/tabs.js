@@ -30,7 +30,7 @@ function genTab(title, link, content, date) {
 
   var tabTitle = document.createElement("div");
   tabTitle.id = tabId.concat("-", "Title");
-  tabTitle.innerHTML = `<h1>${title.substring(1,title.length-1)}<br><span style="opacity: 0.5; font-size: 0.5em">Last modified: ${date}</span></h1>`;
+  tabTitle.innerHTML = `<h1>${title}<br><span style="opacity: 0.5; font-size: 0.5em">Last modified: ${date}</span></h1>`;
 
   // content
   var tabContent = document.createElement("div");
@@ -76,7 +76,8 @@ function genTab(title, link, content, date) {
     tab.append(exitButton);
 
     // making content 
-    tabContent.innerHTML = `${content.substring(1,content.length-2)}`;
+    // tabContent.innerHTML = `${content.substring(1,content.length-2)}`;
+    tabContent.innerHTML = `${content}`;
     tab.append(tabContent);
     renderMathInElement(tab, {
             delimiters: [

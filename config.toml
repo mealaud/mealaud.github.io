@@ -2,6 +2,11 @@ baseURL = 'http://mealaud.com/'
 languageCode = 'en-us'
 title = 'mel-land'
 
+[module]
+  [module.hugoVersion]
+    extended = true
+    min = '0.111.0'
+
 [markup]
   [markup.tableOfContents]
     ordered = true
