@@ -1,0 +1,35 @@
+#content-position {
+  position: relative;
+} #nav-bar {} 
+#guide {
+  margin-left: 2%;
+  width: 100%;
+  float: left;
+} #site-logo {
+  box-sizing: border-box;
+} #title-font {
+  box-sizing: border-box;
+  font-size: 255%;
+  font-weight: bold;
+} #subtitle-font {
+  box-sizing: border-box;
+  line-height: 100%;
+  font-size: 115%;
+  opacity: 65%;
+} 
+
+
+.grid-container {
+  display: grid;
+  /* grid-template-columns: auto 1fr; */
+  grid-template-columns: 20% 2fr;
+  gap: 0%;
+} #nav-grid {
+  grid-coloumn: 1;
+} #content-grid {
+  grid-column: 2;
+}
+
+
+.toc {}
+

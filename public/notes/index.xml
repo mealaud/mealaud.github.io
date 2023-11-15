@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Notes on mel-land</title>
+    <link>http://mealaud.com/notes/</link>
+    <description>Recent content in Notes on mel-land</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 11 Aug 2023 18:23:36 -0700</lastBuildDate><atom:link href="http://mealaud.com/notes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Introduction to Manifolds</title>
+      <link>http://mealaud.com/notes/introduction-to-manifolds/</link>
+      <pubDate>Thu, 31 Aug 2023 15:58:48 -0700</pubDate>
+      
+      <guid>http://mealaud.com/notes/introduction-to-manifolds/</guid>
+      <description>Let $ (M, \mathcal{T}) $ be a topological Hausdorff space with a countable basis). Then $ M $ is called a topological manifold if there exists an $ m \in \mathbb{Z}^+ $ such that for each point $ p \in M $ we have an open neighborhood $ U $ of $ p $, an open subset $ V $ of $ \mathbb{R}^m $ and a homeomorphism $ x \colon U \to V $.</description>
+    </item>
+    
+    <item>
+      <title>The Moral of Differentiation</title>
+      <link>http://mealaud.com/notes/the-moral-of-differentiation/</link>
+      <pubDate>Sat, 26 Aug 2023 21:16:13 -0700</pubDate>
+      
+      <guid>http://mealaud.com/notes/the-moral-of-differentiation/</guid>
+      <description>The spiel Differentiation is first introduced via tangent lines to graphs that may or may not continue to good approximations after your chosen point. For example, $ f(x) = x^2 $ and its tangent line at $ x=1 $ is great at, say, $ x = 1 \pm 1/100 $ but is not so great at $ x = 1 + 100 $. Although a bit extreme, we get the following important idea from this: our tangent line may not represent the graph well after a certain point.</description>
+    </item>
+    
+  </channel>
+</rss>
