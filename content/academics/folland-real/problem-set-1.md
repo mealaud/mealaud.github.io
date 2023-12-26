@@ -38,8 +38,54 @@ summary: "The first problem set for my Folland reading."
 (Folland 5.6) Suppose that $ \mathcal{X} $ is a finite-dimensional vector space. Let $ e_1, \ldots, e_n $ be a basis for $ \mathcal{X} $, and define $||\sum_{1}^{n} a_j e_j|| \coloneqq\sum_{1}^{n}|a_j| $. 
 
 1. $ || \cdot ||_1 $ is a norm on $ \mathcal{X} $.
-2. The map $ (a_1,\ldots,a_n) \mapsto\sum_{1}^{n}a_j e_j $ is cotninuous from $ K^n $ with the usual Euclidean topology to $ \mathcal{X} $ with the topology defined by $ || \cdot ||_1 $.
+2. The map $ (a_1,\ldots,a_n) \mapsto\sum_{1}^{n}a_j e_j $ is continuous from $ K^n $ with the usual Euclidean topology to $ \mathcal{X} $ with the topology defined by $ || \cdot ||_1 $.
 3. $ \left \\{ x \in \mathcal{X} : ||x||_1 = 1 \right \\} $ is compact in the topology defined by $ ||\cdot||_1 $.
 4. All norms on $ \mathcal{X} $ are equivalent. (Compare any norm to $ ||\cdot||_1 $.)
 {{% /MathEnv %}}
+
+{{% MathEnv "lem" %}}
+$ ||\cdot||_2 $ (the Euclidean metric) and $ ||\cdot||_1 $ (per the above exercise) are equivalent norms on $ \mathbb{R}^n $ (and hence also on $ \mathbb{C}^n $).
+{{% Proof %}}
+Since $ ||\cdot||_2 $ and $ ||\cdot||_1 $ are nonnegative, it is sufficient to prove that there exists positive constants $ A $ and $ B $ such that for any $ v \in \mathbb{R}^n $, 
+$$
+     A ||v||_2^2 \leq ||v||_1^2 \leq B||v||_2^2.
+$$ 
+Considering the standard basis $ u_1,\ldots,u_n $ of $ \mathbb{R}^n $, $ v = v_1 u_1+ \cdots + v_n u_n $. Then: 
+$$
+    ||v||_2^2 = v_1^2 + \cdots + v_n^2
+$$
+and 
+$$
+    ||v||_1^2 = (|v_1| + \cdots + |v_n|)^2.
+$$
+Hence, $ ||v||_2^2 \leq ||v||_1^2 $ so we may take $ A = 1 $. Moreover, 
+$$
+    \begin{align*}
+        ||v||_1^2 &\leq \left ( n \operatorname{max}\left \\{ |v_i| : 1\leq i\leq n \right \\}  \right )^2 \\\\
+        &\leq n^2 \operatorname{max} \left \\{ |v_i|^2 : 1 \leq i \leq n \right \\} \\\\
+        &\leq n^2 ||v||_2^2.
+    \end{align*}
+$$
+Thus we may take $ B $ to be $ n^2 $. The claim has been shown.
+{{% /Proof %}}
+{{% /MathEnv %}}
+
+
+{{% Proof %}}
+1. This follows from properties of the absolute value over $ K $ ($ = \mathbb{R} $ or $ \mathbb{C} $.)
+2. finish
+3. By the second part of this question, we can see that $ \mathcal{X} $ is homeomorphic to $ K^n $ with the Euclidean topology (via the given bijective bicontinuous mapping). Hence we may consider our set, $ S \coloneqq \left \\{ x \in K^n : ||x||_1 = 1 \right \\} $. This set is closed and bounded, so by Heine-Borel theorem it is compact. Now, because these spaces are homeomorphic, we get that the original set is compact in $ \mathcal{X} $. 
+4. Consider some normal $ ||\cdot|| $ on $ \mathcal{X} $. It suffices to show that there are positive constants $ A $ and $ B $ such that 
+$$
+    A||v||_1 \leq ||v|| \leq B||v||_1 \quad \text{for all} \quad v \in \mathcal{X}.
+$$
+Fix some $ w \in \mathcal{X} $. We then know that $ w = w_1 e_1 + \cdots + w_n e_n $ for some constants $ w_i \in K $. Then, 
+$$
+    \begin{align*}
+        ||w|| &\leq |w_1| ||e_1|| + \cdots + |w_n| ||e_n|| \\\\
+        &\leq ||w||_1 \operatorname{max} \left \\{ ||e_i|| : 1 \leq i \leq n \right \\} 
+    \end{align*}
+$$
+Hence we can take $ B =\operatorname{max} \left \\{ ||e_i|| : 1 \leq i \leq n \right \\} $. Similarly, we can take $ A = (n) $
+{{% /Proof %}}
 
