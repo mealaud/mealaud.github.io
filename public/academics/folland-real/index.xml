@@ -13,7 +13,7 @@
       <pubDate>Tue, 26 Dec 2023 08:13:54 +0000</pubDate>
       
       <guid>http://mealaud.com/academics/folland-real/note-1/</guid>
-      <description>djsdhfklsjdhf</description>
+      <description>Notes on the basics of normed vector spaces and linear functionals.</description>
     </item>
     
     <item>
@@ -22,7 +22,7 @@
       <pubDate>Tue, 26 Dec 2023 08:13:46 +0000</pubDate>
       
       <guid>http://mealaud.com/academics/folland-real/problem-set-1/</guid>
-      <description>(Folland 5.1) If $ \mathcal{X} $ is a normed vector space over $ K $ ($ = \mathbb{R} $ or $ \mathbb{C} $), then addition and scalar multiplication are continuous from $ \mathcal{X}\times \mathcal{X} $ and $ K\times \mathcal{X} $ to $ \mathcal{X} $. Moreover, the norm is continuous from $ \mathcal{X} $ to $ [0,\infty) $; in fact, $ \left | ||x|| - ||y|| \right | \leq ||x-y|| $.</description>
+      <description>The first problem set for my Folland reading.</description>
     </item>
     
   </channel>
