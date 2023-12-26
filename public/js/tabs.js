@@ -2,7 +2,7 @@ function genTab(title, link, content, date) {
   const parentEltId = "tabs";
   var tabId = link.substring(1,link.length-1);
   var nodeId = tabId.concat("-", "node");
-  date = date.substring(1,date.length-1);
+  // date = date.substring(1,date.length-1);
   // console.log(nodeId);
 
 

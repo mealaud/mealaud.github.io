@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Of Mountains and Shirts | mel-land</title>
+    <title>The Moral of Differentiation | mel-land</title>
     
     <link rel="stylesheet" href="/css/style.css?2" type="text/css" media="all" />
     <link rel="stylesheet" href="/css/theme.css?2" type="text/css" media="all" />
@@ -105,20 +105,54 @@
       <article style="margin-top: 1em; padding-left: 0.5em;">
         
   <header>
-    <h1>Of Mountains and Shirts<span style="opacity: 0.5; font-size: 0.5em">    Wednesday, May 24, 2023</span></h1>
+    <h1>The Moral of Differentiation<span style="opacity: 0.5; font-size: 0.5em">    Saturday, August 26, 2023</span></h1>
   </header>
-  
-
-
-<!-- *Originally written: May 24, 2023*<br>
+  <h2 id="the-spiel">The spiel</h2>
+<p>Differentiation is first introduced via tangent lines to graphs that may or may not continue to good approximations after your chosen point. For example, $ f(x) = x^2 $ and its tangent line at $ x=1 $ is great at, say, $ x = 1 \pm 1/100 $ but is not so great at $ x = 1 + 100 $. Although a bit extreme, we get the following important idea from this: our tangent line may not represent the graph well after a certain point. :( In other words:</p>
+<link rel="stylesheet" href="/css/theme.css" type="text/css" media="all" />
+  <div class="math-env math-up">
+<p>Differentiation is a local property. i.e., it only properly models your function near your point of interest.</p>
+  </div>
 <br>
- -->
-<p>The mountain is immovable.<br></p>
-<p>It stands strongly despite all it endures.<br></p>
-<p>Its clothes may be ragged but it continues to do what it must.<br>
-<br></p>
-<p>May I be a mountain.<br></p>
-<p>May my shirt have holes.</p>
+<p>For the next idea, consider the following function:
+$$
+f(x) =
+\begin{cases}
+1 &amp; x \geq 0,\\
+-1 &amp; x &lt; 0.
+\end{cases}
+$$<br>
+Here, although our function is seemingly very simple, there is a big problem at $ x=0 $&mdash;there&rsquo;s no tangent line! So we can&rsquo;t differentiate it. Leading us to your next idea:</p>
+<link rel="stylesheet" href="/css/theme.css" type="text/css" media="all" />
+  <div class="math-env math-up">
+<p>Not every function admits a derivative. i.e., sometimes there&rsquo;s no tangent line.</p>
+  </div>
+<br>
+<p>For our last point, consider the following seemingly very complicated function:
+$$
+f(x) = e^{\sin x} + \cos (x^2).
+$$
+This seems incredibly awful to work with, in my opinion, but let&rsquo;s consider its derivative: $ f&rsquo;(x) = \cos(x) e^{\sin x} - 2x \sin (x^2)$. Although still ugly, studying this function near, say, $ x = 50 $ is simple enough! We compute its derivative, $ f&rsquo;(50) $ and consider our tangent line and now begin studying the function in that <em>small neighborhood</em>. Now we&rsquo;ve simplified $ e^{\sin x} + \cos (x^2) $ to $ mx + b $ for some $ m $ and $ b $. This straight line is much, much easier to work with, yielding our final big idea:</p>
+<link rel="stylesheet" href="/css/theme.css" type="text/css" media="all" />
+  <div class="math-env math-up">
+<p>Differentiation makes things easier to work with. It makes them more familiar.</p>
+  </div>
+<h2 id="summary">Summary</h2>
+<p>We summarize with a pretty graphic:</p>
+<link rel="stylesheet" href="/css/theme.css" type="text/css" media="all" />
+  <div class="math-env math-up">
+<ol>
+<li>Differentiation is a local property.</li>
+<li>Differentiation isn&rsquo;t always possible.</li>
+<li>When differentiation is possible, it simplifies things.</li>
+</ol>
+  </div>
+<hr>
+<hr>
+<h2 id="references--related-readings">References &amp; Related Readings</h2>
+<ul>
+<li>Just trust me lol.</li>
+</ul>
 
 
       </article>

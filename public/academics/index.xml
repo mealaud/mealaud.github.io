@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Academics on mel-land</title>
+    <link>http://mealaud.com/academics/</link>
+    <description>Recent content in Academics on mel-land</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 11 Aug 2023 18:23:36 -0700</lastBuildDate><atom:link href="http://mealaud.com/academics/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Intro to Dynamical Systems</title>
+      <link>http://mealaud.com/academics/intro-to-dynamical-systems/</link>
+      <pubDate>Sat, 14 Oct 2023 22:22:19 +0000</pubDate>
+      
+      <guid>http://mealaud.com/academics/intro-to-dynamical-systems/</guid>
+      <description>Ethos of the subject Dynamical systems is the study of the long/longer-term behavior of some time evolving system.
+Basic definitions We start with the two basic types of dynamical systems: discrete- and continuous-time.
+A discrete-time dynamical system is a space $ X $ and a map $ f \colon X \to X $. For $ n \in \mathbb{N} $ or $ n \in \mathbb{Z} $ if invertible, we define the $ n $-fold composition $ f^{(n)} = f \circ f \circ \cdots \circ f $ with $ f^0 $ defined as the identity map.</description>
+    </item>
+    
+    <item>
+      <title>Introduction to Manifolds</title>
+      <link>http://mealaud.com/academics/introduction-to-manifolds/</link>
+      <pubDate>Thu, 31 Aug 2023 15:58:48 -0700</pubDate>
+      
+      <guid>http://mealaud.com/academics/introduction-to-manifolds/</guid>
+      <description>Let $ (M, \mathcal{T}) $ be a topological Hausdorff space with a countable basis). Then $ M $ is called a topological manifold if there exists an $ m \in \mathbb{Z}^+ $ such that for each point $ p \in M $ we have an open neighborhood $ U $ of $ p $, an open subset $ V $ of $ \mathbb{R}^m $ and a homeomorphism $ x \colon U \to V $.</description>
+    </item>
+    
+    <item>
+      <title>The Moral of Differentiation</title>
+      <link>http://mealaud.com/academics/the-moral-of-differentiation/</link>
+      <pubDate>Sat, 26 Aug 2023 21:16:13 -0700</pubDate>
+      
+      <guid>http://mealaud.com/academics/the-moral-of-differentiation/</guid>
+      <description>The spiel Differentiation is first introduced via tangent lines to graphs that may or may not continue to good approximations after your chosen point. For example, $ f(x) = x^2 $ and its tangent line at $ x=1 $ is great at, say, $ x = 1 \pm 1/100 $ but is not so great at $ x = 1 + 100 $. Although a bit extreme, we get the following important idea from this: our tangent line may not represent the graph well after a certain point.</description>
+    </item>
+    
+  </channel>
+</rss>

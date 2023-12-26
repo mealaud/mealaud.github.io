@@ -8,61 +8,50 @@
     <language>en-us</language>
     <lastBuildDate>Sun, 13 Aug 2023 21:41:46 -0700</lastBuildDate><atom:link href="http://mealaud.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Note 1</title>
+      <link>http://mealaud.com/academics/folland-real/note-1/</link>
+      <pubDate>Tue, 26 Dec 2023 08:13:54 +0000</pubDate>
+      
+      <guid>http://mealaud.com/academics/folland-real/note-1/</guid>
+      <description>djsdhfklsjdhf</description>
+    </item>
+    
+    <item>
+      <title>Problem Set 1</title>
+      <link>http://mealaud.com/academics/folland-real/problem-set-1/</link>
+      <pubDate>Tue, 26 Dec 2023 08:13:46 +0000</pubDate>
+      
+      <guid>http://mealaud.com/academics/folland-real/problem-set-1/</guid>
+      <description>(Folland 5.1) If $ \mathcal{X} $ is a normed vector space over $ K $ ($ = \mathbb{R} $ or $ \mathbb{C} $), then addition and scalar multiplication are continuous from $ \mathcal{X}\times \mathcal{X} $ and $ K\times \mathcal{X} $ to $ \mathcal{X} $. Moreover, the norm is continuous from $ \mathcal{X} $ to $ [0,\infty) $; in fact, $ \left | ||x|| - ||y|| \right | \leq ||x-y|| $.</description>
+    </item>
+    
+    <item>
+      <title>Intro to Dynamical Systems</title>
+      <link>http://mealaud.com/academics/intro-to-dynamical-systems/</link>
+      <pubDate>Sat, 14 Oct 2023 22:22:19 +0000</pubDate>
+      
+      <guid>http://mealaud.com/academics/intro-to-dynamical-systems/</guid>
+      <description>Ethos of the subject Dynamical systems is the study of the long/longer-term behavior of some time evolving system.
+Basic definitions We start with the two basic types of dynamical systems: discrete- and continuous-time.
+A discrete-time dynamical system is a space $ X $ and a map $ f \colon X \to X $. For $ n \in \mathbb{N} $ or $ n \in \mathbb{Z} $ if invertible, we define the $ n $-fold composition $ f^{(n)} = f \circ f \circ \cdots \circ f $ with $ f^0 $ defined as the identity map.</description>
+    </item>
+    
+    <item>
       <title>Introduction to Manifolds</title>
-      <link>http://mealaud.com/notes/introduction-to-manifolds/</link>
+      <link>http://mealaud.com/academics/introduction-to-manifolds/</link>
       <pubDate>Thu, 31 Aug 2023 15:58:48 -0700</pubDate>
       
-      <guid>http://mealaud.com/notes/introduction-to-manifolds/</guid>
+      <guid>http://mealaud.com/academics/introduction-to-manifolds/</guid>
       <description>Let $ (M, \mathcal{T}) $ be a topological Hausdorff space with a countable basis). Then $ M $ is called a topological manifold if there exists an $ m \in \mathbb{Z}^+ $ such that for each point $ p \in M $ we have an open neighborhood $ U $ of $ p $, an open subset $ V $ of $ \mathbb{R}^m $ and a homeomorphism $ x \colon U \to V $.</description>
     </item>
     
     <item>
       <title>The Moral of Differentiation</title>
-      <link>http://mealaud.com/notes/the-moral-of-differentiation/</link>
+      <link>http://mealaud.com/academics/the-moral-of-differentiation/</link>
       <pubDate>Sat, 26 Aug 2023 21:16:13 -0700</pubDate>
       
-      <guid>http://mealaud.com/notes/the-moral-of-differentiation/</guid>
+      <guid>http://mealaud.com/academics/the-moral-of-differentiation/</guid>
       <description>The spiel Differentiation is first introduced via tangent lines to graphs that may or may not continue to good approximations after your chosen point. For example, $ f(x) = x^2 $ and its tangent line at $ x=1 $ is great at, say, $ x = 1 \pm 1/100 $ but is not so great at $ x = 1 + 100 $. Although a bit extreme, we get the following important idea from this: our tangent line may not represent the graph well after a certain point.</description>
-    </item>
-    
-    <item>
-      <title>On Acting With or Without Purpose</title>
-      <link>http://mealaud.com/axioms/on-acting-with-or-without-purpose/</link>
-      <pubDate>Wed, 09 Aug 2023 15:36:01 -0700</pubDate>
-      
-      <guid>http://mealaud.com/axioms/on-acting-with-or-without-purpose/</guid>
-      <description>We define idling as acting without purpose. One must never idle (i.e., everything must be done with a purpose). This is a corollary of
-.
-It&amp;rsquo;s okay (and beneficial) to take breaks and to recuperate and to enjoy oneself outside of work. It&amp;rsquo;s fine to turn one&amp;rsquo;s brain off! But it has to be done with reason! You must perform one of these inactions with purpose to relax, for example.</description>
-    </item>
-    
-    <item>
-      <title>On Resignation</title>
-      <link>http://mealaud.com/axioms/on-resignation/</link>
-      <pubDate>Wed, 09 Aug 2023 15:35:45 -0700</pubDate>
-      
-      <guid>http://mealaud.com/axioms/on-resignation/</guid>
-      <description>One must never resign. If one resigns to their situation (i.e., gives up and no longer puts in effort into their life),
-tells us that their life can no longer neither markedly improve and stay improved. Therefore we are violating Axiom #4 and thus one cannot resign.
-Notice that there is a hidden &#34;for all&#34; quantifier in the above proposition (i.e., &#34;For all instances in time, one must not resign, or, in other words, &#34;</description>
-    </item>
-    
-    <item>
-      <title>On the Worth of My Word</title>
-      <link>http://mealaud.com/axioms/on-the-worth-of-my-word/</link>
-      <pubDate>Wed, 09 Aug 2023 15:35:31 -0700</pubDate>
-      
-      <guid>http://mealaud.com/axioms/on-the-worth-of-my-word/</guid>
-      <description>My word must have worth and, if it does not, I can ensure it will. I have made many empty promises to myself in the past (whether I was aware or not). Each time I became aware of a such a lie I doubt my ability to change, to improve, to continue. This must not be possible. My word must have worth so that I can keep promises to myself (and to others).</description>
-    </item>
-    
-    <item>
-      <title>On Improving My Life</title>
-      <link>http://mealaud.com/axioms/on-improving-my-life/</link>
-      <pubDate>Wed, 09 Aug 2023 15:33:33 -0700</pubDate>
-      
-      <guid>http://mealaud.com/axioms/on-improving-my-life/</guid>
-      <description>My life can only markedly improve and stay improved only if I, myself, make an effort. If my life did improve according to random chance it is not necessarily permanent. Such a random change may indeed be, once again, randomly taken away. If I am to make a sustained, positive change in my life, I must be able to control whether this change continues to take place. I must be the one deciding whether to continue instituting this change.</description>
     </item>
     
     <item>

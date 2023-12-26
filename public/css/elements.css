@@ -18,6 +18,18 @@
   opacity: 65%;
 } 
 
+.nav-list {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+} .nav-items {
+  display: block;
+  flex: 0 1 auto;
+}
 
 .grid-container {
   display: grid;

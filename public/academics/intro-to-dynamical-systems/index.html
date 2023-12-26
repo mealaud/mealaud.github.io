@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Intro to Dynamical Systems | mel-land</title>
+    
+    <link rel="stylesheet" href="/css/style.css?2" type="text/css" media="all" />
+    <link rel="stylesheet" href="/css/theme.css?2" type="text/css" media="all" />
+    <link rel="stylesheet" href="/css/fonts.css?2" type="text/css" media="all" />
+    <link rel="stylesheet" href="/css/elements.css?2" type="text/css" media="all" />
+    <link rel="stylesheet" href="/css/math.css?2" type="text/css" media="all" />
+    <link rel="stylesheet" href="/css/tabs.css?2" type="text/css" media="all" />
+    <link rel="stylesheet" href="/css/search.css?2" type="text/css" media="all" />
+
+    
+    <link rel="stylesheet" href="/css/katex.min.css">
+<script defer="" src="/js/katex.min.js"></script>
+<script defer="" src="/js/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+            delimiters: [
+                {left: "$$", right: "$$", display: true},
+                {left: "$", right: "$", display: false},
+                {left: "\\[ ", right: "\\]", display: true},
+                {left: "\\(", right: "\\)", display: false},
+            ]
+        });
+    });
+</script>
+
+
+
+
+    
+    <link rel="icon" href="/gruv-cropped-gortoutline.png"/>
+
+    </head>
+
+  <body style="height: 100%; width: 35%; margin: auto">
+    <div id="content-wrapper">
+      
+  <div style="display: flex; height: 7.45em;">
+  <div style="height: 100%;">
+    <a class="logo" href="http://mealaud.com/">
+      <img src="/gortoutline.png" style="filter: brightness(0) saturate(100%) invert(96%) sepia(2%) saturate(4162%) hue-rotate(353deg) brightness(101%) contrast(97%);" height=100%>
+    </a>
+  </div>
+  <div>&nbsp;</div>
+  <div style="width: 100%">
+    <div id="title-font">
+      <a href="http://mealaud.com/" style="text-decoration: none">mel-land</a>
+    </div>
+    <div id="subtitle-font">
+      where the mel guy<br>
+      reigns supreme
+    </div>
+    <div id="navigation">
+      <ul class="nav-list">
+        
+          <li class="nav-item">
+            <a href="/academics/" style="text-decoration: none; font-weight: bold; font-size: 125%;">Academics</a>
+          </li>
+        
+          <li class="nav-item">
+            <a href="/hobbies/" style="text-decoration: none; font-weight: bold; font-size: 125%;">Hobbies</a>
+          </li>
+        
+          <li class="nav-item">
+            <a href="/axioms/" style="text-decoration: none; font-weight: bold; font-size: 125%;">Axioms</a>
+          </li>
+        
+          <li class="nav-item">
+            <a href="/about-me/" style="text-decoration: none; font-weight: bold; font-size: 125%;">About Me</a>
+          </li>
+        
+      </ul>
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </div>
+</div>
+
+
+      <article style="margin-top: 1em; padding-left: 0.5em;">
+        
+  <header>
+    <h1>Intro to Dynamical Systems<span style="opacity: 0.5; font-size: 0.5em">    Saturday, October 14, 2023</span></h1>
+  </header>
+  <h2 id="ethos-of-the-subject">Ethos of the subject</h2>
+<p>Dynamical systems is the study of the long/longer-term behavior of some time evolving system.</p>
+<h2 id="basic-definitions">Basic definitions</h2>
+<p>We start with the two basic types of dynamical systems: discrete- and continuous-time.</p>
+<link rel="stylesheet" href="/css/theme.css" type="text/css" media="all" />
+  <div class="math-env math-defn"><span class="math-no-num"></span>
+    <span style="font-weight: normal; color: var(--fg);">
+<ul>
+<li>
+<p>A <style>
+.tdf {
+style = &ldquo;font-weight: bold;
+font-variant: small-caps;
+background-color: rgba(255,255,0, 0.25) !important;
+}
+</style>
+<span class="tdf">discrete-time dynamical system</span>
+is a space $ X $ and a map $ f \colon X \to X $. For $ n \in \mathbb{N} $ or $ n \in \mathbb{Z} $ if invertible, we define the $ n $-fold composition $ f^{(n)} = f \circ f \circ \cdots \circ f $ with $ f^0 $ defined as the identity map.</p>
+</li>
+<li>
+<p>A <style>
+.tdf {
+style = &ldquo;font-weight: bold;
+font-variant: small-caps;
+background-color: rgba(255,255,0, 0.25) !important;
+}
+</style>
+<span class="tdf">continuous-time dynamical system</span>
+consists of a space $ X $ and a one-parameter family maps $ \left \{ f^t \colon X \to X \right \} $, $ t \in \mathbb{R} $ (if invertible) or $ \mathbb{R}^+ $which forms a one-parameter semigroup: $ f^{t+s} = f^t \circ f^s $.
+</span></p>
+</div>
+</li>
+</ul>
+<p>Now we have he orbits (of inputs) of these dynamical systems. (I think of these as kind of trajectories/paths that the system follows.)</p>
+<link rel="stylesheet" href="/css/theme.css" type="text/css" media="all" />
+  <div class="math-env math-defn"><span class="math-no-num"></span>
+    <span style="font-weight: normal; color: var(--fg);">
+A <style>
+.tdf {
+  style = "font-weight: bold; 
+  font-variant: small-caps; 
+  background-color: rgba(255,255,0, 0.25) !important;
+}
+</style>
+<span class="tdf">positive (semi-)orbit</span>
+ is given by $ \mathcal{O}^+_f(x) =\bigcup{t \geq 0}^{f^t(x)} $. Analagous definitions exist for the negative semi-orbit and the (full) orbit, which is hte union of forawrd and backward in time.
+</span> 
+  </div>
+<p>Here are some invariant adjacent things.</p>
+<link rel="stylesheet" href="/css/theme.css" type="text/css" media="all" />
+  <div class="math-env math-defn"><span class="math-no-num"></span>
+    <span style="font-weight: normal; color: var(--fg);">
+<ul>
+<li>
+<p>An <style>
+.tdf {
+style = &ldquo;font-weight: bold;
+font-variant: small-caps;
+background-color: rgba(255,255,0, 0.25) !important;
+}
+</style>
+<span class="tdf">equilibrium</span>
+or <style>
+.tdf {
+style = &ldquo;font-weight: bold;
+font-variant: small-caps;
+background-color: rgba(255,255,0, 0.25) !important;
+}
+</style>
+<span class="tdf">fixed</span>
+point is a point $ x $ such taht $ f^t(x) = x $ for all $ t $. A point is <style>
+.tdf {
+style = &ldquo;font-weight: bold;
+font-variant: small-caps;
+background-color: rgba(255,255,0, 0.25) !important;
+}
+</style>
+<span class="tdf">periodic</span>
+if there exists $ T $ such that $ f^T(x)=x $ and the orbit is called a <style>
+.tdf {
+style = &ldquo;font-weight: bold;
+font-variant: small-caps;
+background-color: rgba(255,255,0, 0.25) !important;
+}
+</style>
+<span class="tdf">periodic orbit</span>
+.</p>
+</li>
+<li>
+<p>A set $ A \subseteq X $ is called (forward) <style>
+.tdf {
+style = &ldquo;font-weight: bold;
+font-variant: small-caps;
+background-color: rgba(255,255,0, 0.25) !important;
+}
+</style>
+<span class="tdf">invariant</span>
+if $ f^t(x) \in A $ ofr all $ x \in A $ and $ t \geq 0 $.
+</span></p>
+</div>
+</li>
+</ul>
+<p>Here&rsquo;s a thing called conjugacy. (I don&rsquo;t actually fully get what this definition is trying to say!)</p>
+<link rel="stylesheet" href="/css/theme.css" type="text/css" media="all" />
+  <div class="math-env math-defn"><span class="math-no-num"></span>
+    <span style="font-weight: normal; color: var(--fg);">
+A semi-conjugacy from $ (Y,g) $ to $ (X,f) $ if $ \pi \colon Y \to X $ surjective such that 
+$$
+    f^t \circ \pi = \pi \circ g^t
+$$
+is invertible, then called conjugacy.
+</span> 
+  </div>
+<hr>
+<hr>
+<h2 id="references--related-readings">References &amp; Related Readings</h2>
+<ul>
+<li>My Math 238 (Dynamical Systems) lectures by Professor Jacob Bedrossian (UCLA).</li>
+</ul>
+
+
+      </article>
+    </div>
+    
+  <footer>
+  <div style="height: 5vh;"></div>
+	<div style="text-align: center;"><p>&copy;2023 Mealaud Mokhtarzad</p></div>
+</footer>
+
+
+  </body>
+</html>
+

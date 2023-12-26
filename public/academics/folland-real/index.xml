@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Folland&#39;s Real Analysis on mel-land</title>
+    <link>http://mealaud.com/academics/folland-real/</link>
+    <description>Recent content in Folland&#39;s Real Analysis on mel-land</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 26 Dec 2023 07:54:02 +0000</lastBuildDate><atom:link href="http://mealaud.com/academics/folland-real/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Note 1</title>
+      <link>http://mealaud.com/academics/folland-real/note-1/</link>
+      <pubDate>Tue, 26 Dec 2023 08:13:54 +0000</pubDate>
+      
+      <guid>http://mealaud.com/academics/folland-real/note-1/</guid>
+      <description>djsdhfklsjdhf</description>
+    </item>
+    
+    <item>
+      <title>Problem Set 1</title>
+      <link>http://mealaud.com/academics/folland-real/problem-set-1/</link>
+      <pubDate>Tue, 26 Dec 2023 08:13:46 +0000</pubDate>
+      
+      <guid>http://mealaud.com/academics/folland-real/problem-set-1/</guid>
+      <description>(Folland 5.1) If $ \mathcal{X} $ is a normed vector space over $ K $ ($ = \mathbb{R} $ or $ \mathbb{C} $), then addition and scalar multiplication are continuous from $ \mathcal{X}\times \mathcal{X} $ and $ K\times \mathcal{X} $ to $ \mathcal{X} $. Moreover, the norm is continuous from $ \mathcal{X} $ to $ [0,\infty) $; in fact, $ \left | ||x|| - ||y|| \right | \leq ||x-y|| $.</description>
+    </item>
+    
+  </channel>
+</rss>
