@@ -28,9 +28,9 @@ title = 'mel-land'
     #     url = "/map/"
     #     weight = 1
     [[menu.main]]
-        identifier = "notes"
-        name = "Notes"
-        url = "/notes/"
+        identifier = "academics"
+        name = "Academics"
+        url = "/academics/"
         weight = 5
     [[menu.main]]
         identifier = "hobbies"

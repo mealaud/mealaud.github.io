@@ -24,15 +24,17 @@
     {{ end -}}
   </head>
 
-  <body style="height: 100%">
-    {{ block "header" . }}
-
-    {{ end }}
-    <article style="padding-left: 0.5em;">
-      {{ block "main" . }}
+  <body style="height: 100%; width: 35%; margin: auto">
+    <div id="content-wrapper">
+      {{ block "header" . }}
 
       {{ end }}
-    </article>
+      <article style="margin-top: 1em; padding-left: 0.5em;">
+        {{ block "main" . }}
+
+        {{ end }}
+      </article>
+    </div>
     {{ block "footer" . }}
 
     {{ end }}

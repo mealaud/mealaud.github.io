@@ -5,7 +5,7 @@
     </a>
   </div>
   <div>&nbsp;</div>
-  <div>
+  <div style="width: 100%">
     <div id="title-font">
       <a href="{{ .Site.BaseURL }}" style="text-decoration: none">mel-land</a>
     </div>
@@ -13,14 +13,23 @@
       where the mel guy<br>
       reigns supreme
     </div>
-    <div id="nav-menu">
-      <ul style="list-style-type: none; margin: 0; padding: 0; display: flex; font-size: 125%">
+    <div id="navigation">
+      <ul class="nav-list">
         {{ range .Site.Menus.main }}
-          <li>
-            <a href="{{ .URL }}" style="text-decoration: none; font-weight: bold;">{{ .Name }}</a>&nbsp;&nbsp;
+          <li class="nav-item">
+            <a href="{{ .URL }}" style="text-decoration: none; font-weight: bold; font-size: 125%;">{{ .Name }}</a>
           </li>
         {{ end }}
       </ul>
     </div>
+    <!-- <div id="nav-menu"> -->
+    <!--   <ul style="align-items: stretch; justify-content: space-between; list-style-type: none; margin: 0; padding: 0; display: flex; font-size: 125%"> -->
+    <!--     {{ range .Site.Menus.main }} -->
+    <!--       <li style="display: block;"> -->
+    <!--         <a href="{{ .URL }}" style="text-decoration: none; font-weight: bold;">{{ .Name }}</a>&nbsp;&nbsp; -->
+    <!--       </li> -->
+    <!--     {{ end }} -->
+    <!--   </ul> -->
+    <!-- </div> -->
   </div>
 </div>
