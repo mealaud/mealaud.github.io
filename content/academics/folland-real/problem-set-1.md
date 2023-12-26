@@ -4,6 +4,7 @@ date: 2023-12-26T08:13:46Z
 draft: false
 math: true
 layout: "problem-set"
+summary: "The first problem set for my Folland reading."
 ---
 
 {{% MathEnv "x" %}}

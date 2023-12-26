@@ -5,6 +5,7 @@ draft: false
 math: true
 type: "page"
 layout: "note"
+summary: "Notes on the basics of normed vector spaces and linear functionals."
 ---
 
 djsdhfklsjdhf
