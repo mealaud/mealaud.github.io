@@ -5,6 +5,8 @@ draft: false
 math: false
 tags: 
 categories: ["clouds"]
+type: "section"
+layout: "hobby"
 ---
 
 I like clouds a bunch have for a while. Below I have weekly weather reports and likely will eventually have some links/explanations of my favorite cloud-based media. :D 

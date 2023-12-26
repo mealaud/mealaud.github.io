@@ -1,0 +1,23 @@
+{{ define "header" }}
+  {{ partial "header.html" . }}
+{{ end }}
+
+{{ define "main" }}
+  <h1>{{ .Title }}</h1>
+  {{ .Content }}
+
+  <h3>Posts</h3>
+  <ul style="list-style-type: none; padding: 0; margin: 0;">
+    {{ range .RegularPagesRecursive.ByPublishDate.Reverse }}
+      <li>
+        <span style="opacity: 65%;">{{ .PublishDate.Format " Jan 2, 2006" }}</span>   <a href="{{ .Permalink }}" style="text-decoration: none;">{{ .Title }}</a>
+      </li>
+    {{ end }}
+  </ul>
+{{ end }}
+
+{{ define "footer" }}
+  {{ partial "footer.html" . }}
+{{ end }}
+
+

@@ -5,6 +5,8 @@ draft: false
 math: false
 tags: 
 categories: 
+type: "section"
+layout: "rock-skipping"
 ---
 
 I like rock skipping. A lot. :>{{%nl%}}
