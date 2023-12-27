@@ -73,19 +73,40 @@ Thus we may take $ B $ to be $ n^2 $. The claim has been shown.
 
 {{% Proof %}}
 1. This follows from properties of the absolute value over $ K $ ($ = \mathbb{R} $ or $ \mathbb{C} $.)
-2. finish
-3. By the second part of this question, we can see that $ \mathcal{X} $ is homeomorphic to $ K^n $ with the Euclidean topology (via the given bijective bicontinuous mapping). Hence we may consider our set, $ S \coloneqq \left \\{ x \in K^n : ||x||_1 = 1 \right \\} $. This set is closed and bounded, so by Heine-Borel theorem it is compact. Now, because these spaces are homeomorphic, we get that the original set is compact in $ \mathcal{X} $. 
-4. Consider some normal $ ||\cdot|| $ on $ \mathcal{X} $. It suffices to show that there are positive constants $ A $ and $ B $ such that 
-$$
-    A||v||_1 \leq ||v|| \leq B||v||_1 \quad \text{for all} \quad v \in \mathcal{X}.
-$$
-Fix some $ w \in \mathcal{X} $. We then know that $ w = w_1 e_1 + \cdots + w_n e_n $ for some constants $ w_i \in K $. Then, 
+2. Clearly such a map is bijective, so we identify any coordinate with a corresponding vector. Moreover, by our lemma, we may suppose without loss of generality that $ K^n $ is instead endowed with the $ ||\cdot||_1 $ norm. Now, let $ (v_1,\ldots,v_n) \mapsto v_1 e_1 + \cdots + v_n e_n = v $ and $ (w_1,\ldots,w_n) \mapsto w_1 e_1 + \cdots + w_n e_n = w $. Then, if $ ||(v_1,\ldots,v_n)-(w_1,\ldots,w_n)||_1 < \varepsilon $, 
 $$
     \begin{align*}
-        ||w|| &\leq |w_1| ||e_1|| + \cdots + |w_n| ||e_n|| \\\\
-        &\leq ||w||_1 \operatorname{max} \left \\{ ||e_i|| : 1 \leq i \leq n \right \\} 
+        ||v-w||_1 &= \sum_i |v_i-w_i| \\\\
+        &= ||(v_1-w_1, \ldots, v_n-w_n)||_1 \\\\
+        &=||(v_1,\ldots,v_n)-(w_1,\ldots,w_n)||_1 \\\\
+        &< \varepsilon 
     \end{align*}
 $$
-Hence we can take $ B =\operatorname{max} \left \\{ ||e_i|| : 1 \leq i \leq n \right \\} $. Similarly, we can take $ A = (n) $
+as desired.
+3. By the second part of this question, we can see that $ \mathcal{X} $ is homeomorphic to $ K^n $ with the Euclidean topology (via the given bijective bicontinuous mapping). Hence we may consider our set, $ S \coloneqq \left \\{ x \in K^n : ||x||_1 = 1 \right \\} $. This set is closed and bounded, so by Heine-Borel theorem it is compact. Now, because these spaces are homeomorphic, we get that the original set is compact in $ \mathcal{X} $. 
+4. We prove this in several steps.
+    1. Note that the equivlence of norms is an equivalence relation, so it is transitive. Hence, it suffices to only compare our norms to $ ||\cdot||_1 $. Whereby we consider some norm $ ||\cdot|| $ on $ \mathcal{X} $. 
+    2. We now claim that it suffices to check $ S \coloneqq \left \\{ x \in \mathcal{X} : ||x||_1 = 1 \right \\} $. Suppose we have some $ x \in \mathcal{X} $ with $ x \neq 0 $. Then, for fixed $ A,B $, 
+        $$
+            A||x||_1 \leq ||x|| \leq B||x||_1 \quad \text{if and only if} \quad A \leq \frac{ ||x|| }{ ||x||_1 } \leq B,
+        $$
+    proving the claim. 
+    3. We now claim that $ ||\cdot|| $ is $ ||\cdot||_1 $-continuous. It suffices to show that a mixed-reverse triangle inequality holds. Consider the following:
+    $$
+        \begin{align*}
+            ||x|| - ||x_0|| &\leq ||x_0 + (x-x_0)|| - ||x_0|| \leq ||x-x_0|| \\\\
+            ||x_0|| - ||x|| &\leq ||x - (x - x_0)|| - ||x|| \leq ||x-x_0||.
+        \end{align*}
+    $$
+    So $ |||x||-||x_0||| \leq ||x-x_0|| $. Thus, if $ x = a_1 e_1 + \cdots + a_n e_n $ and $ x_0 = b_1 e_1 + \cdots + b_n e_n $, and we take $ ||x-x_0|| < \varepsilon/ \operatorname{max}\left \\{ ||e_i||: 1\leq i\leq n \right \\} $: 
+    $$
+        ||x-x_0|| \leq\sum_i |a_i-b_i|||e_i|| \leq ||x-x_0||_1 \operatorname{max}_i ||e_i|| < \varepsilon.
+    $$
+    Thus $ ||\cdot|| $ is $ ||\cdot||_1 $-continuous. 
+    4. From part (3) of this exercise, we know that $ S $ is compact. Hence, since we are restricting $ ||\cdot|| $ to $ S $, it reaches its extreme values. Thus, if its minimum is $ m $ and its maximum is $ M $, so that 
+    $$
+        m \leq ||u|| \leq M
+    $$
+    as desired. Thus all norms are equivalent and we may celebrate!
 {{% /Proof %}}
 
