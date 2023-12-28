@@ -134,6 +134,12 @@ $$
 {{% /Proof %}}
 
 {{% MathEnv "x" %}}
-(Folland 5.8)
+(Folland 5.11) If $ 0 < \alpha \leq 1 $, let $ \Lambda_\alpha([0,1]) $ be the space of Holder continuous functions of exponent $ \alpha $ on $ [0,1] $. That is, 
+$ f \in \Lambda_\alpha ([0,1]) $ if and only if $ ||f||_{\Lambda_\alpha} < \infty $.
+
+{{%nl%}}
+$$
+    ||f||_{\Lambda_\alpha} = |f(0)| + \operatorname{sup}_{x,y \in [0,1], x \neq y} \frac{ |f(x)-f(y)| }{ |x-y|^\alpha }.
+$$
 {{% /MathEnv %}}
 
