@@ -110,3 +110,30 @@ as desired.
     as desired. Thus all norms are equivalent and we may celebrate!
 {{% /Proof %}}
 
+{{% MathEnv "x" %}}
+(Folland 5.7) Let $ \mathcal{X} $ be a Banach space. 
+1. If $ T \in L(\mathcal{X}, \mathcal{X}) $ and $ || I - T || < 1 $ where $ I $ is the identity operator, then $ T $ is invertible; in fact, the series $\sum_{0}^{\infty} (I-T)^n $ converges in $ L(\mathcal{X},\mathcal{X}) $ to $ T^{-1} $.
+2. If $ T \in L(\mathcal{X},\mathcal{X}) $ is invertible and $ || S - T || < ||T^{-1}||^{-1} $, then $ S $ is invertible. Thus the set of invertible operators is open in $ L(\mathcal{X},\mathcal{X}) $. 
+{{% /MathEnv %}}
+
+{{% Proof %}}
+1. Since $\sum_{0}^{\infty}||I-T||^n $ is a geometric series with common ratio less than $ 1 $, the sum converges. Hence, the series converges in $ \mathcal{X} $. It remains to verify that this series converges to the inverse of $ T $. To this end, let $ R \coloneqq \sum_0^\infty (I-T)^n $. Then 
+$$
+    R - RT = (I-T)R = \sum_1^\infty (I-T)^n = R - I \quad \text{so that} \quad RT = I.
+$$
+Similarly, $ TR = I $. Thus $ R $ is the inverse of $ T $ and $ T $ is invertible.
+
+2. Consider $ || ST^{-1} - I || $. 
+$$
+    ||ST^{-1} - I|| = ||(S - T) T^{-1}|| \leq ||S -T || ||T^{-1}|| < ||T^{-1}||^{-1} ||T^{-1}|| = 1.
+$$
+Then by part (1), $ ST^{-1} $ is invertible with inverse $ U $. Hence, $ ST^{-1} U = I $ so $ S = U^{-1}T $ and since both $ U $ and $ T $ are invertible, $ S $ is invertible. Moreover, $ S $ is bounded since 
+$$
+    || S || \leq ||U^{-1}|| \cdot ||T|| < \infty.
+$$
+{{% /Proof %}}
+
+{{% MathEnv "x" %}}
+(Folland 5.8)
+{{% /MathEnv %}}
+
