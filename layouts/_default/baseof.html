@@ -24,20 +24,22 @@
     {{ end -}}
   </head>
 
-  <body style="height: 100%; width: 35%; margin: auto">
-    <div id="content-wrapper">
-      {{ block "header" . }}
-
-      {{ end }}
-      <article style="margin-top: 1em; padding-left: 0.5em;">
-        {{ block "main" . }}
+  <body>
+    <div id="main-wrapper" style="height: 100%; min-width: 35%; max-width: 100%; width: 700px; margin: auto">
+      <div id="content-wrapper">
+        {{ block "header" . }}
 
         {{ end }}
-      </article>
-    </div>
-    {{ block "footer" . }}
+        <article style="margin-top: 1em; padding-left: 0.5em;">
+          {{ block "main" . }}
 
-    {{ end }}
+          {{ end }}
+        </article>
+      </div>
+      {{ block "footer" . }}
+
+      {{ end }}
+    </div>
   </body>
 </html>
 
