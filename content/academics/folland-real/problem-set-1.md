@@ -134,12 +134,15 @@ $$
 {{% /Proof %}}
 
 {{% MathEnv "x" %}}
-(Folland 5.11) If $ 0 < \alpha \leq 1 $, let $ \Lambda_\alpha([0,1]) $ be the space of Holder continuous functions of exponent $ \alpha $ on $ [0,1] $. That is, 
-$ f \in \Lambda_\alpha ([0,1]) $ if and only if $ ||f||_{\Lambda_\alpha} < \infty $.
-
-{{%nl%}}
+(Folland 5.11) If $ 0 < \alpha \leq 1 $, let $ \Lambda_\alpha([0,1]) $ be the space of Holder continuous functions of exponent $ \alpha $ on $ [0,1] $. That is, $ f \in \Lambda_\alpha([0,1]) $ iff $ ||f||\_{\Lambda\_{\alpha}} < \infty $, where 
 $$
-    ||f||_{\Lambda_\alpha} = |f(0)| + \operatorname{sup}_{x,y \in [0,1], x \neq y} \frac{ |f(x)-f(y)| }{ |x-y|^\alpha }.
+    ||f||\_{\Lambda\_{\alpha}} = ||f(0)|| + \operatorname{sup}\_{x,y \in [0,1], x \neq y} \frac{ |f(x)-f(y) }{ |x-y|^{\alpha} }.
 $$
+1. $ ||\cdot||\_{\Lambda\_{\alpha}} $ is a norm that makes $ \Lambda_\alpha([0,1]) $ into a Banach space.
+2. Let $ \lambda_\alpha([0,1]) $ be the set of all $ f\in \Lambda_\alpha([0,1]) $ such that 
+$$
+    \frac{ |f(x)-f(y)| }{ |x-y|^\alpha } \to 0 \text{ as } x\to y, \text{ for all } y \in [0,1].
+$$
+If $ \alpha <1 $, $ \lambda_\alpha([0,1]) $ is an infinite-dimensional closed subspace of $ \Lambda_\alpha([0,1]) $. If $ \alpha = 1 $, $ \lambda_\alpha([0,1]) $ contains only constant functions.
 {{% /MathEnv %}}
 
