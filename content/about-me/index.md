@@ -12,13 +12,14 @@ Hello! My name is Mealaud Mokhtarzad but I usually go by Mel. I’m a pure math 
 
 
 ## Cool People
+<!-- Hoober Loo, Kelanu Ranganap, King Chud, Logang Bigslap, Andrea Borkhermerfererger -->
 
-* [Hoober Loo](https://hunterliu.xyz/) – Hunter is a lovely, epic friend I met in our graduate complex analysis class. He was wearing cat ears when we first met which weirded me out a bit, but we ended up talking a lot and I figured out he’s one of the coolest people I’ve ever met.
+* [Hunter Liu](https://hunterliu.xyz/) – Hunter is a lovely, epic friend I met in our graduate complex analysis class. He was wearing cat ears when we first met which weirded me out a bit, but we ended up talking a lot and I figured out he’s one of the coolest people I’ve ever met.
 
-* [Kelanu Ranganap](https://kelanu.com) – Kelanu is so cool! We met at our physics lab internship during the summer of 2021 and we’ve been great friends since then. I love this guy a lot. 
+* [Kelanu Ranganath](https://kelanu.com) – Kelanu is so cool! We met at our physics lab internship during the summer of 2021 and we’ve been great friends since then. I love this guy a lot. 
 
-* [King Chud](https://github.com/kylechui) – I met the back of Kyle’s head during the summer going into my high school senior year when we took multivariable together at a local community college. We ended up taking another course together the coming fall where I meant the front of his head and found out he was a cool guy. He’s still really cool. He’s also rich and famous, so that’s a plus. Check out his Neovim plugin!
+* [Kyle Chui](https://github.com/kylechui) – I met the back of Kyle’s head during the summer going into my high school senior year when we took multivariable together at a local community college. We ended up taking another course together the coming fall where I meant the front of his head and found out he was a cool guy. He’s still really cool. He’s also rich and famous, so that’s a plus. Check out his Neovim plugin!
 
-* [Logang Bigslap](https://loganhyslop.github.io/) - Logan is mega cool and mega cracked. We met his freshman year (my sorta junior year). He actually does math (good stuff at that). B)
+* [Logan Hyslop](https://loganhyslop.github.io/) - Logan is mega cool and mega cracked. We met his freshman year (my sorta junior year). He actually does math (good stuff at that). B)
 
-* [Andrea Borkhermerfererger](https://www.math.lsu.edu/~abour99/) - Andrea is a big ol' math nerd and is very cool, but never talk to them after they've had mac'n'cheese. _shudders_
+* [Andrea Bourque](https://www.math.lsu.edu/~abour99/) - Andrea is a big ol' math nerd and is very cool, but never talk to them after they've had mac'n'cheese. _shudders_
