@@ -6,8 +6,6 @@ layout: "problem-set"
 summary: "The second problem set for my Folland reading."
 ---
 
-problems: 19, 22, 25, 30, 33, 36, 38, 48
-
 {{% MathEnv "x" %}}
 (Folland 5.19) Let $ \mathcal{X} $ be an infinite-dimensional normed vector space.
 1. There is a sequence $ \left \\{ x_j \right \\}  $ in $ \mathcal{X} $ such taht $ \left \lVert x_j \right \rVert = 1 $ for all $ j $ and $ \left \lVert x_j - x_k \right \rVert \geq 1/2 $ for $ j \neq k $. (Construct $ x_j $ inductively, using exercises 12b and 18). 
