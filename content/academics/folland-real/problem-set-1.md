@@ -146,3 +146,24 @@ $$
 If $ \alpha <1 $, $ \lambda_\alpha([0,1]) $ is an infinite-dimensional closed subspace of $ \Lambda_\alpha([0,1]) $. If $ \alpha = 1 $, $ \lambda_\alpha([0,1]) $ contains only constant functions.
 {{% /MathEnv %}}
 
+{{% MathEnv "x" %}}
+Suppose that $ \mathcal{X} $ and $ \mathcal{Y} $ are normed vector spaces and $ T \in L(\mathcal{X},\mathcal{Y}) $. Let $ \mathcal{N}(T) = \left \\{ x \in X : Tx = 0 \right \\} $. 
+1. $ \mathcal{N}(T) $ is a closed subspace of $ \mathcal{X} $.
+2. There is a unique $ S \in L(\mathcal{X}/\mathcal{N}(T), \mathcal{Y}) $ such that $ T = S \circ \pi  $ where $ \pi \colon \mathcal{X}\to \mathcal{X}/\mathcal{N}(T) $ is the projection. Moreover, $ \left \lVert S \right \rVert = \left \lVert T \right \rVert $.
+{{% /MathEnv %}}
+
+{{% Proof %}}
+1. Suppose $ \left \\{ x_n \right \\} \subseteq \mathcal{N}(T) $ converges to $ x \in X $. We aim to show that $ x \in \mathcal{N}(T) $. Then let $ \varepsilon > 0 $ and $ N $ sufficiently large for $ \left \lVert x_n-x \right \rVert < \varepsilon/\left \lVert T \right \rVert $ to hold for all $ n \geq N $. Then:
+$$
+    \left \lVert Tx \right \rVert = \left \lVert Tx - Tx_N \right \rVert \leq \left \lVert T \right \rVert \left \lVert x_N - x \right \rVert < \left \lVert T \right \rVert \cdot \frac{ \varepsilon }{ \left \lVert T \right \rVert } = \varepsilon.
+$$
+Thus $ \left \lVert Tx \right \rVert = 0 $ so $ Tx = 0 $ so $ x \in \mathcal{N}(T) $ as desired.
+2. We claim $ S(x+\mathcal{N}(T)) = Tx$ satisfies this property. First we show that $ S $ is well-defined. Suppose $ x,y \in \mathcal{X} $ are such that $ x - y \in \mathcal{N}(T) $. Then: 
+$$
+    \begin{align*}
+        S(x+\mathcal{N}(T)) &= Tx = Tx - T(x-y) \\\\
+        &= T(x-x) + Ty = Ty = S(y + \mathcal{N}(T)).
+    \end{align*}
+$$
+Hence $ S $ is well-defined. It is then clearly linear and satisfies $ T = S \circ \pi $. What remains to be shown is that $ S $ is unique. This, however, follows immediately from the surjectivity (and hence right-cancellation) of $ \pi $ with any other map satisfying our projection-composition property.
+{{% /Proof %}}

@@ -116,8 +116,6 @@ p {
 .math-pf {
   padding-left: 5%;
   padding-right: 5%;
-  /* margin-top: 10px; */
-  margin-bottom: 1em;
 } .math-pf:before {
   font-weight: bold;
   content: "Proof. "
@@ -134,7 +132,7 @@ p {
   /* counter-increment: math-count; */
   color: var(--example-border);
   font-weight: bold;
-  content: "Exercise";
+  content: "Exercise ";
 }
 
 /* math numbering (or lack thereof)! */
