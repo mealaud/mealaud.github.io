@@ -16,7 +16,7 @@
 
   <h3>Recent Posts</h3>
   <ul style="list-style-type: none; padding: 0; margin: 0;">
-    {{ range ( (where .RegularPagesRecursive.ByPublishDate.Reverse ".Date.Unix" "gt" (sub .Date.Unix 2678400)) | first 5) }}
+    {{ range (.RegularPagesRecursive.ByPublishDate.Reverse  | first 5) }}
       <li style="padding-bottom: 0.5em">
         <div style="display: flex; width: 100%;">
           <div style="width: 11em; margin-right: 1em;">
