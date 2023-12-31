@@ -3,7 +3,7 @@ title: "Problem Set 2"
 date: 2023-12-31T01:50:32Z
 draft: false
 layout: "problem-set"
-summary: "The first problem set for my Folland reading."
+summary: "The second problem set for my Folland reading."
 ---
 
 problems: 19, 22, 25, 30, 33, 36, 38, 48

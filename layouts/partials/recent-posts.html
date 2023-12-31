@@ -1,0 +1,16 @@
+  <ul style="list-style-type: none; padding: 0; margin: 0;">
+    {{ range (.RegularPagesRecursive.ByPublishDate.Reverse  | first 5) }}
+      <li style="padding-bottom: 0.5em">
+        <div style="display: flex;">
+          <div style="min-width: 10em; max-width: 10em; margin-right: 0.5em;">
+            <a href="{{ .Permalink }}" style="text-decoration: none; text-wrap: wrap;">{{ .Title }}</a><br>
+            <span style="opacity: 65%;"><em>{{ .PublishDate.Format " Jan 2, 2006" }}</em></span>
+          </div>
+          <div>
+            {{ .Summary }}
+          </div>
+        </div>
+      </li>
+    {{ end }}
+  </ul>
+
