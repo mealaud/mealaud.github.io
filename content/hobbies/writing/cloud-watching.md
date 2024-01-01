@@ -6,6 +6,7 @@ math: false
 tags: 
 categories: 
 rootPage: true
+summary: "A mindful experience of cloud watching."
 ---
 <!-- *Originally written: Sep. 21, 2018*{{%nl%}}{{%nl%}} -->
 

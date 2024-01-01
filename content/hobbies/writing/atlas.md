@@ -6,6 +6,7 @@ math: false
 tags: 
 categories: 
 rootPage: true
+summary: "Atlas holds up the world and, for once, he let go."
 ---
 
 <!-- *Originally written: Sep. 8, 2022*{{%nl%}}{{%nl%}} -->

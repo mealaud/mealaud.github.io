@@ -6,6 +6,7 @@ math: false
 tags: 
 categories: 
 rootPage: true
+summary: "An observation of mountains and their tree-canopies."
 ---
 <!-- *Originally written: circa Apr. 13, 2019*   {{%nl%}}{{%nl%}} -->
 

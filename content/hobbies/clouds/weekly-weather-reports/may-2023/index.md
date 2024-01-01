@@ -5,6 +5,7 @@ draft: false
 math: false
 tags: 
 categories: 
+summary: "My favorite clouds from May 2023."
 ---
 {{<ref "" "/hobbies/clouds/weekly-weather-reports/pre-college">}}
 

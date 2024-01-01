@@ -5,6 +5,7 @@ draft: false
 math: false
 tags: 
 categories: 
+summary: "The day passes."
 ---
 {{<ref "" "/hobbies/writing/cloud-watching">}}
 <!-- *Originally written: Oct. 3, 2018*{{%nl%}}{{%nl%}} -->

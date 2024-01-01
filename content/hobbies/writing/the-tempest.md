@@ -5,6 +5,7 @@ draft: false
 math: false
 tags: 
 categories: 
+summary: "The power of storms and the things that weather through them."
 ---
 {{<ref "" "/hobbies/writing/cloud-watching">}}
 <!-- *Originally written: Oct. 6, 2018*{{%nl%}}{{%nl%}} -->

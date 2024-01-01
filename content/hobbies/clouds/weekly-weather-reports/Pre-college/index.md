@@ -6,6 +6,7 @@ math: false
 tags: 
 categories: 
 rootPage: false
+summary: "My favorite clouds from my high school years."
 ---
 
 Here are my favorite clouds from my high school years.

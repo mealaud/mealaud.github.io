@@ -5,6 +5,7 @@ draft: false
 math: false
 tags: 
 categories: 
+summary: "An observation of wind and grass."
 ---
 {{<ref "" "/hobbies/writing/the-mountains-shirts-have-holes">}}
 <!-- *Originally written: circa Apr. 13, 2019*   {{%nl%}}{{%nl%}} -->

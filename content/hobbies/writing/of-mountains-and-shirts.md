@@ -5,6 +5,7 @@ draft: false
 math: false
 tags: 
 categories: 
+summary: "A look at mountains, their strength, and their clothes."
 ---
 {{<ref "" "/hobbies/writing/the-mountains-shirts-have-holes">}}
 <!-- *Originally written: May 24, 2023*{{%nl%}}{{%nl%}} -->

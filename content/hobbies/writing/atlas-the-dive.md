@@ -5,6 +5,7 @@ draft: false
 math: false
 tags: 
 categories: 
+summary: "A story of forgetting responsibilities."
 ---
 {{<ref "" "/hobbies/writing/atlas">}}
 <!-- *Originally written: Jan. 2, 2023*{{%nl%}}{{%nl%}} -->
