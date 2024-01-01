@@ -2,7 +2,6 @@
 title: "Folland's Real Analysis"
 date: 2023-12-26T07:54:02Z
 draft: false
-math: true
 type: "section"
 layout: "self-study"
 ---
