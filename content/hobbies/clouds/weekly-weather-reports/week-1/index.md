@@ -5,6 +5,7 @@ draft: false
 math: false
 tags: 
 categories: 
+summary: "First week of my weekly weather reports series."
 ---
 {{<ref "" "/hobbies/clouds/weekly-weather-reports/may-2023">}}
 

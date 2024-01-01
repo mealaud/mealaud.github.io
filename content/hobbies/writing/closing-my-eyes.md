@@ -5,6 +5,7 @@ draft: false
 math: false
 tags: 
 categories: 
+summary: "An eye-opening exploration of hope."
 ---
 {{<ref "" "/hobbies/writing/atlas">}}
 

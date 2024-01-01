@@ -5,6 +5,7 @@ draft: false
 math: false
 tags: 
 categories: 
+summary: "Third week of my weekly weather reports series."
 ---
 {{<ref "" "/hobbies/clouds/weekly-weather-reports/week-2">}}
 
