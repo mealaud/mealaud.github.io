@@ -1,7 +1,7 @@
 ---
 title: "{{ replace .Name "-" " " | title }}"
 date: {{ .Date }}
-draft: false
+draft: true
 type: "page"
 layout: "note"
 summary: "Notes on [INSERT]"

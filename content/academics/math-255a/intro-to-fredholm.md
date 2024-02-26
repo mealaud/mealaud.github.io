@@ -1,7 +1,7 @@
 ---
 title: "Introduction to Fredholm Operators"
 date: 2024-02-26T03:15:41-08:00
-draft: false
+draft: true
 type: "page"
 layout: "note"
 summary: "An introduction to Fredholm operators! :D"
@@ -33,7 +33,7 @@ Clearly this map is injective by our choice of $ x_1,\ldots,x_n $, so we then ge
 $$
     B_2 = \operatorname{Ran}(T) \oplus \operatorname{Ran}(S).
 $$
-Thus the map $ R \colon B_1 \oplus \mathbb{C}^n \to B_2 $ defined by $ R(x,a) \mapsto Tx + Sa $ is linear, continuous, and bijective. Now, since $ R $ is a bijection, we may apply Open Mapping Theorem to get that $ R $ is a homeomorphism! Thus, since $ B_1 \oplus \left \{ 0 \right \} $ is closed, $ \operatorname{Ran}(T) = R[B_1 \oplus \left \{ 0 \right \}] $ is closed. Thus we are done.
+Thus the map $ R \colon B_1 \oplus \mathbb{C}^n \to B_2 $ defined by $ R(x,a) \mapsto Tx + Sa $ is linear, continuous, and bijective. Now, since $ R $ is a bijection, we may apply Open Mapping Theorem to get that $ R $ is a homeomorphism! Thus, since $ B_1 \oplus \left \\{ 0 \right \\}$ is closed, $ \operatorname{Ran}(T) = R[B_1 \oplus \left \\{ 0 \right \\}] $ is closed. Thus we are done.
 {{% /Proof %}}
 
 Note that this gives us the following immediate corollary:

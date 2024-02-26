@@ -1,7 +1,7 @@
 ---
 title: "On the Worth of My Word"
 date: 2020-11-12T00:52:07-08:00
-draft: false
+draft: true
 type:
 layout:
 summary: "A thought on whether I am a man of my word."
