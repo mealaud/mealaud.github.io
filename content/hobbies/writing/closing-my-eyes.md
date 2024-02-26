@@ -20,6 +20,6 @@ To see all of this through eyes which were not my own.{{%nl%}}{{%nl%}}
 
 Recently when I close my eyes I imagine what can be --- what *I* can be.{{%nl%}}
 I don't wish for another life.{{%nl%}}
-I see was mine can be made better.{{%nl%}}{{%nl%}}
+I see that mine can be made better.{{%nl%}}{{%nl%}}
 
 I open my eyes.

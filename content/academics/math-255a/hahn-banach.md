@@ -1,7 +1,7 @@
 ---
 title: "The Hahn-Banach Theorem"
 date: 2024-02-24T11:23:27-08:00
-draft: false
+draft: true
 type: "page"
 layout: "note"
 summary: "Notes on the Hahn-Banach Theorem and its applications. In particular, we will talk about: the real, complex, and geometric Hahn-Banach Theorems; the spanning criterion; Runge's Theorem; Muntz's Theorem; and weak solutions to the Poisson equation."
