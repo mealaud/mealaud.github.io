@@ -1,5 +1,5 @@
 ---
-title: "Functional Analysis"
+title: "Math 255A Notes"
 date: 2024-02-24T11:08:29-08:00
 draft: false
 type: "section"

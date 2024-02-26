@@ -33,7 +33,58 @@ Clearly this map is injective by our choice of $ x_1,\ldots,x_n $, so we then ge
 $$
     B_2 = \operatorname{Ran}(T) \oplus \operatorname{Ran}(S).
 $$
+Thus the map $ R \colon B_1 \oplus \mathbb{C}^n \to B_2 $ defined by $ R(x,a) \mapsto Tx + Sa $ is linear, continuous, and bijective. Now, since $ R $ is a bijection, we may apply Open Mapping Theorem to get that $ R $ is a homeomorphism! Thus, since $ B_1 \oplus \left \{ 0 \right \} $ is closed, $ \operatorname{Ran}(T) = R[B_1 \oplus \left \{ 0 \right \}] $ is closed. Thus we are done.
 {{% /Proof %}}
 
+Note that this gives us the following immediate corollary:
+{{% MathEnv "coro" %}}
+Any Fredholm operator has closed image.
+{{% /MathEnv %}}
 
+### Perturbing Fredholm Operators
+
+First, we'll need this interesting (at least to me!) fact about operators with less than unit norm.
+{{% MathEnv "lem" %}}
+Let $ B $ be a Banach space, and let $ S \in \mathcal{L}(B,B) $ be such that $ \left \lVert S \right \rVert < 1 $. Then the operator $ I - S $ has an inverse in $ \mathcal{L}(B,B) $.
+{{% /MathEnv %}}
+{{% Proof %}}
+Consider the (Neumann) series 
+$$
+    R =\sum_{n=0}^{\infty}S^n.
+$$
+(Note that this sum converges as this is just a geometric series with ratio less than one.) Then: 
+$$
+    R(I-S) = R - RS = I \quad \text{and} \quad (I-S)R = R - SR = I,
+$$
+so $ R \in \mathcal{L}(B,B) $ is the inverse of $ I-S $.
+{{% /Proof %}}
+
+We can actually squeeze out a nice little corollary out of this lemma.
+{{% MathEnv "coro" %}}
+The space of invertible bounded operators in $ \mathcal{L}(B,B) $ is open.
+{{% /MathEnv %}}
+{{% Proof %}}
+Let $ T \in \mathcal{L}(B,B) $ be invertible. Then suppose $ S \in \mathcal{L}(B,B) $ is such that 
+$$
+    \left \lVert T^{-1} S \right \rVert \leq \left \lVert T^{-1} \right \rVert \left \lVert S \right \rVert < 1.
+$$
+Then, $ I + T^{-1} S $ is invertible by our above lemma. Now since the product of invertible operators is invertible, $ T (I + T^{-1} S) = T+ S $ is invertible and our space is open.
+{{% /Proof %}}
+
+Now using these ideas of perturbation, we show that the space of Fredholm operators is open, and that the $ \operatorname{ind} $ is locally constant on this open set. In other words, Fredholm operators are _stable_ under perturbations.
+
+{{% MathEnv "thm" %}}
+Let $ T \in \mathcal{L}(B_1,B_2) $ be a Fredholm operator. If $ S \in \mathcal{L}(B_1,B_2) $ is such that $ \left \lVert  S \right \rVert $ is sufficiently small, then $ T+S $ is Fredholm and $ \operatorname{ind}(T+S) = \operatorname{ind}(T) $.
+{{% /MathEnv %}}
+{{% Proof %}}
+**Will finish this later.**
+{{% /Proof %}}
+
+### The Logarithmic Law
+{{% MathEnv "prop" %}}
+Let $ T_1 \in \mathcal{L}(B_1,B_2) $ and $ T_2 \in \mathcal{L}(B_2,B_3) $ be Fredholm. Then $ T_2 T_1 \in \mathcal{L}(B_1,B_3) $ is also Fredholm, and we have the "logarithmic law": 
+$$
+    \operatorname{ind}(T_2 T_1) = \operatorname{ind}(T_2) + \operatorname{ind}(T_1).
+$$
+{{% /MathEnv %}}
 
