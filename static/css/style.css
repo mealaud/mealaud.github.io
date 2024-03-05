@@ -5,7 +5,7 @@ html, body {
 }
 
 body {
-  color: #333;
+  /* color: #333; */
   line-height: 1.5;
   max-width: 95vw;
   /* min-height: 100vh; */
@@ -13,13 +13,12 @@ body {
   flex-direction: column;
 }
 
+p:before { content: "\00a0 \00a0 \00a0 \00a0 "; }
+
 footer {
   margin-top: auto;
 }
 
-p {
-  text-indent: 2em;
-}
 
 .content {
   margin-bottom: 2rem;

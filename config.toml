@@ -48,9 +48,9 @@ title = 'mel-land'
     #     url= "/journal/"
     #     weight = 4
     [[menu.main]]
-        identifier = "axioms"
-        name = "Axioms"
-        url= "/axioms/"
+        identifier = "allegories"
+        name = "Allegories"
+        url= "/allegories/"
         weight = 20
 
 [outputs]

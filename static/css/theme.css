@@ -1,36 +1,23 @@
-/* Gruvbox Colors */
+/* My colorscheme! */
 :root {
- --bg:var(--bg0);
- --bg0:#282828;
- --bg0_h:#1d2021;
- --bg0_s:#32302f;
- --bg1:#3c3836;
- --bg2:#504945;
- --bg3:#665c54;
- --bg4:#7c6f64;
- --fg:var(--fg1);
- --fg0:#fbf1c7;
- --fg1:#ebdbb2;
- --fg2:#d5c4a1;
- --fg3:#bdae93;
- --fg4:#a89984;
- --gray1:var(--fg4);
- --gray2:#928374;
- --red1:#cc241d;
- --red2:#fb4934;
- --green1:#98971a;
- --green2:#b8bb26;
- --yellow1:#d79921;
- --yellow2:#fabd2f;
- --blue1:#458588;
- --blue2:#83a598;
- --purple1:#b16286;
- --purple2:#d3869b;
- --aqua1:#689d6a;
- --aqua2:#8ec07c;
- --orange1:#d65d0e;
- --orange2:#fe8019;
- --skyblue: #87ceeb;
+  /* foggy forest from betterthanhex.com */
+  /* Also used colordesigner.io for the gradient generator */
+  --bg0: #1c1f2e;
+  --bg1: #1f2735;
+  --bg2: #222e3b;
+  --bg3: #2a3d45;
+  --bg4: #2f444a;
+  --fg0: #ece6da;
+  --fg1: #c7c7b9;
+  --fg2: #a2a89b;
+  --fg3: #6d7c72;
+  --fg4: #4e615b;
+  --yellow0: #ddca22;
+  --yellow1: #e6cf57;
+  --yellow2: #ecd57f;
+  --yellow3: #efdba4;
+  --bg: var(--bg0);
+  --fg: var(--fg0);
 }
 
 body {
@@ -41,8 +28,8 @@ body {
  /* font-family: JetBrains-Mono */
 }
 
-h1, h2, h3, h4, h5, h6 {
-  color: var(--fg0);
+h1; h2; h3; h4; h5; h6 {
+  color: var(--fg);
 }
 
 a {
