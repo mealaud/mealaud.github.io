@@ -1,5 +1,5 @@
 ---
-title: "Allegories"
+title: "Axioms"
 date: 2023-07-24T13:05:00-07:00
 draft: false
 type: "section"
@@ -25,6 +25,15 @@ I must lift the weight of my world. My hands may faulter, my knees may buckle, b
 >> 3. There is no freedom without restraint.
 {{%nl%}}
 Given infinite choices, it is a priori impossible to decide what to do. If I am able to do anything, I will do nothing. Realizing this for myself, I saw that if I am act in any sense, I must constrain myself. I must limit choice my choices to make choices. 
+
+#### Axiom #4
+>> 4. I must find my own life meaningful.
+{{%nl%}}
+I say something is meaningful if it is something that requires determination, persistence, creativity, or anything I feel even a slight pride in. 
+<!-- #### Axiom #4 -->
+<!-- >> 4. It's not a matter of if I can, I must. -->
+<!-- {{%nl%}} -->
+
 <!-- Without restraint, I am a slave to indecision. -->
 <!-- 3. It's not a matter of if I can, I must. -->
 <!-- 4. I must work to improve (in all aspects of myself). -->
