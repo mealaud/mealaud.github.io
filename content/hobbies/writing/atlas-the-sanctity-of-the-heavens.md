@@ -1,10 +1,10 @@
 ---
-title: "Atlas the Sanctity of the Heavens"
+title: "Atlas: The Sanctity of the Heavens"
 date: 2024-03-05T21:43:30-08:00
-draft: true
+draft: false
 type:
 layout:
-summary:
+summary: "An exploration of apathy."
 ---
 
 I am unmoved. The heavens begin to slip off my shoulders, but I am unmoved.
@@ -22,7 +22,7 @@ I do not attempt.
 It rolls down my back as I attempt to stay still. I have not maintained my world.
 {{%nl%}}{{%nl%}}
 
-My world falls into the abyss, tattered and left to rot by the one who must maintain its sanctity. Is my apathy not sacriligious? Am I not shirking my most sacred of responsibilities to stand still and be unprovoked by the heavens falling further and further into the deep black of the cosmos?
+My world falls into the abyss, tattered and left to rot by the one who must maintain its sanctity. Is my apathy not sacrilegious? Am I not shirking my most sacred of responsibilities to stand still and be unprovoked by the heavens falling further and further into the deep black of the cosmos?
 {{%nl%}}{{%nl%}}
 
 I am unmoved.
@@ -53,10 +53,8 @@ I close my eyes once more. I see the world in which I want to live. Not one fill
 {{%nl%}}{{%nl%}}
 
 I realize that my goals, my dreams, my hopes, are my sacred commandments. I realize that these aspirations are not optional. I realize:
-{{%nl%}}{{%nl%}}
 
-It is not a matter of if I can, I must.
-{{%nl%}}{{%nl%}}
+>>> It is not a matter of if I can, I must.
 
 I move.
 {{%nl%}}{{%nl%}}
