@@ -21,11 +21,8 @@
 }
 
 body {
- /* word-wrap:break-word; */
  background: var(--bg);
  color: var(--fg);
- /* line-height:1.675 */
- /* font-family: JetBrains-Mono */
 }
 
 h1; h2; h3; h4; h5; h6 {
@@ -34,4 +31,9 @@ h1; h2; h3; h4; h5; h6 {
 
 a {
  color: inherit;
+ /* font-weight: bold;
+ /* font-style: oblique; */
+ /* text-emphasis-position: under; */
+ /* text-emphasis: "_"; */
+ /* text-decoration: none; */
 }

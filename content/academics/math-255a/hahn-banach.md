@@ -12,7 +12,6 @@ Note that we are currently assuming the definition of dual spaces, Banach spaces
 ### The (Analytic) Hahn-Banach Theorem
 
 A big question one can pose for these seemingly pathological infinite-dimensional normed spaces is whether there are *any* nonzero bounded linear functionals on the space. In finite-dimensions its easy enough, but, as is often the case, infinite-dimensional spaces are a bit harder to deal with. The Hahn-Banach Theorem answers this question in the positive: there **are** bounded linear functionals. (We prove this using Zorn's Lemma! So it is... non-constructive.)
-
 {{% MathEnv "thm" %}}
 (Hahn-Banach, analytic form, over $ \mathbb{R} $). Let $ V $ be a vector space over $ \mathbb{R} $, and let $ p \colon V \to \mathbb{R} $ be a map which satisfies: 
 1. Positive homogeneity: $ p(\lambda x) = \lambda p(x) $ for all $ x \in V $ and positive $ \lambda $.

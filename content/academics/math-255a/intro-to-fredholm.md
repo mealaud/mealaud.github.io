@@ -7,6 +7,10 @@ layout: "note"
 summary: "An introduction to Fredholm operators! :D"
 ---
 
+# Hi
+## Test
+### Test
+
 Our previous work with linear operators in functional analysis have let us experience several... pathologies. However, one need not use only general ideas divorced from assumptions to make progress! Indeed, the study of a *nice* operators have a place. The ones we study today are called *Fredholm operators*.{{%nl%}}{{%nl%}}
 
 If $ B_1, B_2 $ are complex Banach spaces, we say a continuous linear operator $ T \in \mathcal{L}(B_1,B_2) $ is called a {{% tdf "Fredholm operator" %}} if $ \operatorname{Ker}(T) $ and $ \operatorname{CoKer}(T) \coloneqq B_2 / \operatorname{Ran}(T) $ are finite dimensional. Fredholm operators, in essence, are operators which are *almost injective* and *almost surjective*. In fact, we can quantify this using the {{% tdf "index" %}} of a Fredholm operator $ \operatorname{ind}(T) $ is defined to be: 
