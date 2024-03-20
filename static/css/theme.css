@@ -30,7 +30,9 @@ h1; h2; h3; h4; h5; h6 {
 }
 
 a {
- color: inherit;
+ color: var(--yellow3);
+ /* text-decoration: none; */
+  /* color: inherit; */
  /* font-weight: bold;
  /* font-style: oblique; */
  /* text-emphasis-position: under; */

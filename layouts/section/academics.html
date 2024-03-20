@@ -10,7 +10,7 @@
   <ul style="list-style-type: none; margin: 0; padding: 0;">
     {{ range .Pages.ByPublishDate.Reverse }}
       <li>
-        <a href="{{ .Permalink }}" style="text-decoration: none;">{{ .Title }}</a>
+        <a href="{{ .Permalink }}">{{ .Title }}</a>
       </li>
     {{ end }}
   </ul>

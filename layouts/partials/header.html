@@ -9,7 +9,7 @@
   <div>&nbsp;</div>
   <div style="width: 100%">
     <div id="title-font">
-      <a href="{{ .Site.BaseURL }}" style="text-decoration: none">mel-land</a>
+      <a href="{{ .Site.BaseURL }}" style="text-decoration: none; color: var(--fg)">mel-land</a>
     </div>
     <div id="subtitle-font">
       where the mel guy<br>
@@ -19,7 +19,7 @@
       <ul class="nav-list">
         {{ range .Site.Menus.main }}
           <li class="nav-item">
-            <a href="{{ .URL }}" style="text-decoration: none; font-weight: bold; font-size: 125%;">{{ .Name }}</a>
+            <a href="{{ .URL }}" style="text-decoration: none; font-weight: bold; font-size: 125%; color: var(--fg)">{{ .Name }}</a>
           </li>
         {{ end }}
       </ul>

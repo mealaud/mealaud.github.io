@@ -13,8 +13,6 @@ body {
   flex-direction: column;
 }
 
-/* p:before { content: "\00a0 \00a0 \00a0 \00a0 "; } */
-
 footer {
   margin-top: auto;
 }
@@ -23,41 +21,6 @@ footer {
 .content {
   margin-bottom: 2rem;
 } 
-
-/* NAVIGATION */
-
-/* .site-nav { */
-/*   display: flex; */
-/* } */
-/**/
-/* .site-nav a { */
-/*   display: block; */
-/*   padding: 1rem; */
-/* } */
-/**/
-/* .site-nav .logo { */
-/*   font-weight: bold; */
-/*   padding-left: 0; */
-/* } */
-/**/
-/* .main-menu { */
-/*   display: flex; */
-/*   list-style: none; */
-/*   margin: 0; */
-/*   padding: 0; */
-/* } */
-
-/* @media screen and (max-width: 48rem) { */
-/*   .site-nav, */
-/*   .main-menu { */
-/*     flex-direction: column; */
-/*   } */
-/**/
-/*   .site-nav a { */
-/*     padding: 0.5rem; */
-/*     padding-left: 0; */
-/*   } */
-/* } */
 
 /* LISTS */
 
@@ -68,5 +31,3 @@ footer {
 .post-snippet h3 {
   margin-bottom: 0.25rem;
 }
-
-/* Journal stuff */
