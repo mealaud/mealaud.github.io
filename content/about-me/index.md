@@ -4,7 +4,7 @@ date: 2023-05-18T10:39:06-07:00
 draft: false
 ---
 
-{{% figure "headshot.jpg" "70%" %}}
+{{% figure "https://i.imgur.com/BH86Fzr_d.webp?maxwidth=760&fidelity=grand" "70%" %}}
 me!
 {{% /figure %}}
 
