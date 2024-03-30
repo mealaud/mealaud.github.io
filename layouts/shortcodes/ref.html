@@ -1,0 +1,4 @@
+{{ $id := print (.Get 1) "/" "/button" }}
+{{ if in $id "/notes/"}}
+  <a href="hello" onclick="document.getElementById({{ $id }}).click(); return false;">{{ .Get 0 }}</a>
+{{ end }}

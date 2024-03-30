@@ -1,0 +1,44 @@
+/* My colorscheme! */
+:root {
+  /* foggy forest from betterthanhex.com */
+  /* Also used colordesigner.io for the gradient generator */
+  --bg0: #1c1f2e;
+  --bg1: #1f2735;
+  --bg2: #222e3b;
+  --bg3: #2a3d45;
+  --bg4: #2f444a;
+  --fg0: #ece6da;
+  --fg1: #c7c7b9;
+  --fg2: #a2a89b;
+  --fg3: #6d7c72;
+  --fg4: #4e615b;
+  --yellow0: #ddca22;
+  --yellow1: #e6cf57;
+  --yellow2: #ecd57f;
+  --yellow3: #efdba4;
+  --bg: var(--bg0);
+  --fg: var(--fg0);
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: "JetBrains Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h1; h2; h3; h4; h5; h6 {
+  color: var(--fg);
+}
+
+a {
+ color: var(--yellow3);
+ /* text-decoration: none; */
+  /* color: inherit; */
+ /* font-weight: bold;
+ /* font-style: oblique; */
+ /* text-emphasis-position: under; */
+ /* text-emphasis: "_"; */
+ /* text-decoration: none; */
+}

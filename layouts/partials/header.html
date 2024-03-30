@@ -1,0 +1,28 @@
+<!-- https://codepen.io/sosuke/pen/Pjoqqp for changing icon color -->
+<div style="display: flex; height: 7.45em;">
+  <div style="height: 100%;">
+    <a class="logo" href="{{ .Site.BaseURL }}">
+      <!-- <img src="/gortoutline.png" style="filter: brightness(0) saturate(100%) invert(96%) sepia(2%) saturate(4162%) hue-rotate(353deg) brightness(101%) contrast(97%);" height=100%> -->
+      <img src="/gortoutline.png" style="filter: brightness(0) saturate(100%) invert(99%) sepia(3%) saturate(1032%) hue-rotate(327deg) brightness(98%) contrast(88%);" height=100%>
+    </a>
+  </div>
+  <div>&nbsp;</div>
+  <div style="width: 100%">
+    <div id="title-font">
+      <a href="{{ .Site.BaseURL }}" style="text-decoration: none; color: var(--fg)">mel-land</a>
+    </div>
+    <div id="subtitle-font">
+      where the mel guy<br>
+      reigns supreme
+    </div>
+    <div id="navigation">
+      <ul class="nav-list">
+        {{ range .Site.Menus.main }}
+          <li class="nav-item">
+            <a href="{{ .URL }}" style="text-decoration: none; font-weight: bold; font-size: 125%; color: var(--fg)">{{ .Name }}</a>
+          </li>
+        {{ end }}
+      </ul>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ if not .IsHome }}{{ .Title }} | {{ end }}{{ .Site.Title }}</title>
+
+    <!-- Getting jetbrains from google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+<!-- <style> -->
+<!-- .jetbrains-mono-site-font { -->
+<!--   font-family: "JetBrains Mono", monospace; -->
+<!--   font-optical-sizing: auto; -->
+<!--   font-weight: 100; -->
+<!--   font-style: normal; -->
+<!-- } -->
+<!-- </style> -->
+
+    <!-- css stylesheets -->
+    <link rel="stylesheet" href="/css/style.css?2" type="text/css" media="all" />
+    <link rel="stylesheet" href="/css/theme.css?2" type="text/css" media="all" />
+    <!-- <link rel="stylesheet" href="/css/fonts.css?2" type="text/css" media="all" /> -->
+    <!-- <link href="https://pvinis.github.io/iosevka-webfont/7.0.2/iosevka.css" rel="stylesheet" /> -->
+    <!-- <link rel="stylesheet" href="/css/iosevka.css?2" type="text/css" media="all" /> -->
+    <link rel="stylesheet" href="/css/elements.css?2" type="text/css" media="all" />
+    <link rel="stylesheet" href="/css/math.css?2" type="text/css" media="all" />
+    <link rel="stylesheet" href="/css/search.css?2" type="text/css" media="all" />
+
+    <!-- katex -->
+    {{ partial "math.html" . }}
+
+    <!-- Icon for Website -->
+    <!-- <link rel="icon" style="filter: invert(99%) sepia(3%) saturate(1032%) hue-rotate(327deg) brightness(98%) contrast(88%);" href="/gruv-cropped-gortoutline.png"/> -->
+    <link rel="icon" href="/gruv-cropped-gortoutline.png"/>
+
+    {{ with .OutputFormats.Get "rss" -}}
+      {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+    {{ end -}}
+  </head>
+
+  <body>
+    <div id="main-wrapper" style="height: 100%; min-width: 35%; max-width: 100%; width: 700px; margin: auto">
+      <div id="content-wrapper">
+        {{ block "header" . }}
+
+        {{ end }}
+        <article style="margin-top: 1em; padding-left: 0.5em;">
+          {{ block "main" . }}
+
+          {{ end }}
+        </article>
+      </div>
+      {{ block "footer" . }}
+
+      {{ end }}
+    </div>
+  </body>
+</html>
+

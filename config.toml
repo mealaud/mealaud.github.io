@@ -1,0 +1,59 @@
+baseURL = 'http://mealaud.com/'
+languageCode = 'en-us'
+title = 'mel-land'
+
+[module]
+  [module.hugoVersion]
+    extended = true
+    min = '0.111.0'
+
+[markup]
+  [markup.tableOfContents]
+    ordered = true
+    startlevel = 2
+    endlevel = 2
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+    [markup.goldmark.extensions]
+      footnote = true
+
+[menu]
+    [[menu.main]]
+        identifier = "about-me"
+        name = "About Me"
+        url = "/about-me/"
+        weight = 0
+    # [[menu.main]]
+    #     identifier = "map"
+    #     name = "Map"
+    #     url = "/map/"
+    #     weight = 1
+    [[menu.main]]
+        identifier = "academics"
+        name = "Academics"
+        url = "/academics/"
+        weight = 5
+    [[menu.main]]
+        identifier = "hobbies"
+        name = "Hobbies"
+        url = "/hobbies/"
+        weight = 10 
+    # [[menu.main]]
+    #     identifier = "misc"
+    #     name = "Misc"
+    #     url = "/misc/"
+    #     weight = 15
+    # [[menu.main]]
+    #     identifier = "journal"
+    #     name = "journal"
+    #     url= "/journal/"
+    #     weight = 4
+    [[menu.main]]
+        identifier = "axioms"
+        name = "Axioms"
+        url= "/axioms/"
+        weight = 20
+
+[outputs]
+    home = ["HTML", "RSS", "JSON"]
