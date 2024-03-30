@@ -1,0 +1,15 @@
+<ol style="padding: 0; margin: 0" title="1">
+  {{ range (.RegularPagesRecursive.ByPublishDate ) }}
+    <li style="padding-bottom: 1em">
+      <div style="display: flex;">
+        <div class="title-date">
+          <a href="{{ .Permalink }}" style="text-wrap: wrap;">{{ .Title }}</a><br>
+          <span style="opacity: 65%;"><em>{{ .PublishDate.Format " Jan 2, 2006" }}</em></span>
+        </div>
+        <div>
+          {{ .Summary }}
+        </div>
+      </div>
+    </li>
+  {{ end }}
+</ol>
