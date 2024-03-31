@@ -7,12 +7,17 @@ layout: "note"
 summary: "An introduction to complex differentiability and some explanation for why it's so strong."
 ---
 
-If $ V \subseteq \mathbb{C} $ is open, we say a function $ f \colon V \to \mathbb{C} $ is complex-differentiable at a point $ z \in V $ if the usual difference quotient converges. That is, 
+If $ V \subseteq \mathbb{C} $ is open, we say a function $ f \colon V \to \mathbb{C} $ is {{% tdf "complex-differentiable" %}}  at a point $ z \in V $ if the usual difference quotient converges. That is, 
 $$\begin{equation}
     f^\prime(z) = \lim_{h \to 0} \frac{ f(z+h)-f(z) }{ h }
 \end{equation}$$
 where, of course, $ h \in \mathbb{C} \setminus \left \\{  0 \right \\} $.[^domain of limit]
+{{%nl%}}{{%nl%}}
 
+The incredible thing about complex differentiation is how strong it is! 
+We'll see more on _why_ this is true with the rest of this post, but two fascinating facts are:
+- Being one-time complex-differentiable implies you are infinitely-many times complex-differentiable;
+- A function is complex-smooth if and only if it is analytic (analytic meaning locally represented by a convergent power series).
 
 
 ## Complex numbers as matrices
