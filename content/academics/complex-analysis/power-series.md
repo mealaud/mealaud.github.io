@@ -54,6 +54,30 @@ There is also a more common definition of the radius of convergence: $ R = \limi
 This is equal to our definition, but to me it feels more opaque and harder to use than our supremum definition of the radius of convergence.
 
 
+## Differentiation of Power Series
+This works as you expect (in the radius of convergence).
+{{% MathEnv "thm" %}}
+Suppose that the power series $\sum_{n=0}^{\infty}c_n (z-z_0)^n $ has radius of convergence $ R > 0 $. Then the function $ f(z) =\sum_{n=0}^{\infty}c_n (z-z_0)^n $ is differentiable in the disk $ D(z_0, R) $, with derivative given by 
+$$\begin{equation}
+    f'(z) =\sum_{n=1}^{\infty}n c_n (z-z_0)^{n-1} =\sum_{n=0}^{\infty}(n+1)c_{n+1} (z-z_0)^n.
+\end{equation}$$
+{{% /MathEnv %}}
+But this was not immediately clear to me how to prove this, so I'm going to spell it out here.
+{{%nl%}}{{%nl%}}
+
+Our general strategy is the following:
+1. show that the term-by-term differentiated power series has the same radius of convergence;
+2. show that the partial sums of the power series differentiated converge to the term-by-term differentiated power series uniformly; and
+3. apply the previous steps to get our conclusion.
+
+{{% MathEnv "lem" %}}
+Suppose that a sequence of differentiable functions $ \left \{ f_n \right \}  $ converge to $ f $ 
+{{% /MathEnv %}}
+
+
+
+
+
 
 [^strength of complex differentiability]: This is incredible because these are very much on the case on the real line! Indeed, there are functions are once differentiable but not twice (let alone infinitely-many times), and there are functions which are smooth but are not analytic.
 [^convergence absolutely and uniformly]: test
