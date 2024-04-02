@@ -11,7 +11,7 @@ As we will see later, a function is complex-differentiable iff it is complex-smo
 This is why, even though we have not explored differentiability very much, we will study power series on their own.
 
 
-## Convergence in Disks
+## Convergence in disks
 We first have to define two basic objects, open and closed disks.
 If $ z \in \mathbb{C} $ and $ r > 0 $, then 
 1. the {{% tdf "open disk" %}} is the set $ D(z,r) = \left \\{ w \in \mathbb{C} : |z-w| < r \right \\}  $, and
@@ -53,8 +53,7 @@ Since $ r < \rho $, $ r/\rho < 1 $, so $ M (r/\rho)^n \to 0 $ as $ n \to \infty 
 There is also a more common definition of the radius of convergence: $ R = \liminf_{n \to \infty} |c_n|^{-1/n}  $.
 This is equal to our definition, but to me it feels more opaque and harder to use than our supremum definition of the radius of convergence.
 
-
-## Differentiation of Power Series
+## Differentiation of power series
 This works as you expect (in the radius of convergence).
 {{% MathEnv "thm" %}}
 Suppose that the power series $\sum_{n=0}^{\infty}c_n (z-z_0)^n $ has radius of convergence $ R > 0 $. Then the function $ f(z) =\sum_{n=0}^{\infty}c_n (z-z_0)^n $ is differentiable in the disk $ D(z_0, R) $, with derivative given by 
@@ -70,9 +69,27 @@ Our general strategy is the following:
 2. show that the partial sums of the power series differentiated converge to the term-by-term differentiated power series uniformly; and
 3. apply the previous steps to get our conclusion.
 
+
 {{% MathEnv "lem" %}}
-Suppose that a sequence of differentiable functions $ \left \{ f_n \right \}  $ converge to $ f $ 
+(Ratio Test for Sequences)
+If $ \left \{ a_n \right \}_1^\infty  \subseteq \mathbb{C} $, 
+$$\begin{equation}
+    \lim_{n \to \infty}\left | \frac{ a_{n+1} }{ a_n } \right | < 1 \implies \lim_{n \to \infty} |a_n| = 0.
+\end{equation}$$
 {{% /MathEnv %}}
+{{% MathEnv "rem" %}}
+This is a strictly weaker result than the usual ratio test for series, but we only need a weaker case like this for my proof.
+{{% /MathEnv %}}
+{{% Proof %}}
+Let $ \lim |a_{n+1}/a_n| = r < 1 $.
+Let $ \varepsilon > 0 $ be small enough so that $ \varepsilon < (1-r)/4 $.
+Then there exists $ N \in \mathbb{N} $ such that $ r - \varepsilon < |a_{n+1}/a_n| < r + \varepsilon $ for all $ n \geq N $. In particular, 
+$$\begin{equation}
+    |a_{n+1}| < (r+\varepsilon) |a_n| \quad \text{so that} \quad |a_n| < |a_N| (r+\varepsilon)^{n-N}.
+\end{equation}$$
+Noting that $ r+\varepsilon < 1 $, it becomes clear that for sufficiently large $ n $, the RHS shrinks to be smaller than $ \varepsilon $ as desired.
+{{% /Proof %}}
+
 
 
 
