@@ -91,6 +91,24 @@ Noting that $ r+\varepsilon < 1 $, it becomes clear that for sufficiently large 
 {{% /Proof %}}
 
 
+{{% MathEnv "lem" %}}
+If $ \left \{ a_n \right \} _0^\infty $ is a sequence of complex numbers and the power series $\sum_{n=0}^{\infty} a_n (z-z_0)^n $ has radius of convergence $ R $, then the power series $\sum_{n=1}^{\infty} n a_n (z-z_0)^{n-1} $ also has radius of convergence $ R $.
+{{% /MathEnv %}}
+{{% Proof %}}
+Without loss of generality, suppose that $ z_0 = 0 $. 
+Now, consider $ |z| < R $. 
+Then, taking some $ \rho \in (|z| , R) $, we have $ r \coloneqq |z|/\rho < 1 $. 
+We now analyze the terms of the sequence: 
+$$\begin{align}
+\left | n a_n z^{n-1} \right | &= n |a_n| |z|^{n-1} \\\\
+&= n |a_n| \rho^n/\rho r^{n-1} \\\\
+&= \rho \cdot \underbrace{|a_n \rho^n|}_{(*)} \cdot \underbrace{nr^{n-1}}\_{(\dagger)}
+\end{align}$$
+By the ratio test for sequences (the previous lemma), $ (\dagger) $ converges to $ 0 $ and hence is bounded by some $ M > 0 $.
+Then by the definition of radius of convergence, the power series $ \sum n a_n z^{n-1} $ converges absolutely. 
+What remains to be shown is that if $ |z| > R $, $ \sum n a_n z^{n-1} $ diverges.
+{{% /Proof %}}
+
 
 
 
