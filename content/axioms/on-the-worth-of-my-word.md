@@ -17,10 +17,7 @@ Why would I make those promises at all? Because I am under the guise that my wor
 That must change.
 {{%nl%}}{{%nl%}}
 
-I must truly value my word, my promises, my speech, and my acts following directly from speech.
+I must truly value my promises and act to corroborate this fact-to-be.
 {{%nl%}}{{%nl%}}
 
-What is life but a promise to oneself to live?
-{{%nl%}}{{%nl%}}
-
-I will live.
+Moreover, what is life but a promise to oneself to live? And I must live.
