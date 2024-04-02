@@ -10,8 +10,7 @@ p {
   font-size: 1.2em;
   font-weight: bold;
   font-variant: small-caps;
-  color: var(--bg1);
-  background-color: var(--yellow1);
+  background-color: #e6cf5770;
 }
 
 /* .tdf { */
