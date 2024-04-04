@@ -116,6 +116,9 @@ $$\begin{equation}
 \end{equation}$$
 This is also just good to know in general.)
 {{% /MathEnv %}}
+{{% MathEnv "rem" %}}
+Note that this is just regular $ \mathbb{R}^2 $-differentiability but requiring our linear map (that approximates the growth of the function) to be a complex number, i.e., forcing the matrix to satisfy the C-R Equations.
+{{% /MathEnv %}}
 {{% Proof %}}
 ($\Rightarrow$) 
 Suppose $ f $ is complex-differentiable at $ z $. 

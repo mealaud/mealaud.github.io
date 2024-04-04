@@ -120,6 +120,34 @@ so it follows from the comparison test that the series $ \sum n a_n z^{n-1} $ di
 Thus the series $\sum_{n=1}^{\infty}n a_n z^{n-1} $ has radius of convergence $ R $.
 {{% /Proof %}}
 
+{{% MathEnv "lem" %}}
+Suppose $ \left \{ f_n \right \}  $ is a sequence of $ \mathbb{C} $-valued complex-differentiable functions on an open set $ \Omega \subseteq \mathbb{C} $ such that:
+{{%nl%}}
+1. for all $ w_0 \in \Omega $, the sequence $ \left \\{ f_n(w_0) \right \\}  $ is convergent; and
+2. the sequence of derivatives $ \left \\{ f_n^\prime \right \\}  $ is uniformly convergent.
+{{%nl%}}
+Then $ \left \\{ f_n \right \\}  $ converges uniformly to a function differentiable on $ \Omega $.
+{{% /MathEnv %}}
+{{% Proof %}}
+Define $ f \colon \Omega \to \mathbb{C} $ by 
+$$\begin{equation}
+    f(z) = \lim_{n \to \infty} f_n(z).
+\end{equation}$$
+Furthermore, let $ g \colon \Omega \to \mathbb{C} $ be the uniform limit of $ \left \\{ f_n^\prime \right \\}  $.
+We claim that: 1) $ f_n \to f $ uniformly, and 2) $ f $ is differentiable and $ f^\prime = g $.
+{{%nl%}}{{%nl%}}
+
+We first show that $ f'(z) = g(z) $ for all $ z \in \Omega $.
+If $ h \in \mathbb{C} $ is small enough so that $ |h| < AAAAAAAAA $, 
+$$\begin{equation}
+\left | \frac{ f(z+h) - f(z) }{ h } - g(z) \right | \leq
+    \left | \frac{ f(z+h) - f(z) }{ h } - \frac{ f_N(z+h) - f_N(z) }{ h } \right | 
+\end{equation}$$
+
+{{% /Proof %}}
+
+
+
 {{% MathEnv "thm" %}}
 Suppose the power series 
 $$\begin{equation}
