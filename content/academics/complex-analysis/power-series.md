@@ -120,6 +120,19 @@ so it follows from the comparison test that the series $ \sum n a_n z^{n-1} $ di
 Thus the series $\sum_{n=1}^{\infty}n a_n z^{n-1} $ has radius of convergence $ R $.
 {{% /Proof %}}
 
+{{% MathEnv "thm" %}}
+Suppose the power series 
+$$\begin{equation}
+    f(x) =\sum_{n=0}^{\infty}a_n (z-z_0)^n \quad \text{for} \quad |z-z_0| < R
+\end{equation}$$
+has radius of convergence $ R > 0 $. Then $ f $ is differentiable in $ |z-z_0| < R $ and ha derivative 
+$$\begin{equation}
+    f^\prime (x) =\sum_{n=1}^{\infty}n a_n z^{n-1} \quad \text{for} \quad |z-z_0| < R.
+\end{equation}$$
+{{% /MathEnv %}}
+
+
+
 
 
 
