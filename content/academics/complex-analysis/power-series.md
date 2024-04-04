@@ -107,6 +107,17 @@ $$\begin{align}
 By the ratio test for sequences (the previous lemma), $ (\dagger) $ converges to $ 0 $ and hence is bounded by some $ M > 0 $.
 Then by the definition of radius of convergence, the power series $ \sum n a_n z^{n-1} $ converges absolutely. 
 What remains to be shown is that if $ |z| > R $, $ \sum n a_n z^{n-1} $ diverges.
+{{%nl%}}{{%nl%}}
+
+Suppose $ |z| > R $ and recall that $ \sum a_n z^n $ diverges. 
+Now notice that 
+$$\begin{equation}
+   | n a_n z^{n-1}| \geq \frac{ |a_n z^n| }{ |z| },
+\end{equation}$$
+so it follows from the comparison test that the series $ \sum n a_n z^{n-1} $ diverges.
+{{%nl%}}{{%nl%}}
+
+Thus the series $\sum_{n=1}^{\infty}n a_n z^{n-1} $ has radius of convergence $ R $.
 {{% /Proof %}}
 
 
