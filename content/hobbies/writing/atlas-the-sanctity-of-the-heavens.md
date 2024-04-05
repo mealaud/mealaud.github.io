@@ -4,7 +4,7 @@ date: 2024-03-05T21:43:30-08:00
 draft: false
 type:
 layout:
-summary: "An exploration of apathy."
+summary: "Apathy."
 ---
 
 I am unmoved. The heavens begin to slip off my shoulders, but I am unmoved.
