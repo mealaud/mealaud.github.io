@@ -139,10 +139,13 @@ We claim that: 1) $ f_n \to f $ uniformly, and 2) $ f $ is differentiable and $ 
 
 We first show that $ f'(z) = g(z) $ for all $ z \in \Omega $.
 If $ h \in \mathbb{C} $ is small enough so that $ |h| < AAAAAAAAA $, 
-$$\begin{equation}
-\left | \frac{ f(z+h) - f(z) }{ h } - g(z) \right | \leq
-    \left | \frac{ f(z+h) - f(z) }{ h } - \frac{ f_N(z+h) - f_N(z) }{ h } \right | 
-\end{equation}$$
+$$\begin{align}
+\left | \frac{ f(z+h) - f(z) }{ h } - g(z) \right | &\leq
+    \left | \frac{ f(z+h) - f(z) }{ h } - \frac{ f_N(z+h) - f_N(z) }{ h } \right | \\\\
+    &\quad+ \left | \frac{ f_N(z+h) - f_N(z) }{ h } - f_N^\prime(z) \right | \\\\
+    &\quad+ \left | f_N^\prime(z) - g(z) \right | \\\\
+&= 
+\end{align}$$
 
 {{% /Proof %}}
 
