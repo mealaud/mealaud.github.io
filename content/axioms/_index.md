@@ -12,13 +12,13 @@ How does one live? How must I live? I am not certain of this. There are no unsha
 #### Axiom #1
 >> 1. It will be okay.
 {{%nl%}}
-I don't know what okay will mean in say a year, or even a week from now, but I know that I will know on that day itself. I can't predict a priori what my life will be like, but I may live it and decide in any moment of introspection. Regardless of what this definintion may be, I know that I can endure. I know that I can persevere. I know I can.
+I don't know what okay will mean in say a year, or even a week from now, but I know that I will know on that day itself. I can't predict a priori what my life will be like, but I may live it and decide in any moment of introspection. Regardless of what this definition may be, I know that I can endure. I know that I can persevere. I know I can. I can.
 {{%nl%}}{{%nl%}}
 
 #### Axiom #2
 >> 2. I am my world's Atlas.
 {{%nl%}}
-I must lift the weight of my world. My hands may faulter, my knees may buckle, but I cannot yield---I must not yield. This is not to say that I must suffer, or succeed, alone. This is moreso to point out that I am the crux of every action in my life. I aim the executer of thoughts. I am the executer of my actions. I am the principle bearer of the burden of my life---in all its successes and failures.
+I must lift the weight of my world. My hands may falter, my knees may buckle, but I cannot yield---I must not yield. This is not to say that I must suffer, or succeed, alone. This is to point out that I am the crux of every action in my life. I aim the executer of thoughts. I am the executer of my actions. I am the principle bearer of the burden of my life---in all its successes and failures.
 {{%nl%}}
 
 #### Axiom #3
@@ -30,10 +30,3 @@ Given infinite choices, it is a priori impossible to decide what to do. If I am 
 >> 4. I must find my own life meaningful.
 {{%nl%}}
 I say something is meaningful if it is something that requires determination, persistence, creativity, or anything I feel even a slight pride in. 
-<!-- #### Axiom #4 -->
-<!-- >> 4. It's not a matter of if I can, I must. -->
-<!-- {{%nl%}} -->
-
-<!-- Without restraint, I am a slave to indecision. -->
-<!-- 3. It's not a matter of if I can, I must. -->
-<!-- 4. I must work to improve (in all aspects of myself). -->
