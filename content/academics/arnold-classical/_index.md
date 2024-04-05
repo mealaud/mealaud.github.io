@@ -1,7 +1,7 @@
 ---
 title: "Classical Mechanics"
 date: 2024-04-04T23:59:52-07:00
-draft: false
+draft: true
 type: "section"
 layout: "self-study"
 ---
