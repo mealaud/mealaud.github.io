@@ -48,13 +48,10 @@ Well, if we insist that physical laws should be invariant under rectilinear moti
 We instead need a structure for which we can put coordinate systems onto naturally--this is precisely $ A^n $.
 {{%nl%}}{{%nl%}}
 
-We now consider $ \mathbb{R}^n $ (as an additive group) acting on $ A^n $ via {{% tdf "parallel displacements" %}}, i.e., (with $ \cdot $ being used as the usual group-element-on-a-set notation)
+We now consider $ \mathbb{R}^n $ (as an additive group) acting on $ A^n $ via {{% tdf "parallel displacements" %}}, i.e.,
 $$\begin{equation}
-b \cdot a = a + b \in A^n
+\mathbb{R}^n \times A^n \ni (b,a) \mapsto a+b \in A^n.
 \end{equation}$$
-with $ a \in A^n $ and $ b \in \mathbb{R}^n $.
-{{%nl%}}{{%nl%}}
-
 We also note that the sum of two elements of $ A^n $ is not discussed but the difference of elements of $ A^4 $ is defined and is an element of $ \mathbb{R}^4 $.
 
 {{%nl%}}{{%nl%}}
@@ -69,12 +66,26 @@ We call an affine space endowed with a euclidean structure a {{% tdf "euclidean 
 
 ### Galilean Structure
 Galilean space-time has three components:
-1. The universe: a four-dimensional affine space $ A^4 $.
+
+1. Universe/Space
+
+The universe is a four-dimensional affine space $ A^4 $.
 The points of $ A^4 $ are called {{% tdf "world points" %}} or {{% tdf "events" %}}.
-2. Time: a linear mapping $ t \colon \mathbb{R}^4 \to \mathbb{R} $ from the vector space of parallel displacements of the universe to the real "time axis". 
+
+2. Time
+
+Time is a linear mapping $ t \colon \mathbb{R}^4 \to \mathbb{R} $ from the vector space of parallel displacements of the universe to the real "time axis". 
 The {{% tdf "time interval" %}} from an event $ a \in A^4 $ to an event $ b \in A^4 $ is the number $ t(b-a) $. 
 If $ t(b-a) = 0 $, then the events $ a $ and $ b $ are said to be {{% tdf "simultaneous" %}}.
 The set of events simultaneous with some fixed event forms a three-dimensional affine subspace in $ A^4 $; we call this the {{% tdf "space of simultaneous events" %}}.
+
+3. Distance
+
+The {{% tdf "distance between simultaneous events" %}} is defined to be 
+$$\begin{equation}
+\rho(a,b) = \left \lVert a-b \right \rVert  = \sqrt{(a-b) \cdot (a-b)}, \quad a,b \in A^3
+\end{equation}$$
+This distance makes every space of simultaneous events into a three-dimensional euclidean space $ E^3 $.
 
 
 
