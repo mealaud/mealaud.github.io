@@ -7,6 +7,11 @@ layout: "experiment"
 summary:
 ---
 
+### Set-up
+*Start date*: Tuesday, May 21, 2024.
+{{%nl%}}
+*End date*: Friday, June 14, 2024.
+
 ### Preface
 This is an experiment started purely out of frustration with myself. 
 (And this is being posted on my website for greater accountability, as I do not want to viewed as someone who is lazy.)
