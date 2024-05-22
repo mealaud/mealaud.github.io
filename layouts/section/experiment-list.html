@@ -1,0 +1,25 @@
+{{ define "header" }}
+  {{ partial "header.html" . }}
+{{ end }}
+
+{{ define "main" }}
+  <h1>{{ .Title }}</h1>
+  {{ .Content }}
+
+  <h3>Experiments</h3>
+  <ul style="list-style-type: none; margin: 0; padding: 0;">
+    {{ range .Pages.ByPublishDate.Reverse }}
+      <li>
+        <a href="{{ .Permalink }}">{{ .Title }}</a>
+      </li>
+    {{ end }}
+  </ul>
+
+  <h3>Recent Posts</h3>
+  {{ partial "recent-posts" . }}
+{{ end }}
+
+{{ define "footer" }}
+  {{ partial "footer.html" . }}
+{{ end }}
+
