@@ -23,3 +23,5 @@ Hello! My name is Mealaud Mokhtarzad but I usually go by Mel. I’m a pure math 
 * [Logan Hyslop](https://loganhyslop.github.io/) - Logan is mega cool and mega cracked. We met his freshman year (my sorta junior year). He actually does math (good stuff at that). B)
 
 * [Andrea Bourque](https://www.math.lsu.edu/~abour99/) - Andrea is a big ol' math nerd and is very cool, but never talk to them after they've had mac'n'cheese. _shudders_
+* [Liz](https://linkyxstart.blogspot.com) - I met Liz first as Hunter's girlfriend, but Liz eventually became a part of my world too. She is wonderful, kind, and a former [League of Legends addict...](https://linkyxstart.blogspot.com/2024/04/sobriety-from-league-of-legends.html)
+
