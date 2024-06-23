@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Clouds on mel-land</title>
+    <link>http://localhost:1313/categories/clouds/</link>
+    <description>Recent content in Clouds on mel-land</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 21 May 2023 20:29:02 -0700</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/clouds/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Clouds</title>
+      <link>http://localhost:1313/hobbies/clouds/</link>
+      <pubDate>Sun, 21 May 2023 20:29:02 -0700</pubDate>
+      <guid>http://localhost:1313/hobbies/clouds/</guid>
+      <description>I like clouds a bunch have for a while. Below I have weekly weather reports and likely will eventually have some links/explanations of my favorite cloud-based media. :D</description>
+    </item>
+  </channel>
+</rss>

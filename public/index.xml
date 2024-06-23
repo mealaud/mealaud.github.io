@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>mel-land</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on mel-land</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 27 May 2024 18:42:41 -0700</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>On Becoming</title>
+      <link>http://localhost:1313/axioms/on-becoming/</link>
+      <pubDate>Mon, 27 May 2024 18:42:41 -0700</pubDate>
+      <guid>http://localhost:1313/axioms/on-becoming/</guid>
+      <description>What am I to become?</description>
+    </item>
+    <item>
+      <title>On the Impermanence of Aspirations</title>
+      <link>http://localhost:1313/axioms/on-the-impermanence-of-aspirations/</link>
+      <pubDate>Fri, 05 Apr 2024 01:24:26 -0700</pubDate>
+      <guid>http://localhost:1313/axioms/on-the-impermanence-of-aspirations/</guid>
+      <description>It is not a matter of if I can, I must.</description>
+    </item>
+    <item>
+      <title>On the Worth of My Word</title>
+      <link>http://localhost:1313/axioms/on-the-worth-of-my-word/</link>
+      <pubDate>Tue, 02 Apr 2024 02:49:49 -0700</pubDate>
+      <guid>http://localhost:1313/axioms/on-the-worth-of-my-word/</guid>
+      <description>What am I to do if my word means nothing?</description>
+    </item>
+    <item>
+      <title>Complex Differentiation</title>
+      <link>http://localhost:1313/academics/complex-analysis/complex-differentiation/</link>
+      <pubDate>Thu, 28 Mar 2024 21:55:28 -0700</pubDate>
+      <guid>http://localhost:1313/academics/complex-analysis/complex-differentiation/</guid>
+      <description>An introduction to complex differentiability and some explanation for why it&amp;rsquo;s so strong.</description>
+    </item>
+    <item>
+      <title>Atlas: The Sanctity of the Heavens</title>
+      <link>http://localhost:1313/hobbies/writing/atlas-the-sanctity-of-the-heavens/</link>
+      <pubDate>Tue, 05 Mar 2024 21:43:30 -0800</pubDate>
+      <guid>http://localhost:1313/hobbies/writing/atlas-the-sanctity-of-the-heavens/</guid>
+      <description>Apathy and ascension.</description>
+    </item>
+    <item>
+      <title>Closing My Eyes</title>
+      <link>http://localhost:1313/hobbies/writing/closing-my-eyes/</link>
+      <pubDate>Fri, 09 Jun 2023 11:36:31 -0700</pubDate>
+      <guid>http://localhost:1313/hobbies/writing/closing-my-eyes/</guid>
+      <description>An eye-opening exploration of hope.</description>
+    </item>
+    <item>
+      <title>Of Mountains and Shirts</title>
+      <link>http://localhost:1313/hobbies/writing/of-mountains-and-shirts/</link>
+      <pubDate>Wed, 24 May 2023 11:43:00 -0700</pubDate>
+      <guid>http://localhost:1313/hobbies/writing/of-mountains-and-shirts/</guid>
+      <description>A look at mountains, their strength, and their clothes.</description>
+    </item>
+    <item>
+      <title>Atlas: The Dive</title>
+      <link>http://localhost:1313/hobbies/writing/atlas-the-dive/</link>
+      <pubDate>Mon, 02 Jan 2023 00:18:58 -0700</pubDate>
+      <guid>http://localhost:1313/hobbies/writing/atlas-the-dive/</guid>
+      <description>A story of forgetting responsibilities.</description>
+    </item>
+    <item>
+      <title>Atlas</title>
+      <link>http://localhost:1313/hobbies/writing/atlas/</link>
+      <pubDate>Thu, 08 Sep 2022 00:18:45 -0700</pubDate>
+      <guid>http://localhost:1313/hobbies/writing/atlas/</guid>
+      <description>Atlas holds up the world and, for once, he let go.</description>
+    </item>
+    <item>
+      <title>The Mountains&#39; Shirts Have Holes</title>
+      <link>http://localhost:1313/hobbies/writing/the-mountains-shirts-have-holes/</link>
+      <pubDate>Sat, 13 Apr 2019 23:50:26 -0700</pubDate>
+      <guid>http://localhost:1313/hobbies/writing/the-mountains-shirts-have-holes/</guid>
+      <description>An observation of mountains and their tree-canopies.</description>
+    </item>
+    <item>
+      <title>The Mountains Dance</title>
+      <link>http://localhost:1313/hobbies/writing/the-mountains-dance/</link>
+      <pubDate>Sat, 13 Apr 2019 00:15:55 -0700</pubDate>
+      <guid>http://localhost:1313/hobbies/writing/the-mountains-dance/</guid>
+      <description>An observation of wind and grass.</description>
+    </item>
+    <item>
+      <title>The Tempest</title>
+      <link>http://localhost:1313/hobbies/writing/the-tempest/</link>
+      <pubDate>Sat, 06 Oct 2018 00:13:30 -0700</pubDate>
+      <guid>http://localhost:1313/hobbies/writing/the-tempest/</guid>
+      <description>The power of storms and the things that weather through them.</description>
+    </item>
+    <item>
+      <title>Dawn to Noon</title>
+      <link>http://localhost:1313/hobbies/writing/dawn-to-noon/</link>
+      <pubDate>Wed, 03 Oct 2018 00:17:32 -0700</pubDate>
+      <guid>http://localhost:1313/hobbies/writing/dawn-to-noon/</guid>
+      <description>The day passes.</description>
+    </item>
+    <item>
+      <title>Cloud Watching</title>
+      <link>http://localhost:1313/hobbies/writing/cloud-watching/</link>
+      <pubDate>Fri, 21 Sep 2018 23:32:21 -0700</pubDate>
+      <guid>http://localhost:1313/hobbies/writing/cloud-watching/</guid>
+      <description>A mindful experience of cloud watching.</description>
+    </item>
+  </channel>
+</rss>

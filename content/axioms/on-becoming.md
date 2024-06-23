@@ -35,5 +35,5 @@ These goals may be basic and obvious, but they are important to note for times o
     - Take medications.
     - Oral care (brush teeth, floss, mouthwash).
     - Be in bed, attempting to sleep by 10:00 PM.
-3. Reserve 6:00 AM until 12:00 PM for working (and possibly errands/chores). (cf. [Spring 2024 Experiment]({{<relref "/academics/time-management/spring24-experiment">}}))
+3. Reserve 6:00 AM until 12:00 PM for working (and possibly errands/chores). 
 

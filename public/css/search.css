@@ -1,0 +1,123 @@
+#fastSearch { 
+  visibility: hidden;
+  position: absolute;
+  top: 12.5vh;
+  bottom: 12.5vh;
+  left: 12.5vw;
+  right: 12.5vw;
+  display: inline-block;
+  width: 75vw;
+  height: 75vh;
+  display: flex;
+  background-color: var(--bg);
+  z-index: 100;
+}      
+
+#fastSearch input { 
+  padding-left: 2em;
+  width: calc(100% - 2.2em);
+  height: 2.5em;
+  font-size: 1.7em;
+  color: var(--fg);
+  background-color: var(--bg);
+  outline: none;
+  text-align: left;
+  display: inline-block;
+  /* flex: 0 1 auto; */
+}
+#search-input-wrapper {
+  position: relative; 
+  flex: 0 1 auto;
+}
+
+#search-icon {
+  position: absolute;
+  top: 0.5em;
+  left: 0.5em;
+  font-size: 1.7em;
+}
+
+
+
+#postResults {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+  /* border: 2px solid red; */
+}
+
+#searchResults { 
+  /* flex: 1 1 auto; */
+  padding-top: 1em;
+  padding-left: 1em;
+  visibility: inherit; 
+  display: inline-block; 
+  width: 100%;
+  height: 60vh;
+} #searchResults li { 
+  list-style: none; 
+  /* background-color: var(--bg);  */
+} #searchResults li .title {
+  display: inline-block;
+} #searchResults div { 
+  padding: 0.5em;
+  height: 1.5em;
+  font-size: 1em;
+  text-decoration: none !important; 
+  display: inline-block; 
+} #searchResults div:focus { 
+  outline: 0; 
+  /* background-color: var(--bg); */
+  color: var(--orange2); 
+} #searchResults div:focus::before {
+  content: " 🔍 ";
+}
+
+.content-results {
+  width: 50%;
+  /* border: 2px solid var(--fg0); */
+  color: var(--fg0);
+  display: flex;
+  justify-content: center;
+  border-radius: 0.6em;
+}
+
+#resultsContentDivider {
+  width: 2em;
+}
+#inputOutputDivider {
+  height: 2em;
+}
+
+
+.border {
+  border: 2px solid var(--fg0);
+  border-sizing: border-box;
+}
+
+.content-wrapper {
+  width: 95%;
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+  /* padding-bottom: 1em; */
+  position: relative;
+} .search-header {
+  position: absolute;
+  z-index: 1000;
+  background-color: var(--bg);
+  top: -0.9em;
+  font-size: 1.25em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+
+.body {
+  flex: 1 1 auto;
+  overflow-y: auto;
+}
+
+.highlighted {
+  background-color: rgba(254,128,25, 0.5) !important;
+}
