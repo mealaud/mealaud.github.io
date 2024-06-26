@@ -29,4 +29,4 @@ I felt, _truly_ felt, that I was nothing in the face of these monoliths.
 There seemed to be nothing above them, and I, and everything else that I have ever known, was below them.
 {{%nl%}}{{%nl%}}
 
-I am nothing but what they are not——I am nothing.
+I am nothing but what they are not. I am nothing.
