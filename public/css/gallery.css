@@ -1,0 +1,27 @@
+.gallery {
+  margin: auto;
+} .main-photo img {
+  width: 100%;
+  height: auto;
+} .gallery .photo-collection {
+  display: flex;
+  overflow-x: scroll;
+} .photo-collection img {
+  min-width: 30%;
+  max-width: 50%;
+  height: auto;
+} .single-image {
+  margin-right: 10em;
+} .photo-buttons {
+  display: flex;
+} .photo-buttons button {
+  width: fit-content;
+  min-width: 5%;
+  background-color: transparent;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  font-family: inherit;
+  font-weight: 900;
+}

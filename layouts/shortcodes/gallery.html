@@ -1,0 +1,16 @@
+{{ $num_photos := .Params | len }}
+{{ $img_counter := 1 }}
+<div class="gallery">
+<div class="main-photo">
+<img  id="main-photo" src="{{ .Get 0 }}">
+</div>
+<div class="photo-buttons">
+{{ range $img := .Params }}
+{{ if ge $img_counter $num_photos }}
+{{ break }}
+{{ end }}
+<button onclick="update_gallery_img('{{ $img }}')">[{{ $img_counter }}]</button>
+{{ $img_counter = add $img_counter 1 }}
+{{ end }}
+</div>
+</div>

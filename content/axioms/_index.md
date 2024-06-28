@@ -6,8 +6,18 @@ type: "section"
 layout: "axioms"
 ---
 
-How does one live? How must I live? I am not certain of this. There are no unshakeable axioms in my life but there are some suppositions which allow me to live a life I find enjoyable. This is to say: what I describe may not be for everyone, but it is for me.
+How does one live? 
+How must I live?
+I am not certain of this.
+There are no unshakeable axioms in my life but there are some suppositions which allow me to live a life I find enjoyable.
+This is to say: what I describe may not be for everyone, but it is for me.
+{{%nl%}}{{%nl%}}
 
+A new addition to these axioms will be those of interest to interpersonal relationships. 
+Reflecting on this now, I feel I have well-addressed rules for my conduct with _myself_, but not with _others_. 
+And, being someone who loves social interaction, I've thought about this a lot.
+
+### Intrapersonal
 #### Axiom #1 {#okay}
 >> 1. It will be okay.
 {{%nl%}}
@@ -37,3 +47,11 @@ Relaxing is fine -- with purpose.
 Working is fine -- with purpose.
 Living is fine -- with purpose.
 There is no less that I may do.
+
+
+### Interpersonal
+
+#### Axiom #6 {#golden}
+>> 6. Treat others how you want to be treated.
+{{%nl%}}
+I can read no minds but my own, yet I must act, so I must empathize.

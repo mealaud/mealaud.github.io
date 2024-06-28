@@ -1,0 +1,25 @@
+{{ $sections := .Sections.ByPublishDate.Reverse }}
+{{ $singles := .RegularPages.ByPublishDate.Reverse }}
+
+{{ if ne ($sections | len) 0 }}
+<h3>LISTS</h3>
+<ul>
+  {{ range $sections }}
+  <li>
+    <a href="{{ .Permalink }}" style="text-decoration: underline; text-wrap: wrap;">{{ .Title }}</a><br>
+  </li>
+  {{ end }}
+</ul>
+{{ end }}
+
+{{ if ne ($singles | len) 0 }}
+<h3>SINGLES</h3>
+<ul>
+  {{ range $singles }}
+  <li>
+    <a href="{{ .Permalink }}" style="text-decoration: underline; text-wrap: wrap;">{{ .Title }}</a><br>
+  </li>
+  {{ end }}
+</ul>
+
+{{ end }}
