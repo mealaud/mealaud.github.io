@@ -1,13 +1,13 @@
 ---
 title: "Complex Differentiation"
-date: 2024-03-28T21:55:28-07:00
+date: 2024-06-29T11:48:12-07:00
 draft: false
 type: "page"
 layout: "note"
 summary: "An introduction to complex differentiability and some explanation for why it's so strong."
 ---
 
-If $ V \subseteq \mathbb{C} $ is open, we say a function $ f \colon V \to \mathbb{C} $ is {{% tdf "complex-differentiable" %}}  at a point $ z \in V $ if the usual difference quotient converges. That is, 
+If $ V \subseteq \mathbb{C} $ is open, we say a function $ f \colon V \to \mathbb{C} $ is {{% tdf "complex-differentiable" %}}, or {{% tdf "holomorphic" %}}, at a point $ z \in V $ if the usual difference quotient converges. That is, 
 $$\begin{equation}
     f^\prime(z) = \lim_{h \to 0} \frac{ f(z+h)-f(z) }{ h }
 \end{equation}$$
@@ -86,7 +86,7 @@ Then if $ f = u + iv $ is complex-differentiable at $ z $ if and only if the cor
 ### An important example
 {{% MathEnv "ex" %}}
 There are functions which are real-differentiable but NOT complex-differentiable.
-{{% /MathEnv %}}
+
 {{% Proof %}}
 Take for example: $ f(x+iy) = x $. We can then identify $ f $ with the function $ F(x,y) = x $. Clearly, then, 
 $$\begin{equation}
@@ -98,6 +98,7 @@ $$\begin{equation}
 \end{equation}$$
 Hence the C-R Equations are not satisfied and our function, although real-differentiable, is NOT complex-differentiable.
 {{% /Proof %}}
+{{% /MathEnv %}}
 
 ## Exercises
 {{% MathEnv "x" %}}
@@ -115,10 +116,7 @@ $$\begin{equation}
     \lim_{h \to 0} \frac{ \left | E(h) \right |  }{ \left | h \right |  } = 0.
 \end{equation}$$
 This is also just good to know in general.)
-{{% /MathEnv %}}
-{{% MathEnv "rem" %}}
-Note that this is just regular $ \mathbb{R}^2 $-differentiability but requiring our linear map (that approximates the growth of the function) to be a complex number, i.e., forcing the matrix to satisfy the C-R Equations.
-{{% /MathEnv %}}
+
 {{% Proof %}}
 ($\Rightarrow$) 
 Suppose $ f $ is complex-differentiable at $ z $. 
@@ -165,10 +163,14 @@ $$\begin{equation}
 \end{equation}$$
 so $ f $ is complex-differentiable at $ z $ as desired.
 {{% /Proof %}}
+{{% /MathEnv %}}
+{{% MathEnv "rem" %}}
+Note that this is just regular $ \mathbb{R}^2 $-differentiability but requiring our linear map (that approximates the growth of the function) to be a complex number, i.e., forcing the matrix to satisfy the C-R Equations.
+{{% /MathEnv %}}
 
 {{% MathEnv "x" %}}
 Suppose that $ f $ is complex-differentiable at $ z $. Show that $ f $ is continuous at $ z $.
-{{% /MathEnv %}}
+
 {{% Proof %}}
 Suppose that $ f $ is complex-differentiable at $ z $.
 Let $ \varepsilon > 0 $ be smaller than $ 1 $. 
@@ -187,6 +189,7 @@ $$\begin{align}
 \end{align}$$
 so $ f $ is continuous! :) 
 {{% /Proof %}}
+{{% /MathEnv %}}
 
 
 {{% MathEnv "x" %}}
@@ -203,7 +206,7 @@ Show that $ f $ satisfies the Cauchy-Riemann equations at the origin even though
 {{%nl%}}{{%nl%}}
 
 _Hint._ By our if and only if from earlier, this function must then fail to be a $ \mathbb{R}^2 $-differentiable.
-{{% /MathEnv %}}
+
 {{% Proof %}}
 It is clear that 
 $$\begin{equation}
@@ -211,6 +214,58 @@ $$\begin{equation}
 \end{equation}$$
 so the C-R Equations are satisfied, but it is also clear that (although the partials exist) $ f $ is not $ \mathbb{R}^2 $-differentiable.
 {{% /Proof %}}
+{{% /MathEnv %}}
+
+{{% MathEnv "x" %}}
+(Ahlfors 1.2.1.) If $ g(w) $ and $ f(z) $ are holomorphic, show that $ g(f((z)) $ is also holomorphic.
+
+{{% Proof %}}
+Fix $ z_0 $ in the domain of $ g \circ f $. 
+Let $ h $ be small.
+Then:
+1. by our Landau's Little $ o $ notation exercise, $ f(z_0+h) = f(z_0) + f'(z_0)h + o(h) $ and similarly for $ g $,
+2. the facts that $ o(h) + o(h) = o(h) $ and $ o(ch) = o(h) $ for constant $ c $, and
+3. $ o(o(h)) = o(h) $,
+we get that:
+$$\begin{align}
+    g(f(z_0+h)) &= g(f(z_0) + \underbrace{f'(z_0)h + o(h)}_{(*)}) \\\\
+    &= g(f(z_0)) + g'(f(z_0))[f'(z_0) h + o(h)] \\\\
+    &\qquad+ o(f'(z_0)h + o(h)) \\\\
+    &= g(f(z_0)) + g'(f(z_0)) f'(z_0) h + o(h).
+\end{align}$$
+(Where we used (\*) to indicate what the small error term was in our expansion.)
+Thus we have shown $ g\circ f $ is holomorphic, with derivative $ g'(f(z_0))f'(z_0) $, by our Landau exercise.
+{{% /Proof %}}
+{{% /MathEnv %}}
+
+{{% MathEnv "x" %}}
+(Ahlfors 1.2.3.) Find the most general harmonic polynomial of the form $ ax^3 + bx^2 y + cxy^2 + dy^3 $. Determine the conjugate harmonic function and the corresponding holomorphic function by integration and by the formal method. 
+{{% /MathEnv %}}
+
+{{% MathEnv "x" %}}
+(Ahlfors 1.2.4.) Show that an holomorphic function cannot have a constant absolute value without reducing to a constant.
+{{% /MathEnv %}}
+
+
+{{% MathEnv "x" %}}
+(Ahlfors 1.2.4.) Prove rigorously that the function $ f(z) $ and $ \overline{f(\overline{z})} $ are simultaneously holomorphic.
+{{% /MathEnv %}}
+
+{{% MathEnv "x" %}}
+(Ahlfors 1.2.6.) Prove that the functions $ u(z) $ and $ u(\overline{z}) $ are simultaneously harmonic.
+{{% /MathEnv %}}
+
+{{% MathEnv "x" %}}
+(Ahlfoirs 1.2.7.) Show that a harmonic function satisfies the formal differential equation 
+$$\begin{equation}
+    \frac{\partial^2 u}{\partial z \partial \overline{z}} = 0.
+\end{equation}$$
+
+{{% /MathEnv %}}
+
+
+
+
 
 
 

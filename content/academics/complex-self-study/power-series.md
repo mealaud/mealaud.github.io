@@ -1,6 +1,6 @@
 ---
 title: "Power Series"
-date: 2024-03-30T00:15:11-07:00
+date: 2024-06-29T11:49:12-07:00
 draft: true
 type: "page"
 layout: "note"

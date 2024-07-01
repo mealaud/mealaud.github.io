@@ -2,8 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://localhost:1313/academics/unsorted/convex-hulls-and-concave-skulls/</loc>
+    <lastmod>2024-06-29T23:10:35-07:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2024-06-26T20:02:48-07:00</lastmod>
+    <lastmod>2024-06-29T23:10:35-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/academics/unsorted/</loc>
+    <lastmod>2024-06-29T22:48:18-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/academics/complex-self-study/power-series/</loc>
+    <lastmod>2024-06-29T11:49:12-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/academics/complex-self-study/complex-differentiation/</loc>
+    <lastmod>2024-06-29T11:48:12-07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/academics/test/</loc>
     <lastmod>2024-06-26T20:02:48-07:00</lastmod>
@@ -20,8 +32,8 @@
     <loc>http://localhost:1313/axioms/on-the-worth-of-my-word/</loc>
     <lastmod>2024-04-02T02:49:49-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/academics/complex-analysis/complex-differentiation/</loc>
-    <lastmod>2024-03-28T21:55:28-07:00</lastmod>
+    <loc>http://localhost:1313/academics/complex-self-study/</loc>
+    <lastmod>2024-03-28T17:52:25-07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/hobbies/writing/atlas-the-sanctity-of-the-heavens/</loc>
     <lastmod>2024-03-05T21:43:30-08:00</lastmod>
@@ -43,6 +55,9 @@
   </url><url>
     <loc>http://localhost:1313/hobbies/writing/of-mountains-and-shirts/</loc>
     <lastmod>2023-05-24T11:43:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/misc/</loc>
+    <lastmod>2023-05-21T21:46:25-07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/hobbies/rock-skipping/</loc>
     <lastmod>2023-05-21T20:30:06-07:00</lastmod>

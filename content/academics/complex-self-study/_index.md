@@ -1,10 +1,12 @@
 ---
-title: "Complex Analysis"
+title: "Complex Analysis Self Study"
 date: 2024-03-28T17:52:25-07:00
 draft: true
 type: "section"
 layout: "self-study"
 ---
+
+[Michael Taylor's Notes](https://mtaylor.web.unc.edu/wp-content/uploads/sites/16915/2018/04/complex.pdf)
 
 These are my notes on complex analysis! 
 I'm going to base them on three main sources: 

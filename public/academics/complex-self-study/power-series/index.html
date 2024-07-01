@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Power Series | mel-land</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="/css/style.css?2" type="text/css" media="all" />
+    <link rel="stylesheet" href="/css/theme.css?2" type="text/css" media="all" />
+    <link rel="stylesheet" href="/css/gallery.css?2" type="text/css" media="all" />
+    <link rel="stylesheet" href="/css/elements.css?2" type="text/css" media="all" />
+    <link rel="stylesheet" href="/css/math.css?2" type="text/css" media="all" />
+    <link rel="stylesheet" href="/css/search.css?2" type="text/css" media="all" />
+    
+    <script src="/js/gallery.js?2"></script>
+
+    
+    <link rel="stylesheet" href="/css/katex.min.css">
+<script defer="" src="/js/katex.min.js"></script>
+<script defer="" src="/js/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+            delimiters: [
+                {left: "$$", right: "$$", display: true},
+                {left: "$", right: "$", display: false},
+                {left: "\\[ ", right: "\\]", display: true},
+                {left: "\\(", right: "\\)", display: false},
+            ]
+        });
+    });
+</script>
+
+
+
+
+    
+    
+    <link rel="icon" href="/gruv-cropped-gortoutline.png"/>
+
+    </head>
+
+  <body>
+    <div id="main-wrapper" style="height: 100%; min-width: 35%; max-width: 100%; width: 700px; margin: auto">
+      <div id="content-wrapper">
+        
+  
+<div style="display: flex; height: 7.45em;">
+  <div style="height: 100%;">
+    <a class="logo" href="http://localhost:1313/">
+      
+      <img src="/gortoutline.png" style="filter: brightness(0) saturate(100%) invert(99%) sepia(3%) saturate(1032%) hue-rotate(327deg) brightness(98%) contrast(88%);" height=100%>
+    </a>
+  </div>
+  <div>&nbsp;</div>
+  <div style="width: 100%">
+    <div id="title-font">
+      <a href="http://localhost:1313/" style="text-decoration: none; color: var(--fg)">mel-land</a>
+    </div>
+    <div id="subtitle-font">
+      where the mel guy<br>
+      reigns supreme
+    </div>
+    <div id="navigation">
+      <ul class="nav-list">
+        
+          <li class="nav-item">
+            <a href="/academics/" style="text-decoration: none; font-weight: bold; font-size: 125%; color: var(--fg)">Academics</a>
+          </li>
+        
+          <li class="nav-item">
+            <a href="/hobbies/" style="text-decoration: none; font-weight: bold; font-size: 125%; color: var(--fg)">Hobbies</a>
+          </li>
+        
+          <li class="nav-item">
+            <a href="/axioms/" style="text-decoration: none; font-weight: bold; font-size: 125%; color: var(--fg)">Axioms</a>
+          </li>
+        
+          <li class="nav-item">
+            <a href="/about-me/" style="text-decoration: none; font-weight: bold; font-size: 125%; color: var(--fg)">About Me</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+        <article style="margin-top: 1em; padding-left: 0.5em;">
+          
+  <header>
+    <h1>Power Series<span style="opacity: 0.5; font-size: 0.5em">    Saturday, June 29, 2024</span></h1>
+  </header>
+  <p>As we will see later, a function is complex-differentiable iff it is complex-smooth iff it is analytic, so understanding power series will be very important.<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>
+This is why, even though we have not explored differentiability very much, we will study power series on their own.</p>
+<h2 id="convergence-in-disks">Convergence in disks</h2>
+<p>We first have to define two basic objects, open and closed disks.
+If $ z \in \mathbb{C} $ and $ r &gt; 0 $, then</p>
+<ol>
+<li>the <span class="tdf">open disk</span>
+is the set $ D(z,r) = \left \{ w \in \mathbb{C} : |z-w| &lt; r \right \}  $, and</li>
+<li>the <span class="tdf">closed disk</span>
+is the set $ \overline{D}(z,r) = \left \{ w \in \mathbb{C} : |z-w| \leq r \right \}  $.
+<br></li>
+</ol>
+<p>This notation is generally for $ r &lt; \infty $, but if $ r = \infty $, $ D(z, \infty) = \overline{D}(z,\infty) = \mathbb{C}  $, as one would expect.
+(This will become helpful very soon.)
+<br>
+<br></p>
+<p>It turns out that disks are the fundamental objects on which convergence happens (or doesn&rsquo;t happen).
+This is codified in the following series of results.</p>
+<link rel="stylesheet" href="/css/theme.css" type="text/css" media="all" />
+  <div class="math-env math-result math-lem"><span class="math-no-num"></span>
+    <span style="font-weight: normal; color: var(--fg);">
+Suppose $ \left \{ c_n \right \}_{n=0}^\infty \subseteq \mathbb{C} $, and define $ 0 \leq R \leq \infty $ by 
+$$\begin{equation}
+R = \sup \left \{ r \geq 0 : \text{the sequence } \left \{ c_n r^n \right \} \text{ is bounded} \right \} .
+\end{equation}$$
+Then the power series $\sum_{n=0}^{\infty}c_n (z-z_0)^n $ converges absolutely and uniformly on every compact subset of the disk $ D(z_0, R) $ and diverges at every point $ z $ with $ |z-z_0| > R $.
+</span> 
+  </div>
+<link rel="stylesheet" href="/css/theme.css" type="text/css" media="all" />
+  <div class="math-env math-rem"><span class="math-no-num"></span>
+    <span style="font-weight: normal; color: var(--fg);">
+Before we prove this, please note that for the purpose of power series, we identify $ 0^0 $ with $ 1 $. Moreover, "converges absolutely and uniformly" means $\sum_{n=0}^{\infty}|c_n (z-z_0)^n| $ converges uniformly.
+</span> 
+  </div>
+<p>Because of these properties of $ R $, we call $ R $ the <span class="tdf">radius of convergence</span>
+and $ D(z_0,R) $ is called the <span class="tdf">disk of convergence</span>
+.
+We now prove the claim.</p>
+<details id="math-pf">
+  <summary><i>Explanation</i></summary>
+  <div class="math-pf">
+<p>Suppose $ z \in \mathbb{C} $ is such that $ |z-z_0| &gt; R $.
+Then the sequence $ \left \{ c_n |z-z_0|^n \right \}_{n=0}^\infty  $ is unbounded, so its sum must diverge.
+<br>
+<br></p>
+<p>We now want to show that the power series converges absolutely and uniformly every compact subset of $ D(z_0, R) $.
+To this end, it suffices to show that the power series converges absolutely and uniformly on $ \overline{D}(z_0, r) $ for any choice of $ 0\leq r &lt; R $.
+So suppose $ z \in \overline{D}(z_0,r) $. Now taking some $ r &lt; \rho &lt; R $, $ |z-z_0| \leq r &lt; \rho $. Furthermore, because $ \rho &lt; R $, there exists some bound $ M &gt; 0 $ such that $ |c_n| \rho^n &lt; M $ for all $ n $. Hence,
+$$\begin{equation}
+|c_n(z-z_0)^n| \leq |c_n| r^n = |c_n| \rho^n \left ( \frac{ r }{ \rho } \right )^n \leq M \left ( \frac{ r }{ \rho } \right )^n.
+\end{equation}$$
+Since $ r &lt; \rho $, $ r/\rho &lt; 1 $, so $ M (r/\rho)^n \to 0 $ as $ n \to \infty $ as desired.</p>
+  </div>
+</details>
+<p>There is also a more common definition of the radius of convergence: $ R = \liminf_{n \to \infty} |c_n|^{-1/n}  $.
+This is equal to our definition, but to me it feels more opaque and harder to use than our supremum definition of the radius of convergence.</p>
+<h2 id="differentiation-of-power-series">Differentiation of power series</h2>
+<p>This works as you expect (in the radius of convergence).</p>
+<link rel="stylesheet" href="/css/theme.css" type="text/css" media="all" />
+  <div class="math-env math-result math-thm"><span class="math-no-num"></span>
+    <span style="font-weight: normal; color: var(--fg);">
+Suppose that the power series $\sum_{n=0}^{\infty}c_n (z-z_0)^n $ has radius of convergence $ R > 0 $. Then the function $ f(z) =\sum_{n=0}^{\infty}c_n (z-z_0)^n $ is differentiable in the disk $ D(z_0, R) $, with derivative given by 
+$$\begin{equation}
+    f'(z) =\sum_{n=1}^{\infty}n c_n (z-z_0)^{n-1} =\sum_{n=0}^{\infty}(n+1)c_{n+1} (z-z_0)^n.
+\end{equation}$$
+</span> 
+  </div>
+<p>But this was not immediately clear to me how to prove this, so I&rsquo;m going to spell it out here.
+<br>
+<br></p>
+<p>Our general strategy is the following:</p>
+<ol>
+<li>show that the term-by-term differentiated power series has the same radius of convergence;</li>
+<li>show that the partial sums of the power series differentiated converge to the term-by-term differentiated power series uniformly; and</li>
+<li>apply the previous steps to get our conclusion.</li>
+</ol>
+<link rel="stylesheet" href="/css/theme.css" type="text/css" media="all" />
+  <div class="math-env math-result math-lem"><span class="math-no-num"></span>
+    <span style="font-weight: normal; color: var(--fg);">
+(Ratio Test for Sequences)
+If $ \left \{ a_n \right \}_1^\infty  \subseteq \mathbb{C} $, 
+$$\begin{equation}
+    \lim_{n \to \infty}\left | \frac{ a_{n+1} }{ a_n } \right | < 1 \implies \lim_{n \to \infty} |a_n| = 0.
+\end{equation}$$
+</span> 
+  </div>
+<link rel="stylesheet" href="/css/theme.css" type="text/css" media="all" />
+  <div class="math-env math-rem"><span class="math-no-num"></span>
+    <span style="font-weight: normal; color: var(--fg);">
+This is a strictly weaker result than the usual ratio test for series, but we only need a weaker case like this for my proof.
+</span> 
+  </div>
+<details id="math-pf">
+  <summary><i>Explanation</i></summary>
+  <div class="math-pf">
+<p>Let $ \lim |a_{n+1}/a_n| = r &lt; 1 $.
+Let $ \varepsilon &gt; 0 $ be small enough so that $ \varepsilon &lt; (1-r)/4 $.
+Then there exists $ N \in \mathbb{N} $ such that $ r - \varepsilon &lt; |a_{n+1}/a_n| &lt; r + \varepsilon $ for all $ n \geq N $. In particular,
+$$\begin{equation}
+|a_{n+1}| &lt; (r+\varepsilon) |a_n| \quad \text{so that} \quad |a_n| &lt; |a_N| (r+\varepsilon)^{n-N}.
+\end{equation}$$
+Noting that $ r+\varepsilon &lt; 1 $, it becomes clear that for sufficiently large $ n $, the RHS shrinks to be smaller than $ \varepsilon $ as desired.</p>
+  </div>
+</details>
+<link rel="stylesheet" href="/css/theme.css" type="text/css" media="all" />
+  <div class="math-env math-result math-lem"><span class="math-no-num"></span>
+    <span style="font-weight: normal; color: var(--fg);">
+If $ \left \{ a_n \right \} _0^\infty $ is a sequence of complex numbers and the power series $\sum_{n=0}^{\infty} a_n (z-z_0)^n $ has radius of convergence $ R $, then the power series $\sum_{n=1}^{\infty} n a_n (z-z_0)^{n-1} $ also has radius of convergence $ R $.
+</span> 
+  </div>
+<details id="math-pf">
+  <summary><i>Explanation</i></summary>
+  <div class="math-pf">
+<p>Without loss of generality, suppose that $ z_0 = 0 $.
+Now, consider $ |z| &lt; R $.
+Then, taking some $ \rho \in (|z| , R) $, we have $ r \coloneqq |z|/\rho &lt; 1 $.
+We now analyze the terms of the sequence:
+$$\begin{align}
+\left | n a_n z^{n-1} \right | &amp;= n |a_n| |z|^{n-1} \\
+&amp;= n |a_n| \rho^n/\rho r^{n-1} \\
+&amp;= \rho \cdot \underbrace{|a_n \rho^n|}_{(*)} \cdot \underbrace{nr^{n-1}}_{(\dagger)}
+\end{align}$$
+By the ratio test for sequences (the previous lemma), $ (\dagger) $ converges to $ 0 $ and hence is bounded by some $ M &gt; 0 $.
+Then by the definition of radius of convergence, the power series $ \sum n a_n z^{n-1} $ converges absolutely.
+What remains to be shown is that if $ |z| &gt; R $, $ \sum n a_n z^{n-1} $ diverges.
+<br>
+<br></p>
+<p>Suppose $ |z| &gt; R $ and recall that $ \sum a_n z^n $ diverges.
+Now notice that
+$$\begin{equation}
+| n a_n z^{n-1}| \geq \frac{ |a_n z^n| }{ |z| },
+\end{equation}$$
+so it follows from the comparison test that the series $ \sum n a_n z^{n-1} $ diverges.
+<br>
+<br></p>
+<p>Thus the series $\sum_{n=1}^{\infty}n a_n z^{n-1} $ has radius of convergence $ R $.</p>
+  </div>
+</details>
+<link rel="stylesheet" href="/css/theme.css" type="text/css" media="all" />
+  <div class="math-env math-result math-lem"><span class="math-no-num"></span>
+    <span style="font-weight: normal; color: var(--fg);">
+Suppose $ \left \{ f_n \right \}  $ is a sequence of $ \mathbb{C} $-valued complex-differentiable functions on an open set $ \Omega \subseteq \mathbb{C} $ such that:
+<br>
+<ol>
+<li>for all $ w_0 \in \Omega $, the sequence $ \left \{ f_n(w_0) \right \}  $ is convergent; and</li>
+<li>the sequence of derivatives $ \left \{ f_n^\prime \right \}  $ is uniformly convergent.
+<br></li>
+</ol>
+<p>Then $ \left \{ f_n \right \}  $ converges uniformly to a function differentiable on $ \Omega $.
+</span></p>
+  </div>
+<details id="math-pf">
+  <summary><i>Explanation</i></summary>
+  <div class="math-pf">
+<p>Define $ f \colon \Omega \to \mathbb{C} $ by
+$$\begin{equation}
+f(z) = \lim_{n \to \infty} f_n(z).
+\end{equation}$$
+Furthermore, let $ g \colon \Omega \to \mathbb{C} $ be the uniform limit of $ \left \{ f_n^\prime \right \}  $.
+We claim that: 1) $ f_n \to f $ uniformly, and 2) $ f $ is differentiable and $ f^\prime = g $.
+<br>
+<br></p>
+<p>We first show that $ f&rsquo;(z) = g(z) $ for all $ z \in \Omega $.
+If $ h \in \mathbb{C} $ is small enough so that $ |h| &lt; AAAAAAAAA $,
+$$\begin{align}
+\left | \frac{ f(z+h) - f(z) }{ h } - g(z) \right | &amp;\leq
+\left | \frac{ f(z+h) - f(z) }{ h } - \frac{ f_N(z+h) - f_N(z) }{ h } \right | \\
+&amp;\quad+ \left | \frac{ f_N(z+h) - f_N(z) }{ h } - f_N^\prime(z) \right | \\
+&amp;\quad+ \left | f_N^\prime(z) - g(z) \right | \\
+&amp;=
+\end{align}$$</p>
+  </div>
+</details>
+<link rel="stylesheet" href="/css/theme.css" type="text/css" media="all" />
+  <div class="math-env math-result math-thm"><span class="math-no-num"></span>
+    <span style="font-weight: normal; color: var(--fg);">
+Suppose the power series 
+$$\begin{equation}
+    f(x) =\sum_{n=0}^{\infty}a_n (z-z_0)^n \quad \text{for} \quad |z-z_0| < R
+\end{equation}$$
+has radius of convergence $ R > 0 $. Then $ f $ is differentiable in $ |z-z_0| < R $ and ha derivative 
+$$\begin{equation}
+    f^\prime (x) =\sum_{n=1}^{\infty}n a_n z^{n-1} \quad \text{for} \quad |z-z_0| < R.
+\end{equation}$$
+</span> 
+  </div>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>This is incredible because these are very much on the case on the real line! Indeed, there are functions are once differentiable but not twice (let alone infinitely-many times), and there are functions which are smooth but are not analytic.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+
+
+        </article>
+      </div>
+      
+  <footer>
+  <div style="height: 5vh;"></div>
+	<div style="text-align: center;"><p>&copy;2023-2024 Mealaud Mokhtarzad</p></div>
+</footer>
+
+
+    </div>
+  </body>
+</html>
+

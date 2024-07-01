@@ -112,7 +112,7 @@ p {
   /* counter-increment: math-count; */
   color: var(--example-border);
   font-weight: bold;
-  content: "Example";
+  content: "Example.";
 }
 
 /* upshot */
@@ -140,6 +140,12 @@ p {
   text-align: right;
   float: right;
 }
+/* details > summary { */
+/*   list-style-type: ' '; */
+/* } */
+/* details[open] > summary { */
+/*   list-style-type: ' '; */
+/* } */
 
 /* exercise */
 .math-x {
