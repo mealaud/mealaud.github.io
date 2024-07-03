@@ -10,14 +10,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="/css/style.css?2" type="text/css" media="all" />
-    <link rel="stylesheet" href="/css/theme.css?2" type="text/css" media="all" />
-    <link rel="stylesheet" href="/css/gallery.css?2" type="text/css" media="all" />
-    <link rel="stylesheet" href="/css/elements.css?2" type="text/css" media="all" />
-    <link rel="stylesheet" href="/css/math.css?2" type="text/css" media="all" />
-    <link rel="stylesheet" href="/css/search.css?2" type="text/css" media="all" />
+    <link rel="stylesheet" href="/css/style.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/css/theme.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/css/gallery.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/css/elements.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/css/math.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/css/search.css" type="text/css" media="all" />
     
-    <script src="/js/gallery.js?2"></script>
+    <script src="/js/gallery.js"></script>
 
     
     <link rel="stylesheet" href="/css/katex.min.css">
@@ -166,21 +166,18 @@ A quick way to recall these is by thinking about how matching indices are positi
 <br>
 <br></p>
 <p>From this we also get a nice (and hopefully clear) consequence of the C-R Equations being satisfied: equivalence to complex differentiability!</p>
-<link rel="stylesheet" href="/css/theme.css" type="text/css" media="all" />
-  <div class="math-env math-result math-prop"><span class="math-no-num"></span>
-    <span style="font-weight: normal; color: var(--fg);">
-Suppose $ V \subseteq \mathbb{C} $ is open and that $ z \in V $. 
-Then if $ f = u + iv $ is complex-differentiable at $ z $ if and only if the corresponding $ \mathbb{R}^2 \to \mathbb{R}^2 $ map is differentiable and the C-R Equations are satisfied.
-</span> 
-  </div>
+<div class="math-env math-result math-prop">
+<p>Suppose $ V \subseteq \mathbb{C} $ is open and that $ z \in V $.
+Then if $ f = u + iv $ is complex-differentiable at $ z $ if and only if the corresponding $ \mathbb{R}^2 \to \mathbb{R}^2 $ map is differentiable and the C-R Equations are satisfied.</p>
+</div>
 <h3 id="an-important-example">An important example</h3>
-<link rel="stylesheet" href="/css/theme.css" type="text/css" media="all" />
-  <div class="math-env math-ex">
+<div class="math-practice math-ex">
 <p>There are functions which are real-differentiable but NOT complex-differentiable.</p>
+</div>
 <details id="math-pf">
-  <summary><i>Explanation</i></summary>
+  <summary><i>Solution</i></summary>
   <div class="math-pf">
-    <p>Take for example: $ f(x+iy) = x $. We can then identify $ f $ with the function $ F(x,y) = x $. Clearly, then,
+<p>Take for example: $ f(x+iy) = x $. We can then identify $ f $ with the function $ F(x,y) = x $. Clearly, then,
 $$\begin{equation}
 DF =
 \begin{pmatrix}
@@ -191,10 +188,8 @@ DF =
 Hence the C-R Equations are not satisfied and our function, although real-differentiable, is NOT complex-differentiable.</p>
   </div>
 </details>
-  </div>
 <h2 id="exercises">Exercises</h2>
-<link rel="stylesheet" href="/css/theme.css" type="text/css" media="all" />
-  <div class="math-env math-x">
+<div class="math-practice math-x">
 <p>Suppose that $ f $ is defined in a neighborhood of the complex number $ z $.
 Show that $ f $ is complex-differentiable at $ z $ if and only if there exists a complex number $ a $ such that
 $$\begin{equation}
@@ -209,10 +204,11 @@ $$\begin{equation}
 \lim_{h \to 0} \frac{ \left | E(h) \right |  }{ \left | h \right |  } = 0.
 \end{equation}$$
 This is also just good to know in general.)</p>
+</div>
 <details id="math-pf">
-  <summary><i>Explanation</i></summary>
+  <summary><i>Solution</i></summary>
   <div class="math-pf">
-    <p>($\Rightarrow$)
+<p>($\Rightarrow$)
 Suppose $ f $ is complex-differentiable at $ z $.
 Then there exists a complex number $ a $ such that for all $ \varepsilon &gt; 0 $, there exists $ \delta &gt; 0 $ such that
 $$\begin{equation}
@@ -258,20 +254,16 @@ $$\begin{equation}
 so $ f $ is complex-differentiable at $ z $ as desired.</p>
   </div>
 </details>
-  </div>
-<link rel="stylesheet" href="/css/theme.css" type="text/css" media="all" />
-  <div class="math-env math-rem"><span class="math-no-num"></span>
-    <span style="font-weight: normal; color: var(--fg);">
-Note that this is just regular $ \mathbb{R}^2 $-differentiability but requiring our linear map (that approximates the growth of the function) to be a complex number, i.e., forcing the matrix to satisfy the C-R Equations.
-</span> 
-  </div>
-<link rel="stylesheet" href="/css/theme.css" type="text/css" media="all" />
-  <div class="math-env math-x">
+<div class="math-env math-rem">
+<p>Note that this is just regular $ \mathbb{R}^2 $-differentiability but requiring our linear map (that approximates the growth of the function) to be a complex number, i.e., forcing the matrix to satisfy the C-R Equations.</p>
+</div>
+<div class="math-practice math-x">
 <p>Suppose that $ f $ is complex-differentiable at $ z $. Show that $ f $ is continuous at $ z $.</p>
+</div>
 <details id="math-pf">
-  <summary><i>Explanation</i></summary>
+  <summary><i>Solution</i></summary>
   <div class="math-pf">
-    <p>Suppose that $ f $ is complex-differentiable at $ z $.
+<p>Suppose that $ f $ is complex-differentiable at $ z $.
 Let $ \varepsilon &gt; 0 $ be smaller than $ 1 $.
 Then there exists some $ 0 &lt; \delta &lt; 1 $ such that
 $$\begin{equation}
@@ -289,9 +281,7 @@ $$\begin{align}
 so $ f $ is continuous! :)</p>
   </div>
 </details>
-  </div>
-<link rel="stylesheet" href="/css/theme.css" type="text/css" media="all" />
-  <div class="math-env math-x">
+<div class="math-practice math-x">
 <p>Define $ f \colon \mathbb{C} \to \mathbb{C} $ by
 $$\begin{equation}
 f(x+iy) =
@@ -305,24 +295,24 @@ Show that $ f $ satisfies the Cauchy-Riemann equations at the origin even though
 <br>
 <br></p>
 <p><em>Hint.</em> By our if and only if from earlier, this function must then fail to be a $ \mathbb{R}^2 $-differentiable.</p>
+</div>
 <details id="math-pf">
-  <summary><i>Explanation</i></summary>
+  <summary><i>Solution</i></summary>
   <div class="math-pf">
-    <p>It is clear that
+<p>It is clear that
 $$\begin{equation}
 u_x(0,0) = 0 = v_y(0,0) \quad \text{and} \quad u_y(0,0) = 0 = -v_x(0,0),
 \end{equation}$$
 so the C-R Equations are satisfied, but it is also clear that (although the partials exist) $ f $ is not $ \mathbb{R}^2 $-differentiable.</p>
   </div>
 </details>
-  </div>
-<link rel="stylesheet" href="/css/theme.css" type="text/css" media="all" />
-  <div class="math-env math-x">
+<div class="math-practice math-x">
 <p>(Ahlfors 1.2.1.) If $ g(w) $ and $ f(z) $ are holomorphic, show that $ g(f((z)) $ is also holomorphic.</p>
+</div>
 <details id="math-pf">
-  <summary><i>Explanation</i></summary>
+  <summary><i>Solution</i></summary>
   <div class="math-pf">
-    <p>Fix $ z_0 $ in the domain of $ g \circ f $.
+<p>Fix $ z_0 $ in the domain of $ g \circ f $.
 Let $ h $ be small.
 Then:</p>
 <ol>
@@ -341,30 +331,59 @@ Thus we have shown $ g\circ f $ is holomorphic, with derivative $ g&rsquo;(f(z_0
 </ol>
   </div>
 </details>
-  </div>
-<link rel="stylesheet" href="/css/theme.css" type="text/css" media="all" />
-  <div class="math-env math-x">
+<div class="math-practice math-x">
 <p>(Ahlfors 1.2.3.) Find the most general harmonic polynomial of the form $ ax^3 + bx^2 y + cxy^2 + dy^3 $. Determine the conjugate harmonic function and the corresponding holomorphic function by integration and by the formal method.</p>
-  </div>
-<link rel="stylesheet" href="/css/theme.css" type="text/css" media="all" />
-  <div class="math-env math-x">
+</div>
+<div class="math-practice math-x">
 <p>(Ahlfors 1.2.4.) Show that an holomorphic function cannot have a constant absolute value without reducing to a constant.</p>
+</div>
+<details id="math-pf">
+  <summary><i>Solution</i></summary>
+  <div class="math-pf">
+<p>Suppose $ f $ is holomorphic and that $ f $ has constant magnitude $ c \in \mathbb{R} $.
+Without loss of generality, suppose $ c \neq 0 $.
+<br>
+<br></p>
+<p>Recall that if $ f = u + iv $, $ |f|^2 = u^2 + v^2 $.
+Moreover, note that $ |f| $ is constant iff $ |f|^2 $ is constant.
+Thus, we henceforth study $ |f|^2 $ in place of $ |f| $.</p>
+<p>First observe that we then have that
+$$\begin{equation}
+\frac{\mathrm d (u^2+v^2)}{\mathrm d x} = 0 \quad \text{and} \quad \frac{\mathrm d (u^2+v^2)}{\mathrm d y} = 0.
+\end{equation}$$
+We then get two equations:
+$$\begin{equation}
+\begin{cases}
+u u_x + v v_x &amp;= 0 \\
+u u_y + v v_y &amp;= 0
+\end{cases}
+\end{equation}$$
+which becomes
+$$\begin{equation}
+\begin{cases}
+u^2 u_x + uv v_x &amp;= 0 \\
+-uv v_x + v^2 u_x &amp;= 0
+\end{cases}
+\end{equation}$$
+after using the C-R Equations and multiplying by $ u $ and $ v $.
+Summing these two equations, we get that
+$$\begin{equation}
+0= (u^2+v^2)u_x = c u_x
+\end{equation}$$
+so that $ u_x = 0 $.
+Similarly, if we run the same argument with the function $ g(z) = f(iz) $, we get that $ u_y = 0 $.
+Then by the C-R Equations, $ f&rsquo;(z)=0 $, and we are done.</p>
   </div>
-<link rel="stylesheet" href="/css/theme.css" type="text/css" media="all" />
-  <div class="math-env math-x">
-<p>(Ahlfors 1.2.4.) Prove rigorously that the function $ f(z) $ and $ \overline{f(\overline{z})} $ are simultaneously holomorphic.</p>
-  </div>
-<link rel="stylesheet" href="/css/theme.css" type="text/css" media="all" />
-  <div class="math-env math-x">
-<p>(Ahlfors 1.2.6.) Prove that the functions $ u(z) $ and $ u(\overline{z}) $ are simultaneously harmonic.</p>
-  </div>
-<link rel="stylesheet" href="/css/theme.css" type="text/css" media="all" />
-  <div class="math-env math-x">
+</details>
+<div class="math-practice math-x">
+<p>(Ahlfors 1.2.5.) Prove rigorously that the function $ f(z) $ and $ \overline{f(\overline{z})} $ are simultaneously holomorphic.</p>
+</div>
+<div class="math-practice math-x">
 <p>(Ahlfoirs 1.2.7.) Show that a harmonic function satisfies the formal differential equation
 $$\begin{equation}
 \frac{\partial^2 u}{\partial z \partial \overline{z}} = 0.
 \end{equation}$$</p>
-  </div>
+</div>
 <div class="footnotes" role="doc-endnotes">
 <hr>
 <ol>

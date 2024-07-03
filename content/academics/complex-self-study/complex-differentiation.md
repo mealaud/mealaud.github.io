@@ -4,7 +4,7 @@ date: 2024-06-29T11:48:12-07:00
 draft: false
 type: "page"
 layout: "note"
-summary: "An introduction to complex differentiability and some explanation for why it's so strong."
+summary: "An introduction to complex differentiability and some explanation for why it's so strong. Plus some exercises."
 ---
 
 If $ V \subseteq \mathbb{C} $ is open, we say a function $ f \colon V \to \mathbb{C} $ is {{% tdf "complex-differentiable" %}}, or {{% tdf "holomorphic" %}}, at a point $ z \in V $ if the usual difference quotient converges. That is, 
@@ -86,7 +86,7 @@ Then if $ f = u + iv $ is complex-differentiable at $ z $ if and only if the cor
 ### An important example
 {{% MathEnv "ex" %}}
 There are functions which are real-differentiable but NOT complex-differentiable.
-
+{{% /MathEnv %}}
 {{% Proof %}}
 Take for example: $ f(x+iy) = x $. We can then identify $ f $ with the function $ F(x,y) = x $. Clearly, then, 
 $$\begin{equation}
@@ -98,7 +98,6 @@ $$\begin{equation}
 \end{equation}$$
 Hence the C-R Equations are not satisfied and our function, although real-differentiable, is NOT complex-differentiable.
 {{% /Proof %}}
-{{% /MathEnv %}}
 
 ## Exercises
 {{% MathEnv "x" %}}
@@ -116,7 +115,7 @@ $$\begin{equation}
     \lim_{h \to 0} \frac{ \left | E(h) \right |  }{ \left | h \right |  } = 0.
 \end{equation}$$
 This is also just good to know in general.)
-
+{{% /MathEnv %}}
 {{% Proof %}}
 ($\Rightarrow$) 
 Suppose $ f $ is complex-differentiable at $ z $. 
@@ -163,14 +162,13 @@ $$\begin{equation}
 \end{equation}$$
 so $ f $ is complex-differentiable at $ z $ as desired.
 {{% /Proof %}}
-{{% /MathEnv %}}
 {{% MathEnv "rem" %}}
 Note that this is just regular $ \mathbb{R}^2 $-differentiability but requiring our linear map (that approximates the growth of the function) to be a complex number, i.e., forcing the matrix to satisfy the C-R Equations.
 {{% /MathEnv %}}
 
 {{% MathEnv "x" %}}
 Suppose that $ f $ is complex-differentiable at $ z $. Show that $ f $ is continuous at $ z $.
-
+{{% /MathEnv %}}
 {{% Proof %}}
 Suppose that $ f $ is complex-differentiable at $ z $.
 Let $ \varepsilon > 0 $ be smaller than $ 1 $. 
@@ -189,8 +187,6 @@ $$\begin{align}
 \end{align}$$
 so $ f $ is continuous! :) 
 {{% /Proof %}}
-{{% /MathEnv %}}
-
 
 {{% MathEnv "x" %}}
 Define $ f \colon \mathbb{C} \to \mathbb{C} $ by 
@@ -206,7 +202,7 @@ Show that $ f $ satisfies the Cauchy-Riemann equations at the origin even though
 {{%nl%}}{{%nl%}}
 
 _Hint._ By our if and only if from earlier, this function must then fail to be a $ \mathbb{R}^2 $-differentiable.
-
+{{% /MathEnv %}}
 {{% Proof %}}
 It is clear that 
 $$\begin{equation}
@@ -214,11 +210,10 @@ $$\begin{equation}
 \end{equation}$$
 so the C-R Equations are satisfied, but it is also clear that (although the partials exist) $ f $ is not $ \mathbb{R}^2 $-differentiable.
 {{% /Proof %}}
-{{% /MathEnv %}}
 
 {{% MathEnv "x" %}}
 (Ahlfors 1.2.1.) If $ g(w) $ and $ f(z) $ are holomorphic, show that $ g(f((z)) $ is also holomorphic.
-
+{{% /MathEnv %}}
 {{% Proof %}}
 Fix $ z_0 $ in the domain of $ g \circ f $. 
 Let $ h $ be small.
@@ -236,8 +231,6 @@ $$\begin{align}
 (Where we used (\*) to indicate what the small error term was in our expansion.)
 Thus we have shown $ g\circ f $ is holomorphic, with derivative $ g'(f(z_0))f'(z_0) $, by our Landau exercise.
 {{% /Proof %}}
-{{% /MathEnv %}}
-
 {{% MathEnv "x" %}}
 (Ahlfors 1.2.3.) Find the most general harmonic polynomial of the form $ ax^3 + bx^2 y + cxy^2 + dy^3 $. Determine the conjugate harmonic function and the corresponding holomorphic function by integration and by the formal method. 
 {{% /MathEnv %}}
@@ -245,14 +238,45 @@ Thus we have shown $ g\circ f $ is holomorphic, with derivative $ g'(f(z_0))f'(z
 {{% MathEnv "x" %}}
 (Ahlfors 1.2.4.) Show that an holomorphic function cannot have a constant absolute value without reducing to a constant.
 {{% /MathEnv %}}
+{{% Proof %}}
+Suppose $ f $ is holomorphic and that $ f $ has constant magnitude $ c \in \mathbb{R} $.
+Without loss of generality, suppose $ c \neq 0 $. 
+{{%nl%}}{{%nl%}}
 
+Recall that if $ f = u + iv $, $ |f|^2 = u^2 + v^2 $. 
+Moreover, note that $ |f| $ is constant iff $ |f|^2 $ is constant. 
+Thus, we henceforth study $ |f|^2 $ in place of $ |f| $. 
+
+First observe that we then have that 
+$$\begin{equation}
+    \frac{\mathrm d (u^2+v^2)}{\mathrm d x} = 0 \quad \text{and} \quad \frac{\mathrm d (u^2+v^2)}{\mathrm d y} = 0.
+\end{equation}$$
+We then get two equations: 
+$$\begin{equation}
+    \begin{cases}
+        u u_x + v v_x &= 0 \\\\
+        u u_y + v v_y &= 0
+    \end{cases}
+\end{equation}$$
+which becomes
+$$\begin{equation}
+    \begin{cases}
+        u^2 u_x + uv v_x &= 0 \\\\
+        -uv v_x + v^2 u_x &= 0
+    \end{cases}
+\end{equation}$$
+after using the C-R Equations and multiplying by $ u $ and $ v $. 
+Summing these two equations, we get that 
+$$\begin{equation}
+    0= (u^2+v^2)u_x = c u_x 
+\end{equation}$$
+so that $ u_x = 0 $. 
+Similarly, if we run the same argument with the function $ g(z) = f(iz) $, we get that $ u_y = 0 $. 
+Then by the C-R Equations, $ f'(z)=0 $, and we are done.
+{{% /Proof %}}
 
 {{% MathEnv "x" %}}
-(Ahlfors 1.2.4.) Prove rigorously that the function $ f(z) $ and $ \overline{f(\overline{z})} $ are simultaneously holomorphic.
-{{% /MathEnv %}}
-
-{{% MathEnv "x" %}}
-(Ahlfors 1.2.6.) Prove that the functions $ u(z) $ and $ u(\overline{z}) $ are simultaneously harmonic.
+(Ahlfors 1.2.5.) Prove rigorously that the function $ f(z) $ and $ \overline{f(\overline{z})} $ are simultaneously holomorphic.
 {{% /MathEnv %}}
 
 {{% MathEnv "x" %}}

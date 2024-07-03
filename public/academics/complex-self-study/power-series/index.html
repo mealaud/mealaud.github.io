@@ -10,14 +10,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="/css/style.css?2" type="text/css" media="all" />
-    <link rel="stylesheet" href="/css/theme.css?2" type="text/css" media="all" />
-    <link rel="stylesheet" href="/css/gallery.css?2" type="text/css" media="all" />
-    <link rel="stylesheet" href="/css/elements.css?2" type="text/css" media="all" />
-    <link rel="stylesheet" href="/css/math.css?2" type="text/css" media="all" />
-    <link rel="stylesheet" href="/css/search.css?2" type="text/css" media="all" />
+    <link rel="stylesheet" href="/css/style.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/css/theme.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/css/gallery.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/css/elements.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/css/math.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/css/search.css" type="text/css" media="all" />
     
-    <script src="/js/gallery.js?2"></script>
+    <script src="/js/gallery.js"></script>
 
     
     <link rel="stylesheet" href="/css/katex.min.css">
@@ -114,28 +114,22 @@ is the set $ \overline{D}(z,r) = \left \{ w \in \mathbb{C} : |z-w| \leq r \right
 <br></p>
 <p>It turns out that disks are the fundamental objects on which convergence happens (or doesn&rsquo;t happen).
 This is codified in the following series of results.</p>
-<link rel="stylesheet" href="/css/theme.css" type="text/css" media="all" />
-  <div class="math-env math-result math-lem"><span class="math-no-num"></span>
-    <span style="font-weight: normal; color: var(--fg);">
-Suppose $ \left \{ c_n \right \}_{n=0}^\infty \subseteq \mathbb{C} $, and define $ 0 \leq R \leq \infty $ by 
+<div class="math-env math-result math-lem">
+<p>Suppose $ \left { c_n \right }<em>{n=0}^\infty \subseteq \mathbb{C} $, and define $ 0 \leq R \leq \infty $ by
 $$\begin{equation}
-R = \sup \left \{ r \geq 0 : \text{the sequence } \left \{ c_n r^n \right \} \text{ is bounded} \right \} .
+R = \sup \left { r \geq 0 : \text{the sequence } \left { c_n r^n \right } \text{ is bounded} \right } .
 \end{equation}$$
-Then the power series $\sum_{n=0}^{\infty}c_n (z-z_0)^n $ converges absolutely and uniformly on every compact subset of the disk $ D(z_0, R) $ and diverges at every point $ z $ with $ |z-z_0| > R $.
-</span> 
-  </div>
-<link rel="stylesheet" href="/css/theme.css" type="text/css" media="all" />
-  <div class="math-env math-rem"><span class="math-no-num"></span>
-    <span style="font-weight: normal; color: var(--fg);">
-Before we prove this, please note that for the purpose of power series, we identify $ 0^0 $ with $ 1 $. Moreover, "converges absolutely and uniformly" means $\sum_{n=0}^{\infty}|c_n (z-z_0)^n| $ converges uniformly.
-</span> 
-  </div>
+Then the power series $\sum</em>{n=0}^{\infty}c_n (z-z_0)^n $ converges absolutely and uniformly on every compact subset of the disk $ D(z_0, R) $ and diverges at every point $ z $ with $ |z-z_0| &gt; R $.</p>
+</div>
+<div class="math-env math-rem">
+<p>Before we prove this, please note that for the purpose of power series, we identify $ 0^0 $ with $ 1 $. Moreover, &ldquo;converges absolutely and uniformly&rdquo; means $\sum_{n=0}^{\infty}|c_n (z-z_0)^n| $ converges uniformly.</p>
+</div>
 <p>Because of these properties of $ R $, we call $ R $ the <span class="tdf">radius of convergence</span>
 and $ D(z_0,R) $ is called the <span class="tdf">disk of convergence</span>
 .
 We now prove the claim.</p>
 <details id="math-pf">
-  <summary><i>Explanation</i></summary>
+  <summary><i>Solution</i></summary>
   <div class="math-pf">
 <p>Suppose $ z \in \mathbb{C} $ is such that $ |z-z_0| &gt; R $.
 Then the sequence $ \left \{ c_n |z-z_0|^n \right \}_{n=0}^\infty  $ is unbounded, so its sum must diverge.
@@ -154,15 +148,12 @@ Since $ r &lt; \rho $, $ r/\rho &lt; 1 $, so $ M (r/\rho)^n \to 0 $ as $ n \to \
 This is equal to our definition, but to me it feels more opaque and harder to use than our supremum definition of the radius of convergence.</p>
 <h2 id="differentiation-of-power-series">Differentiation of power series</h2>
 <p>This works as you expect (in the radius of convergence).</p>
-<link rel="stylesheet" href="/css/theme.css" type="text/css" media="all" />
-  <div class="math-env math-result math-thm"><span class="math-no-num"></span>
-    <span style="font-weight: normal; color: var(--fg);">
-Suppose that the power series $\sum_{n=0}^{\infty}c_n (z-z_0)^n $ has radius of convergence $ R > 0 $. Then the function $ f(z) =\sum_{n=0}^{\infty}c_n (z-z_0)^n $ is differentiable in the disk $ D(z_0, R) $, with derivative given by 
+<div class="math-env math-result math-thm">
+<p>Suppose that the power series $\sum_{n=0}^{\infty}c_n (z-z_0)^n $ has radius of convergence $ R &gt; 0 $. Then the function $ f(z) =\sum_{n=0}^{\infty}c_n (z-z_0)^n $ is differentiable in the disk $ D(z_0, R) $, with derivative given by
 $$\begin{equation}
-    f'(z) =\sum_{n=1}^{\infty}n c_n (z-z_0)^{n-1} =\sum_{n=0}^{\infty}(n+1)c_{n+1} (z-z_0)^n.
-\end{equation}$$
-</span> 
-  </div>
+f&rsquo;(z) =\sum_{n=1}^{\infty}n c_n (z-z_0)^{n-1} =\sum_{n=0}^{\infty}(n+1)c_{n+1} (z-z_0)^n.
+\end{equation}$$</p>
+</div>
 <p>But this was not immediately clear to me how to prove this, so I&rsquo;m going to spell it out here.
 <br>
 <br></p>
@@ -172,24 +163,18 @@ $$\begin{equation}
 <li>show that the partial sums of the power series differentiated converge to the term-by-term differentiated power series uniformly; and</li>
 <li>apply the previous steps to get our conclusion.</li>
 </ol>
-<link rel="stylesheet" href="/css/theme.css" type="text/css" media="all" />
-  <div class="math-env math-result math-lem"><span class="math-no-num"></span>
-    <span style="font-weight: normal; color: var(--fg);">
-(Ratio Test for Sequences)
-If $ \left \{ a_n \right \}_1^\infty  \subseteq \mathbb{C} $, 
+<div class="math-env math-result math-lem">
+<p>(Ratio Test for Sequences)
+If $ \left { a_n \right }<em>1^\infty  \subseteq \mathbb{C} $,
 $$\begin{equation}
-    \lim_{n \to \infty}\left | \frac{ a_{n+1} }{ a_n } \right | < 1 \implies \lim_{n \to \infty} |a_n| = 0.
-\end{equation}$$
-</span> 
-  </div>
-<link rel="stylesheet" href="/css/theme.css" type="text/css" media="all" />
-  <div class="math-env math-rem"><span class="math-no-num"></span>
-    <span style="font-weight: normal; color: var(--fg);">
-This is a strictly weaker result than the usual ratio test for series, but we only need a weaker case like this for my proof.
-</span> 
-  </div>
+\lim</em>{n \to \infty}\left | \frac{ a_{n+1} }{ a_n } \right | &lt; 1 \implies \lim_{n \to \infty} |a_n| = 0.
+\end{equation}$$</p>
+</div>
+<div class="math-env math-rem">
+<p>This is a strictly weaker result than the usual ratio test for series, but we only need a weaker case like this for my proof.</p>
+</div>
 <details id="math-pf">
-  <summary><i>Explanation</i></summary>
+  <summary><i>Solution</i></summary>
   <div class="math-pf">
 <p>Let $ \lim |a_{n+1}/a_n| = r &lt; 1 $.
 Let $ \varepsilon &gt; 0 $ be small enough so that $ \varepsilon &lt; (1-r)/4 $.
@@ -200,14 +185,11 @@ $$\begin{equation}
 Noting that $ r+\varepsilon &lt; 1 $, it becomes clear that for sufficiently large $ n $, the RHS shrinks to be smaller than $ \varepsilon $ as desired.</p>
   </div>
 </details>
-<link rel="stylesheet" href="/css/theme.css" type="text/css" media="all" />
-  <div class="math-env math-result math-lem"><span class="math-no-num"></span>
-    <span style="font-weight: normal; color: var(--fg);">
-If $ \left \{ a_n \right \} _0^\infty $ is a sequence of complex numbers and the power series $\sum_{n=0}^{\infty} a_n (z-z_0)^n $ has radius of convergence $ R $, then the power series $\sum_{n=1}^{\infty} n a_n (z-z_0)^{n-1} $ also has radius of convergence $ R $.
-</span> 
-  </div>
+<div class="math-env math-result math-lem">
+<p>If $ \left { a_n \right } <em>0^\infty $ is a sequence of complex numbers and the power series $\sum</em>{n=0}^{\infty} a_n (z-z_0)^n $ has radius of convergence $ R $, then the power series $\sum_{n=1}^{\infty} n a_n (z-z_0)^{n-1} $ also has radius of convergence $ R $.</p>
+</div>
 <details id="math-pf">
-  <summary><i>Explanation</i></summary>
+  <summary><i>Solution</i></summary>
   <div class="math-pf">
 <p>Without loss of generality, suppose that $ z_0 = 0 $.
 Now, consider $ |z| &lt; R $.
@@ -234,21 +216,18 @@ so it follows from the comparison test that the series $ \sum n a_n z^{n-1} $ di
 <p>Thus the series $\sum_{n=1}^{\infty}n a_n z^{n-1} $ has radius of convergence $ R $.</p>
   </div>
 </details>
-<link rel="stylesheet" href="/css/theme.css" type="text/css" media="all" />
-  <div class="math-env math-result math-lem"><span class="math-no-num"></span>
-    <span style="font-weight: normal; color: var(--fg);">
-Suppose $ \left \{ f_n \right \}  $ is a sequence of $ \mathbb{C} $-valued complex-differentiable functions on an open set $ \Omega \subseteq \mathbb{C} $ such that:
-<br>
+<div class="math-env math-result math-lem">
+<p>Suppose $ \left { f_n \right }  $ is a sequence of $ \mathbb{C} $-valued complex-differentiable functions on an open set $ \Omega \subseteq \mathbb{C} $ such that:
+<br></p>
 <ol>
 <li>for all $ w_0 \in \Omega $, the sequence $ \left \{ f_n(w_0) \right \}  $ is convergent; and</li>
 <li>the sequence of derivatives $ \left \{ f_n^\prime \right \}  $ is uniformly convergent.
 <br></li>
 </ol>
-<p>Then $ \left \{ f_n \right \}  $ converges uniformly to a function differentiable on $ \Omega $.
-</span></p>
-  </div>
+<p>Then $ \left \{ f_n \right \}  $ converges uniformly to a function differentiable on $ \Omega $.</p>
+</div>
 <details id="math-pf">
-  <summary><i>Explanation</i></summary>
+  <summary><i>Solution</i></summary>
   <div class="math-pf">
 <p>Define $ f \colon \Omega \to \mathbb{C} $ by
 $$\begin{equation}
@@ -269,19 +248,16 @@ $$\begin{align}
 \end{align}$$</p>
   </div>
 </details>
-<link rel="stylesheet" href="/css/theme.css" type="text/css" media="all" />
-  <div class="math-env math-result math-thm"><span class="math-no-num"></span>
-    <span style="font-weight: normal; color: var(--fg);">
-Suppose the power series 
+<div class="math-env math-result math-thm">
+<p>Suppose the power series
 $$\begin{equation}
-    f(x) =\sum_{n=0}^{\infty}a_n (z-z_0)^n \quad \text{for} \quad |z-z_0| < R
+f(x) =\sum_{n=0}^{\infty}a_n (z-z_0)^n \quad \text{for} \quad |z-z_0| &lt; R
 \end{equation}$$
-has radius of convergence $ R > 0 $. Then $ f $ is differentiable in $ |z-z_0| < R $ and ha derivative 
+has radius of convergence $ R &gt; 0 $. Then $ f $ is differentiable in $ |z-z_0| &lt; R $ and ha derivative
 $$\begin{equation}
-    f^\prime (x) =\sum_{n=1}^{\infty}n a_n z^{n-1} \quad \text{for} \quad |z-z_0| < R.
-\end{equation}$$
-</span> 
-  </div>
+f^\prime (x) =\sum_{n=1}^{\infty}n a_n z^{n-1} \quad \text{for} \quad |z-z_0| &lt; R.
+\end{equation}$$</p>
+</div>
 <div class="footnotes" role="doc-endnotes">
 <hr>
 <ol>
