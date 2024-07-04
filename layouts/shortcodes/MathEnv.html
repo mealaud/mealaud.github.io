@@ -1,16 +1,13 @@
 {{ $results := slice "prop" "coro" "thm" "lem" }}
 {{ $practice := slice "x" "ex" }}
 {{ $env := .Get 0 }}
+{{ $id := .Get 1 }}
 {{ if (in $results $env) }}
-<div class="math-env math-result math-{{ .Get 0 }}">
+<div id="{{ $id }}" class="math-env math-result math-{{ $env }}">
   {{ .Inner }}
 </div>
-{{ else if (eq $env "ex") }}
-<div class="math-practice math-{{ .Get 0 }}">
-  {{ .Inner }}
-</div>
-{{ else if (eq $env "x") }}
-<div class="math-practice math-{{ .Get 0 }}">
+{{ else if (in $practice $env) }}
+<div id="{{ $id }}" class="math-practice math-{{ $env }}">
   {{ .Inner }}
 </div>
 {{ else }}

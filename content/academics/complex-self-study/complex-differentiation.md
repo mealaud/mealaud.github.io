@@ -82,6 +82,15 @@ Suppose $ V \subseteq \mathbb{C} $ is open and that $ z \in V $.
 Then if $ f = u + iv $ is complex-differentiable at $ z $ if and only if the corresponding $ \mathbb{R}^2 \to \mathbb{R}^2 $ map is differentiable and the C-R Equations are satisfied.
 {{% /MathEnv %}}
 
+{{% MathEnv "prop" %}}
+test
+{{% /MathEnv %}}
+
+{{% MathEnv "coro" %}}
+fahsdfkjasdhf
+{{% /MathEnv %}}
+
+
 
 ### An important example
 {{% MathEnv "ex" %}}
@@ -174,7 +183,7 @@ Suppose that $ f $ is complex-differentiable at $ z $.
 Let $ \varepsilon > 0 $ be smaller than $ 1 $. 
 Then there exists some $ 0 < \delta < 1 $ such that 
 $$\begin{equation}
-    0 < |w-z| < \delta \implies \left | \frac{ f(w)-f(z) }{ w-z } - f'(z) \right | < \frac{ \varepsilon }{2 |w-z|}
+    0 < |w-z| < \delta \implies \left | \frac{ f(w)-f(z) }{ w-z } - f^\prime(z) \right | < \frac{ \varepsilon }{2 |w-z|}
 \end{equation}$$
 so 
 $$\begin{equation}
@@ -218,18 +227,18 @@ so the C-R Equations are satisfied, but it is also clear that (although the part
 Fix $ z_0 $ in the domain of $ g \circ f $. 
 Let $ h $ be small.
 Then:
-1. by our Landau's Little $ o $ notation exercise, $ f(z_0+h) = f(z_0) + f'(z_0)h + o(h) $ and similarly for $ g $,
+1. by our Landau's Little $ o $ notation exercise, $ f(z_0+h) = f(z_0) + f^\prime(z_0)h + o(h) $ and similarly for $ g $,
 2. the facts that $ o(h) + o(h) = o(h) $ and $ o(ch) = o(h) $ for constant $ c $, and
 3. $ o(o(h)) = o(h) $,
 we get that:
 $$\begin{align}
-    g(f(z_0+h)) &= g(f(z_0) + \underbrace{f'(z_0)h + o(h)}_{(*)}) \\\\
-    &= g(f(z_0)) + g'(f(z_0))[f'(z_0) h + o(h)] \\\\
-    &\qquad+ o(f'(z_0)h + o(h)) \\\\
-    &= g(f(z_0)) + g'(f(z_0)) f'(z_0) h + o(h).
+    g(f(z_0+h)) &= g(f(z_0) + \underbrace{f^\prime(z_0)h + o(h)}_{(*)}) \\\\
+    &= g(f(z_0)) + g^\prime(f(z_0))[f^\prime(z_0) h + o(h)] \\\\
+    &\qquad+ o(f^\prime(z_0)h + o(h)) \\\\
+    &= g(f(z_0)) + g^\prime(f(z_0)) f^\prime(z_0) h + o(h).
 \end{align}$$
 (Where we used (\*) to indicate what the small error term was in our expansion.)
-Thus we have shown $ g\circ f $ is holomorphic, with derivative $ g'(f(z_0))f'(z_0) $, by our Landau exercise.
+Thus we have shown $ g\circ f $ is holomorphic, with derivative $ g^\prime(f(z_0))f^\prime(z_0) $, by our Landau exercise.
 {{% /Proof %}}
 {{% MathEnv "x" %}}
 (Ahlfors 1.2.3.) Find the most general harmonic polynomial of the form $ ax^3 + bx^2 y + cxy^2 + dy^3 $. Determine the conjugate harmonic function and the corresponding holomorphic function by integration and by the formal method. 
@@ -272,20 +281,20 @@ $$\begin{equation}
 \end{equation}$$
 so that $ u_x = 0 $. 
 Similarly, if we run the same argument with the function $ g(z) = f(iz) $, we get that $ u_y = 0 $. 
-Then by the C-R Equations, $ f'(z)=0 $, and we are done.
+Then by the C-R Equations, $ f^\prime(z)=0 $, and we are done.
 {{% /Proof %}}
 
 {{% MathEnv "x" %}}
 (Ahlfors 1.2.5.) Prove rigorously that the function $ f(z) $ and $ \overline{f(\overline{z})} $ are simultaneously holomorphic.
 {{% /MathEnv %}}
-
-{{% MathEnv "x" %}}
-(Ahlfoirs 1.2.7.) Show that a harmonic function satisfies the formal differential equation 
-$$\begin{equation}
-    \frac{\partial^2 u}{\partial z \partial \overline{z}} = 0.
-\end{equation}$$
-
-{{% /MathEnv %}}
+{{% Proof %}}
+We only consider the forward direction as both are almost exactly the same. Fix some $ z_0 $ in the domain of $ g(z) = \overline{f(\overline{z})} $. Then, if we let $ a = \overline{f^\prime(\overline{z_0})} $ and take $ h \in \mathbb{C} $ to be small, we get
+$$\begin{align}
+    g(z_0+h) &= \overline{f(\overline{z_0+h})} = \overline{f(\overline{z_0} + \overline{h})} \\\\
+    &= \overline{f(\overline{z_0}) + f^\prime(\overline{z_0}) \overline{h} + o(\overline{h})} \\\\
+    &= g(z_0) + a h + o(h).
+\end{align}$$
+{{% /Proof %}}
 
 
 

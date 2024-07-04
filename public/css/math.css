@@ -28,7 +28,7 @@ p {
   margin-bottom: 1em;
 } .math-env:before {
   font-weight: bold;
-  counter-increment: math-count;
+  /* counter-increment: math-count; */
 } 
 
 /* RESULTS */
@@ -37,6 +37,7 @@ p {
   padding: 0.5em;
   background-color: var(--result-background);
   border-left-color: var(--result-border);
+  counter-increment: math-count;
 } .math-result:before {
   color: var(--result-border);
 } math-prop {} .math-prop:before {
@@ -51,6 +52,7 @@ p {
 
 /* Other */
 .math-rem {} .math-rem:before {
+  counter-increment: math-count;
   content: "Remark " counter(math-count)  ". ";
 }
 
@@ -68,6 +70,7 @@ p {
   border: 0.15em solid var(--example-border);
   border-color: var(--example-border);
 } .math-ex:before {
+  counter-increment: math-count;
   color: var(--example-border);
   content: "Example " counter(math-count)  ". ";
 } .math-x {
