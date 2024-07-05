@@ -36,5 +36,6 @@ They say
 {{%nl%}}{{%nl%}}
 
 I turn around and see a small man.
-He stands sheepishly but with great humility.
-I look at him affectionately.
+He stands humbly.
+I look at him affectionately. 
+He smiles back.
