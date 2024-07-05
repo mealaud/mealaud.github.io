@@ -19,87 +19,8 @@ We'll see more on _why_ this is true with the rest of this post, but two fascina
 - Being one-time complex-differentiable implies you are infinitely-many times complex-differentiable;
 - A function is complex-smooth if and only if it is analytic (analytic meaning locally represented by a convergent power series).
 
-## Complex numbers as matrices
-Recall that the complex numbers can be seen as ordered pairs of real numbers $ (x,y) \in \mathbb{R}^2 $ written $ x+iy $.
-Further recall that they have the usual pointwise addition defined on them, $ (x+iy)+(a+ib) = (x+a) + i (y+b) $, and that they have a special multiplication defined on them: 
-$$\begin{equation}
-    (x+iy) \cdot (a+ib) = (xa - yb) + i (xb + ya).
-\end{equation}$$
-This ends up endowing $ \mathbb{C} $ with a _field_ structure (i.e., we have additive and multiplicative identities, and both addition and multiplication have our usual properties).
-{{%nl%}}{{%nl%}}
 
-We may also represent these numbers as $ 2 \times 2 $ matrices with real entries.
-Indeed, we may identify[^kyle]
-$$\begin{equation}
-    x+iy \longleftrightarrow
-    \begin{pmatrix}
-    x & -y \\\\
-    y & x
-    \end{pmatrix}.
-\end{equation}$$
-
-## Differentiation in $ \mathbb{R}^2 $
-Consider a function $ F \colon \mathbb{R}^2 \to \mathbb{R}^2 $.
-If the function is differentiable, the derivative takes the form of the Jacobian, i.e., if $ F = (F_1, F_2) $, 
-$$\begin{equation}
-    D F = 
-    \begin{pmatrix}
-    \partial_x F_1 & \partial_y F_1 \\\\
-    \partial_x F_2 & \partial_y F_2 
-    \end{pmatrix}.
-\end{equation}$$
-
-## Requiring derivatives are complex
-Recalling our first section, it is clear that we may identify functions $ f \colon \mathbb{C} \to \mathbb{C} $ with functions $ F \colon \mathbb{R}^2 \to \mathbb{R}^2 $.
-This then allots us the opportunity to study what something being complex-differentiable _would_ mean.
-Indeed, the following two subsections explore this idea and make the same conclusion: the existence of the _Cauchy-Riemann Equations_.
-{{%nl%}}{{%nl%}}
-
-Consider a function $ f \colon \mathbb{C} \to \mathbb{C} $ given by $ f = u+iv $, where $ u,v \colon \mathbb{R}^2 \to \mathbb{R}^2 $ (obviously with us identifying $ \mathbb{C} $ with $ \mathbb{R}^2 $).
-Then, taking the derivative of $ f $ in the $ \mathbb{R}^2 $-sense, we get that 
-$$\begin{equation}
-    Df = 
-    \begin{pmatrix}
-    \partial_x u & \partial_y u \\\\
-    \partial_x v & \partial_y v
-    \end{pmatrix}.
-\end{equation}$$
-But if we require the result of this differentiation to always be a complex number, we immediately get two constraints, known as the {{% tdf "Cauchy-Riemann Equations" %}} (AKA the _C-R Equations_):[^partial notation]
-$$\begin{equation}
-    \begin{cases}
-    u_x &= v_y \\\\
-    u_y &= -v_x
-    \end{cases}
-\end{equation}$$
-A quick way to recall these is by thinking about how matching indices are positive, and differing indices are negative, i.e., $ u $ is the first component and $ v $ is the second, so $ u_x = v_y $ with no negative sign (similarly for $ u_y = - v_x $).
-{{%nl%}}{{%nl%}}
-
-From this we also get a nice (and hopefully clear) consequence of the C-R Equations being satisfied: equivalence to complex differentiability!
-
-{{% MathEnv "prop" %}}
-Suppose $ V \subseteq \mathbb{C} $ is open and that $ z \in V $. 
-Then if $ f = u + iv $ is complex-differentiable at $ z $ if and only if the corresponding $ \mathbb{R}^2 \to \mathbb{R}^2 $ map is differentiable and the C-R Equations are satisfied.
-{{% /MathEnv %}}
-
-### An important example
-{{% MathEnv "ex" %}}
-There are functions which are real-differentiable but NOT complex-differentiable.
-{{% /MathEnv %}}
-{{% Proof %}}
-Take for example: $ f(x+iy) = x $. We can then identify $ f $ with the function $ F(x,y) = x $. Clearly, then, 
-$$\begin{equation}
-    DF = 
-    \begin{pmatrix}
-    1 & 0 \\\\
-    0 & 0
-    \end{pmatrix}.
-\end{equation}$$
-Hence the C-R Equations are not satisfied and our function, although real-differentiable, is NOT complex-differentiable.
-{{% /Proof %}}
-
-
-## Exercises
-{{% MathEnv "x" %}}
+{{% MathEnv "x" "x:landau" %}}
 Suppose that $ f $ is defined in a neighborhood of the complex number $ z $.
 Show that $ f $ is complex-differentiable at $ z $ if and only if there exists a complex number $ a $ such that 
 $$\begin{equation}
@@ -161,33 +82,87 @@ $$\begin{equation}
 \end{equation}$$
 so $ f $ is complex-differentiable at $ z $ as desired.
 {{% /Proof %}}
-{{% MathEnv "rem" %}}
-Note that this is just regular $ \mathbb{R}^2 $-differentiability but requiring our linear map (that approximates the growth of the function) to be a complex number, i.e., forcing the matrix to satisfy the C-R Equations.
+
+## Complex numbers as matrices
+Recall that the complex numbers can be seen as ordered pairs of real numbers $ (x,y) \in \mathbb{R}^2 $ written $ x+iy $.
+Further recall that they have the usual pointwise addition defined on them, $ (x+iy)+(a+ib) = (x+a) + i (y+b) $, and that they have a special multiplication defined on them: 
+$$\begin{equation}
+    (x+iy) \cdot (a+ib) = (xa - yb) + i (xb + ya).
+\end{equation}$$
+This ends up endowing $ \mathbb{C} $ with a _field_ structure (i.e., we have additive and multiplicative identities, and both addition and multiplication have our usual properties).
+{{%nl%}}{{%nl%}}
+
+We may also represent these numbers as $ 2 \times 2 $ matrices with real entries.
+Indeed, we may identify[^kyle]
+$$\begin{equation}
+    x+iy \longleftrightarrow
+    \begin{pmatrix}
+    x & -y \\\\
+    y & x
+    \end{pmatrix}.
+\end{equation}$$
+
+## Differentiation in $ \mathbb{R}^2 $
+Consider a function $ F \colon \mathbb{R}^2 \to \mathbb{R}^2 $.
+If the function is differentiable, the derivative takes the form of the Jacobian, i.e., if $ F = (F_1, F_2) $, 
+$$\begin{equation}
+    D F = 
+    \begin{pmatrix}
+    \partial_x F_1 & \partial_y F_1 \\\\
+    \partial_x F_2 & \partial_y F_2 
+    \end{pmatrix}.
+\end{equation}$$
+
+## Requiring derivatives are complex
+Recalling our first section, it is clear that we may identify functions $ f \colon \mathbb{C} \to \mathbb{C} $ with functions $ F \colon \mathbb{R}^2 \to \mathbb{R}^2 $.
+This then allots us the opportunity to study what something being complex-differentiable _would_ mean.
+Indeed, the following two subsections explore this idea and make the same conclusion: the existence of the _Cauchy-Riemann Equations_.
+{{%nl%}}{{%nl%}}
+
+Consider a function $ f \colon \mathbb{C} \to \mathbb{C} $ given by $ f = u+iv $, where $ u,v \colon \mathbb{R}^2 \to \mathbb{R}^2 $ (obviously with us identifying $ \mathbb{C} $ with $ \mathbb{R}^2 $).
+Then, taking the derivative of $ f $ in the $ \mathbb{R}^2 $-sense, we get that 
+$$\begin{equation}
+    Df = 
+    \begin{pmatrix}
+    \partial_x u & \partial_y u \\\\
+    \partial_x v & \partial_y v
+    \end{pmatrix}.
+\end{equation}$$
+But if we require the result of this differentiation to always be a complex number, we immediately get two constraints, known as the {{% tdf "Cauchy-Riemann Equations" %}} (AKA the _C-R Equations_):[^partial notation]
+$$\begin{equation}
+    \begin{cases}
+    u_x &= v_y \\\\
+    u_y &= -v_x
+    \end{cases}
+\end{equation}$$
+A quick way to recall these is by thinking about how matching indices are positive, and differing indices are negative, i.e., $ u $ is the first component and $ v $ is the second, so $ u_x = v_y $ with no negative sign (similarly for $ u_y = - v_x $).
+{{%nl%}}{{%nl%}}
+
+From this we also get a nice (and hopefully clear) consequence of the C-R Equations being satisfied: equivalence to complex differentiability!
+
+{{% MathEnv "prop" "prop:complex-diff-cond" %}}
+Suppose $ V \subseteq \mathbb{C} $ is open and that $ z \in V $. 
+Then if $ f = u + iv $ is complex-differentiable at $ z $ if and only if the corresponding $ \mathbb{R}^2 \to \mathbb{R}^2 $ map is differentiable and the C-R Equations are satisfied.
 {{% /MathEnv %}}
 
-{{% MathEnv "x" %}}
-Suppose that $ f $ is complex-differentiable at $ z $. Show that $ f $ is continuous at $ z $.
+### An important example and exercise
+{{% MathEnv "ex" "ex:real-diff-but-not-holo" %}}
+There are functions which are real-differentiable but NOT complex-differentiable.
 {{% /MathEnv %}}
 {{% Proof %}}
-Suppose that $ f $ is complex-differentiable at $ z $.
-Let $ \varepsilon > 0 $ be smaller than $ 1 $. 
-Then there exists some $ 0 < \delta < 1 $ such that 
+Take for example: $ f(x+iy) = x $. We can then identify $ f $ with the function $ F(x,y) = x $. Clearly, then, 
 $$\begin{equation}
-    0 < |w-z| < \delta \implies \left | \frac{ f(w)-f(z) }{ w-z } - f^\prime(z) \right | < \frac{ \varepsilon }{2 |w-z|}
+    DF = 
+    \begin{pmatrix}
+    1 & 0 \\\\
+    0 & 0
+    \end{pmatrix}.
 \end{equation}$$
-so 
-$$\begin{equation}
-|f(w)-f(z) - (w-z)f^\prime(z)| < \frac{ \varepsilon }{ 2|w-z| }|w-z| < \frac{ \varepsilon }{ 2 }
-\end{equation}$$
-Taking $ |w-z| < \min \left \\{ \delta, \varepsilon|f^\prime(z)|^{-1}/2 \right \\}  $, 
-$$\begin{align}
-|f(w)-f(z)| &\leq |f(w)-f(z) - (w-z)f^\prime(z)| + |w-z||f^\prime(z)| \\\\
-&< \frac{ \varepsilon }{ 2 } + \frac{ \varepsilon }{ 2 } = \varepsilon,
-\end{align}$$
-so $ f $ is continuous! :) 
+Hence the C-R Equations are not satisfied and our function, although real-differentiable, is NOT complex-differentiable.
 {{% /Proof %}}
 
-{{% MathEnv "x" %}}
+
+{{% MathEnv "x" "x:C-R-necessary" %}}
 Define $ f \colon \mathbb{C} \to \mathbb{C} $ by 
 $$\begin{equation}
     f(x+iy) = 
@@ -210,14 +185,37 @@ $$\begin{equation}
 so the C-R Equations are satisfied, but it is also clear that (although the partials exist) $ f $ is not $ \mathbb{R}^2 $-differentiable.
 {{% /Proof %}}
 
-{{% MathEnv "x" %}}
+## Extra exercises
+{{% MathEnv "x" "x:holo-implies-cts" %}}
+Suppose that $ f $ is complex-differentiable at $ z $. Show that $ f $ is continuous at $ z $.
+{{% /MathEnv %}}
+{{% Proof %}}
+Suppose that $ f $ is complex-differentiable at $ z $.
+Let $ \varepsilon > 0 $ be smaller than $ 1 $. 
+Then there exists some $ 0 < \delta < 1 $ such that 
+$$\begin{equation}
+    0 < |w-z| < \delta \implies \left | \frac{ f(w)-f(z) }{ w-z } - f^\prime(z) \right | < \frac{ \varepsilon }{2 |w-z|}
+\end{equation}$$
+so 
+$$\begin{equation}
+|f(w)-f(z) - (w-z)f^\prime(z)| < \frac{ \varepsilon }{ 2|w-z| }|w-z| < \frac{ \varepsilon }{ 2 }
+\end{equation}$$
+Taking $ |w-z| < \min \left \\{ \delta, \varepsilon|f^\prime(z)|^{-1}/2 \right \\}  $, 
+$$\begin{align}
+|f(w)-f(z)| &\leq |f(w)-f(z) - (w-z)f^\prime(z)| + |w-z||f^\prime(z)| \\\\
+&< \frac{ \varepsilon }{ 2 } + \frac{ \varepsilon }{ 2 } = \varepsilon,
+\end{align}$$
+so $ f $ is continuous! :) 
+{{% /Proof %}}
+
+{{% MathEnv "x" "x:Ahlfors-1.2.1." %}}
 (Ahlfors 1.2.1.) If $ g(w) $ and $ f(z) $ are holomorphic, show that $ g(f((z)) $ is also holomorphic.
 {{% /MathEnv %}}
 {{% Proof %}}
 Fix $ z_0 $ in the domain of $ g \circ f $. 
 Let $ h $ be small.
 Then:
-1. by our Landau's Little $ o $ notation exercise, $ f(z_0+h) = f(z_0) + f^\prime(z_0)h + o(h) $ and similarly for $ g $,
+1. by our [Landau's Little $ o $ notation exercise](#x:landau), $ f(z_0+h) = f(z_0) + f^\prime(z_0)h + o(h) $ and similarly for $ g $,
 2. the facts that $ o(h) + o(h) = o(h) $ and $ o(ch) = o(h) $ for constant $ c $, and
 3. $ o(o(h)) = o(h) $,
 we get that:
@@ -234,7 +232,7 @@ Thus we have shown $ g\circ f $ is holomorphic, with derivative $ g^\prime(f(z_0
 (Ahlfors 1.2.3.) Find the most general harmonic polynomial of the form $ ax^3 + bx^2 y + cxy^2 + dy^3 $. Determine the conjugate harmonic function and the corresponding holomorphic function by integration and by the formal method. 
 {{% /MathEnv %}}
 
-{{% MathEnv "x" %}}
+{{% MathEnv "x" "Ahlfors-1.2.4" %}}
 (Ahlfors 1.2.4.) Show that an holomorphic function cannot have a constant absolute value without reducing to a constant.
 {{% /MathEnv %}}
 {{% Proof %}}
@@ -274,7 +272,7 @@ Similarly, if we run the same argument with the function $ g(z) = f(iz) $, we ge
 Then by the C-R Equations, $ f^\prime(z)=0 $, and we are done.
 {{% /Proof %}}
 
-{{% MathEnv "x" %}}
+{{% MathEnv "x" "x:Ahlfors-1.2.5" %}}
 (Ahlfors 1.2.5.) Prove rigorously that the function $ f(z) $ and $ \overline{f(\overline{z})} $ are simultaneously holomorphic.
 {{% /MathEnv %}}
 {{% Proof %}}
