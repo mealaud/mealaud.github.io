@@ -2,18 +2,17 @@
   {{ partial "header.html" . }}
 {{ end }}
 
-{{ define "main" }} 
+{{ define "main" }}
   <header>
     <h1>{{ .Title }}<span style="opacity: 0.5; font-size: 0.5em">    {{ .PublishDate.Format "Monday, January 2, 2006" }}</span></h1>
   </header>
-  {{ .Content }}
-
-  <h3>Notes (with associated exercises)</h3>
-  {{ partial "all-notes-collections" . }}
+  <!-- {{ .Content }} -->
+  {{ range $posts := .RegularPagesRecursive.ByPublishDate }}
+    {{ $posts.Content }}
+  {{ end }}
 {{ end }}
 
 {{ define "footer" }}
   {{ partial "footer.html" . }}
 {{ end }}
-
 

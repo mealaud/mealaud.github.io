@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Complex Differentiation on mel-land</title>
+    <link>http://localhost:1313/academics/complex-self-study/1/</link>
+    <description>Recent content in Complex Differentiation on mel-land</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 03 Jul 2024 21:50:13 -0700</lastBuildDate>
+    <atom:link href="http://localhost:1313/academics/complex-self-study/1/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ex1</title>
+      <link>http://localhost:1313/academics/complex-self-study/1/ex1/</link>
+      <pubDate>Wed, 03 Jul 2024 21:50:13 -0700</pubDate>
+      <guid>http://localhost:1313/academics/complex-self-study/1/ex1/</guid>
+      <description>An important example There are functions which are real-differentiable but NOT complex-differentiable.&#xA;Solution Take for example: $ f(x+iy) = x $. We can then identify $ f $ with the function $ F(x,y) = x $. Clearly, then, $$\begin{equation} DF = \begin{pmatrix} 1 &amp;amp; 0 \\ 0 &amp;amp; 0 \end{pmatrix}. \end{equation}$$ Hence the C-R Equations are not satisfied and our function, although real-differentiable, is NOT complex-differentiable.</description>
+    </item>
+    <item>
+      <title>matrices</title>
+      <link>http://localhost:1313/academics/complex-self-study/1/matrices/</link>
+      <pubDate>Wed, 03 Jul 2024 21:49:13 -0700</pubDate>
+      <guid>http://localhost:1313/academics/complex-self-study/1/matrices/</guid>
+      <description>Complex numbers as matrices Recall that the complex numbers can be seen as ordered pairs of real numbers $ (x,y) \in \mathbb{R}^2 $ written $ x+iy $. Further recall that they have the usual pointwise addition defined on them, $ (x+iy)+(a+ib) = (x+a) + i (y+b) $, and that they have a special multiplication defined on them: $$\begin{equation} (x+iy) \cdot (a+ib) = (xa - yb) + i (xb + ya). \end{equation}$$ This ends up endowing $ \mathbb{C} $ with a field structure (i.</description>
+    </item>
+    <item>
+      <title>Intro</title>
+      <link>http://localhost:1313/academics/complex-self-study/1/intro/</link>
+      <pubDate>Wed, 03 Jul 2024 21:48:13 -0700</pubDate>
+      <guid>http://localhost:1313/academics/complex-self-study/1/intro/</guid>
+      <description>If $ V \subseteq \mathbb{C} $ is open, we say a function $ f \colon V \to \mathbb{C} $ is complex-differentiable , or holomorphic , at a point $ z \in V $ if the usual difference quotient converges. That is, $$\begin{equation} f^\prime(z) = \lim_{h \to 0} \frac{ f(z+h)-f(z) }{ h } \end{equation}$$ where, of course, $ h \in \mathbb{C} \setminus \left \{ 0 \right \} $.[^domain of limit] The incredible thing about complex differentiation is how strong it is!</description>
+    </item>
+  </channel>
+</rss>

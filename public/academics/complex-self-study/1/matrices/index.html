@@ -3,7 +3,7 @@
   <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hobbies | mel-land</title>
+    <title>matrices | mel-land</title>
 
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -43,7 +43,6 @@
     
     <link rel="icon" href="/gruv-cropped-gortoutline.png"/>
 
-    <link rel="alternate" type="application/rss+xml" href="http://localhost:1313/hobbies/index.xml" title="mel-land" />
     </head>
 
   <body>
@@ -94,92 +93,68 @@
 
         <article style="margin-top: 1em; padding-left: 0.5em;">
           
-  <h1>Hobbies</h1>
-  <p>Hello! I have things I like doing sometimes.</p>
-
-
-  <h3>Hobbies</h3>
-  <ul style="list-style-type: none; padding: 0; margin: 0;">
-    
-      <li>
-        <a href="http://localhost:1313/hobbies/writing/">Writing</a>
-      </li>
-    
-      <li>
-        <a href="http://localhost:1313/hobbies/rock-skipping/">Rock Skipping</a>
-      </li>
-    
-      <li>
-        <a href="http://localhost:1313/hobbies/clouds/">Clouds</a>
-      </li>
-    
-  </ul>
-  <h3>Recent Posts</h3>
-    <ul class="post-list" style="list-style-type: none; padding: 0; margin: 0;">
-    
-      <li>
-        <div style="display: flex;">
-          <div class="title-date">
-            <a href="http://localhost:1313/hobbies/writing/untitled/" style="text-decoration: underline; text-wrap: wrap;">Untitled</a><br>
-            <span style="opacity: 65%;"><em> Jul 4, 2024</em></span>
-          </div>
-          <div>
-            On becoming.
-          </div>
-        </div>
-      </li>
-    
-      <li>
-        <div style="display: flex;">
-          <div class="title-date">
-            <a href="http://localhost:1313/hobbies/writing/humbled-by-the-heavens/" style="text-decoration: underline; text-wrap: wrap;">Humbled by the Heavens</a><br>
-            <span style="opacity: 65%;"><em> Jun 26, 2024</em></span>
-          </div>
-          <div>
-            A story of being humbled by what lies above you.
-          </div>
-        </div>
-      </li>
-    
-      <li>
-        <div style="display: flex;">
-          <div class="title-date">
-            <a href="http://localhost:1313/hobbies/writing/atlas-the-sanctity-of-the-heavens/" style="text-decoration: underline; text-wrap: wrap;">Atlas: The Sanctity of the Heavens</a><br>
-            <span style="opacity: 65%;"><em> Mar 5, 2024</em></span>
-          </div>
-          <div>
-            Apathy and ascension.
-          </div>
-        </div>
-      </li>
-    
-      <li>
-        <div style="display: flex;">
-          <div class="title-date">
-            <a href="http://localhost:1313/hobbies/writing/closing-my-eyes/" style="text-decoration: underline; text-wrap: wrap;">Closing My Eyes</a><br>
-            <span style="opacity: 65%;"><em> Jun 9, 2023</em></span>
-          </div>
-          <div>
-            An eye-opening exploration of hope.
-          </div>
-        </div>
-      </li>
-    
-      <li>
-        <div style="display: flex;">
-          <div class="title-date">
-            <a href="http://localhost:1313/hobbies/writing/of-mountains-and-shirts/" style="text-decoration: underline; text-wrap: wrap;">Of Mountains and Shirts</a><br>
-            <span style="opacity: 65%;"><em> May 24, 2023</em></span>
-          </div>
-          <div>
-            A look at mountains, their strength, and their clothes.
-          </div>
-        </div>
-      </li>
-    
-  </ul>
-
-
+  <header>
+    <h1>matrices<span style="opacity: 0.5; font-size: 0.5em">    Wednesday, July 3, 2024</span></h1>
+  </header>
+  <h2 id="complex-numbers-as-matrices">Complex numbers as matrices</h2>
+<p>Recall that the complex numbers can be seen as ordered pairs of real numbers $ (x,y) \in \mathbb{R}^2 $ written $ x+iy $.
+Further recall that they have the usual pointwise addition defined on them, $ (x+iy)+(a+ib) = (x+a) + i (y+b) $, and that they have a special multiplication defined on them:
+$$\begin{equation}
+(x+iy) \cdot (a+ib) = (xa - yb) + i (xb + ya).
+\end{equation}$$
+This ends up endowing $ \mathbb{C} $ with a <em>field</em> structure (i.e., we have additive and multiplicative identities, and both addition and multiplication have our usual properties).
+<br>
+<br></p>
+<p>We may also represent these numbers as $ 2 \times 2 $ matrices with real entries.
+Indeed, we may identify[^kyle]
+$$\begin{equation}
+x+iy \longleftrightarrow
+\begin{pmatrix}
+x &amp; -y \\
+y &amp; x
+\end{pmatrix}.
+\end{equation}$$</p>
+<h2 id="differentiation-in--mathbbr2-">Differentiation in $ \mathbb{R}^2 $</h2>
+<p>Consider a function $ F \colon \mathbb{R}^2 \to \mathbb{R}^2 $.
+If the function is differentiable, the derivative takes the form of the Jacobian, i.e., if $ F = (F_1, F_2) $,
+$$\begin{equation}
+D F =
+\begin{pmatrix}
+\partial_x F_1 &amp; \partial_y F_1 \\
+\partial_x F_2 &amp; \partial_y F_2
+\end{pmatrix}.
+\end{equation}$$</p>
+<h2 id="requiring-derivatives-are-complex">Requiring derivatives are complex</h2>
+<p>Recalling our first section, it is clear that we may identify functions $ f \colon \mathbb{C} \to \mathbb{C} $ with functions $ F \colon \mathbb{R}^2 \to \mathbb{R}^2 $.
+This then allots us the opportunity to study what something being complex-differentiable <em>would</em> mean.
+Indeed, the following two subsections explore this idea and make the same conclusion: the existence of the <em>Cauchy-Riemann Equations</em>.
+<br>
+<br></p>
+<p>Consider a function $ f \colon \mathbb{C} \to \mathbb{C} $ given by $ f = u+iv $, where $ u,v \colon \mathbb{R}^2 \to \mathbb{R}^2 $ (obviously with us identifying $ \mathbb{C} $ with $ \mathbb{R}^2 $).
+Then, taking the derivative of $ f $ in the $ \mathbb{R}^2 $-sense, we get that
+$$\begin{equation}
+Df =
+\begin{pmatrix}
+\partial_x u &amp; \partial_y u \\
+\partial_x v &amp; \partial_y v
+\end{pmatrix}.
+\end{equation}$$
+But if we require the result of this differentiation to always be a complex number, we immediately get two constraints, known as the <span class="tdf">Cauchy-Riemann Equations</span>
+(AKA the <em>C-R Equations</em>):[^partial notation]
+$$\begin{equation}
+\begin{cases}
+u_x &amp;= v_y \\
+u_y &amp;= -v_x
+\end{cases}
+\end{equation}$$
+A quick way to recall these is by thinking about how matching indices are positive, and differing indices are negative, i.e., $ u $ is the first component and $ v $ is the second, so $ u_x = v_y $ with no negative sign (similarly for $ u_y = - v_x $).
+<br>
+<br></p>
+<p>From this we also get a nice (and hopefully clear) consequence of the C-R Equations being satisfied: equivalence to complex differentiability!</p>
+<div id="" class="math-env math-result math-prop">
+<p>Suppose $ V \subseteq \mathbb{C} $ is open and that $ z \in V $.
+Then if $ f = u + iv $ is complex-differentiable at $ z $ if and only if the corresponding $ \mathbb{R}^2 \to \mathbb{R}^2 $ map is differentiable and the C-R Equations are satisfied.</p>
+</div>
 
 
         </article>

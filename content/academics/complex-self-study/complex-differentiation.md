@@ -19,7 +19,6 @@ We'll see more on _why_ this is true with the rest of this post, but two fascina
 - Being one-time complex-differentiable implies you are infinitely-many times complex-differentiable;
 - A function is complex-smooth if and only if it is analytic (analytic meaning locally represented by a convergent power series).
 
-
 ## Complex numbers as matrices
 Recall that the complex numbers can be seen as ordered pairs of real numbers $ (x,y) \in \mathbb{R}^2 $ written $ x+iy $.
 Further recall that they have the usual pointwise addition defined on them, $ (x+iy)+(a+ib) = (x+a) + i (y+b) $, and that they have a special multiplication defined on them: 
@@ -82,16 +81,6 @@ Suppose $ V \subseteq \mathbb{C} $ is open and that $ z \in V $.
 Then if $ f = u + iv $ is complex-differentiable at $ z $ if and only if the corresponding $ \mathbb{R}^2 \to \mathbb{R}^2 $ map is differentiable and the C-R Equations are satisfied.
 {{% /MathEnv %}}
 
-{{% MathEnv "prop" %}}
-test
-{{% /MathEnv %}}
-
-{{% MathEnv "coro" %}}
-fahsdfkjasdhf
-{{% /MathEnv %}}
-
-
-
 ### An important example
 {{% MathEnv "ex" %}}
 There are functions which are real-differentiable but NOT complex-differentiable.
@@ -107,6 +96,7 @@ $$\begin{equation}
 \end{equation}$$
 Hence the C-R Equations are not satisfied and our function, although real-differentiable, is NOT complex-differentiable.
 {{% /Proof %}}
+
 
 ## Exercises
 {{% MathEnv "x" %}}
@@ -288,7 +278,9 @@ Then by the C-R Equations, $ f^\prime(z)=0 $, and we are done.
 (Ahlfors 1.2.5.) Prove rigorously that the function $ f(z) $ and $ \overline{f(\overline{z})} $ are simultaneously holomorphic.
 {{% /MathEnv %}}
 {{% Proof %}}
-We only consider the forward direction as both are almost exactly the same. Fix some $ z_0 $ in the domain of $ g(z) = \overline{f(\overline{z})} $. Then, if we let $ a = \overline{f^\prime(\overline{z_0})} $ and take $ h \in \mathbb{C} $ to be small, we get
+We only consider the forward direction as both are almost exactly the same.
+Fix some $ z_0 $ in the domain of $ g(z) = \overline{f(\overline{z})} $.
+Then, if we let $ a = \overline{f^\prime(\overline{z_0})} $ and take $ h \in \mathbb{C} $ to be small, we get
 $$\begin{align}
     g(z_0+h) &= \overline{f(\overline{z_0+h})} = \overline{f(\overline{z_0} + \overline{h})} \\\\
     &= \overline{f(\overline{z_0}) + f^\prime(\overline{z_0}) \overline{h} + o(\overline{h})} \\\\

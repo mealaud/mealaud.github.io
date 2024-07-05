@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Complex Differentiation on mel-land</title>
+    <link>http://localhost:1313/academics/complex-self-study/ch1/</link>
+    <description>Recent content in Complex Differentiation on mel-land</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 03 Jul 2024 21:48:13 -0700</lastBuildDate>
+    <atom:link href="http://localhost:1313/academics/complex-self-study/ch1/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Intro</title>
+      <link>http://localhost:1313/academics/complex-self-study/ch1/intro/</link>
+      <pubDate>Wed, 03 Jul 2024 21:48:13 -0700</pubDate>
+      <guid>http://localhost:1313/academics/complex-self-study/ch1/intro/</guid>
+      <description>If $ V \subseteq \mathbb{C} $ is open, we say a function $ f \colon V \to \mathbb{C} $ is complex-differentiable , or holomorphic , at a point $ z \in V $ if the usual difference quotient converges. That is, $$\begin{equation} f^\prime(z) = \lim_{h \to 0} \frac{ f(z+h)-f(z) }{ h } \end{equation}$$ where, of course, $ h \in \mathbb{C} \setminus \left \{ 0 \right \} $.[^domain of limit] The incredible thing about complex differentiation is how strong it is!</description>
+    </item>
+  </channel>
+</rss>
