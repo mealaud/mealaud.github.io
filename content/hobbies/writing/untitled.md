@@ -8,12 +8,12 @@ summary: "On becoming."
 ---
 
 I see a monolith in the distance.
-Immediately I am humbled.
+Immediately, I am humbled.
 {{%nl%}}{{%nl%}}
 
 I stand in awe in what stands before me all the while they are unphased by my presence.
 Am I so small they do not sense me?
-They look at me affectionately. 
+They turn and begin to look at me affectionately. 
 I smile back.
 {{%nl%}}{{%nl%}}
 
@@ -32,9 +32,9 @@ I sprint after them as long as I can and then some.
 By the time they stop, we are just as far from each other as we were before.
 They look at me and smile once again, even wider than the first.
 They say 
-"You are a hope for times better and lives to come."
+"You are a time better. You are life that came."
 {{%nl%}}{{%nl%}}
 
-I look behind me and see a small man.
+I turn around and see a small man.
 He stands sheepishly but with great humility.
 I look at him affectionately.
