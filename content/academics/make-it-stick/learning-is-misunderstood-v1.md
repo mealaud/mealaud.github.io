@@ -7,8 +7,6 @@ layout:
 summary: My first pass of the first chapter of _Make It Stick_.
 ---
 
-# Introduction 
-
 The first thing that the authors discuss is the story of Matt, a pilot.
 One of his plane's engines is dying and he needs to fly for another 10 miles, but how can he do this?
 Though we don't follow his actions in their complexity and depth, he does!
@@ -91,9 +89,54 @@ A {{% tdf "mental model" %}} is a mental representations of some external realit
 We start our life with our initial conditions (genes), sure, but it's also true that we become capable through the learning and development of mental models that enable us to reason, solve, and create. 
 i.e., *The elements that shape your intellectual abilities lie to a surprising extent within your own control*.
 Understanding this enables you to see failure as a badge of effort and a source of useful information —— needing to go deeper or try a different strategy.
-You need to unerstand that when learning is hard, you're doing important work. 
+You need to understand that when learning is hard, you're doing important work. 
 To understand that striving and setbacks, are essential if you are to surpass your current level of performance towards true expertise. 
 Making mistakes and correcting them builds the bridges to advanced learning.
+
+
+# Empirical Evidence versus Theory, Lore, and Intuition
+
+## People Misunderstand Learning
+
+1. People often think enough exposures to something means it will not be forgotten. 
+_This is not the case._
+
+2. Many teachers believe that if they can make learning easier and faster, the learning will be better. 
+_This is not the case._ 
+
+Research actually says the opposite! Research tells us that when learning is harder, it's stronger and lasts longer.
+
+3. It's widely believed by teachers, trainers, and coaches that the most effective way to master a new skill is to give it dogged single-minded focus, practicing over and over until you've got it down.
+We often have a lot of faith in this one because this is how most make fast gains during the learning phase of massed practice. _This is not the case._ 
+
+Research tells us that these achieved gains are transient and are lost quickly.
+{{%nl%}}{{%nl%}}
+
+Rereading stuff has three strikes against it when it comes to being an effective learning strategy: 1) it is time consuming, 2) it doesn't result in durable memory, and 3) it often involves some kind of unwitting self-deception, as growing familiarity with the text comes to feel like mastery of the content.
+>> The hours immersed in rereading can seem like due diligence, but the amount of study time is no measure of mastery.
+
+>> Learning is stronger when it matters, when the abstract is made concrete and personal.
+
+## Early Evidence
+
+In a study, it was found that exposure did not increase retention.
+This has been reproduced, confirmed, and elaborated to get that *repetition does not lead to good long-term memory.*
+{{%nl%}}{{%nl%}}
+
+Upshot of some studies: it makes sense to reread a text once if there's been a meaningful lapse of time since the first reading, but doing multiple readings in close succession is a time consuming study strategy that yields negligible benefits at the expense of much more effective strategies that take less time.
+
+
+## Illusions of Knowing
+
+
+
+
+
+
+
+
+
+
 
 
 
