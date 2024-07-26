@@ -16,5 +16,7 @@ With graduate school coming up, I felt I should actually read it and see how it 
 To be honest, my expectations are kind of high since Bjoern (someone who I look up to and greatly respect) recommended it, but it seems that many people love this text.
 {{%nl%}}{{%nl%}}
 
-While reading an Amazon review for the book, someone had a great idea of reading the book, THEN reading it again using what you learn from the book. For this reason, I'm separating this into two readings with corresponding notes and thoughts.
+While reading an Amazon review for the book, someone had a great idea of reading the book, THEN reading it again using what you learn from the book.
+For this reason, I'm separating this into two readings with corresponding notes and thoughts.
+However, I will likely hide my original notes after I have done the second pass, just because the first pass notes are going to be awful/largely just quotes.
 
