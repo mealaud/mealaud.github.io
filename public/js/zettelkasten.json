@@ -1,8 +1,5 @@
 
 
-  
-    
-  
 
   
     
@@ -13,7 +10,7 @@
   
 
   
-
+    
   
 
   
@@ -44,9 +41,17 @@
 
   
 
+  
+
+  
 
 
 
+
+
+
+  
+  
   
   
   
@@ -57,36 +62,43 @@
     
   
     
-  
-    
-  
-    
-      
-    
-  
-  
-
-  
-  
   
     
   
     
       
+      
+      
+    
+  
+
+  
+  
+  
+  
+  
     
   
     
       
+      
+      
     
   
+    
+      
+      
+      
+    
   
 
+  
+  
   
   
   
     
   
-  
 
 
-[{"links":["/zettelkasten/1"],"title":"1a"},{"links":["/zettelkasten/1a","/zettelkasten/1"],"title":"2"},{"links":[],"title":"1"}]
+[[{"post":"/zettelkasten/1a/"},{"post":"/zettelkasten/2/"},{"post":"/zettelkasten/1/"}],[{"source":"/zettelkasten/1a/","target":"/zettelkasten/1/"},{"source":"/zettelkasten/2/","target":"/zettelkasten/1a/"},{"source":"/zettelkasten/2/","target":"/zettelkasten/1/"}]]

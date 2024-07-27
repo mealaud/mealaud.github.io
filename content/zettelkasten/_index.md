@@ -2,8 +2,8 @@
 title: "Zettelkasten"
 date: 2024-07-26T18:03:35-07:00
 draft: false
-type:
-layout:
+type: "section"
+layout: "zettelkasten"
 summary:
 ---
 dasd
@@ -14,4 +14,3 @@ Current idea is to have this page be a brief description, map option on the righ
 Map can be filtered through (ripgrep style).
 dalskdj
 
-{{% zettelkasten-graph %}}

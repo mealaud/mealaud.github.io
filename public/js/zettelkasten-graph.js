@@ -1,20 +1,49 @@
 /* global d3 */
-
+var canvas = d3.select("#network");
+var width = canvas.attr("width");
+var height = canvas.attr("height");
 var r = 3;
-var canvas = d3.select("#network"),
-  width = canvas.attr("width"),
-  height = canvas.attr("height"),
-  ctx = canvas.node().getContext("2d"),
-  color = d3.scaleOrdinal(d3.schemeCategory20),
-  simulation = d3.forceSimulation()
-    .force("x", d3.forceX(width/2))
-    .force("y", d3.forceY(height/2))
-    .force("collide", d3.forceCollide(r+1))
-    .force("charge", d3.forceManyBody()
-      .strength(-20))
-    .force("link", d3.forceLink()
-      .id(function (d) { return d.name; }));
+var ctx = canvas.node().getContext("2d");
+var color = d3.scaleOrdinal(d3.schemeCategory20);
+var simulation = d3.forceSimulation()
+  .force("x", d3.forceX(width/2))
+  .force("y", d3.forceY(height/2))
+  .force("collide", d3.forceCollide(r+1))
+  .force("charge", d3.forceManyBody()
+    .strength(-20))
+  .force("link", d3.forceLink()
+    .id(function (d) { return d.name; }));
 
+function dragstarted() {
+  if (!d3.event.active) simulation.alphaTarget(0.3).restart();
+  d3.event.subject.fx = d3.event.subject.x;
+  d3.event.subject.fy = d3.event.subject.y;
+  console.log(d3.event.subject);
+}
+
+function dragged() {
+  d3.event.subject.fx = d3.event.x;
+  d3.event.subject.fy = d3.event.y;
+}
+
+function dragended() {
+  if (!d3.event.active) simulation.alphaTarget(0);
+  d3.event.subject.fx = null;
+  d3.event.subject.fy = null;
+}
+
+function drawNode(d) {
+  ctx.beginPath();
+  ctx.fillStyle = color(d.party);
+  ctx.moveTo(d.x, d.y);
+  ctx.arc(d.x, d.y, r, 0, Math.PI*2);
+  ctx.fill();
+}
+
+function drawLink(l) {
+  ctx.moveTo(l.source.x, l.source.y);
+  ctx.lineTo(l.target.x, l.target.y);
+}
 
 d3.json("zettelkasten.json", function (err, graph) {
   if (err) throw err;
@@ -51,36 +80,3 @@ d3.json("zettelkasten.json", function (err, graph) {
   }
 
 });
-
-function dragstarted() {
-  if (!d3.event.active) simulation.alphaTarget(0.3).restart();
-  d3.event.subject.fx = d3.event.subject.x;
-  d3.event.subject.fy = d3.event.subject.y;
-  console.log(d3.event.subject);
-}
-
-function dragged() {
-  d3.event.subject.fx = d3.event.x;
-  d3.event.subject.fy = d3.event.y;
-}
-
-function dragended() {
-  if (!d3.event.active) simulation.alphaTarget(0);
-  d3.event.subject.fx = null;
-  d3.event.subject.fy = null;
-}
-
-
-
-function drawNode(d) {
-  ctx.beginPath();
-  ctx.fillStyle = color(d.party);
-  ctx.moveTo(d.x, d.y);
-  ctx.arc(d.x, d.y, r, 0, Math.PI*2);
-  ctx.fill();
-}
-
-function drawLink(l) {
-  ctx.moveTo(l.source.x, l.source.y);
-  ctx.lineTo(l.target.x, l.target.y);
-}

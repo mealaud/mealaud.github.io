@@ -1,3 +1,4 @@
+{{/* Getting all Zettelkasten pages */}}
 {{ $z_pages := slice }}
 {{ range $p := .Site.RegularPages }}
   {{ if (in $p.RelPermalink "zettelkasten") }}
@@ -5,16 +6,21 @@
   {{ end }}
 {{ end }}
 
-{{ $pages := slice }}
+{{ $slash := "/" }}
+{{ $nodes := slice }}
+{{ $links := slice }}
 {{ range $p := $z_pages }}
+  {{ $nodes = $nodes | append (dict "post" $p.RelPermalink)}}
+  {{/* Split raw content at spaces so we can find links */}}
   {{ $splits := split $p.RawContent " " }}
-  {{ $links := slice }}
+  {{/* Find splits with the links, then take the RelPermalink out and put it into the link data format */}}
   {{ range $s := $splits }}
     {{ if (in $s "zettelkasten") }}
-      {{ $links = $links | append (index (split $s "\"") 1) }}
+      {{ $t := index (split $s "\"") 1 }}
+      {{ $target := print $t $slash }}
+      {{ $links = $links | append (dict "source" $p.RelPermalink "target" $target) }}
     {{ end }}
   {{ end }}
-  {{ $pages = $pages | append (dict "title" $p.Title "links" $links )}}
 {{ end }}
 
-{{ $pages | jsonify }}
+{{ slice $nodes $links | jsonify }}

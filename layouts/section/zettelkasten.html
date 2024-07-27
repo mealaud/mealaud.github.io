@@ -1,0 +1,16 @@
+{{ define "header" }}
+  {{ partial "header.html" . }}
+{{ end }}
+
+{{ define "main" }}
+  <h1>{{ .Title }}</h1>
+  {{ .Content }}
+
+  <h2>GRAPH</h2>
+  <div id="network" style="border: solid red; width: 100%; height: 30vh;"></div>
+{{ end }}
+
+{{ define "footer" }}
+  {{ partial "footer.html" . }}
+{{ end }}
+
