@@ -1,7 +1,20 @@
-{{ $zettelkasten_pages := slice }}
+{{ $z_pages := slice }}
 {{ range $p := .Site.RegularPages }}
   {{ if (in $p.RelPermalink "zettelkasten") }}
-    {{ $zettelkasten_pages = $zettelkasten_pages | append $p.Title }}
+    {{ $z_pages = $z_pages | append $p }}
   {{ end }}
 {{ end }}
-{{ $zettelkasten_pages | jsonify }}
+
+{{ $pages := slice }}
+{{ range $p := $z_pages }}
+  {{ $splits := split $p.RawContent " " }}
+  {{ $links := slice }}
+  {{ range $s := $splits }}
+    {{ if (in $s "zettelkasten") }}
+      {{ $links = $links | append (index (split $s "\"") 1) }}
+    {{ end }}
+  {{ end }}
+  {{ $pages = $pages | append (dict "title" $p.Title "links" $links )}}
+{{ end }}
+
+{{ $pages | jsonify }}

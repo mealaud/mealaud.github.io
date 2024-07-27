@@ -1,8 +1,0 @@
-{{- .Store.Add "timesIndexed" 1 -}}
-{{- if eq (.Store.Get "timesIndexed") 1 -}}
-  {{- $.Scratch.Add "index" slice -}}
-  {{- range where .Site.RegularPages "Type" "not in"  (slice "page" "json") -}}
-      {{- $.Scratch.Add "index" (dict "title" .Title  "content" .Content "plain" .Plain "relpermalink" .RelPermalink "date" (.Lastmod.Format "2006-01-02")) -}}
-  {{- end -}}
-  {{- $.Scratch.Get "index" | jsonify -}}
-{{- end -}}
