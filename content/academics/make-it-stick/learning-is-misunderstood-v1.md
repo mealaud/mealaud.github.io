@@ -128,6 +128,40 @@ Upshot of some studies: it makes sense to reread a text once if there's been a m
 
 ## Illusions of Knowing
 
+If we don't test ourselves, we don't know what we don't know (or where we are weak).
+Just practicing and "studying" seems like you're mastering the material (after all you can recall it right you read it...) but that doesn't tell us whether we actually know it or have mastered it. 
+Testing comes in handy here as we can then use it to figure out what we need to improve on and whether we actually know something and are able to apply them in new contexts.
+
+
+
+# Knowledge: Not Sufficient, but Necessary
+
+"[O]ne cannot apply what one knows in a practical manner if one does not know anything to apply".
+Mastery requires both the possession of ready knowledge and the conceptual understanding of how to use it.
+
+
+# Testing: Dipstick versus Learning Tool
+
+If we stop thinking of testing as a determiner of whether you know something and think of testing as practicing retrieval of learning from memory, we open ourselves to a new possibility: _the use of testing as a tool for learning._
+{{%nl%}}{{%nl%}}
+
+One of the most striking research findings is the power of active retrieval —— testing —— to strengthen memory, and that the more effortful the retrieval, the stronger the benefit.
+{{%nl%}}{{%nl%}}
+
+The act of retrieving learning from memory has two profound benefits. 
+1. It tells you what you know and don't know, and therefore where to focus further study to improve the areas where you're weak.
+2. Recalling what you have learned causes your brain to reconsolidate the memory, which strengthens its connections to what you already know and makes it easier for you to recall in the future.
+
+i.e., Retrieval —— testing —— interrupts forgetting.
+
+
+# The Takeaway
+
+1. For the most part, we are going about learning in the wrong ways, and are giving poor advice to those coming after us.
+
+2. We know of simple and practical strategies that anybody can use, at any point in life, to learn better and remember longer: various forms of retrieval practice, such as low-stakes quizzing and self-testing, spacing out practice, interleaving the practice of different but related topics or skills, trying to solve a problem before being taught the solution, distilling the underlying principles or rules that differentiate different types of problems, and so on. 
+
+Because learning is an iterative process that requires that you revisit what you have learned earlier and continually update it and connect it with new knowledge, we circle through these topics several times along the way. 
 
 
 
