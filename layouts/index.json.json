@@ -1,0 +1,7 @@
+{{ $zettelkasten_pages := slice }}
+{{ range $p := .Site.RegularPages }}
+  {{ if (in $p.RelPermalink "zettelkasten") }}
+    {{ $zettelkasten_pages = $zettelkasten_pages | append $p.Title }}
+  {{ end }}
+{{ end }}
+{{ $zettelkasten_pages | jsonify }}
