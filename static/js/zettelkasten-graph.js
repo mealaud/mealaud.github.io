@@ -2,9 +2,8 @@
 var canvas = d3.select("#network");
 var width = canvas.attr("width");
 var height = canvas.attr("height");
-var r = 3;
+var r = 10;
 var ctx = canvas.node().getContext("2d");
-var color = d3.scaleOrdinal(d3.schemeCategory20);
 var simulation = d3.forceSimulation()
   .force("x", d3.forceX(width/2))
   .force("y", d3.forceY(height/2))
@@ -12,7 +11,7 @@ var simulation = d3.forceSimulation()
   .force("charge", d3.forceManyBody()
     .strength(-20))
   .force("link", d3.forceLink()
-    .id(function (d) { return d.name; }));
+    .id(function (d) { return d.post; }));
 
 function dragstarted() {
   if (!d3.event.active) simulation.alphaTarget(0.3).restart();
@@ -34,7 +33,7 @@ function dragended() {
 
 function drawNode(d) {
   ctx.beginPath();
-  ctx.fillStyle = color(d.party);
+  ctx.fillStyle = "white";
   ctx.moveTo(d.x, d.y);
   ctx.arc(d.x, d.y, r, 0, Math.PI*2);
   ctx.fill();
@@ -45,7 +44,10 @@ function drawLink(l) {
   ctx.lineTo(l.target.x, l.target.y);
 }
 
-d3.json("zettelkasten.json", function (err, graph) {
+// const url = "https://raw.githubusercontent.com/mealaud/mealaud.github.io/main/assets/data/zettelkasten.json";
+const url = "/home/mel/mealaud.github.io/public/index.json";
+// const url = "https://raw.githubusercontent.com/john-guerra/d3V4ForceTutorial/master/VotacionesSenado2017.json";
+d3.json(url, function (err, graph) {
   if (err) throw err;
 
   simulation.nodes(graph.nodes);
@@ -69,7 +71,6 @@ d3.json("zettelkasten.json", function (err, graph) {
     ctx.strokeStyle = "#aaa";
     graph.links.forEach(drawLink);
     ctx.stroke();
-
 
     ctx.globalAlpha = 1.0;
     graph.nodes.forEach(drawNode);

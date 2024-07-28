@@ -23,4 +23,4 @@
   {{ end }}
 {{ end }}
 
-{{ slice $nodes $links | jsonify }}
+{{ dict "nodes" $nodes "links" $links | jsonify }}
