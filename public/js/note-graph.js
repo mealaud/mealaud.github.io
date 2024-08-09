@@ -1,5 +1,16 @@
-import data from '/home/mel/mealaud.github.io/public/index.json';
-console.log(data);
+const getJSON = async url => {
+  const response = await fetch(url);
+  return response.json(); // get JSON from the response 
+}
+
+var graph;
+const data_url = "https://raw.githubusercontent.com/mealaud/mealaud.github.io/main/public/index.json"
+console.log("Fetching data...");
+getJSON(data_url)
+  .then(data => {
+    graph = data;
+  });
+console.log(graph);
 // /* global d3 */
 // var canvas = d3.select("#network");
 // var width = canvas.attr("width");

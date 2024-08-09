@@ -14,3 +14,4 @@ Current idea is to have this page be a brief description, map option on the righ
 Map can be filtered through (ripgrep style).
 dalskdj
 
+Currently I'm just gonna be taking notes lol.

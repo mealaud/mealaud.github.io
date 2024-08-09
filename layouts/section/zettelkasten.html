@@ -1,16 +1,13 @@
 {{ define "header" }}
   {{ partial "header.html" . }}
-  <script src="https://d3js.org/d3.v4.min.js"></script>
-  <script src="/js/note-graph.js"></script>
 {{ end }}
 
 {{ define "main" }}
   <h1>{{ .Title }}</h1>
   {{ .Content }}
 
-  <h2>GRAPH</h2>
-<canvas id="network" width="500" height="500"></canvas>
-
+  <h3>Notes</h3>
+  {{ partial "all-notes-collections" . }}
 {{ end }}
 
 {{ define "footer" }}

@@ -2,7 +2,8 @@
 title: "{{ replace .Name "-" " " | title }}"
 date: {{ .Date }}
 draft: false
-layout: "zettelkasten"
+type: "page"
+layout: "note"
 summary: "[SUMMARY]"
 ---
 

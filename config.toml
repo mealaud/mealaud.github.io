@@ -29,11 +29,11 @@ title = 'mel-land'
     #     name = "Map"
     #     url = "/map/"
     #     weight = 1
-    [[menu.main]]
-        identifier = "zettelkasten"
-        name = "Zettelkasten"
-        url = "/zettelkasten/"
-        weight = 1
+    # [[menu.main]]
+    #     identifier = "zettelkasten"
+    #     name = "Zettelkasten"
+    #     url = "/zettelkasten/"
+    #     weight = 1
     [[menu.main]]
         identifier = "academics"
         name = "Academics"
