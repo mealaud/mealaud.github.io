@@ -1,7 +1,7 @@
 ---
 title: "August 19th Lecture"
 date: 2024-08-20T13:22:09-04:00
-draft: true
+draft: false
 type:
 layout:
 summary: "Notes for the August 19th lecture on metric spaces."
