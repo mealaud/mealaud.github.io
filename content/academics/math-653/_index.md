@@ -1,7 +1,7 @@
 ---
 title: "Math 653"
 date: 2024-08-20T13:02:45-04:00
-draft: true
+draft: false
 type: "section"
 layout: "class-notes"
 summary: "My Math 653 notes."
