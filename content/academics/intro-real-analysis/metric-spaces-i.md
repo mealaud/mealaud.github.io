@@ -1,13 +1,14 @@
 ---
-title: "August 19th Lecture"
-date: 2024-08-20T13:22:09-04:00
+title: "Metric Spaces I (Overview)"
+date: 2024-08-31T15:38:34-04:00
 draft: false
 type:
 layout:
-summary: "Notes for the August 19th lecture on metric spaces."
+summary: "A guided tour and introduction to metric spaces in real analysis."
 ---
 
-In lecture, we actually began with topological spaces, but I feel that general topology will not be as helpful as just diving into metric spaces.
+Metric spaces, are in essence, the realm of analysis (in my experience).
+Analysis (or as I have heard from those my senior, "applied triangle inequality") relies on notions of distance and, in particular, arbitrarily precise approximations. (e.g., the $ \varepsilon $-$ \delta $ arguments that you might have seen previously.)
 
 ## Metric spaces and examples thereof
 

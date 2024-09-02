@@ -6,14 +6,14 @@
     <description>Recent content on mel-land</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 20 Aug 2024 13:22:09 -0400</lastBuildDate>
+    <lastBuildDate>Sat, 31 Aug 2024 15:38:34 -0400</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>August 19th Lecture</title>
-      <link>http://localhost:1313/academics/math-653/aug19-lecture/</link>
-      <pubDate>Tue, 20 Aug 2024 13:22:09 -0400</pubDate>
-      <guid>http://localhost:1313/academics/math-653/aug19-lecture/</guid>
-      <description>Notes for the August 19th lecture on metric spaces.</description>
+      <title>Metric Spaces I (Overview)</title>
+      <link>http://localhost:1313/academics/intro-real-analysis/metric-spaces-i/</link>
+      <pubDate>Sat, 31 Aug 2024 15:38:34 -0400</pubDate>
+      <guid>http://localhost:1313/academics/intro-real-analysis/metric-spaces-i/</guid>
+      <description>A guided tour and introduction to metric spaces in real analysis.</description>
     </item>
     <item>
       <title>Untitled</title>
@@ -21,13 +21,6 @@
       <pubDate>Thu, 04 Jul 2024 18:33:22 -0700</pubDate>
       <guid>http://localhost:1313/hobbies/writing/untitled/</guid>
       <description>On becoming.</description>
-    </item>
-    <item>
-      <title>Complex Differentiation</title>
-      <link>http://localhost:1313/academics/complex-self-study/complex-differentiation/</link>
-      <pubDate>Sat, 29 Jun 2024 11:48:12 -0700</pubDate>
-      <guid>http://localhost:1313/academics/complex-self-study/complex-differentiation/</guid>
-      <description>An introduction to complex differentiability and some explanation for why it&amp;rsquo;s so strong. Plus some exercises.</description>
     </item>
     <item>
       <title>Humbled by the Heavens</title>

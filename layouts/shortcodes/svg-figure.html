@@ -1,7 +1,8 @@
 <center>
   <figure>
-    <img src="{{ print "/svgs/" (.Get 0) }}" width="{{ .Get 1 }}" style="filter: brightness(0) saturate(100%) invert(96%) sepia(2%) saturate(4162%) hue-rotate(353deg) brightness(101%) contrast(97%);">
-    <br>{{ .Inner }}
+    <img src="{{ .Get 0 }}" width="{{ .Get 1 }}">
+    <figcaption>{{ .Inner }}</figcaption>
+    <br>
   </figure>
 </center>
 

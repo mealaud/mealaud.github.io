@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Introduction to Real Analysis on mel-land</title>
+    <link>http://localhost:1313/academics/intro-real-analysis/</link>
+    <description>Recent content in Introduction to Real Analysis on mel-land</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 31 Aug 2024 15:38:34 -0400</lastBuildDate>
+    <atom:link href="http://localhost:1313/academics/intro-real-analysis/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Metric Spaces I (Overview)</title>
+      <link>http://localhost:1313/academics/intro-real-analysis/metric-spaces-i/</link>
+      <pubDate>Sat, 31 Aug 2024 15:38:34 -0400</pubDate>
+      <guid>http://localhost:1313/academics/intro-real-analysis/metric-spaces-i/</guid>
+      <description>A guided tour and introduction to metric spaces in real analysis.</description>
+    </item>
+  </channel>
+</rss>

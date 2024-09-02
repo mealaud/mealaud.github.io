@@ -3,7 +3,7 @@
   <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Complex Analysis Self Study | mel-land</title>
+    <title>August 20th Lecture | mel-land</title>
 
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -43,7 +43,6 @@
     
     <link rel="icon" href="/gruv-cropped-gortoutline.png"/>
 
-    <link rel="alternate" type="application/rss+xml" href="http://localhost:1313/academics/complex-self-study/index.xml" title="mel-land" />
     </head>
 
   <body>
@@ -93,50 +92,33 @@
 
 
         <article style="margin-top: 1em; padding-left: 0.5em;">
-           
+          
   <header>
-    <h1>Complex Analysis Self Study<span style="opacity: 0.5; font-size: 0.5em">    Thursday, March 28, 2024</span></h1>
+    <h1>August 20th Lecture<span style="opacity: 0.5; font-size: 0.5em">    Tuesday, August 20, 2024</span></h1>
   </header>
-  <p><a href="https://mtaylor.web.unc.edu/wp-content/uploads/sites/16915/2018/04/complex.pdf">Michael Taylor&rsquo;s Notes</a></p>
-<p>These are my notes on complex analysis!
-I&rsquo;m going to base them on three main sources:</p>
+  <p>We started with a brief, high-level overview of what topology is.
+Topology is simply &ldquo;geometry made flexible, without rigid notions of distance&rdquo;.
+This general-seeming idea grew out of the study of surfaces in complex analysis and algebraic geometry.</p>
+<h2 id="topological-spaces">Topological spaces</h2>
+<p>A <span id="defn:topological space" class="tdf">topological space</span>
+is a set $ X $ together with a collection $ \mathcal{T} $ of subsets $ X $ such that</p>
 <ol>
-<li>David Ullrich&rsquo;s <em>Complex Made Simple</em>;</li>
-<li>Lars Ahlfor&rsquo;s <em>Complex Analysis</em>; and</li>
-<li>Terence Tao&rsquo;s <a href="https://terrytao.wordpress.com/2016/09/18/246a-notes-0-the-complex-numbers/">Complex Analysis Notes</a><br></li>
+<li>$ \varnothing, X \in \mathcal{T} $,</li>
+<li>any union of elements of $ \mathcal{T} $ is in $ \mathcal{T} $, and</li>
+<li>any finite intersection of elements of $ \mathcal{T} $ is in $ \mathcal{T} $.
+The collection of subsets $ \mathcal{T} $ is known as a <span id="defn:topology" class="tdf">topology</span>
+.
+In most cases, we&rsquo;ll drop the $ \mathcal{T} $ and just write &ldquo;$ X $ is a topological space&rdquo;.
+<br></li>
 </ol>
-<p>I will also be assuming basic familiarity with complex numbers (i.e., their definition as ordered pairs of real numbers with multiplication defined on them).<br>
-<br></p>
-<p>I hope to finally understand complex analysis by writing these, hopefully&hellip;</p>
-
-
-  <h3>Notes</h3>
-  <ol style="padding: 0; margin: 0" title="1">
-  
-    <li style="padding-bottom: 1em">
-      <div style="display: flex;">
-        <div class="title-date">
-          <a href="http://localhost:1313/academics/complex-self-study/complex-differentiation/" style="text-wrap: wrap;">Complex Differentiation</a><br>
-          <span style="opacity: 65%;"><em> Jun 29, 2024</em></span>
-        </div>
-        <div>
-          An introduction to complex differentiability and some explanation for why it&rsquo;s so strong. Plus some exercises.
-        </div>
-      </div>
-    </li>
-  
-    <li style="padding-bottom: 1em">
-      <div style="display: flex;">
-        <div class="title-date">
-          <a href="http://localhost:1313/academics/complex-self-study/power-series/" style="text-wrap: wrap;">Power Series</a><br>
-          <span style="opacity: 65%;"><em> Jun 29, 2024</em></span>
-        </div>
-        <div>
-          An introduction to power series as objects in their own right.
-        </div>
-      </div>
-    </li>
-  
+<p>The structure of a topology is ubiquitous in mathematics and so we have a lot of examples.
+We name a few for the time being:</p>
+<ol>
+<li>The standard topology on $ \mathbb{R} $ (if every point of a set contains an open interval contained in the set, then the set is open)</li>
+<li>If $ X $ is any set, $ \mathcal{P}(X) $ forms a topology on $ X $. We call this the <span id="defn:discrete topology" class="tdf">discrete topology</span>
+.</li>
+<li>If $ X $ is any set, we can take $ \mathcal{T} = \left \{ \varnothing, X \right \}  $ to get the <span id="defn:indiscrete topology" class="tdf">indiscrete topology</span>
+.</li>
 </ol>
 
 

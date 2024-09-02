@@ -1,7 +1,7 @@
 ---
 title: "Complex Differentiation"
 date: 2024-06-29T11:48:12-07:00
-draft: false
+draft: true
 type: "page"
 layout: "note"
 summary: "An introduction to complex differentiability and some explanation for why it's so strong. Plus some exercises."
