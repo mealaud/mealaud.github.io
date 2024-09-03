@@ -6,8 +6,15 @@
     <description>Recent content on mel-land</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 01 Sep 2024 12:08:16 -0400</lastBuildDate>
+    <lastBuildDate>Mon, 02 Sep 2024 13:46:56 -0400</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Topological Spaces I (Overview)</title>
+      <link>http://localhost:1313/academics/intro-topology/topological-spaces-i/</link>
+      <pubDate>Mon, 02 Sep 2024 13:46:56 -0400</pubDate>
+      <guid>http://localhost:1313/academics/intro-topology/topological-spaces-i/</guid>
+      <description>A tour of some basic ideas in topology.</description>
+    </item>
     <item>
       <title>Metric Spaces II (Topology)</title>
       <link>http://localhost:1313/academics/intro-real-analysis/metric-spaces-ii/</link>
