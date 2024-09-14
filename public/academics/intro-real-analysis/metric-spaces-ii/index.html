@@ -150,10 +150,7 @@ We now claim that $ D \colon \mathcal{X} \times \mathcal{X} \to \mathbb{R} $ def
 <br>
 <br></p>
 <p><strong>Step 3.</strong>
-(Showing $ (\mathcal{X},D) $ is complete.)
-<br></p>
-<p><em>Step 3.1.</em>
-(Show $ D $ is well-defined.)
+(Showing $ D $ is well-defined so $ (\mathcal{X},D) $ is a metric space.)
 Suppose $ (a_n) \sim (c_n) $ and $ (b_n) \sim (d_n) $.
 Then using $ d $&rsquo;s triangle inequality:
 $$\begin{align}
@@ -172,11 +169,40 @@ Thus $ D $ is well-defined.
 (It is clear that $ D $ is symmetric, reflexive, and satisfies the triangle inequality.)
 <br>
 <br></p>
-<p><em>Step 3.2.</em>
-(Showing completeness.)
+<p><strong>Step 4.</strong>
+(Showing $ (\mathcal{X},D) $ is complete.)
+This will take a few steps.
+<br>
+<br></p>
+<p><em>Step 4.1.</em> (Figuring out notation! :skull:)
 Now, suppose $ (F_n) \subseteq \mathcal{X} $ is a Cauchy sequence with each $ F_n $ being an equivalence class of Cauchy sequences in $ (X,d) $.
-For each $ n $, choose a representative and call it $ (f_n) $.
-We claim that $ F_n \to \overline{g(n)} $ where $ g(n) = f_n(n) $.
+For each $ n $, choose a representative and call it $ (f_n(j))_{j=1}^\infty $.
+<br>
+<br></p>
+<p><em>Step 4.2.</em> (Choosing a limit candidate.)
+By definition of $ (F_n) $ being Cauchy in $ (\mathcal{X},D) $, we know that, by our aforementioned notation the quantity $\lim_{j\to\infty} d(f_n(j),f_m(j)) $ can be arbitrarily small.
+<br>
+<br></p>
+<p>Since each $ (f_k(j))_{j=1}^\infty $ is Cauchy, for each $ k \in \mathbb{Z}^+ $, there exists $ I_k $ such that $ i,j \geq I_k $ implies that $ d(f_k(i),f_k(j)) &lt; 1/k $.
+From this, we are now prepared to choose our candidate: consider the sequence $ (\ell_j) $ defined by
+$$\begin{equation}
+\ell_j = f_j(N_j).
+\end{equation}$$
+Now we have to show that $ (\ell_j) $ is actually a point in our space, i.e., we have to&hellip;
+<br>
+<br></p>
+<p><em>Step 4.3.</em> (Showing $ (\ell_j) $ is cauchy in $ (X,d) $.)
+Let $ \varepsilon &gt; 0 $.
+Then, can employ the triangle inequality to get that:
+$$\begin{align}
+d(\ell_i,\ell_j) &amp;\leq d(f_i(N_i), f_j(N_j)) \\
+&amp;\leq \underbrace{d(f_i(N_i), f_i(r))}_A + \underbrace{d(f_i(r), f_j(r))}_B + \underbrace{d(f_j(r),f_j(N_j))}_C.
+\end{align}$$</p>
+<p>We now bound each term.</p>
+<br>
+<br>
+<p><em>Step 4.4.</em> (Proving convergence to the candidate.)</p>
+<p>We claim that $ F_n \to \overline{g(n)} $ where $ g(n) = f_n(n) $.
 We know that $ g \in \mathcal{X} $, as if we fix $ \varepsilon &gt; 0 $, we know that:</p>
 <ol>
 <li>for each $ n $, there is $ N_n $ such that $ r,s \geq N_n $ implies that $ d(f_n(r),f_n(s)) &lt; \varepsilon/3 $</li>

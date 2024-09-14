@@ -62,11 +62,7 @@ We now claim that $ D \colon \mathcal{X} \times \mathcal{X} \to \mathbb{R} $ def
 {{%nl%}}{{%nl%}}
 
 **Step 3.** 
-(Showing $ (\mathcal{X},D) $ is complete.)
-{{%nl%}}
-
-_Step 3.1._
-(Show $ D $ is well-defined.)
+(Showing $ D $ is well-defined so $ (\mathcal{X},D) $ is a metric space.)
 Suppose $ (a_n) \sim (c_n) $ and $ (b_n) \sim (d_n) $. 
 Then using $ d $'s triangle inequality:
 $$\begin{align}
@@ -86,10 +82,43 @@ I further claim that $ D $ is indeed a metric.
 {{%nl%}}{{%nl%}}
 
 
-_Step 3.2._ 
-(Showing completeness.)
+**Step 4.**
+(Showing $ (\mathcal{X},D) $ is complete.)
+This will take a few steps.
+{{%nl%}}{{%nl%}}
+
+_Step 4.1._ (Figuring out notation! :skull:)
 Now, suppose $ (F_n) \subseteq \mathcal{X} $ is a Cauchy sequence with each $ F_n $ being an equivalence class of Cauchy sequences in $ (X,d) $. 
-For each $ n $, choose a representative and call it $ (f_n) $.
+For each $ n $, choose a representative and call it $ (f_n(j))_{j=1}^\infty $.
+{{%nl%}}{{%nl%}}
+
+_Step 4.2._ (Choosing a limit candidate.)
+By definition of $ (F_n) $ being Cauchy in $ (\mathcal{X},D) $, we know that, by our aforementioned notation the quantity $\lim_{j\to\infty} d(f_n(j),f_m(j)) $ can be arbitrarily small.
+{{%nl%}}{{%nl%}}
+
+Since each $ (f_k(j))_{j=1}^\infty $ is Cauchy, for each $ k \in \mathbb{Z}^+ $, there exists $ I_k $ such that $ i,j \geq I_k $ implies that $ d(f_k(i),f_k(j)) < 1/k $. 
+From this, we are now prepared to choose our candidate: consider the sequence $ (\ell_j) $ defined by 
+$$\begin{equation}
+    \ell_j = f_j(N_j).
+\end{equation}$$
+Now we have to show that $ (\ell_j) $ is actually a point in our space, i.e., we have to...
+{{%nl%}}{{%nl%}}
+
+_Step 4.3._ (Showing $ (\ell_j) $ is cauchy in $ (X,d) $.)
+Let $ \varepsilon > 0 $.
+Then, can employ the triangle inequality to get that:
+$$\begin{align}
+d(\ell_i,\ell_j) &\leq d(f_i(N_i), f_j(N_j)) \\\\
+&\leq \underbrace{d(f_i(N_i), f_i(r))}_A + \underbrace{d(f_i(r), f_j(r))}_B + \underbrace{d(f_j(r),f_j(N_j))}_C.
+\end{align}$$
+
+We now bound each term.
+
+
+{{%nl%}}{{%nl%}}
+_Step 4.4._ (Proving convergence to the candidate.)
+
+
 We claim that $ F_n \to \overline{g(n)} $ where $ g(n) = f_n(n) $.
 We know that $ g \in \mathcal{X} $, as if we fix $ \varepsilon > 0 $, we know that:
 1. for each $ n $, there is $ N_n $ such that $ r,s \geq N_n $ implies that $ d(f_n(r),f_n(s)) < \varepsilon/3 $
