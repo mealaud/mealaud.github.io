@@ -48,9 +48,8 @@ Working is fine -- with purpose.
 Living is fine -- with purpose.
 There is no less that I may do.
 
-#### Axiom I.6 {#mundane}
->>> _The mundane can be beautiful._
-{{%nl%}}
+<!-- #### Axiom I.6 {#mundane} -->
+<!-- >>> _The mundane can be beautiful._ -->
 
 
 
