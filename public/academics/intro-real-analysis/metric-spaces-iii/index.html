@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Metric Spaces III (Topology) | mel-land</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="/css/style.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/css/theme.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/css/gallery.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/css/elements.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/css/math.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/css/search.css" type="text/css" media="all" />
+    
+    <script src="/js/gallery.js"></script>
+
+    
+    <link rel="stylesheet" href="/css/katex.min.css">
+<script defer="" src="/js/katex.min.js"></script>
+<script defer="" src="/js/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+            delimiters: [
+                {left: "$$", right: "$$", display: true},
+                {left: "$", right: "$", display: false},
+                {left: "\\[ ", right: "\\]", display: true},
+                {left: "\\(", right: "\\)", display: false},
+            ]
+        });
+    });
+</script>
+
+
+
+
+    
+    
+    <link rel="icon" href="/gruv-cropped-gortoutline.png"/>
+
+    </head>
+
+  <body>
+    <div id="main-wrapper" style="height: 100%; min-width: 35%; max-width: 100%; width: 700px; margin: auto">
+      <div id="content-wrapper">
+        
+  
+<div style="display: flex; height: 7.45em;">
+  <div style="height: 100%;">
+    <a class="logo" href="http://localhost:1313/">
+      
+      <img src="/gortoutline.png" style="filter: brightness(0) saturate(100%) invert(99%) sepia(3%) saturate(1032%) hue-rotate(327deg) brightness(98%) contrast(88%);" height=100%>
+    </a>
+  </div>
+  <div>&nbsp;</div>
+  <div style="width: 100%">
+    <div id="title-font">
+      <a href="http://localhost:1313/" style="text-decoration: none; color: var(--fg)">mel-land</a>
+    </div>
+    <div id="subtitle-font">
+      where the mel guy<br>
+      reigns supreme
+    </div>
+    <div id="navigation">
+      <ul class="nav-list">
+        
+          <li class="nav-item">
+            <a href="/academics/" style="text-decoration: none; font-weight: bold; font-size: 125%; color: var(--fg)">Academics</a>
+          </li>
+        
+          <li class="nav-item">
+            <a href="/hobbies/" style="text-decoration: none; font-weight: bold; font-size: 125%; color: var(--fg)">Hobbies</a>
+          </li>
+        
+          <li class="nav-item">
+            <a href="/axioms/" style="text-decoration: none; font-weight: bold; font-size: 125%; color: var(--fg)">Axioms</a>
+          </li>
+        
+          <li class="nav-item">
+            <a href="/about-me/" style="text-decoration: none; font-weight: bold; font-size: 125%; color: var(--fg)">About Me</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+        <article style="margin-top: 1em; padding-left: 0.5em;">
+          
+  <header>
+    <h1>Metric Spaces III (Topology)<span style="opacity: 0.5; font-size: 0.5em">    Friday, September 13, 2024</span></h1>
+  </header>
+  <p>A quick explanation of topology (per my Professor, Philip Tosteson) is that topology is &ldquo;geometry made flexible; geometry without rigid notions of distance&rdquo;.
+Immediately, you may be confused why this is relevant as we are considering <em>metric spaces</em>&ndash;spaces with (literally) a notion of distance.
+So why are we thinking about this?
+I have three reasons.</p>
+<ol>
+<li>Topology is the overarching branch of mathematics which contains the contents of this post; we are simply studying a very special case of a topology.</li>
+<li>Topology is a powerful language in which we can express mathematics.
+Sometimes, things we prove in analysis using metrics is actually a consequence of a more general topological idea or theorem.</li>
+<li>Metric spaces are a bit geometric with their distances and whatnot, but they are also quite flexible!
+We will witness this idea a bit with equivalent metrics and the idea of <em>homeomorphic spaces</em> (essentially, when two spaces &ldquo;look the same&rdquo;).</li>
+</ol>
+<h2 id="the-foundation-of-topology-open-sets">The foundation of topology: open sets</h2>
+<p>Open sets are going to be the basis of how we understand the &ldquo;shape&rdquo; of our space.
+Indeed, all other topological/geometric/shape-seeming properties will be (in some form) encoded by these objects.
+<br>
+<br></p>
+<h3 id="balls-and-their-relation-to-openness">Balls and their relation to openness</h3>
+<p>Though open sets are a very powerful idea, they are not too complicated (in definition)!
+<br>
+<br></p>
+<p>First, we need a preliminary definition.
+Indeed: in a metric space $ (X,d) $, the <span id="defn:open ball" class="tdf">open ball</span>
+around a point $ p \in X $ of radius $ r \in \mathbb{R}^+ $ is defined to be the set $ \left \{ x \in X : d(p,x) &lt; r \right \}  $ and is denoted $ B(p,r) $.
+<br>
+<br></p>
+<p>Now, an <span id="defn:open set" class="tdf">open set</span>
+$ U \subseteq X $ is a set such that for all $ p \in U $, there exists an open ball around $ p $ that is completely contained in $ U $.
+In other words, $ U $ is open if for all $ p \in U $, there exists $ r_p &gt; 0 $ such that $ B(p,r_p) \subseteq U $.<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>
+<br>
+<br></p>
+<p>Now you might be thinking: is an <em>open ball</em> open?
+It is!
+If you want to prove it on your own, remember that pictures, although not proofs, are helpful for intuition and for developing your argument.</p>
+<div id="" class="math-env math-result math-prop">
+<p>In a metric space $ (X,d) $, every open ball is open.</p>
+</div>
+<details id="math-hint">
+  <summary><i>Hint</i></summary>
+<p>Suppose we are working with $ B(p,r) $ for $ p \in X $ and $ r &gt; 0 $.
+Consider some point $ q \in B(p,r) $.
+What radius $ s $ would fit the ball $ B(q,s) $ in the original ball $ B(p,r) $? (cf. the diagram below)</p>
+<center>
+  <figure>
+    <img src="https://raw.githubusercontent.com/mealaud/mealaud.github.io/main/static/svgs/open-ball-is-open.svg" width="90%">
+    <figcaption></figcaption>
+    <br>
+  </figure>
+</center>
+</details>
+<details id="math-pf">
+  <summary><i>Solution</i></summary>
+  <div class="math-pf">
+<p>Suppose $ p \in X $, $ r &gt; 0 $ and consider $ B(p,r) $.
+To show that $ B(p,r) $ is open, it suffices to show that for any point $ q \in B(p,r) $ there exists some $ s &gt; 0 $ such that $ B(q,s) \subseteq B(p,r) $.
+<br>
+<br></p>
+<p>To this end, consider
+$$\begin{equation}
+s = r-d(p,q)
+\end{equation}$$
+Now consider some point $ \ell \in B(q,s) $:
+Using the triangle inequality, we get that
+$$\begin{equation}
+d(\ell,p) \leq d(\ell,q) + d(q,p) &lt; s + d(q,p) = r - d(p,q) + d(q,p) = r.
+\end{equation}$$
+Thus $ d(\ell,p) &lt; r $ and $ \ell \in B(p,r) $.
+Thus $ B(q,s) \subseteq B(p,r) $ and $ B(p,r) $ is open.</p>
+  </div>
+</details>
+<p>Now we can freely discuss open sets.</p>
+<h3 id="properties-and-examples-of-open-sets">Properties and examples of open sets</h3>
+<p>We immediately state some neat properties of open sets.</p>
+<div id="" class="math-env math-result math-prop">
+<p>In a metric space $ (X,d) $:</p>
+<ol>
+<li>$ X $ and $ \varnothing $ are open.</li>
+<li>Finite intersection of open sets are open.</li>
+<li>Arbitrary unions of open sets are open.</li>
+</ol>
+</div>
+<p>Statement #1</p>
+<details id="math-pf">
+  <summary><i>Solution</i></summary>
+  <div class="math-pf">
+<p>Vacuously, $ \varnothing $ is open as it contains no points.
+Moreover, $ X $ is open as any open ball $ B(p,r) $ for $ p \in X $, $ r &gt; 0 $ is, by definition, contained in $ X $.</p>
+  </div>
+</details>
+<p>Statement #2.</p>
+<details id="math-pf">
+  <summary><i>Solution</i></summary>
+  <div class="math-pf">
+<p>Suppose $ U_1,\ldots,U_n $ are a collection of open subsets of $ X $.
+Then consider $\bigcap_{i=1}^{n}U_i $.
+If $ p \in U_i $, there exists some radius $ r_i &gt; 0 $ such that $ B(p,r_i) \subseteq U_i $.
+Then, for each $ p $, we can define an $ r_p $ by taking the minimum of the $ r_i $.
+(This minimum is still positive as we are taking the minimum of a finite set.)
+Hence, for each $ p \in\bigcap_{i=1}^{n} U_i $, $ B(p,r_p) \subseteq\bigcap_{i=1}^{n}U_i $ and their intersection is open.</p>
+  </div>
+</details>
+<p>Statement #3.</p>
+<details id="math-pf">
+  <summary><i>Solution</i></summary>
+  <div class="math-pf">
+<p>Suppose $ \left \{ U_\alpha \right \}<em>{\alpha \in A} $ is a collection of open sets (where $ A $ is some indexing set).
+Then suppose $ p \in\bigcup</em>{\alpha \in A}^{}U_\alpha $.
+Then, by definition of union, there exists some $ \beta \in A $ such that $ p \in U_\beta $.
+Thus there exists a radius $ r &gt; 0 $ such that $ B(p,r) \subseteq U_\beta $.
+Hence $ B(p,r) \subseteq\bigcup_{\alpha \in A}^{} U_\alpha $ as desired.</p>
+  </div>
+</details>
+<br>
+<p>One thing worth noting is that I didn&rsquo;t say &ldquo;arbitrary intersections of open sets are open&rdquo;.
+I didn&rsquo;t say it, because, well, it&rsquo;s not true!; but that&rsquo;s not particularly helpful&hellip;
+If we consider a metric space $ \mathbb{R} $, $\bigcap_{n=1}^{\infty}(-n^{-1}, n^{-1}) = \left \{ 0 \right \} $ which is not open even though $ (-n^{-1},n^{-1}) $ is open for all $ n $.</p>
+<h3 id="open-balls-and-convergence-of-sequences">Open balls and convergence of sequences</h3>
+<p>We learned in the last post that a sequence $ (p_n) $ converges to $ p $ if for all $ \varepsilon &gt; 0 $ there exists $ N $ such that $ d(p,p_n) &lt; \varepsilon $ if $ n \geq N $.
+But, since we know about open balls now, we can rephrase this definition using open balls!
+We put this as a proposition (which I will not prove).</p>
+<div id="" class="math-env math-result math-prop">
+<p>Let $ (X,d) $ be a metric space and let $ (p_n) \subseteq X $ and $ p \in X $.
+Then: $ p_n \to p $ if and only if for all $ \varepsilon &gt; 0 $ there exists $ N $ such that $ p_n \in B(p,\varepsilon) $ whenever $ n \geq N $.</p>
+</div>
+<h3 id="closed-sets-and-their-relation-to-openness">Closed sets and their relation to openness</h3>
+<p>We say a set $ C \subseteq X $ is <span id="defn:closed" class="tdf">closed</span>
+if: if $ (p_n) \subseteq C $ is a sequence converging to $ p \in X $, then $ p \in C $.
+How does this relate to openness however?
+Well, with the definition of openness in mind, we can show that $ C $ is closed if and only if $ X \setminus C $ is <em>open</em>!
+We state this as a result and leave an associated proof.</p>
+<div id="" class="math-env math-result math-prop">
+<p>In a metric space $ (X,d) $, $ C \subseteq X $ is closed if and only if $ X \setminus C $ is open.</p>
+</div>
+<details id="math-pf">
+  <summary><i>Solution</i></summary>
+  <div class="math-pf">
+<p>($\Rightarrow$)
+Suppose towards the contraposition that $ X \setminus C $ is not open.
+Then there exists an element $ p \in X \setminus C $ such that for all $ \varepsilon &gt; 0 $, there $ B(p,\varepsilon) \cap C \neq \varnothing $.
+(i.e., $ B(p,\varepsilon) $ is not entirely contained in $ X \setminus C $.)
+Using this we can now define a sequence $ (p_n) $.
+For each $ n \in \mathbb{Z}^+ $, define $ p_n $ to be a point contained in $ B(p,1/n) \cap C $.
+Then, by our alternate definition of convergence using open balls, we have that $ (p_n) \subseteq C $ and $ p_n \to p $.
+However, $ p \not \in C $ by hypothesis.
+Thus $ C $ is not closed.</p>
+<br>
+<br>
+<p>($\Leftarrow$)
+Suppose towards the contraposition that $ C $ is not closed.
+Then there is a sequence $ (q_n) \subseteq C $ such that $ q_n \to q \not \in C $ (i.e., $ q \in X \setminus C $).
+Then for all $ \varepsilon &gt; 0 $, there is some $ n_\varepsilon $ such that $ q_{n_\varepsilon} \in B(q,\varepsilon) $.
+Thus $ B(q,\varepsilon) \not \subseteq X \setminus C $ for any $ \varepsilon &gt; 0 $ and $ X \setminus C $ is not open.</p>
+  </div>
+</details>
+<p>Then recalling our properties of open sets and using our above proposition, we get the following:</p>
+<div id="" class="math-env math-result math-prop">
+<p>In a metric space $ (X,d) $:</p>
+<ol>
+<li>$ X $ and $ \varnothing $ are closed.</li>
+<li>Finite unions of closed sets are closed.</li>
+<li>Arbitrary intersections of closed sets are closed.</li>
+</ol>
+</div>
+<h3 id="an-interesting-observation">An interesting observation</h3>
+<p>If we look at our properties of open and closed sets, we get that in a metric space $ (X,d) $, $ X $ and $ \varnothing $ are both open AND closed, or <span id="defn:clopen" class="tdf">clopen</span>
+.
+We will give more examples of clopen sets soon.
+<br>
+<br></p>
+<p>For now we will describe more metric-topological properties in increasing abstractness.</p>
+<h2 id="a-stronger-sense-of-boundedness">A stronger sense of boundedness</h2>
+<h2 id="connectedness">Connectedness</h2>
+<h2 id="compactness">Compactness</h2>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>The dependence of the radius on the point is quite important. In this case, there is not much to read into, but it is important to know when values depend on other values in analysis.
+Later we&rsquo;ll get more into this with ideas like <em>pointwise</em> and <em>uniform</em> continuity, among other things.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+
+
+        </article>
+      </div>
+      
+  <footer>
+  <div style="height: 5vh;"></div>
+	<div style="text-align: center;"><p>&copy;2023-2024 Mealaud Mokhtarzad</p></div>
+</footer>
+
+
+    </div>
+  </body>
+</html>
+

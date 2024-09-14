@@ -3,7 +3,7 @@
   <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Metric Spaces II (Topology) | mel-land</title>
+    <title>Metric Spaces II (Completeness) | mel-land</title>
 
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -94,128 +94,102 @@
         <article style="margin-top: 1em; padding-left: 0.5em;">
           
   <header>
-    <h1>Metric Spaces II (Topology)<span style="opacity: 0.5; font-size: 0.5em">    Sunday, September 1, 2024</span></h1>
+    <h1>Metric Spaces II (Completeness)<span style="opacity: 0.5; font-size: 0.5em">    Sunday, September 1, 2024</span></h1>
   </header>
-  <p>A quick explanation of topology (per my Professor, Philip Tosteson) is that topology is &ldquo;geometry made flexible; geometry without rigid notions of distance&rdquo;.
-Immediately, you may be confused why this is relevant as we are considering <em>metric spaces</em>&ndash;spaces with (literally) a notion of distance.
-So why are we thinking about this?
-I have three reasons.</p>
-<ol>
-<li>Topology is the overarching branch of mathematics which contains the contents of this post; we are simply studying a very special case of a topology.</li>
-<li>Topology is a powerful language in which we can express mathematics.
-Sometimes, things we prove in analysis using metrics is actually a consequence of a more general topological idea or theorem.</li>
-<li>Metric spaces are a bit geometric with their distances and whatnot, but they are also quite flexible!
-We will witness this idea a bit with equivalent metrics and the idea of <em>homeomorphic spaces</em> (essentially, when two spaces &ldquo;look the same&rdquo;).</li>
-</ol>
-<h2 id="the-foundation-of-topology-open-sets">The foundation of topology: open sets</h2>
-<p>Open sets are going to be the basis of how we understand the &ldquo;shape&rdquo; of our space.
-Indeed, all other topological/geometric/shape-seeming properties will be (in some form) encoded by these objects.
+  <p>In the previous set of notes, we defined <a href="/academics/intro-real-analysis/metric-spaces-i/#defn:Cauchy">cauchy sequences</a> and I commented that they <em>do</em> converge but also they <em>do not</em> converge.
+I will expand on that more in this set of notes.</p>
+<h2 id="completeness-and-how-it-fails">Completeness and how it fails</h2>
+<p>We say a metric space $ (X,d) $ is <span id="defn:complete" class="tdf">complete</span>
+if every cauchy sequence is convergent.
+But isn&rsquo;t this obvious?
+Yes!——but also no!
 <br>
 <br></p>
-<h3 id="balls-and-their-relation-to-openness">Balls and their relation to openness</h3>
-<p>Though open sets are a very powerful idea, they are not too complicated (in definition)!
+<p>Cauchy sequences, morally speaking, <em>should</em> converge, but they don&rsquo;t necessarily.
+Where can they fail?
 <br>
 <br></p>
-<p>First, we need a preliminary definition.
-Indeed: in a metric space $ (X,d) $, the <span id="defn:open ball" class="tdf">open ball</span>
-around a point $ p \in X $ of radius $ r \in \mathbb{R}^+ $ is defined to be the set $ \left \{ x \in X : d(p,x) &lt; r \right \}  $ and is denoted $ B(p,r) $.
-<br>
-<br></p>
-<p>Now, an <span id="defn:open set" class="tdf">open set</span>
-$ U \subseteq X $ is a set such that for all $ p \in U $, there exists an open ball around $ p $ that is completely contained in $ U $.
-In other words, $ U $ is open if for all $ p \in U $, there exists $ r_p &gt; 0 $ such that $ B(p,r_p) \subseteq U $.<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>
-<br>
-<br></p>
-<p>Now you might be thinking: is an <em>open ball</em> open?
-It is!
-If you want to prove it on your own, remember that pictures, although not proofs, are helpful for intuition and for developing your argument.</p>
-<div id="" class="math-env math-result math-prop">
-<p>In a metric space $ (X,d) $, every open ball is open.</p>
+<p>To explore this, consider the metric space $ (X,d) $ with $ X = \left \{ 1/n : n \in \mathbb{Z} \setminus \left \{ 0 \right \}  \right \}  $ and $ d $ the Euclidean metric.
+This space is <em>not</em> complete.
+Why?
+Well, we know that the sequences $ (a_n), (b_n) \subseteq X $ defined by $ a_n = 1/n $ and $ b_n = -1/n $ are Cauchy and <em>should</em> converge to $ 0 $, but $ 0 \not \in X $.
+Hence, in some sense, $ a_n ,b_n \to 0 $, but just in a space <em>larger than but still containing $ X $.</em>
+This is precisely how Cauchy sequences can fail to converge, but it gives us a way to fix this!
+We (somehow) make our spaces bigger&hellip; or we <em>complete</em> the space. B)</p>
+<h2 id="incompleteness-and-how-to-fix-it">Incompleteness and how to fix it</h2>
+<p>Consider an <em>incomplete</em> metric space $ (X,d) $.
+How do we fill the holes?
+By adding in the limits of Cauchy sequences.
+This is literally the core idea lol.</p>
+<p>We proceed with a step-by-step proof.</p>
+<div id="" class="math-env math-result math-thm">
+<p>Given a metric space $ (X,d) $, there exists a complete metric space $ (\mathcal{X},D) $ such that there is an injective map $ \iota \colon X \to \mathcal{X} $ such that $ d(x_1,x_2) = D(\iota(x_1),\iota(x_2)) $.</p>
 </div>
-<details id="math-hint">
-  <summary><i>Hint</i></summary>
-<p>Suppose we are working with $ B(p,r) $ for $ p \in X $ and $ r &gt; 0 $.
-Consider some point $ q \in B(p,r) $.
-What radius $ s $ would fit the ball $ B(q,s) $ in the original ball $ B(p,r) $? (cf. the diagram below)</p>
-<center>
-  <figure>
-    <img src="https://raw.githubusercontent.com/mealaud/mealaud.github.io/main/static/svgs/open-ball-is-open.svg" width="90%">
-    <figcaption></figcaption>
-    <br>
-  </figure>
-</center>
-</details>
+<p>We&rsquo;re basically saying, we can put the original metric space inside a bigger, complete metric space.</p>
 <details id="math-pf">
   <summary><i>Solution</i></summary>
   <div class="math-pf">
-<p>Suppose $ p \in X $, $ r &gt; 0 $ and consider $ B(p,r) $.
-To show that $ B(p,r) $ is open, it suffices to show that for any point $ q \in B(p,r) $ there exists some $ s &gt; 0 $ such that $ B(q,s) \subseteq B(p,r) $.
-<br>
-<br></p>
-<p>To this end, consider
+<p>put back</p>
+  </div>
+</details>
+<p><strong>Step 1.</strong>
+(Creating the fillers.)
+We proceed by creating equivalence classes of Cauchy sequences.
+We say that two Cauchy sequences $ (p_n) \sim (q_n) $ if
 $$\begin{equation}
-s = r-d(p,q)
+\lim_{n \to \infty} d(p_n,q_n) = 0.
 \end{equation}$$
-Now consider some point $ \ell \in B(q,s) $:
-Using the triangle inequality, we get that
-$$\begin{equation}
-d(\ell,p) \leq d(\ell,q) + d(q,p) &lt; s + d(q,p) = r - d(p,q) + d(q,p) = r.
-\end{equation}$$
-Thus $ d(\ell,p) &lt; r $ and $ \ell \in B(p,r) $. T
-Thus $ B(q,s) \subseteq B(p,r) $ and $ B(p,r) $ is open.</p>
-  </div>
-</details>
-<p>Now we can freely discuss open sets.</p>
-<h3 id="properties-and-examples">Properties and examples</h3>
-<p>We immediately state some neat properties of open sets.</p>
-<div id="" class="math-env math-result math-prop">
-<p>In a metric space $ (X,d) $:</p>
-<ol>
-<li>$ X $ and $ \varnothing $ are open.</li>
-<li>Finite intersection of open sets are open.</li>
-<li>Arbitrary unions of open sets are open.</li>
-</ol>
-</div>
-<p>Statement #1</p>
-<details id="math-pf">
-  <summary><i>Solution</i></summary>
-  <div class="math-pf">
-<p>Vacuously, $ \varnothing $ is open as it contains no points.
-Moreover, $ X $ is open as any open ball $ B(p,r) $ for $ p \in X $, $ r &gt; 0 $ is, by definition, contained in $ X $.</p>
-  </div>
-</details>
-<p>Statement #2.</p>
-<details id="math-pf">
-  <summary><i>Solution</i></summary>
-  <div class="math-pf">
-<p>Suppose $ U_1,\ldots,U_n $ are a collection of open subsets of $ X $.
-Then consider $\bigcap_{i=1}^{n}U_i $.
-If $ p \in U_i $, there exists some radius $ r_i &gt; 0 $ such that $ B(p,r_i) \subseteq U_i $.
-Then, for each $ p $, we can define an $ r_p $ by taking the minimum of the $ r_i $.
-(This minimum is still positive as we are taking the minimum of a finite set.)
-Hence, for each $ p \in\bigcap_{i=1}^{n} U_i $, $ B(p,r_p) \subseteq\bigcap_{i=1}^{n}U_i $ and their intersection is open.</p>
-  </div>
-</details>
-<p>Statement #3.</p>
-<details id="math-pf">
-  <summary><i>Solution</i></summary>
-  <div class="math-pf">
-<p>Suppose $ \left \{ U_\alpha \right \}_{\alpha \in A} $ is a collection of open sets (where $ A $ is some indexing set).</p>
-  </div>
-</details>
+We claim that $ \sim $ defines an equivalence relation as it clearly satisfies reflexivity, symmetry, and transitivity.
 <br>
+<br></p>
+<p><strong>Step 2.</strong>
+(Choosing our space and its metric.)
+Now let $ \mathscr{X} $ be the space of $ X $-valued sequences and let $ \mathcal{X} \coloneqq \mathscr{X} / \sim $.
+We now claim that $ D \colon \mathcal{X} \times \mathcal{X} \to \mathbb{R} $ defined by $ (\overline{(a_n)},\overline{(b_n)}) \mapsto\lim_{n \to \infty} d(a_n,b_n) $ is a metric on $ \mathcal{X} $ under which $ (\mathcal{X}, D) $ is complete.
+(We use the bar-notation to indicate that the object is an equivalence class under $ \sim $.)
 <br>
-<p>This is also a good time to define its sister-object: the <span id="defn:closed ball" class="tdf">closed ball</span>
-around $ p $ of radius $ r $ is the set $ \left \{ x \in X : d(p,x) \leq r \right \}  $ and is denoted $ \overline{B}(p,r) $.</p>
-<div class="footnotes" role="doc-endnotes">
-<hr>
+<br></p>
+<p><strong>Step 3.</strong>
+(Showing $ (\mathcal{X},D) $ is complete.)
+<br></p>
+<p><em>Step 3.1.</em>
+(Show $ D $ is well-defined.)
+Suppose $ (a_n) \sim (c_n) $ and $ (b_n) \sim (d_n) $.
+Then using $ d $&rsquo;s triangle inequality:
+$$\begin{align}
+D \left ( \overline{(a_n)}, \overline{(b_n)} \right )  - D\left ( \overline{(c_n)}, \overline{(d_n)} \right )
+&amp;= \lim_{n\to \infty} \left [ d(a_n,b_n) -\lim_{n\to\infty} d(c_n,d_n) \right ]   \\
+&amp;\leq\lim_{n\to\infty} \left [ d(a_n,b_n) - d(c_n,d_n) \right ]  \\
+&amp;\leq\lim_{n\to \infty} \left [ d(a_n,b_n) - d(c_n,b_n) \right. \\
+&amp;\qquad \left . + d(c_n,b_n) - d(c_n,d_n) \right ] \\
+&amp;\leq\lim_{n\to\infty} \left [ d(a_n,c_n) + d(b_n,d_n) \right ]  \\
+&amp;= 0.
+\end{align}$$
+Thus $ D $ is well-defined.
+<br>
+<br></p>
+<p>I further claim that $ D $ is indeed a metric.
+(It is clear that $ D $ is symmetric, reflexive, and satisfies the triangle inequality.)
+<br>
+<br></p>
+<p><em>Step 3.2.</em>
+(Showing completeness.)
+Now, suppose $ (F_n) \subseteq \mathcal{X} $ is a Cauchy sequence with each $ F_n $ being an equivalence class of Cauchy sequences in $ (X,d) $.
+For each $ n $, choose a representative and call it $ (f_n) $.
+We claim that $ F_n \to \overline{g(n)} $ where $ g(n) = f_n(n) $.
+We know that $ g \in \mathcal{X} $, as if we fix $ \varepsilon &gt; 0 $, we know that:</p>
 <ol>
-<li id="fn:1">
-<p>The dependence of the radius on the point is quite important. In this case, there is not much to read into, but it is important to know when values depend on other values in analysis.
-Later we&rsquo;ll get more into this with ideas like <em>pointwise</em> and <em>uniform</em> continuity, among other things.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
-</li>
+<li>for each $ n $, there is $ N_n $ such that $ r,s \geq N_n $ implies that $ d(f_n(r),f_n(s)) &lt; \varepsilon/3 $</li>
+<li>for each m</li>
+<li>$ d(f_m(n),f_m(m)) &lt; \varepsilon/3 $ (similarly)</li>
+<li>$ D(f_n,f_m) &lt; \varepsilon/3 $ and $ (f_n) $ is assumed to be Cauchy in $ (\mathcal{X},D) $.
+Then:
+$$\begin{align}
+d(g(n),g(m)) &amp;= d(f_n(n),f_m(m)) \\
+&amp;\leq d(f_n(n), f_n(m)) + d(f_n(m), f_m(n)) + d(f_m(n),f_m(m)) \\
+\end{align}$$
+<a href="https://www.rose-hulman.edu/~bryan/lottamath/complete.pdf">https://www.rose-hulman.edu/~bryan/lottamath/complete.pdf</a></li>
 </ol>
-</div>
 
 
         </article>
