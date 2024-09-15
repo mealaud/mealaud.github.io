@@ -96,7 +96,69 @@
   <header>
     <h1>Topology &amp; Continuity II (Continuous functions)<span style="opacity: 0.5; font-size: 0.5em">    Sunday, September 15, 2024</span></h1>
   </header>
-  
+  <p>I first learning about continuous functions in high school (I think) as &ldquo;being able to draw the graph of the function without lifting your pen&rdquo;.
+This is not rigorous of course, but it does give some helpful intuition and brings up some good questions:</p>
+<ol>
+<li>What are the different types of discontinuities?</li>
+<li>How do we encode jumps (or the lack thereof)?</li>
+<li>How many discontinuities can we have?</li>
+<li>How do we deal with little blips or very brief, single-point spikes in value?</li>
+</ol>
+<p>Let&rsquo;s explore this a bit.</p>
+<h2 id="developing-the-definition">Developing the definition</h2>
+<h3 id="what-things-shouldnt-be-continuous">What things SHOULDN&rsquo;T be continuous?</h3>
+<p>There are some clear candidates for discontinuities.</p>
+<p>The aforementioned jump and blip discontinuities are great choices.</p>
+<center>
+  <figure>
+    <img src="https://raw.githubusercontent.com/mealaud/mealaud.github.io/main/static/svgs/jump-discontinuity.svg" width="90%">
+    <figcaption>
+A jump discontinuity at a point $ c $ in a function $ f $.
+</figcaption>
+    <br>
+  </figure>
+</center>
+<center>
+  <figure>
+    <img src="https://raw.githubusercontent.com/mealaud/mealaud.github.io/main/static/svgs/blip-discontinuity.svg" width="90%">
+    <figcaption>
+A single-point blip discontinuity at a point $ c $ in a function $ f $.
+</figcaption>
+    <br>
+  </figure>
+</center>
+<p>But how many of these little jumps can we have?
+Can we be <em>discontinuous everywhere</em>?
+Can we be discontinuous <em>every but a single point</em>?
+It turns out the answers are: it depends; yes; and yes.
+We&rsquo;ll talk about this more in due time, but for now we know what stuff <em>shouldn&rsquo;t</em> be continuous.
+Let&rsquo;s try developing a definition of continuity.</p>
+<h3 id="what-things-should-be-continuous">What things should be continuous?</h3>
+<p>Looking back at our examples, we see that there is a never an issue with the domain (read: our inputs/$ x $-axis).
+The only issue happens with our codomain (read: our outputs/$ y $-axis.)
+So it seems that to ensure continuity, we need to restrict how much the function can move up and down.
+<br>
+<br></p>
+<p>Preliminarily, consider the following diagram for a continuous (in the sense of the pen-lifting) function $ f $, where $ \varepsilon &gt; 0 $ and $ \delta &gt; 0 $ are small values satisfying our little picture.</p>
+<center>
+  <figure>
+    <img src="https://raw.githubusercontent.com/mealaud/mealaud.github.io/7dde523b1f0e5ee4ac54b5b6f3863827534e50f4/static/svgs/continuity-in-reals.svg" width="90%">
+    <figcaption>
+A diagram of constraints on vertical and associated horizontal movements for continuity.
+</figcaption>
+    <br>
+  </figure>
+</center>
+<p>The interesting thing is is that we can make $ \varepsilon $ as small as we want (and still have a satisfying $ x $-axis interval).
+If we had a jump like before, there would be a point where interval on the $ y $-axis would not include the jump itself.
+If we had a little blip the same thing can happen.
+But because we can make our $ \varepsilon  $ arbitrarily small with a corresponding $ \delta $ existing, we are <em>continuous</em>.</p>
+<h3 id="the-definition">The definition</h3>
+<p>Let&rsquo;s phrase this a little bit more rigorously. Given two metric spaces $ (X,d_X), (Y,d_Y) $, a function $ f \colon X \to Y $ is <span id="defn:continuous at a point" class="tdf">continuous at a point</span>
+$ c \in X $ if for every $ \varepsilon &gt; 0 $ there exist some $ \delta &gt; 0 $ (possibly dependent on $ c $ and $ \varepsilon $) such that $ d_Y(f(x)-f(c))&lt;\varepsilon $ whenever $ d_X(x,c) &lt; \delta $.</p>
+<p>We then say a function $ f \colon X \to Y $ is <span id="defn:continuous" class="tdf">continuous</span>
+if it is continuous at every point in its domain.</p>
+
 
         </article>
       </div>

@@ -98,6 +98,8 @@ In other words
 $$\begin{equation}
     (\forall \varepsilon > 0)(\exists N \in \mathbb{Z}^+)[n \geq N \implies d(p_n,p) < \varepsilon ].
 \end{equation}$$
+We denote this by $\lim_{n\to\infty} p_n = p $ or $ p_n \to p $.
+{{%nl%}}{{%nl%}}
 
 In other other words, our sequence converges to $ p $ if we can get _arbitrarily_ close to $ p $.
 Now we say our sequence is {{% tdf "Cauchy" %}} if for all $ \varepsilon > 0 $ there exists $ N \in \mathbb{Z}^+ $ such that whenever $ n,m \geq N $, $ d(p_n,p_m) < \varepsilon $. 
