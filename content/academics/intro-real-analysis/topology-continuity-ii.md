@@ -41,7 +41,7 @@ We'll talk about this more in due time, but for now we know what stuff _shouldn'
 Let's try developing a definition of continuity.
 
 
-### What things should be continuous?
+### What things SHOULD be continuous?
 
 Looking back at our examples, we see that there is a never an issue with the domain (read: our inputs/$ x $-axis).
 The only issue happens with our codomain (read: our outputs/$ y $-axis.)
