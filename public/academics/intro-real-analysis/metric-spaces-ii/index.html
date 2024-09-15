@@ -94,7 +94,7 @@
         <article style="margin-top: 1em; padding-left: 0.5em;">
           
   <header>
-    <h1>Metric Spaces II (Completeness)<span style="opacity: 0.5; font-size: 0.5em">    Sunday, September 1, 2024</span></h1>
+    <h1>Metric Spaces II (Completeness)<span style="opacity: 0.5; font-size: 0.5em">    Wednesday, September 11, 2024</span></h1>
   </header>
   <p>In the previous set of notes, we defined <a href="/academics/intro-real-analysis/metric-spaces-i/#defn:Cauchy">cauchy sequences</a> and I commented that they <em>do</em> converge but also they <em>do not</em> converge.
 I will expand on that more in this set of notes.</p>
@@ -129,9 +129,7 @@ This is literally the core idea lol.</p>
 <details id="math-pf">
   <summary><i>Solution</i></summary>
   <div class="math-pf">
-<p>put back</p>
-  </div>
-</details>
+<p><em><strong>Constructing the completion.</strong></em> <br></p>
 <p><strong>Step 1.</strong>
 (Creating the fillers.)
 We proceed by creating equivalence classes of Cauchy sequences.
@@ -183,38 +181,61 @@ For each $ n $, choose a representative and call it $ (f_n(j))_{j=1}^\infty $.
 By definition of $ (F_n) $ being Cauchy in $ (\mathcal{X},D) $, we know that, by our aforementioned notation the quantity $\lim_{j\to\infty} d(f_n(j),f_m(j)) $ can be arbitrarily small.
 <br>
 <br></p>
-<p>Since each $ (f_k(j))_{j=1}^\infty $ is Cauchy, for each $ k \in \mathbb{Z}^+ $, there exists $ I_k $ such that $ i,j \geq I_k $ implies that $ d(f_k(i),f_k(j)) &lt; 1/k $.
+<p>Since each $ (f_k(j))_{j=1}^\infty $ is Cauchy, for each $ k \in \mathbb{Z}^+ $, there exists $ N_k $ such that $ i,j \geq N_k $ implies that $ d(f_k(i),f_k(j)) &lt; 1/k $.
 From this, we are now prepared to choose our candidate: consider the sequence $ (\ell_j) $ defined by
 $$\begin{equation}
-\ell_j = f_j(N_j).
+\ell_j = f_j(N_j),
 \end{equation}$$
-Now we have to show that $ (\ell_j) $ is actually a point in our space, i.e., we have to&hellip;
+and we claim that $ F_n \to [(\ell_j)] $ (where $ [(\ell_j)] $ is the $ \sim $-equivalence class on our space of $ d $-Cauchy $ X $-sequences).
 <br>
 <br></p>
-<p><em>Step 4.3.</em> (Showing $ (\ell_j) $ is cauchy in $ (X,d) $.)
+<p>But now we have to show that $ (\ell_j) $ is actually a point in our space, i.e., we have to&hellip;
+<br>
+<br></p>
+<p><em>Step 4.3.</em> (Showing $ (\ell_j) $ is Cauchy in $ (X,d) $.)
 Let $ \varepsilon &gt; 0 $.
 Then, can employ the triangle inequality to get that:
 $$\begin{align}
 d(\ell_i,\ell_j) &amp;\leq d(f_i(N_i), f_j(N_j)) \\
-&amp;\leq \underbrace{d(f_i(N_i), f_i(r))}_A + \underbrace{d(f_i(r), f_j(r))}_B + \underbrace{d(f_j(r),f_j(N_j))}_C.
-\end{align}$$</p>
-<p>We now bound each term.</p>
-<br>
-<br>
-<p><em>Step 4.4.</em> (Proving convergence to the candidate.)</p>
-<p>We claim that $ F_n \to \overline{g(n)} $ where $ g(n) = f_n(n) $.
-We know that $ g \in \mathcal{X} $, as if we fix $ \varepsilon &gt; 0 $, we know that:</p>
-<ol>
-<li>for each $ n $, there is $ N_n $ such that $ r,s \geq N_n $ implies that $ d(f_n(r),f_n(s)) &lt; \varepsilon/3 $</li>
-<li>for each m</li>
-<li>$ d(f_m(n),f_m(m)) &lt; \varepsilon/3 $ (similarly)</li>
-<li>$ D(f_n,f_m) &lt; \varepsilon/3 $ and $ (f_n) $ is assumed to be Cauchy in $ (\mathcal{X},D) $.
-Then:
-$$\begin{align}
-d(g(n),g(m)) &amp;= d(f_n(n),f_m(m)) \\
-&amp;\leq d(f_n(n), f_n(m)) + d(f_n(m), f_m(n)) + d(f_m(n),f_m(m)) \\
+&amp;\leq \underbrace{d(f_i(N_i), f_i(r))}_A + \underbrace{d(f_i(r), f_j(r))}_B + \underbrace{d(f_j(r),f_j(N_j))}_C
 \end{align}$$
-<a href="https://www.rose-hulman.edu/~bryan/lottamath/complete.pdf">https://www.rose-hulman.edu/~bryan/lottamath/complete.pdf</a></li>
+with $ r $ is large enough that:</p>
+<ol>
+<li>$ A,C &lt; \varepsilon/3 $ (which exists by our choice of $ N_i, N_j$)</li>
+<li>$ B &lt; \varepsilon/3 $ (which exists as $ (F_n) $ is $ D $-Cauchy so $\lim_{s\to\infty} d(f_i(s),f_j(s)) = 0 $).
+Thus we have that
+$$\begin{equation}
+d(\ell_i,\ell_j) \leq \frac{ \varepsilon }{ 3 } + \frac{ \varepsilon }{ 3 } + \frac{ \varepsilon }{ 3 } = \varepsilon
+\end{equation}$$
+as desired.
+Thus $ (\ell_j) $ is $ d $-Cauchy as desired.
+<br>
+<br></li>
+</ol>
+<p><em>Step 4.4.</em> (Proving convergence to the candidate.)
+Let $ \varepsilon &gt; 0 $.
+Then, for sufficiently large $ n $ (by our construction of $ (\ell_j) $ and $ (\ell_j) $&rsquo;s Cauchy-ness):
+$$\begin{align}
+D(F_n, [(\ell_j)]) &amp;= \lim_{j\to\infty} d(f_n(j), \ell_j) \\
+&amp;\leq \lim_{j\to\infty} \left [ d(f_n(j),\ell_n) + d(\ell_n,\ell_j) \right ] \\
+&amp;&lt;\lim_{j\to\infty} \left [ \frac{ 1 }{ n } + \frac{ \varepsilon }{ 2 }      \right ] \\
+&amp;&lt; \frac{ \varepsilon }{ 2 } + \frac{ \varepsilon }{ 2 } = \varepsilon
+\end{align}$$
+as desired.
+<br>
+<br></p>
+<p><em><strong>Constructing the injective map.</strong></em><br></p>
+<p>This part is actually pretty straight-forward.
+Define the map $ \iota \colon X \to \mathcal{X} $ by $ x \mapsto [(a_n)] $ where $ a_n = x $ for all $ n $ (i.e., the constant sequence).
+I leave the verification of its properties up to you.</p>
+  </div>
+</details>
+<br>
+<br>
+<hr>
+<h2 id="unlisted-references">Unlisted References</h2>
+<ol>
+<li><a href="https://www.rose-hulman.edu/~bryan/lottamath/complete.pdf">Kurt Bryan&rsquo;s notes</a></li>
 </ol>
 
 

@@ -23,7 +23,7 @@ From this, we get three basic rules that any "sensible" sense of distance should
 2. $ d(x,y) = d(y,x) $, and 
 3. $ d(x,y) + d(y,z) \geq d(x,z) $. 
 
-Any function satisfying this description is henceforth known as a {{% tdf "metric on $ X $" %}}.
+Any function satisfying this description is henceforth known as a {{% tdf "metric" %}} on $ X $.
 
 {{% MathEnv "rem" %}}
 Note that $ \mathbb{R}^{\geq 0} $ is just the set of nonnegative reals or just $ \left \\{ x \in \mathbb{R} : x \geq 0 \right \\} $.

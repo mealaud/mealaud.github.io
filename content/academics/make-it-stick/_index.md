@@ -1,7 +1,7 @@
 ---
 title: "Make It Stick"
 date: 2024-07-26T13:34:06-07:00
-draft: false
+draft: true
 type: "section"
 layout: "self-study"
 summary:

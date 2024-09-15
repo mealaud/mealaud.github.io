@@ -1,7 +1,7 @@
 ---
 title: "Metric Spaces II (Completeness)"
-date: 2024-09-01T12:08:16-04:00
-draft: true
+date: 2024-09-11T12:08:16-04:00
+draft: false
 type:
 layout:
 summary: "A introduction to completeness and completions."
@@ -41,9 +41,7 @@ Given a metric space $ (X,d) $, there exists a complete metric space $ (\mathcal
 {{% /MathEnv %}}
 We're basically saying, we can put the original metric space inside a bigger, complete metric space.
 {{% Proof %}}
-put back
-{{% /Proof %}}
-
+***Constructing the completion.*** {{%nl%}}
 **Step 1.** 
 (Creating the fillers.)
 We proceed by creating equivalence classes of Cauchy sequences.
@@ -96,38 +94,59 @@ _Step 4.2._ (Choosing a limit candidate.)
 By definition of $ (F_n) $ being Cauchy in $ (\mathcal{X},D) $, we know that, by our aforementioned notation the quantity $\lim_{j\to\infty} d(f_n(j),f_m(j)) $ can be arbitrarily small.
 {{%nl%}}{{%nl%}}
 
-Since each $ (f_k(j))_{j=1}^\infty $ is Cauchy, for each $ k \in \mathbb{Z}^+ $, there exists $ I_k $ such that $ i,j \geq I_k $ implies that $ d(f_k(i),f_k(j)) < 1/k $. 
+Since each $ (f_k(j))_{j=1}^\infty $ is Cauchy, for each $ k \in \mathbb{Z}^+ $, there exists $ N_k $ such that $ i,j \geq N_k $ implies that $ d(f_k(i),f_k(j)) < 1/k $. 
 From this, we are now prepared to choose our candidate: consider the sequence $ (\ell_j) $ defined by 
 $$\begin{equation}
-    \ell_j = f_j(N_j).
+    \ell_j = f_j(N_j),
 \end{equation}$$
-Now we have to show that $ (\ell_j) $ is actually a point in our space, i.e., we have to...
+and we claim that $ F_n \to [(\ell_j)] $ (where $ [(\ell_j)] $ is the $ \sim $-equivalence class on our space of $ d $-Cauchy $ X $-sequences).
 {{%nl%}}{{%nl%}}
 
-_Step 4.3._ (Showing $ (\ell_j) $ is cauchy in $ (X,d) $.)
+But now we have to show that $ (\ell_j) $ is actually a point in our space, i.e., we have to...
+{{%nl%}}{{%nl%}}
+
+_Step 4.3._ (Showing $ (\ell_j) $ is Cauchy in $ (X,d) $.)
 Let $ \varepsilon > 0 $.
 Then, can employ the triangle inequality to get that:
 $$\begin{align}
 d(\ell_i,\ell_j) &\leq d(f_i(N_i), f_j(N_j)) \\\\
-&\leq \underbrace{d(f_i(N_i), f_i(r))}_A + \underbrace{d(f_i(r), f_j(r))}_B + \underbrace{d(f_j(r),f_j(N_j))}_C.
+&\leq \underbrace{d(f_i(N_i), f_i(r))}_A + \underbrace{d(f_i(r), f_j(r))}_B + \underbrace{d(f_j(r),f_j(N_j))}_C
 \end{align}$$
+with $ r $ is large enough that: 
+1. $ A,C < \varepsilon/3 $ (which exists by our choice of $ N_i, N_j$)
+2. $ B < \varepsilon/3 $ (which exists as $ (F_n) $ is $ D $-Cauchy so $\lim_{s\to\infty} d(f_i(s),f_j(s)) = 0 $).
+Thus we have that 
+$$\begin{equation}
+    d(\ell_i,\ell_j) \leq \frac{ \varepsilon }{ 3 } + \frac{ \varepsilon }{ 3 } + \frac{ \varepsilon }{ 3 } = \varepsilon
+\end{equation}$$
+as desired.
+Thus $ (\ell_j) $ is $ d $-Cauchy as desired.
+{{%nl%}}{{%nl%}}
 
-We now bound each term.
+_Step 4.4._ (Proving convergence to the candidate.)
+Let $ \varepsilon > 0 $.
+Then, for sufficiently large $ n $ (by our construction of $ (\ell_j) $ and $ (\ell_j) $'s Cauchy-ness):
+$$\begin{align}
+    D(F_n, [(\ell_j)]) &= \lim_{j\to\infty} d(f_n(j), \ell_j) \\\\
+    &\leq \lim_{j\to\infty} \left [ d(f_n(j),\ell_n) + d(\ell_n,\ell_j) \right ] \\\\
+    &<\lim_{j\to\infty} \left [ \frac{ 1 }{ n } + \frac{ \varepsilon }{ 2 }      \right ] \\\\
+    &< \frac{ \varepsilon }{ 2 } + \frac{ \varepsilon }{ 2 } = \varepsilon
+\end{align}$$
+as desired.
+{{%nl%}}{{%nl%}}
+
+***Constructing the injective map.***{{%nl%}}
+This part is actually pretty straight-forward.
+Define the map $ \iota \colon X \to \mathcal{X} $ by $ x \mapsto [(a_n)] $ where $ a_n = x $ for all $ n $ (i.e., the constant sequence).
+I leave the verification of its properties up to you.
+{{% /Proof %}}
+
+
+
+
 
 
 {{%nl%}}{{%nl%}}
-_Step 4.4._ (Proving convergence to the candidate.)
-
-
-We claim that $ F_n \to \overline{g(n)} $ where $ g(n) = f_n(n) $.
-We know that $ g \in \mathcal{X} $, as if we fix $ \varepsilon > 0 $, we know that:
-1. for each $ n $, there is $ N_n $ such that $ r,s \geq N_n $ implies that $ d(f_n(r),f_n(s)) < \varepsilon/3 $
-2. for each m
-3. $ d(f_m(n),f_m(m)) < \varepsilon/3 $ (similarly)
-3. $ D(f_n,f_m) < \varepsilon/3 $ and $ (f_n) $ is assumed to be Cauchy in $ (\mathcal{X},D) $.
-Then:
-$$\begin{align}
-d(g(n),g(m)) &= d(f_n(n),f_m(m)) \\\\
-&\leq d(f_n(n), f_n(m)) + d(f_n(m), f_m(n)) + d(f_m(n),f_m(m)) \\\\
-\end{align}$$
-https://www.rose-hulman.edu/~bryan/lottamath/complete.pdf
+***
+## Unlisted References
+1. [Kurt Bryan's notes](https://www.rose-hulman.edu/~bryan/lottamath/complete.pdf)
