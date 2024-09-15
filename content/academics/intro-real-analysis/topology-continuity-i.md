@@ -1,10 +1,10 @@
 ---
-title: "Metric Spaces III (Topology)"
+title: "Topology & Continuity I (Open sets)"
 date: 2024-09-13T14:44:27-04:00
-draft: true
+draft: false
 type:
 layout:
-summary: "An introduction to the topology (read: _shape_) of metric spaces."
+summary: "What defines the shape of a metric space?"
 ---
 
 A quick explanation of topology (per my Professor, Philip Tosteson) is that topology is "geometry made flexible; geometry without rigid notions of distance".
@@ -128,7 +128,7 @@ Then: $ p_n \to p $ if and only if for all $ \varepsilon > 0 $ there exists $ N 
 
 
 
-### Closed sets and their relation to openness
+## Closed sets and their relation to openness
 
 We say a set $ C \subseteq X $ is {{% tdf "closed" %}} if: if $ (p_n) \subseteq C $ is a sequence converging to $ p \in X $, then $ p \in C $.
 How does this relate to openness however? 
@@ -153,7 +153,7 @@ Thus $ C $ is not closed.
 Suppose towards the contraposition that $ C $ is not closed. 
 Then there is a sequence $ (q_n) \subseteq C $ such that $ q_n \to q \not \in C $ (i.e., $ q \in X \setminus C $).
 Then for all $ \varepsilon > 0 $, there is some $ n_\varepsilon $ such that $ q_{n_\varepsilon} \in B(q,\varepsilon) $. 
-Thus $ B(q,\varepsilon) \not \subseteq X \setminus C $ for any $ \varepsilon > 0 $ and $ X \setminus C $ is not open.
+Thus $ B(q,\varepsilon) $ is not contained in $ X \setminus C $ for any $ \varepsilon > 0 $ and $ X \setminus C $ is not open.
 {{% /Proof %}}
 
 Then recalling our properties of open sets and using our above proposition, we get the following:
@@ -164,30 +164,48 @@ In a metric space $ (X,d) $:
 3. Arbitrary intersections of closed sets are closed.
 {{% /MathEnv %}}
 
-### An interesting observation
+
+### Closed sets and convergence of sequences
+
+Why do they call a closed set _closed_? 
+The door to leave is closed!
+This odd remark is exemplified by the following theorem.
+{{% MathEnv "thm" %}}
+In a metric space $ (X,d) $, a subset $ C $ of $ X $ is closed if and only if every convergent sequence in $ C $ converges in $ C $.
+{{% /MathEnv %}}
+
+{{% Proof %}}
+($\Rightarrow$) 
+Suppose that $ C $ is closed, i.e., $ X \setminus C $ is open.
+Let $ (p_n) \subseteq C $ be a sequence converging to $ p \in X $. 
+We aim to show that $ p \in C $.
+Suppose towards a contradiction that $ p \not \in C $, i.e., $ p \in X \setminus C $.
+Since $ X \setminus C $ is open, there exists a radius $ r > 0 $ such that $ B(p,r) \subseteq X \setminus C $. 
+However, since $ p_n \to p $, there exists a radius $ N $ such that $ p_n \in B(p,r) $ whenever $ n \geq N $.
+But then $ p_N \in B(p,r) $ so that $ p_N \in X \setminus C $, which is absurd (!) as $ p_N \in C $.
+{{%nl%}}{{%nl%}}
+
+($\Leftarrow$)
+Suppose that every convergent sequence in $ C $ converges in $ C $.
+Let $ p \in X \setminus C $. 
+Suppose towards the contraposition that $ C $ is _not_ closed.
+Hence, $ X \setminus C $ is _not_ open.
+Then there exists a point $ p \in X \setminus C $ such that for all $ r > 0 $, $ B(p,r) $ is not contained in $ X \setminus C $. 
+In other words, there exists a point $ q \in C \cap B(p,r) $ for any $ r > 0 $.
+{{%nl%}}{{%nl%}}
+
+Then for each $ n \in \mathbb{Z}^+ $, choose some point $ q_n \in C \cap B(p,n^{-1}) $.
+Then $ q_n \to p $ but $ p \not \in C $ by hypothesis.
+{{% /Proof %}}
+
+
+
+
+
+## Aside: An interesting observation
 
 If we look at our properties of open and closed sets, we get that in a metric space $ (X,d) $, $ X $ and $ \varnothing $ are both open AND closed, or {{% tdf "clopen" %}}.
 We will give more examples of clopen sets soon.
-{{%nl%}}{{%nl%}}
-
-For now we will describe more metric-topological properties in increasing abstractness.
-
-## A stronger sense of boundedness
-
-
-
-## Connectedness
-
-
-## Compactness
-
-
-
-
-
-
-
-
 
 
 

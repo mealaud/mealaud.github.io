@@ -3,7 +3,7 @@
   <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Topology and Continuity I (Open sets) | mel-land</title>
+    <title>Topology &amp; Continuity I (Open sets) | mel-land</title>
 
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -94,7 +94,7 @@
         <article style="margin-top: 1em; padding-left: 0.5em;">
           
   <header>
-    <h1>Topology and Continuity I (Open sets)<span style="opacity: 0.5; font-size: 0.5em">    Friday, September 13, 2024</span></h1>
+    <h1>Topology &amp; Continuity I (Open sets)<span style="opacity: 0.5; font-size: 0.5em">    Friday, September 13, 2024</span></h1>
   </header>
   <p>A quick explanation of topology (per my Professor, Philip Tosteson) is that topology is &ldquo;geometry made flexible; geometry without rigid notions of distance&rdquo;.
 Immediately, you may be confused why this is relevant as we are considering <em>metric spaces</em>&ndash;spaces with (literally) a notion of distance.
@@ -219,7 +219,7 @@ We put this as a proposition (which I will not prove).</p>
 <p>Let $ (X,d) $ be a metric space and let $ (p_n) \subseteq X $ and $ p \in X $.
 Then: $ p_n \to p $ if and only if for all $ \varepsilon &gt; 0 $ there exists $ N $ such that $ p_n \in B(p,\varepsilon) $ whenever $ n \geq N $.</p>
 </div>
-<h3 id="closed-sets-and-their-relation-to-openness">Closed sets and their relation to openness</h3>
+<h2 id="closed-sets-and-their-relation-to-openness">Closed sets and their relation to openness</h2>
 <p>We say a set $ C \subseteq X $ is <span id="defn:closed" class="tdf">closed</span>
 if: if $ (p_n) \subseteq C $ is a sequence converging to $ p \in X $, then $ p \in C $.
 How does this relate to openness however?
@@ -258,7 +258,40 @@ Thus $ B(q,\varepsilon) $ is not contained in $ X \setminus C $ for any $ \varep
 <li>Arbitrary intersections of closed sets are closed.</li>
 </ol>
 </div>
-<h3 id="an-interesting-observation">An interesting observation</h3>
+<h3 id="closed-sets-and-convergence-of-sequences">Closed sets and convergence of sequences</h3>
+<p>Why do they call a closed set <em>closed</em>?
+The door to leave is closed!
+This odd remark is exemplified by the following theorem.</p>
+<div id="" class="math-env math-result math-thm">
+<p>In a metric space $ (X,d) $, a subset $ C $ of $ X $ is closed if and only if every convergent sequence in $ C $ converges in $ C $.</p>
+</div>
+<details id="math-pf">
+  <summary><i>Solution</i></summary>
+  <div class="math-pf">
+<p>($\Rightarrow$)
+Suppose that $ C $ is closed, i.e., $ X \setminus C $ is open.
+Let $ (p_n) \subseteq C $ be a sequence converging to $ p \in X $.
+We aim to show that $ p \in C $.
+Suppose towards a contradiction that $ p \not \in C $, i.e., $ p \in X \setminus C $.
+Since $ X \setminus C $ is open, there exists a radius $ r &gt; 0 $ such that $ B(p,r) \subseteq X \setminus C $.
+However, since $ p_n \to p $, there exists a radius $ N $ such that $ p_n \in B(p,r) $ whenever $ n \geq N $.
+But then $ p_N \in B(p,r) $ so that $ p_N \in X \setminus C $, which is absurd (!) as $ p_N \in C $.
+<br>
+<br></p>
+<p>($\Leftarrow$)
+Suppose that every convergent sequence in $ C $ converges in $ C $.
+Let $ p \in X \setminus C $.
+Suppose towards the contraposition that $ C $ is <em>not</em> closed.
+Hence, $ X \setminus C $ is <em>not</em> open.
+Then there exists a point $ p \in X \setminus C $ such that for all $ r &gt; 0 $, $ B(p,r) $ is not contained in $ X \setminus C $.
+In other words, there exists a point $ q \in C \cap B(p,r) $ for any $ r &gt; 0 $.
+<br>
+<br></p>
+<p>Then for each $ n \in \mathbb{Z}^+ $, choose some point $ q_n \in C \cap B(p,n^{-1}) $.
+Then $ q_n \to p $ but $ p \not \in C $ by hypothesis.</p>
+  </div>
+</details>
+<h2 id="aside-an-interesting-observation">Aside: An interesting observation</h2>
 <p>If we look at our properties of open and closed sets, we get that in a metric space $ (X,d) $, $ X $ and $ \varnothing $ are both open AND closed, or <span id="defn:clopen" class="tdf">clopen</span>
 .
 We will give more examples of clopen sets soon.</p>

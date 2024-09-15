@@ -4,7 +4,7 @@ date: 2024-09-11T12:08:16-04:00
 draft: false
 type:
 layout:
-summary: "A introduction to completeness and completions."
+summary: "Are Cauchy sequences convergent? Yes! But also no."
 ---
 
 In the previous set of notes, we defined [cauchy sequences]({{<relref "/academics/intro-real-analysis/metric-spaces-i#defn:Cauchy" >}}) and I commented that they _do_ converge but also they _do not_ converge. 
