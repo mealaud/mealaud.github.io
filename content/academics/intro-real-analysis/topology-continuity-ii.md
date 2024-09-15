@@ -1,7 +1,7 @@
 ---
 title: "Topology & Continuity II (Continuous functions)"
 date: 2024-09-15T00:08:48-04:00
-draft: true
+draft: false
 type:
 layout:
 summary: "A study of pen-lifting, or the lack thereof."
