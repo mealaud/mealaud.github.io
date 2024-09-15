@@ -4,7 +4,7 @@ date: 2024-09-15T00:08:48-04:00
 draft: true
 type:
 layout:
-summary: "Never lifting your pen, mathematically!"
+summary: "A study of pen-lifting, or the lack thereof."
 ---
 
 I first learning about continuous functions in high school (I think) as "being able to draw the graph of the function without lifting your pen".
@@ -58,9 +58,107 @@ The interesting thing is is that we can make $ \varepsilon $ as small as we want
 If we had a jump like before, there would be a point where interval on the $ y $-axis would not include the jump itself.
 If we had a little blip the same thing can happen.
 But because we can make our $ \varepsilon  $ arbitrarily small with a corresponding $ \delta $ existing, we are _continuous_.
+{{%nl%}}{{%nl%}}
+
+But what does $ \delta $ depend on? 
+Obviously it depends on $ \varepsilon $, but does it depend on the point? 
+In this case, yes!
+Looking at our function, the left-most hump is much steeper coming down than around the point $ c $.
+Hence, for the same $ \varepsilon $, we have different values of $ \delta $ depending on where we are.
+{{%nl%}}{{%nl%}}
+
+This dependence on $ \varepsilon,c $ are usually omitted when writing $ \delta $ (i.e., we don't usually write $ \delta(\varepsilon,c) $), but it is important to keep in mind.
+We'll cover examples of when the point doesn't matter soon. :)
 
 ### The definition 
 
 Let's phrase this a little bit more rigorously. Given two metric spaces $ (X,d_X), (Y,d_Y) $, a function $ f \colon X \to Y $ is {{% tdf "continuous at a point" %}}  $ c \in X $ if for every $ \varepsilon > 0 $ there exist some $ \delta > 0 $ (possibly dependent on $ c $ and $ \varepsilon $) such that $ d_Y(f(x)-f(c))<\varepsilon $ whenever $ d_X(x,c) < \delta $.
+{{%nl%}}{{%nl%}}
 
 We then say a function $ f \colon X \to Y $ is {{% tdf "continuous" %}}  if it is continuous at every point in its domain.
+{{%nl%}}{{%nl%}}
+
+Are there any alternate definitions, however? 
+Yes! 
+And some are (on occasion) more useful than others.
+
+## Equivalent definitions of continuity
+
+Let $ (X,d_X) $ and $ (Y,d_Y) $ be metric spaces and $ f \colon X \to Y $.
+
+### Open ball definition
+
+{{% MathEnv "thm" %}}
+The function $ f $ is continuous at $ c \in X $ if and only if for all $ \varepsilon > 0 $, there exists some $ \delta > 0 $ such that 
+$$\begin{equation}
+    B_X(c, \delta) \subseteq f^{-1}\left [ B_Y(f(c),\varepsilon) \right ] 
+\end{equation}$$
+where $ B_X $ and $ B_Y $ are balls in $ X $ and $ Y $, respectively.
+{{% /MathEnv %}}
+This equivalent formulation is important, but not as interesting.
+
+{{% Proof %}}
+($\Rightarrow$) 
+Let $ \varepsilon > 0 $. 
+Suppose that $ f $ is continuous at $ c $. 
+Then there exists $ \delta > 0 $ such that $ d_Y(f(x),f(c)) < \varepsilon $ whenever $ d_X(x,c) < \delta $.
+In other words, 
+$$\begin{equation}
+    x \in B_X(c,\delta) \implies f(x) \in B_Y(f(c),\varepsilon)
+\end{equation}$$
+Notice that this is precisely the definition of 
+$$\begin{equation}
+    B_X( c, \delta) \subseteq f^{-1}[B_Y(f(c),\varepsilon)].
+\end{equation}$$
+
+($\Leftarrow$)
+Let $ \varepsilon > 0 $.
+Suppose that then there exists some $ \delta > 0 $ such that 
+$$\begin{equation}
+    B_X( c, \delta) \subseteq f^{-1}[B_Y(f(c),\varepsilon)].
+\end{equation}$$
+Hence, $ x \in B_X(c,\delta) $ so that $ f(x) \in B_Y(f(c),\varepsilon) $.
+Thus 
+$$\begin{equation}
+    d_X(x,c) < \delta \implies d_Y(f(x),f(c)) < \varepsilon
+\end{equation}$$
+as desired.
+{{% /Proof %}}
+
+### Sequential definition
+This equivalent definition is actually very helpful to know. 
+
+{{% MathEnv "thm" %}}
+The function $ f $ is continuous at $ c \in X $ if and only if for all sequences $ (x_n) $ converging to $ c $:
+$$\begin{equation}
+   \lim_{n\to\infty} f(x_n) = f (c).
+\end{equation}$$
+{{% /MathEnv %}}
+{{% Proof %}}
+($\Rightarrow$) 
+Suppose that $ f $ is continuous at $ c $.
+Further suppose that $ (x_n) $ is a sequence converging to $ c $. 
+Fix $ \varepsilon > 0 $. 
+Then there exists some $ \delta > 0 $ such that any $ x \in X $ satisfying $ d(x,c) < \delta $ further satisfies $ d(f(x),f(c)) < \varepsilon $.
+By $ (x_n) $'s convergence, there exists some $ N $ such that $ n \geq N $ implies that $ d(x_n,c) < \delta $.
+Then taking $ n \geq N $, we have that
+$$\begin{equation}
+    d(f(x_n),f(c)) < \varepsilon.
+\end{equation}$$
+Thus $ f(x_n) \to f(c) $ as desired.
+{{%nl%}}{{%nl%}}
+
+($\Leftarrow$)
+Suppose towards the contraposition that $ f $ is not continuous at $ c $.
+Then there exists some $ \varepsilon > 0 $ such that for all $ \delta > 0 $, there is some $ x \in B(c,\delta) $ such that $ d(f(x), f(c)) \geq \varepsilon $.
+{{%nl%}}{{%nl%}}
+
+Now for each $ n $, choose some $ x_n \in B(c,n^{-1}) $ such that $ d(f(x_n),f(c)) \geq \varepsilon $.
+Clearly, $ x_n \to c $, and, by construction, $ f(x_n) \not \to f(c) $.
+{{% /Proof %}}
+
+
+
+
+
+
