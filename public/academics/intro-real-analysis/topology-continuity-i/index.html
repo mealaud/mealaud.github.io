@@ -166,7 +166,7 @@ Thus $ B(q,s) \subseteq B(p,r) $ and $ B(p,r) $ is open.</p>
   </div>
 </details>
 <p>Now we can freely discuss open sets.</p>
-<h3 id="properties-and-examples-of-open-sets">Properties and examples of open sets</h3>
+<h3 id="properties-of-open-sets">Properties of open sets</h3>
 <p>We immediately state some neat properties of open sets.</p>
 <div id="" class="math-env math-result math-prop">
 <p>In a metric space $ (X,d) $:</p>
@@ -210,7 +210,30 @@ Hence $ B(p,r) \subseteq\bigcup_{\alpha \in A}^{} U_\alpha $ as desired.</p>
 <br>
 <p>One thing worth noting is that I didn&rsquo;t say &ldquo;arbitrary intersections of open sets are open&rdquo;.
 I didn&rsquo;t say it, because, well, it&rsquo;s not true!; but that&rsquo;s not particularly helpful&hellip;
-If we consider a metric space $ \mathbb{R} $, $\bigcap_{n=1}^{\infty}(-n^{-1}, n^{-1}) = \left \{ 0 \right \} $ which is not open even though $ (-n^{-1},n^{-1}) $ is open for all $ n $.</p>
+If we consider a metric space $ \mathbb{R} $, $\bigcap_{n=1}^{\infty}(-n^{-1}, n^{-1}) = \left \{ 0 \right \} $ which is not open even though $ (-n^{-1},n^{-1}) $ is open for all $ n $.
+<br>
+<br></p>
+<p>Our first property, that the whole space and the empty set are open, gives us some potentially weird properties.
+We look into them now.</p>
+<h2 id="openness-is-relative">Openness is relative</h2>
+<p>Consider the space the metric space $ (X,d) $ where $ X = \mathbb{R} $ and $ d $ is the Euclidean metric.
+Then, by our definition of openness, we know that $ [0,1] $ is <em>not</em> open.
+But, if we consider $ [0,1] $ as our space and (a restriction of) the Euclidean metric as our metric, by our previous proposition we have that $ [0,1] $ is open?
+<br>
+<br></p>
+<p>This is no mistake!
+Openness <em>does</em> depend on the space you&rsquo;re in&ndash;it depends on where your set lives.</p>
+<p>Think about it like this: if your set $ Y $ lives in $ X $, then, if $ Y $ is not open, it has a point that is not interior (the left graphic), but if you live in $ Y $ (meaning <em>you are your universe</em>), you can&rsquo;t <em>leave</em> $ Y $!
+There&rsquo;s nothing outside of it!
+Hence your ball is always contained.</p>
+<center>
+  <figure>
+    <img src="https://raw.githubusercontent.com/mealaud/mealaud.github.io/main/static/svgs/relativity-of-openness.svg" width="100%">
+    <figcaption>
+</figcaption>
+    <br>
+  </figure>
+</center>
 <h3 id="open-balls-and-convergence-of-sequences">Open balls and convergence of sequences</h3>
 <p>We learned in the last post that a sequence $ (p_n) $ converges to $ p $ if for all $ \varepsilon &gt; 0 $ there exists $ N $ such that $ d(p,p_n) &lt; \varepsilon $ if $ n \geq N $.
 But, since we know about open balls now, we can rephrase this definition using open balls!
@@ -219,6 +242,7 @@ We put this as a proposition (which I will not prove).</p>
 <p>Let $ (X,d) $ be a metric space and let $ (p_n) \subseteq X $ and $ p \in X $.
 Then: $ p_n \to p $ if and only if for all $ \varepsilon &gt; 0 $ there exists $ N $ such that $ p_n \in B(p,\varepsilon) $ whenever $ n \geq N $.</p>
 </div>
+<h2 id="heading"></h2>
 <h2 id="closed-sets-and-their-relation-to-openness">Closed sets and their relation to openness</h2>
 <p>We say a set $ C \subseteq X $ is <span id="defn:closed" class="tdf">closed</span>
 if: if $ (p_n) \subseteq C $ is a sequence converging to $ p \in X $, then $ p \in C $.

@@ -1,7 +1,7 @@
 ---
 title: "Learning Is Misunderstood V1"
 date: 2024-07-26T13:42:12-07:00
-draft: false
+draft: true
 type:
 layout:
 summary: My first pass of the first chapter of _Make It Stick_.

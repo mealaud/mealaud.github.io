@@ -74,7 +74,7 @@ Thus $ B(q,s) \subseteq B(p,r) $ and $ B(p,r) $ is open.
 
 Now we can freely discuss open sets.
 
-### Properties and examples of open sets
+### Properties of open sets
 
 We immediately state some neat properties of open sets.
 
@@ -113,6 +113,26 @@ Hence $ B(p,r) \subseteq\bigcup_{\alpha \in A}^{} U_\alpha $ as desired.
 One thing worth noting is that I didn't say "arbitrary intersections of open sets are open".
 I didn't say it, because, well, it's not true!; but that's not particularly helpful... 
 If we consider a metric space $ \mathbb{R} $, $\bigcap_{n=1}^{\infty}(-n^{-1}, n^{-1}) = \left \\{ 0 \right \\} $ which is not open even though $ (-n^{-1},n^{-1}) $ is open for all $ n $.
+{{%nl%}}{{%nl%}}
+
+Our first property, that the whole space and the empty set are open, gives us some potentially weird properties. 
+We look into them now.
+
+## Openness is relative
+
+Consider the space the metric space $ (X,d) $ where $ X = \mathbb{R} $ and $ d $ is the Euclidean metric.
+Then, by our definition of openness, we know that $ [0,1] $ is _not_ open.
+But, if we consider $ [0,1] $ as our space and (a restriction of) the Euclidean metric as our metric, by our previous proposition we have that $ [0,1] $ is open?
+{{%nl%}}{{%nl%}}
+
+This is no mistake! 
+Openness _does_ depend on the space you're in--it depends on where your set lives.
+
+Think about it like this: if your set $ Y $ lives in $ X $, then, if $ Y $ is not open, it has a point that is not interior (the left graphic), but if you live in $ Y $ (meaning _you are your universe_), you can't _leave_ $ Y $! 
+There's nothing outside of it!
+Hence your ball is always contained.
+{{% svg-figure "https://raw.githubusercontent.com/mealaud/mealaud.github.io/main/static/svgs/relativity-of-openness.svg" "100%" %}}
+{{%  /svg-figure %}}
 
 
 ### Open balls and convergence of sequences
@@ -126,6 +146,8 @@ Then: $ p_n \to p $ if and only if for all $ \varepsilon > 0 $ there exists $ N 
 {{% /MathEnv %}}
 
 
+
+##
 
 
 ## Closed sets and their relation to openness
