@@ -1,5 +1,5 @@
 ---
-title: "Metric Spaces I (Overview)"
+title: "Metric Spaces and Sequences I (Overview)"
 date: 2024-08-31T15:38:34-04:00
 draft: false
 type:

@@ -1,5 +1,5 @@
 ---
-title: "Metric Spaces II (Completeness)"
+title: "Metric Spaces & Sequences II (Completeness)"
 date: 2024-09-11T12:08:16-04:00
 draft: false
 type:

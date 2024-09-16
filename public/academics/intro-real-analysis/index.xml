@@ -6,8 +6,22 @@
     <description>Recent content in Introduction to Real Analysis on mel-land</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 15 Sep 2024 00:08:48 -0400</lastBuildDate>
+    <lastBuildDate>Mon, 16 Sep 2024 12:30:56 -0400</lastBuildDate>
     <atom:link href="http://localhost:1313/academics/intro-real-analysis/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Topology &amp; Continuity IV (Compactness, Uniform Continuity)</title>
+      <link>http://localhost:1313/academics/intro-real-analysis/topology-continuity-iv/</link>
+      <pubDate>Mon, 16 Sep 2024 12:30:56 -0400</pubDate>
+      <guid>http://localhost:1313/academics/intro-real-analysis/topology-continuity-iv/</guid>
+      <description>A study of one of if not THE most powerful idea in analysis.</description>
+    </item>
+    <item>
+      <title>Topology &amp; Continuity III (Connectedness)</title>
+      <link>http://localhost:1313/academics/intro-real-analysis/topology-continuity-iii/</link>
+      <pubDate>Mon, 16 Sep 2024 12:20:16 -0400</pubDate>
+      <guid>http://localhost:1313/academics/intro-real-analysis/topology-continuity-iii/</guid>
+      <description>Study of non-separated spaces.</description>
+    </item>
     <item>
       <title>Topology &amp; Continuity II (Continuous functions)</title>
       <link>http://localhost:1313/academics/intro-real-analysis/topology-continuity-ii/</link>
@@ -23,14 +37,14 @@
       <description>What defines the shape of a metric space?</description>
     </item>
     <item>
-      <title>Metric Spaces II (Completeness)</title>
+      <title>Metric Spaces &amp; Sequences II (Completeness)</title>
       <link>http://localhost:1313/academics/intro-real-analysis/metric-spaces-ii/</link>
       <pubDate>Wed, 11 Sep 2024 12:08:16 -0400</pubDate>
       <guid>http://localhost:1313/academics/intro-real-analysis/metric-spaces-ii/</guid>
       <description>Are Cauchy sequences convergent? Yes! But also no.</description>
     </item>
     <item>
-      <title>Metric Spaces I (Overview)</title>
+      <title>Metric Spaces and Sequences I (Overview)</title>
       <link>http://localhost:1313/academics/intro-real-analysis/metric-spaces-i/</link>
       <pubDate>Sat, 31 Aug 2024 15:38:34 -0400</pubDate>
       <guid>http://localhost:1313/academics/intro-real-analysis/metric-spaces-i/</guid>
