@@ -96,7 +96,116 @@
   <header>
     <h1>Topology &amp; Continuity IV (Compactness, Uniform Continuity)<span style="opacity: 0.5; font-size: 0.5em">    Monday, September 16, 2024</span></h1>
   </header>
-  
+  <p>Finite sets enjoy such wonderful properties like&hellip; (where $ A \subseteq \mathbb{R} $ is finite)</p>
+<ol>
+<li>They always contain their maximum or minimum values (i.e., $ \sup A, \inf A \in A $);</li>
+<li>Any collection of open sets which union to the set, there is always a finite subcollection which still unions to the set</li>
+<li>Every sequence in a finite set has a convergent subsequence (i.e., by Pigeon Hole Principle, at least one element of $ A $ must occur infinitely many times and hence a subsequence consisting of these elements is convergent); and</li>
+<li>Every finite set (with some metric) is complete</li>
+</ol>
+<p>and many other wonderful properties. (It is worth nothing though, that Property 2 is a lot more involved.)
+<br>
+<br></p>
+<p>But, the moment we go to infinite sets, we can lose these!
+As counter examples, consider (to the corresponding nice property):</p>
+<ol>
+<li>If $ A = (0,1) $, $ \sup A, \inf A \not \in A $.</li>
+<li>$ A = \left \{ n^{-1} : n \in \mathbb{Z}^+ \right \} $.</li>
+<li>If $ A = \mathbb{Z} $, the sequence defined by $ a_n = n $ has no convergent subsequence.</li>
+<li>The space $ \mathbb{Q} $ is not complete.</li>
+</ol>
+<p>But if the set is <em>compact</em>, all the properties of finite sets we stated above are actually preserved!
+In essence, <em>compactness means you are <strong>basically</strong> finite</em>.
+<br>
+<br></p>
+<p>Let actually define it now.</p>
+<h2 id="definition">Definition</h2>
+<p>Let $ (X,d) $ be a metric space.</p>
+<p>We first need to define some preliminary stuff.</p>
+<ol>
+<li>We say $ \left \{ U_\alpha : \alpha_A \right \}  $ for some indexing set $ A $ (we also say just $ \left \{ U_\alpha \right \}  $) is an <span id="defn:open cover" class="tdf">open cover</span>
+of $ X $ if each $ U_\alpha $ is open and $ \bigcup U_\alpha \supseteq X $<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>.</li>
+<li>We say $ \left \{ U_\alpha \right \}  $ has a <span id="defn:finite subcover" class="tdf">finite subcover</span>
+if there is a finite subcollection of $ \left \{ U_\alpha \right \} $ which is also an open cover.</li>
+</ol>
+<p>Now we say that: a subset $ K \subseteq X $ is <span id="defn:compact" class="tdf">compact</span>
+<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup> if any open cover of $ K $ has a finite subcover.
+<br>
+<br></p>
+<p>I now state the definition with more emphasis: a subset $ K \subseteq X $ is <em>compact</em> if <strong>any open cover has a finite subcover</strong>.
+I repeat: <em><strong>ANY</strong></em>.
+<br>
+<br></p>
+<p>The reason this is so strong is because we are saying that no matter how you look at a compact set, it is can be understood by looks at finitely many pieces of it.
+<br>
+<br></p>
+<p>Let&rsquo;s start looking at examples of compactness being a powerful property.
+First, its &ldquo;absoluteness&rdquo;.</p>
+<h2 id="is-compactness-relative">Is compactness relative?</h2>
+<p>We know that sets open in one metric space may not be open in another. (e.g., $ (0,1] $ is open in itself but $ (0,1] $ is not open as a subset of $ \mathbb{R} $.)
+And compactness is all about open sets&hellip;
+Does this mean compactness is also relative?
+No!</p>
+<div id="" class="math-env math-result math-thm">
+<p>Let $ (X,d) $ be a metric space and let $ K \subseteq X $.
+Then $ K $ is compact in $ X $ if and only if $ (K,d) $ is compact (when we restrict $ d $ to $ K $).</p>
+</div>
+<details id="math-pf">
+  <summary><i>Solution</i></summary>
+  <div class="math-pf">
+<p>($\Rightarrow$)
+Suppose $ K $ is compact in $ X $.
+Then consider $ (K,d) $ as a metric space in its own right.
+If $ \left \{ U_\alpha \right \} $ is an open cover of $ (K,d) $.
+Then each $ U_\alpha = V_\alpha \cap K $ for some $ V_\alpha $ open in $ X $.
+Then $ \left \{ V_\alpha \right \}  $ is an open cover $ K $ in $ X $.
+Since $ K $ is compact in $ X $, there is a finite subcover $ \left \{ V_{\alpha_1},\ldots,V_{\alpha_n} \right \}  $ of $ K $ in $ X $.
+We then immediately have that $ \left \{ U_{\alpha_1},\ldots,U_{\alpha_n} \right \}  $ is a finite subcover of $ (K,d) $.
+Thus $ K $ is compact.
+<br>
+<br></p>
+<p>($\Leftarrow$)
+Suppose $ (K,d) $ is compact and let $ \left \{ U_\alpha \right \}  $ be an open cover of $ K $ in $ X $.
+Then $ \left \{ U_\alpha \cap K \right \}  $ is an open cover of $ (K,d) $ and hence has a finite subcover $ \left \{ U_{\alpha_i} \cap K \right \}  $.
+We then have that $ \left \{ U_{\alpha_i} \right \}  $ is a finite subcover of $ K $ so that $ K $ is compact.</p>
+  </div>
+</details>
+<p>Let&rsquo;s show off some of the power of compactness. B)</p>
+<h2 id="uniform-continuity">Uniform Continuity</h2>
+<p>Let $ (X,d) $ and $ (Y,\rho) $ be metric spaces.
+<br>
+<br></p>
+<p>Recall our definition of <a href="/academics/intro-real-analysis/topology-continuity-ii/#defn:continuous">continuity</a>.
+In particular, recall that our $ \delta $ depends on both $ \varepsilon $ (of course) AND the point we&rsquo;re at.
+Compactness, however, gives us the freedom from this point-dependent $ \delta $, and let&rsquo;s us choose one $ \delta $ for the entire interval.
+<br>
+<br></p>
+<p>Putting this mathematically, we say that $ f $ is <span id="defn:uniformly continuous" class="tdf">uniformly continuous</span>
+on $ X $ if for every $ \varepsilon &gt; 0 $, there exists some $ \delta &gt; 0 $ (dependent only on $ \varepsilon $) such that any $ x_1,x_2 \in X $ satisfying $ d(x_1,x_2) &lt; \delta $, we have that $ \rho(f(x_1),f(x_2)) &lt; \varepsilon $.
+<br>
+<br></p>
+<p>Let&rsquo;s do some exploration into this definition.</p>
+<div id="" class="math-practice math-ex">
+<p>Let $ (X,d), (Y,\rho) $ are metric spaces.
+Suppose $ f \colon X \to Y $ is continuous.
+So let $ \varepsilon &gt; 0 $.
+Then for each $ x \in X $, there exist some suitable $ \delta_x &gt; 0 $.
+But if we try to extract a $ \delta_x $ that works for everyone?
+The obvious candidate is $ \delta = \inf_{x \in X} \delta_x $, but this isn&rsquo;t necessarily positive&hellip;
+So how do we ensure this &ldquo;minimum $ \delta $&rdquo; is nonzero?</p>
+</div>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>This is equivalent to just equality, but the containment gets the right idea across.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p>This open cover definition of compactness is sometimes called <em>covering compactness</em> to avoid ambiguity between equivalent formulations of compactness.&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+
 
         </article>
       </div>
