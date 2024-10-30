@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="41.672058mm"
+   height="19.407438mm"
+   viewBox="0 0 41.672058 19.407438"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.3.2 (091e20ef0f, 2023-11-25, custom)"
+   sodipodi:docname="topologist-sine-curve.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="mm"
+     inkscape:zoom="5.5945567"
+     inkscape:cx="60.237123"
+     inkscape:cy="35.838407"
+     inkscape:window-width="1672"
+     inkscape:window-height="1009"
+     inkscape:window-x="0"
+     inkscape:window-y="33"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-79.407971,-89.848862)">
+    <path
+       style="fill:none;stroke:#ece6da;stroke-width:0.0763129;stroke-dasharray:none;paint-order:stroke fill markers"
+       d="M 81.062229,89.848862 V 109.2563"
+       id="path1" />
+    <path
+       style="fill:none;stroke:#ece6da;stroke-width:0.176765;stroke-dasharray:none;paint-order:stroke fill markers"
+       d="M 121.08003,99.552277 H 79.407971"
+       id="path2" />
+    <path
+       style="fill:none;stroke:#ddca22;stroke-width:0.2;stroke-dasharray:none;paint-order:stroke fill markers"
+       d="m 100.29349,99.552405 c 6.84363,-27.062026 13.63762,27.061515 20.48126,0"
+       title="t sin(t)"
+       id="path3"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#ddca22;stroke-width:0.2;stroke-dasharray:none;paint-order:stroke fill markers"
+       d="m 91.377266,99.552405 c 2.972092,-27.234801 5.944131,27.234285 8.916224,0"
+       title="t sin(t)"
+       id="path3-5" />
+    <path
+       style="fill:none;stroke:#ddca22;stroke-width:0.2;stroke-dasharray:none;paint-order:stroke fill markers"
+       d="m 86.735761,99.552405 c 1.546137,-27.328246 3.092246,27.327725 4.638385,0"
+       title="t sin(t)"
+       id="path3-5-2" />
+    <path
+       style="fill:none;stroke:#ddca22;stroke-width:0.2;stroke-dasharray:none;paint-order:stroke fill markers"
+       d="m 83.973919,99.552405 c 0.926018,-27.383734 1.852018,27.383215 2.778037,0"
+       title="t sin(t)"
+       id="path3-5-2-7" />
+    <path
+       style="fill:none;stroke:#ddca22;stroke-width:0.2;stroke-dasharray:none;paint-order:stroke fill markers"
+       d="m 82.466956,99.387113 c 0.502676,-27.434196 1.005342,27.433677 1.508018,0"
+       title="t sin(t)"
+       id="path3-5-2-7-6" />
+    <path
+       style="fill:none;stroke:#ddca22;stroke-width:0.2;stroke-dasharray:none;paint-order:stroke fill markers"
+       d="m 81.691344,99.387113 c 0.258539,-27.474156 0.517073,27.473647 0.775612,0"
+       title="t sin(t)"
+       id="path3-5-2-7-6-6" />
+    <path
+       style="fill:none;stroke:#ddca22;stroke-width:0.2;stroke-dasharray:none;paint-order:stroke fill markers"
+       d="m 81.322403,99.387113 c 0.122981,-27.505525 0.24596,27.505017 0.368941,0"
+       title="t sin(t)"
+       id="path3-5-2-7-6-6-3" />
+    <path
+       style="fill:none;stroke:#ddca22;stroke-width:0.2;stroke-dasharray:none;paint-order:stroke fill markers"
+       d="m 81.164328,99.387113 c 0.05269,-27.52906 0.105383,27.528547 0.158075,0"
+       title="t sin(t)"
+       id="path3-5-2-7-6-6-3-2" />
+    <path
+       style="fill:none;stroke:#ddca22;stroke-width:0.2;stroke-dasharray:none;paint-order:stroke fill markers"
+       d="M 81.151052,91.591846 V 107.51332"
+       id="path6" />
+  </g>
+</svg>
