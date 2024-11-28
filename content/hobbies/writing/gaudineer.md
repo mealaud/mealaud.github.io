@@ -60,7 +60,7 @@ Being as small as it is, it doesn't sway in the wind;
 {{%nl%}}
 Being as soft as it is, it doesn't push against the things above it;
 {{%nl%}}
-Being as damp as it is, it doesn't squish under the weight of a foot or hoof;
+Being as damp as it is, it doesn't falter under the weight of a foot or hoof;
 {{%nl%}}
 Being as it is, it is beautiful.
 {{%nl%}}
