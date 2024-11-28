@@ -6,8 +6,15 @@
     <description>Recent content on mel-land</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 25 Nov 2024 15:12:30 -0500</lastBuildDate>
+    <lastBuildDate>Tue, 26 Nov 2024 10:10:02 -0500</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Gaudineer</title>
+      <link>http://localhost:1313/hobbies/writing/gaudineer/</link>
+      <pubDate>Tue, 26 Nov 2024 10:10:02 -0500</pubDate>
+      <guid>http://localhost:1313/hobbies/writing/gaudineer/</guid>
+      <description>The virtues of moss and the ascension of man.</description>
+    </item>
     <item>
       <title>Sorry.</title>
       <link>http://localhost:1313/hobbies/writing/sorry/</link>
