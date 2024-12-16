@@ -2,8 +2,8 @@
 title: "Topology & Continuity I (Open sets)"
 date: 2024-09-13T14:44:27-04:00
 draft: false
-type:
-layout:
+type: "page"
+layout: "note"
 summary: "What defines the shape of a metric space?"
 ---
 

@@ -6,6 +6,7 @@
   <header>
     <h1>{{ .Title }}<span style="opacity: 0.5; font-size: 0.5em">    {{ .PublishDate.Format "Monday, January 2, 2006" }}</span></h1>
   </header>
+  <!-- {{ .TableOfContents }} -->
   {{ .Content }}
 {{ end }}
 

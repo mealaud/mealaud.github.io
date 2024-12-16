@@ -20,3 +20,20 @@ This curve is known as the Topologist's Sine Curve. It is defined by $  (0 \time
 3. Is the large blob $ A \cup B $ connected?
 {{% svg-figure "https://raw.githubusercontent.com/mealaud/mealaud.github.io/main/static/svgs/disconnected-blobs.svg" "90%" %}}
 {{%  /svg-figure %}}
+
+
+It seems that the first is _connected_.
+The second is entirely unclear (at least it was to me at first).
+We know that the third example is certainly _not connected_.
+{{%nl%}}{{%nl%}}
+
+So what characterizes these?
+Well, in the sense of open sets, we can see that (3) has open sets that totally separate the blobs $ A $ and $ B $.
+And it seems as if we cannot do that in (1). 
+(I will save (2) for later.)
+{{%nl%}}{{%nl%}}
+
+It turns out that this notion of separation can be made more rigorous with the following definition: given a set $ A $, it is {{% tdf "disconnected" %}} if there are a pair of disjoint open sets whose union is $ A $.
+
+
+

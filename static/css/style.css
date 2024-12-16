@@ -31,3 +31,10 @@ footer {
 .post-snippet h3 {
   margin-bottom: 0.25rem;
 }
+
+#TableOfContents {
+  border: 1px solid yellow;
+} #TableOfContents:before {
+  content: "Table of Contents"
+}
+
