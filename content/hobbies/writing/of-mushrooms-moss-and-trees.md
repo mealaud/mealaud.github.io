@@ -25,7 +25,7 @@ It sprouts through the star-shaped stems it now protects, casting shade on the m
 on the moss which protected it as it grew.
 {{%nl%}}{{%nl%}}
 
-Above all stands once stout sapling that ascended to tree-hood.
+Above all stands a once stout sapling that ascended to tree-hood.
 {{%nl%}}
 Its conception from the falling of a seed which thought no more of itself than the dirt it was buried in.
 {{%nl%}}{{%nl%}}
