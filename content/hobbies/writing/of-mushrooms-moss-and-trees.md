@@ -57,11 +57,10 @@ I was not here when this branch fell in the woods--nor was anyone.
 {{%nl%}}
 But I am here to witness its peaceful but fleeting coexistence with the forest floor.
 {{%nl%}}
-I continue with my hike,
-and I am not there to hear them falls once more;
+I continue with my hike, and I am not there to witness their stories anymore.
 {{%nl%}}
-whether a branch falling, a mushroom sprouting, or some moss spreading,{{%nl%}}
-their stories continue. As do I.
+Regardless, whether a branch falling, a mushroom sprouting, or some moss spreading,{{%nl%}}
+their stories continue. As do mine.
 
 
 
