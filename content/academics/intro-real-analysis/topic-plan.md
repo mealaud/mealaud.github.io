@@ -29,8 +29,7 @@ summary: "my plans"
 18. Integration and Measure V - Simple Functions and the approximation of measurable function
 19. Integration and Measure VI - Integration measurable functions
 20. Integration and Measure VII - Convergence Theorems (Fatou, MCT, DCT)
-21. L^p Spaces I - Definition, Inequalities, and Completeness 
-<!-- Might have split the above section into multiple posts -->
+21. L^p Spaces I - Definition, Inequalities, and Completeness <!-- Might have split into multiple posts -->
 22. L^p Spaces II - Approximation results
 23. L^p Spaces III — Containment relations
 24. Tools for Integration I - Tonelli's and Fubini's Theorems

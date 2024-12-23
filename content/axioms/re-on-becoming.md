@@ -1,7 +1,7 @@
 ---
 title: "Re: On Becoming"
 date: 2024-10-27T19:22:07-04:00
-draft: false
+draft: true
 type:
 layout:
 summary: "Revisiting who I want to be."

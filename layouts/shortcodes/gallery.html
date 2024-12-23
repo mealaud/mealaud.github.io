@@ -1,12 +1,12 @@
 {{ $num_photos := .Params | len }}
-{{ $img_counter := 1 }}
+{{ $img_counter := 0 }}
 <div class="gallery">
 <div class="photo-buttons">
 {{ range $img := .Params }}
 {{ if ge $img_counter $num_photos }}
 {{ break }}
 {{ end }}
-<button onclick="update_gallery_img('{{ $img }}')">[{{ $img_counter }}]</button>
+<button onclick="update_gallery_img('{{ $img }}')">[{{ add $img_counter 1 }}]</button>
 {{ $img_counter = add $img_counter 1 }}
 {{ end }}
 </div>
