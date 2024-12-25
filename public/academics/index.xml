@@ -6,7 +6,14 @@
     <description>Recent content in Academics on mel-land</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate></lastBuildDate>
+    <lastBuildDate>Sat, 21 Dec 2024 16:03:56 -0500</lastBuildDate>
     <atom:link href="http://localhost:1313/academics/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Brownian Motion</title>
+      <link>http://localhost:1313/academics/brownian-motion/</link>
+      <pubDate>Sat, 21 Dec 2024 16:03:56 -0500</pubDate>
+      <guid>http://localhost:1313/academics/brownian-motion/</guid>
+      <description>My first attempt as simulating particles in a box.</description>
+    </item>
   </channel>
 </rss>
