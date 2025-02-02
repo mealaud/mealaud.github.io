@@ -4,7 +4,7 @@ date: 2025-02-01T23:36:43-05:00
 draft: false
 type:
 layout:
-summary: "Snow on the wind is a beautiful sight."
+summary: "A moving waltz unfolds in front of me."
 ---
 
 I walk home in the moonlight.
