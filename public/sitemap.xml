@@ -2,10 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/hobbies/writing/dancing/</loc>
-    <lastmod>2025-02-01T23:36:43-05:00</lastmod>
+    <loc>http://localhost:1313/hobbies/writing/i-love-my-cat-pencil-pouch/</loc>
+    <lastmod>2025-02-14T16:58:33-05:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/</loc>
+    <lastmod>2025-02-14T16:58:33-05:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/hobbies/writing/dancing/</loc>
     <lastmod>2025-02-01T23:36:43-05:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/academics/brownian-motion/</loc>

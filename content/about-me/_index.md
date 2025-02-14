@@ -4,12 +4,12 @@ date: 2023-05-18T10:39:06-07:00
 draft: false
 ---
 
-{{% figure "https://i.imgur.com/BH86Fzr_d.webp?maxwidth=760&fidelity=grand" "70%" %}}
+{{% figure "https://i.imgur.com/EK2u0cT.jpeg" "100%" %}}
 me!
 {{% /figure %}}
 
 Hello! My name is Mealaud Mokhtarzad but I usually go by Mel. 
-I’m an incoming pure mathematics graduate student at UNC Chapel Hill!
+I’m a pure mathematics graduate student at UNC Chapel Hill!
 My interests include and are usually limited to: math, rock skipping, clouds, and writing.
 If you need to contact me, [mealaud at unc dot edu]() is usually a good way to reach me.
 
