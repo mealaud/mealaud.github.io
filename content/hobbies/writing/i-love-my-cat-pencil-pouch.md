@@ -31,7 +31,7 @@ He never gets stuck.
 {{%nl%}}
 I can always give him a quick belly scratch if I need to recenter.
 {{%nl%}}
-I cna always give him a little head scratch if I need a pen.
+I can always give him a little head scratch if I need a pen.
 {{%nl%}}
 My cat pencil pouch is perfect.
 {{%nl%}}{{%nl%}}
@@ -77,7 +77,7 @@ He keeps my pen refills so my thoughts never stutter.
 But what have I done for him?
 {{%nl%}}{{%nl%}}
 
-A few years ago, I put a sharper in my pouch and it spilled some ink.
+A few years ago, I put a sharpie in my pouch and it spilled some ink.
 {{%nl%}}
 I can still see the little stains on his head.
 {{%nl%}}
