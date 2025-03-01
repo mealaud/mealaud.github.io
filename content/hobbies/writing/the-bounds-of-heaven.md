@@ -11,12 +11,6 @@ I saw some clouds today.
 {{%nl%}}
 It didn't feel notable beyond that I had not noticed them in a while.
 {{%nl%}}
-But today,
-{{%nl%}}
-Those clouds looked...
-{{%nl%}}
-blurry?
-{{%nl%}}
 {{%nl%}}
 
 The clouds with the sun peering behind them
