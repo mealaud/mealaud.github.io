@@ -6,6 +6,7 @@ type:
 layout:
 summary: "I'm the world's smartest dumbass."
 ---
+dasdasd
 
 Kelanu called me today and told me about a _really_ weird functional result: the convex hull of a bounded set is not necessarily bounded.  which came from an exercise in Rudin's _Functional Analysis_:
 
