@@ -40,4 +40,4 @@ They think nothing of these stones I throw.
 
 My nothings are sweet and delightful.
 {{%nl%}}
-Their beauty overwhelms as the clouds reflect off the rippling water in front.
+Their beauty overwhelms as the clouds reflect off the rippling water in front of me.
