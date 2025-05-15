@@ -21,7 +21,7 @@ title = 'mel-land'
 [menu]
     [[menu.main]]
         identifier = "about-me"
-        name = "About Me"
+        name = "Me!"
         url = "/about-me/"
         weight = 0
     # [[menu.main]]

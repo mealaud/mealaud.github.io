@@ -6,57 +6,8 @@
     <description>Recent content in Introduction to Real Analysis on mel-land</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 18 Dec 2024 13:01:17 -0500</lastBuildDate>
+    <lastBuildDate>Sun, 15 Sep 2024 00:08:48 -0400</lastBuildDate>
     <atom:link href="http://localhost:1313/academics/intro-real-analysis/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Function Spaces IV (Contraction Mapping Theorem)</title>
-      <link>http://localhost:1313/academics/intro-real-analysis/function-spaces-iv/</link>
-      <pubDate>Wed, 18 Dec 2024 13:01:17 -0500</pubDate>
-      <guid>http://localhost:1313/academics/intro-real-analysis/function-spaces-iv/</guid>
-      <description>Notes on [INSERT]</description>
-    </item>
-    <item>
-      <title>Function Spaces III (Compactness Theorems)</title>
-      <link>http://localhost:1313/academics/intro-real-analysis/function-spaces-iii/</link>
-      <pubDate>Wed, 18 Dec 2024 13:01:10 -0500</pubDate>
-      <guid>http://localhost:1313/academics/intro-real-analysis/function-spaces-iii/</guid>
-      <description>Notes on [INSERT]</description>
-    </item>
-    <item>
-      <title>Function Spaces II (Series of Functions)</title>
-      <link>http://localhost:1313/academics/intro-real-analysis/function-spaces-ii/</link>
-      <pubDate>Wed, 18 Dec 2024 12:50:05 -0500</pubDate>
-      <guid>http://localhost:1313/academics/intro-real-analysis/function-spaces-ii/</guid>
-      <description>A series of functions is a tricky, devious creature. We now try to tame these wild beasts.</description>
-    </item>
-    <item>
-      <title>Function Spaces I ($ C([0,1]) $ and Uniform Convergence)</title>
-      <link>http://localhost:1313/academics/intro-real-analysis/function-spaces-i/</link>
-      <pubDate>Wed, 18 Dec 2024 12:50:01 -0500</pubDate>
-      <guid>http://localhost:1313/academics/intro-real-analysis/function-spaces-i/</guid>
-      <description>?</description>
-    </item>
-    <item>
-      <title>Topic Plan</title>
-      <link>http://localhost:1313/academics/intro-real-analysis/topic-plan/</link>
-      <pubDate>Fri, 22 Nov 2024 14:53:14 -0500</pubDate>
-      <guid>http://localhost:1313/academics/intro-real-analysis/topic-plan/</guid>
-      <description>my plans</description>
-    </item>
-    <item>
-      <title>Topology &amp; Continuity IV (Compactness, Uniform Continuity)</title>
-      <link>http://localhost:1313/academics/intro-real-analysis/topology-continuity-iv/</link>
-      <pubDate>Mon, 16 Sep 2024 12:30:56 -0400</pubDate>
-      <guid>http://localhost:1313/academics/intro-real-analysis/topology-continuity-iv/</guid>
-      <description>A study of one of the most powerful ideas in mathematics: compactness.</description>
-    </item>
-    <item>
-      <title>Topology &amp; Continuity III (Connectedness)</title>
-      <link>http://localhost:1313/academics/intro-real-analysis/topology-continuity-iii/</link>
-      <pubDate>Mon, 16 Sep 2024 12:20:16 -0400</pubDate>
-      <guid>http://localhost:1313/academics/intro-real-analysis/topology-continuity-iii/</guid>
-      <description>Study of non-separated spaces.</description>
-    </item>
     <item>
       <title>Topology &amp; Continuity II (Continuous functions)</title>
       <link>http://localhost:1313/academics/intro-real-analysis/topology-continuity-ii/</link>

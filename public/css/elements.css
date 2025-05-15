@@ -34,16 +34,19 @@
 
 .nav-list {
   display: flex;
-  align-items: stretch;
-  justify-content: space-between;
-  width: 100%;
+  /* align-items: stretch; */
+  /* justify-content: space-between; */
+  max-width: 80%;
   margin: 0;
   padding: 0;
   list-style-type: none;
   color: var(--fg);
+  overflow-x: scroll;
 } .nav-items {
-  display: block;
-  flex: 0 1 auto;
+  /* display: block; */
+  /* margin-right: 400; */
+  /* margin-left: 100; */
+  /* flex: 0 1 auto; */
   color: var(--fg);
 }
 
