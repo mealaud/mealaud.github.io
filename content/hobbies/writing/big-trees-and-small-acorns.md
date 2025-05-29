@@ -4,7 +4,7 @@ date: 2025-05-14T22:05:14-04:00
 draft: False
 type:
 layout:
-summary: "I love acorns. Trees are cool too. ;)"
+summary: "I love trees and their children."
 ---
 
 When I would go to the gym in the fall,
