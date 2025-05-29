@@ -7,6 +7,7 @@ layout:
 summary: "Solutions to the exercises of Chapter 3 of Browder's _Mathematical Analysis_."
 ---
 
+fasdf
 {{% MathEnv "x" %}}
 Let $ f \colon \mathbb{R} \to \mathbb{R} $.
 If $\lim_{h\to 0} \left [ f(x+h) - f(x-h) \right ] = 0 $ for every $ x \in \mathbb{R} $, does it follows that $ f $ is continuous? 
