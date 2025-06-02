@@ -1,13 +1,43 @@
 ---
 title: "The Chosen One"
-date: 2025-04-15T17:50:33-04:00
+date: 2025-06-01T17:50:33-04:00
 draft: true
 type:
 layout:
-summary:
+summary: "I am who I choose to be."
 ---
 
-While heading home on the bus today, I was curious about complacency; specifically, my complacency.
+Some months ago I started to write a post about who I wanted to be as a student, but never finished it. 
+Now my scope is my life in general. 
+Who do I choose to be (in actions, beliefs, etc.)?
+In no particular order, and I do not claim this to be comprehensive:
+
+1. 
+
+2. The past is not any indication of the future.
+
+When I lived with my roommate Kyle is undergrad, we would occasionally go to the gym together.
+I stopped going pretty soon but he _always_ invited me.
+He extended his hand to help me and I, in an act of intense moral failure, almost always said: "If the past is any indication of the future, I will not be gym-ing today."
+At first he took it as me passing and then went to the gym by himself.
+
+{{%nl%}}{{%nl%}}
+I still appreciate all the times he asked me, but the time that stands out most to me was when he said "Mel, that is a terrible way of thinking" and explained to me how I'm using it to excuse doing something I _want_ to do. 
+I was using my past to predict my future. 
+More than that, **I was foregoing who I wanted to be using what I was before.**
+
+{{%nl%}}{{%nl%}}
+I refuse to fall into this trap once again.
+The past does not predict the future nor does anything else.
+
+
+
+
+{{%nl%}}{{%nl%}}
+"If the past is any indication of the future" is a worthless statement. it's evil and immoral.
+
+
+While heading home on the bus recently, I was curious about complacency; specifically, my complacency.
 My graduate-school career has been marred by lows and elevated by highs, but I have had far more lows than highs.
 In some sense, I am below where I was in undergrad.
 {{%nl%}}{{%nl%}}
