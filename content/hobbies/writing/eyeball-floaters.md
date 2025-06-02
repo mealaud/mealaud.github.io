@@ -72,7 +72,7 @@ They chose to be here with me, I suppose.
 {{%nl%}}
 But do they deserve it?
 {{%nl%}}
-Our beads still seem fastened to each; the string isn't broken.
+Our beads still seem fastened to each other; the string isn't broken.
 {{%nl%}}
 Maybe it's fine.
 {{%nl%}}
@@ -80,6 +80,6 @@ I think I'm feeling too much.
 {{%nl%}}
 I feel I'm thinking too much.
 {{%nl%}}
-I want to look up to my floaters more often.
+I'm gonna look up at my floaters more often.
 
 
