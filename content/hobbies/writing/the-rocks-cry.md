@@ -4,7 +4,7 @@ date: 2025-07-23T16:19:19-04:00
 draft: false
 type:
 layout:
-summary: "Inspired by Ezekiel from the Chime-In Open Mic. He wrote \"The rocks do not cry for apocalypse.\""
+summary: "A story of rocks. (Inspired by Ezekiel from the Chime-In Open Mic. He wrote \"The rocks do not cry for apocalypse.\")"
 ---
 
 I've heard rocks are soft until you touch them.
