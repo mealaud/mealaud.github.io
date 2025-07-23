@@ -7,7 +7,7 @@ layout:
 summary: "A study of pen-lifting, or the lack thereof."
 ---
 
-I first learning about continuous functions in high school (I think) as "being able to draw the graph of the function without lifting your pen".
+I first learned about continuous functions in high school (I think) as "being able to draw the graph of the function without lifting your pen".
 This is not rigorous of course, but it does give some helpful intuition and brings up some good questions:
 1. What are the different types of discontinuities?
 2. How do we encode jumps (or the lack thereof)?
@@ -35,7 +35,7 @@ A single-point blip discontinuity at a point $ c $ in a function $ f $.
 
 But how many of these little jumps can we have?
 Can we be _discontinuous everywhere_?
-Can we be discontinuous _every but a single point_?
+Can we be discontinuous _everywhere but a single point_?
 It turns out the answers are: it depends; yes; and yes.
 We'll talk about this more in due time, but for now we know what stuff _shouldn't_ be continuous.
 Let's try developing a definition of continuity.

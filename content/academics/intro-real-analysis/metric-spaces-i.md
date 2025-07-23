@@ -58,13 +58,12 @@ We now delve into the one of the most fundamental objects of study in analysis: 
 A sequence is a list of elements from a set (like numbers from $ \mathbb{R} $) indexed by the positive integers $ \mathbb{Z}^+ $.[^indexing of sequences] 
 {{%nl%}}{{%nl%}}
 
-To put say this more precisely, given a set $ X $, a {{% tdf "sequence" %}} is a function $ p \colon \mathbb{Z}^+ \to X $. 
+To say this more precisely, given a set $ X $, a {{% tdf "sequence" %}} is a function $ p \colon \mathbb{Z}^+ \to X $. 
 We also often denote $ p(n) $ by $ p_n $ for simplicity, and we write $ (p_n) $, $ (p\_n)\_n $, $ (p_n)_{n=1}^\infty $ for the sequence itself.
 
 
 {{% MathEnv "rem" %}}
 Also, please note that sequences are therefore _infinite_ in length. 
-ooppp
 If you need a finite list of things though, just be explicit (by saying "finite sequence" or something like that).
 {{% /MathEnv %}}
 
