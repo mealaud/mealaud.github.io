@@ -6,8 +6,22 @@
     <description>Recent content on mel-land</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 23 Jul 2025 16:39:33 -0400</lastBuildDate>
+    <lastBuildDate>Thu, 18 Sep 2025 15:20:59 -0400</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Sweet Nothings</title>
+      <link>http://localhost:1313/hobbies/writing/sweet-nothings/</link>
+      <pubDate>Thu, 18 Sep 2025 15:20:59 -0400</pubDate>
+      <guid>http://localhost:1313/hobbies/writing/sweet-nothings/</guid>
+      <description>The storm whispers in my ear.</description>
+    </item>
+    <item>
+      <title>God in the Forest</title>
+      <link>http://localhost:1313/hobbies/writing/god-in-the-forest/</link>
+      <pubDate>Thu, 18 Sep 2025 15:16:29 -0400</pubDate>
+      <guid>http://localhost:1313/hobbies/writing/god-in-the-forest/</guid>
+      <description>Inspired by the line &amp;lsquo;I&amp;rsquo;ve never had trouble locating God in the forest&amp;rsquo; from Durham poet Kolten Slaughter.</description>
+    </item>
     <item>
       <title>O&#39;Bunny, Bear Witness!</title>
       <link>http://localhost:1313/hobbies/writing/obunny-bear-witness/</link>
