@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Some Notes on Cloud Physics on mel-land</title>
+    <link>http://localhost:1313/academics/some-notes-on-cloud-physics/</link>
+    <description>Recent content in Some Notes on Cloud Physics on mel-land</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 06 Oct 2025 10:41:34 -0400</lastBuildDate>
+    <atom:link href="http://localhost:1313/academics/some-notes-on-cloud-physics/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Thermodynamics</title>
+      <link>http://localhost:1313/academics/some-notes-on-cloud-physics/thermodynamics/</link>
+      <pubDate>Mon, 06 Oct 2025 10:41:34 -0400</pubDate>
+      <guid>http://localhost:1313/academics/some-notes-on-cloud-physics/thermodynamics/</guid>
+      <description>The thermodynamics of dry air.</description>
+    </item>
+  </channel>
+</rss>

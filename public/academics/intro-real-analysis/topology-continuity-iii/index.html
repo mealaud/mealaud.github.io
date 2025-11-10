@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Topology &amp; Continuity III (Connectedness) | mel-land</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="/css/style.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/css/theme.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/css/gallery.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/css/elements.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/css/math.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/css/search.css" type="text/css" media="all" />
+    
+    <script src="/js/gallery.js"></script>
+
+    
+    <link rel="stylesheet" href="/css/katex.min.css">
+<script defer="" src="/js/katex.min.js"></script>
+<script defer="" src="/js/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+            delimiters: [
+                {left: "$$", right: "$$", display: true},
+                {left: "$", right: "$", display: false},
+                {left: "\\[ ", right: "\\]", display: true},
+                {left: "\\(", right: "\\)", display: false},
+            ]
+        });
+    });
+</script>
+
+
+
+
+    
+    
+    <link rel="icon" href="/gruv-cropped-gortoutline.png"/>
+
+    </head>
+
+  <body>
+    <div id="main-wrapper" style="height: 100%; min-width: 35%; max-width: 100%; width: 700px; margin: auto">
+      <div id="content-wrapper">
+        
+  
+<div style="display: flex; height: 7.45em;">
+  <div style="height: 100%;">
+    <a class="logo" href="http://localhost:1313/">
+      
+      <img src="/gortoutline.png" style="filter: brightness(0) saturate(100%) invert(99%) sepia(3%) saturate(1032%) hue-rotate(327deg) brightness(98%) contrast(88%);" height=100%>
+    </a>
+  </div>
+  <div>&nbsp;</div>
+  <div style="width: 100%">
+    <div id="title-font">
+      <a href="http://localhost:1313/" style="text-decoration: none; color: var(--fg)">mel-land</a>
+    </div>
+    <div id="subtitle-font">
+      where the mel guy<br>
+      reigns supreme
+    </div>
+    <div id="navigation">
+      <ul class="nav-list">
+        
+          <li class="nav-item">
+            <a href="/academics/" style="text-decoration: none; font-weight: bold; font-size: 125%; color: var(--fg)">Academics</a>
+          </li>
+          <li>
+            &nbsp;
+            &nbsp;
+          </li>
+        
+          <li class="nav-item">
+            <a href="/hobbies/" style="text-decoration: none; font-weight: bold; font-size: 125%; color: var(--fg)">Hobbies</a>
+          </li>
+          <li>
+            &nbsp;
+            &nbsp;
+          </li>
+        
+          <li class="nav-item">
+            <a href="/axioms/" style="text-decoration: none; font-weight: bold; font-size: 125%; color: var(--fg)">Axioms</a>
+          </li>
+          <li>
+            &nbsp;
+            &nbsp;
+          </li>
+        
+          <li class="nav-item">
+            <a href="/about-me/" style="text-decoration: none; font-weight: bold; font-size: 125%; color: var(--fg)">Me!</a>
+          </li>
+          <li>
+            &nbsp;
+            &nbsp;
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+        <article style="margin-top: 1em; padding-left: 0.5em;">
+          
+  <header>
+    <h1>Topology &amp; Continuity III (Connectedness)<span style="opacity: 0.5; font-size: 0.5em">    Monday, September 16, 2024</span></h1>
+  </header>
+  <p>Let&rsquo;s motivate first.
+You may or may not remember the Intermediate Value Theorem from calculus: given a continuous function $ f \colon [a,b] \to \mathbb{R} $ then for all $ f(a) \lesseqgtr y \lesseqgtr f(b) $<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>, there is some $ c \in [a,b] $ with $ f(c) = y $.
+Note that when we understand the function to be continuous, our domain is exactly what gives us this property.
+<br>
+<br></p>
+<p>Indeed, consider the function $ f \colon [0,1] \cup [2,3] \to \mathbb{R} $ given by $ f(x)=x $ and consider the value $ 1.5 $.
+Here we attain $ f(0)=0 $ and $ f(3)=3 $ with $ 1.5 \in [0,3] $, but DO NOT attain $ 1.5 $.
+Why?
+<br>
+<br></p>
+<p>This failure comes $ [a,b] $ have no &ldquo;holes&rdquo; or &ldquo;gaps&rdquo; whereas $ [0,1] \cup [2,3] $ has a &ldquo;hole&rdquo; or &ldquo;gap&rdquo; from $ (1,2) $.
+If there was no gap in our domain, we would have reached our desired value.
+In this sense, we have to have a <em>connected</em> domain.</p>
+<h2 id="old">OLD</h2>
+<p>Connectedness is kind of hard to define directly.
+We know for sure when something is <em>not</em> connected (or is <em>disconnected</em>) but the positive answer is not nearly as obvious.
+For example, which of following are connected?</p>
+<ol>
+<li>Is $ A \cup B $ connected?</li>
+</ol>
+<center>
+  <figure>
+    <img src="https://raw.githubusercontent.com/mealaud/mealaud.github.io/main/static/svgs/connected-blobs.svg" width="90%">
+    <figcaption>
+</figcaption>
+    <br>
+  </figure>
+</center>
+<ol start="2">
+<li>Is this curve connected?</li>
+</ol>
+<center>
+  <figure>
+    <img src="https://raw.githubusercontent.com/mealaud/mealaud.github.io/98245a3e3cb8aee7367faf701a3d6b3d1541795f/static/svgs/topologist-sine-curve.svg" width="90%">
+    <figcaption>
+This curve is known as the Topologist's Sine Curve. It is defined by $  (0 \times [-1,1]) \cup \left \{ (t,\sin(1/t)) : t \in (0,1] \right \}   $
+</figcaption>
+    <br>
+  </figure>
+</center>
+<ol start="3">
+<li>Is the large blob $ A \cup B $ connected?</li>
+</ol>
+<center>
+  <figure>
+    <img src="https://raw.githubusercontent.com/mealaud/mealaud.github.io/main/static/svgs/disconnected-blobs.svg" width="90%">
+    <figcaption>
+</figcaption>
+    <br>
+  </figure>
+</center>
+<p>It seems that the first is <em>connected</em>.
+The second is entirely unclear (at least it was to me at first).
+We know that the third example is certainly <em>not connected</em>.
+<br>
+<br></p>
+<p>So what characterizes these?
+Well, in the sense of open sets, we can see that (3) has open sets that totally separate the blobs $ A $ and $ B $.
+And it seems as if we cannot do that in (1).
+(I will save (2) for later.)
+<br>
+<br></p>
+<p>It turns out that this notion of separation can be made more rigorous with the following definition: given a set $ A $, it is <span id="defn:disconnected" class="tdf">disconnected</span>
+if there are a pair of disjoint open sets whose union is $ A $.
+From here, we get that a set is <span id="defn:connected" class="tdf">connected</span>
+if it is <em>not</em> disconnected.</p>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>This is just a shorthand for both $ f(a) \leq c \leq f(b) $ and $ f(a) \geq c \geq f(b) $. The reason I use this is because it not a priori obvious that whether $ f $ is increasing or decreasing on the interval. Just choose which one makes sense.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+
+
+        </article>
+      </div>
+      
+  <footer>
+  <div style="height: 5vh;"></div>
+	<div style="text-align: center;"><p>&copy;2023-2025 Mealaud Mokhtarzad</p></div>
+</footer>
+
+
+    </div>
+  </body>
+</html>
+

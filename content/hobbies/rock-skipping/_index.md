@@ -23,11 +23,7 @@ I kept practicing and over a few months I went from 1 skip, to 2, to 3, and I ev
 
 I went to a lake a bit farther away and there was a great abundance of nice, flat, thin, yet hefty rocks. These I would learn later are great for skipping. (I will talk more about this is in a future post!) I got some of my best skips here (see the two videos below). {{%nl%}}{{%nl%}}
 
-Since then I've been skipping a lot and other times not so much. I'm at UCLA right now and there's no places (that I've found) that are both: 
-- good for skipping and
-- doesn't have people swimming in it.
-
-Though the latter does not necessarily prevent the former, they definitely don't mix well... especially if you're the one swimming. {{%nl%}}
+Since then I've been skipping a lot and other times not so much. 
 
 ## My best skips
 Just watch. B){{%nl%}}{{%nl%}}

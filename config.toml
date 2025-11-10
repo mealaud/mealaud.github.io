@@ -35,10 +35,14 @@ title = 'mel-land'
     #     url = "/zettelkasten/"
     #     weight = 1
     [[menu.main]]
-        identifier = "academics"
-        name = "Academics"
-        url = "/academics/"
+        identifier = "thoughts"
+        name = "Thoughts"
+        url = "/thoughts/"
         weight = 5
+        # identifier = "academics"
+        # name = "Academics"
+        # url = "/academics/"
+        # weight = 5
     [[menu.main]]
         identifier = "hobbies"
         name = "Hobbies"
@@ -54,11 +58,11 @@ title = 'mel-land'
     #     name = "journal"
     #     url= "/journal/"
     #     weight = 4
-    [[menu.main]]
-        identifier = "axioms"
-        name = "Axioms"
-        url= "/axioms/"
-        weight = 20
+    # [[menu.main]]
+    #     identifier = "axioms"
+    #     name = "Axioms"
+    #     url= "/axioms/"
+    #     weight = 20
 
 [outputs]
     home = ["HTML", "RSS", "JSON"]
