@@ -15,3 +15,5 @@ Map can be filtered through (ripgrep style).
 dalskdj
 
 Currently I'm just gonna be taking notes lol.
+
+test
